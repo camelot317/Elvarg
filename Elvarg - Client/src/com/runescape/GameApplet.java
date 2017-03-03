@@ -505,6 +505,8 @@ public class GameApplet extends Applet implements Runnable, MouseListener,
 			Client.setTab(6);
 		} else if (i == KeyEvent.VK_F5) {
 			Client.setTab(0);
+		} else if (i == 192) {
+			Client.consoleOpen = !Client.consoleOpen;
 		}
 		if (j < 30)
 			j = 0;
