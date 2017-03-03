@@ -3,6 +3,7 @@ package com.elvarg.world.entity.impl.player;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import com.elvarg.GameConstants;
 import com.elvarg.cache.impl.definitions.ItemDefinition;
@@ -381,43 +382,12 @@ public class Player extends Character {
 
 		getUpdateFlag().flag(Flag.APPEARANCE);
 
+		
 		//Add items if new plr
 		if(isNewPlayer()) {
-			getInventory().add(995, 500000000);
-			getInventory().add(4151, 1);
-			getInventory().add(4153, 1);
-			getInventory().add(1215, 1);
-
-			getInventory().add(9185, 1);
-			getInventory().add(11235, 1);
-			getInventory().add(9244, 5000);
-			getInventory().add(11212, 1000);
-
-			getInventory().add(386, 500);
-			getInventory().add(2441, 100);
-			getInventory().add(2437, 100);
-			getInventory().add(2443, 100);
-
-			getInventory().add(2445, 100);
-			getInventory().add(2435, 100);
-			getInventory().add(3041, 100);
-			getInventory().add(2431, 100);
-
-			getInventory().add(1163, 1);
-			getInventory().add(1127, 1);
-			getInventory().add(1079, 1);
-			getInventory().add(12954, 1);
-
-			getInventory().add(4089, 1);
-			getInventory().add(4091, 1);
-			getInventory().add(4093, 1);
-			getInventory().add(4095, 1);
-
-			getInventory().add(4097, 1);
-			getInventory().add(2503, 1);
-			getInventory().add(2497, 1);
-			getInventory().add(2491, 1);
-
+			for (int[] item : GameConstants.startKit) {
+				getInventory().add((item[0]), item[1]);
+			}
 			getPacketSender().sendMessage("Available commands:  ")
 			.sendMessage("").sendMessage("::item id amount").sendMessage("::setlevel skillId level").sendMessage("::master").sendMessage("::runes");
 
