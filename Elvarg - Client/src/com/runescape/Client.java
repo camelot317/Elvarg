@@ -10276,7 +10276,7 @@ public class Client extends GameApplet {
 				if(rows == 0) {
 
 					//Empty container, small tab!!
-					lineY += 25;
+//					lineY += 25;
 
 				} else {
 
