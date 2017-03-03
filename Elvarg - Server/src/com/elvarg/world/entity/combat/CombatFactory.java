@@ -420,38 +420,43 @@ public class CombatFactory {
 	}
 
 
-	public static void rewardExp(Player player, QueueableHit qHit) {
+	/**
+	 * Rewards a player with experience in respective skills based on
+	 * how much damage they've dealt.
+	 * 
+	 * @param player		The player.
+	 * @param hit			The damage dealt.
+	 */
+	public static void rewardExp(Player player, QueueableHit hit) {
 
 		//Add magic exp, even if total damage is 0.
 		//Since spells have a base exp reward
-		if(qHit.getCombatMethod().getCombatType() == CombatType.MAGIC) {
+		if(hit.getCombatMethod().getCombatType() == CombatType.MAGIC) {
 			if(player.getCombat().getPreviousCast() != null) {
-				player.getSkillManager().addExperience(Skill.MAGIC, (int) (((qHit.getTotalDamage() * .90))) + player.getCombat().getPreviousCast().baseExperience());
+				player.getSkillManager().addExperience(Skill.MAGIC, hit.getTotalDamage() + player.getCombat().getPreviousCast().baseExperience());
 			}
 		}
 
 		//Don't add any exp to other skills if total damage is 0.
-		if(qHit.getTotalDamage() <= 0) {
+		if(hit.getTotalDamage() <= 0) {
 			return;
 		}
 
 		//Add hp xp
-		player.getSkillManager().addExperience(Skill.HITPOINTS, (int) (qHit.getTotalDamage() * .70));
+		player.getSkillManager().addExperience(Skill.HITPOINTS, (int) (hit.getTotalDamage() * .70));
 
 		//Magic xp was already added
-		if(qHit.getCombatMethod().getCombatType() == CombatType.MAGIC) {
+		if(hit.getCombatMethod().getCombatType() == CombatType.MAGIC) {
 			return;
 		}
 
 		//Add all other skills xp
-		final int[] exp = qHit.getSkills();
+		final int[] exp = hit.getSkills();
 		for (int i : exp) {
 			Skill skill = Skill.forId(i);
-			player.getSkillManager().addExperience(skill, (int) (((qHit.getTotalDamage() * .90)) / exp.length));
+			player.getSkillManager().addExperience(skill, ((hit.getTotalDamage()) / exp.length));
 		}
-
 	}
-
 	public static CombatMethod getMethod(Character attacker) {
 
 		if(attacker.isPlayer()) {
