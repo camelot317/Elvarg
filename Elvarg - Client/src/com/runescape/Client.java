@@ -7577,59 +7577,18 @@ public class Client extends GameApplet {
 		}
 		anInt886 = 0;
 		anInt1315 = 0;
-		if (frameMode == ScreenMode.FIXED) {
-			if (super.mouseX > 4 && super.mouseY > 4 && super.mouseX < 516
-					&& super.mouseY < 338) {
+		if (frameMode == ScreenMode.FIXED ) {			
+			if (super.mouseX > 4 && super.mouseY > 4 && super.mouseX < 516 && super.mouseY < 338) {
 				if (openInterfaceId != -1) {
-					buildInterfaceMenu(4, Widget.interfaceCache[openInterfaceId],
-							super.mouseX, 4, super.mouseY, 0);
+					buildInterfaceMenu(4, Widget.interfaceCache[openInterfaceId], super.mouseX, 4, super.mouseY, 0);
 				} else {
 					createMenu();
 				}
 			}
-		} else if (frameMode != ScreenMode.FIXED) {
+		} else if (frameMode != ScreenMode.FIXED ) {
 			if (getMousePositions()) {
-				/*if (super.mouseX > (frameWidth / 2) - 356
-						&& super.mouseY > (frameHeight / 2) - 230
-						&& super.mouseX < ((frameWidth / 2) + 356)
-						&& super.mouseY < (frameHeight / 2) + 230
-						&& openInterfaceId != -1) {
-					buildInterfaceMenu((frameWidth / 2) - 356,
-							Widget.interfaceCache[openInterfaceId], super.mouseX,
-							(frameHeight / 2) - 230, super.mouseY, 0);
-				} else {
-					createMenu();
-				}*/
-				int w = 512, h = 334;
-				int x = (frameWidth / 2) - 256, y = (frameHeight / 2) - 167;
-				int x2 = (frameWidth / 2) + 256, y2 = (frameHeight / 2) + 167;
-				int count = !changeTabArea ? 4 : 3;
-				if (frameMode != ScreenMode.FIXED) {
-					for (int i = 0; i < count; i++) {
-						if (x + w > (frameWidth - 225)) {
-							x = x - 30;
-							x2 = x2 - 30;
-							if (x < 0) {
-								x = 0;
-							}
-						}
-						if (y + h > (frameHeight - 182)) {
-							y = y - 30;
-							y2 = y2 - 30;
-							if (y < 0) {
-								y = 0;
-							}
-						}
-					}
-				}
-				if (openInterfaceId == 5292) {
-					if (super.mouseX > (frameWidth / 2) - 356 && super.mouseY > (frameHeight / 2) - 230 && super.mouseX < ((frameWidth / 2) + 356) && super.mouseY < (frameHeight / 2) + 230) {
-						buildInterfaceMenu((frameWidth / 2) - 356, Widget.interfaceCache[openInterfaceId], super.mouseX, (frameHeight / 2) - 230, super.mouseY, 0);
-					} else {
-						createMenu();
-					}
-				} else if (openInterfaceId != -1 && openInterfaceId != 5292 && super.mouseX > x && super.mouseY > y && super.mouseX < x2 && super.mouseY < y2) {
-					buildInterfaceMenu(x, Widget.interfaceCache[openInterfaceId], super.mouseX, y, super.mouseY, 0);
+				if (super.mouseX > (frameWidth / 2) - 356 && super.mouseY > (frameHeight / 2) - 230 && super.mouseX < ((frameWidth / 2) + 356) && super.mouseY < (frameHeight / 2) + 230 && openInterfaceId != -1) {
+					buildInterfaceMenu((frameWidth / 2) - 356, Widget.interfaceCache[openInterfaceId], super.mouseX, (frameHeight / 2) - 230, super.mouseY, 0);
 				} else {
 					createMenu();
 				}
