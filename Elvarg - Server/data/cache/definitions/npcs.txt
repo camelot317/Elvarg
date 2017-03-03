@@ -1,0 +1,1733 @@
+//After making changes, use the "reloadnpcs" command ingame to quickly test it out.
+
+
+//The emblem trader, in Edgeville. Skulls players is also a PKP shop.
+npc: 315
+name: Emblem trader
+examine: Buys your emblems from you.
+spawn-position: 3097:3503
+walk-radius: 3
+finish
+
+//The warrior, in Edgeville. Has an armour shop.
+npc: 1158
+name: Warrior
+examine: Sells armour.
+spawn-position: 3095:3506
+finish
+
+
+//The ranger, in Edgeville. Has an range shop.
+npc: 1576
+name: Ranger
+examine: Sells Ranged equipment.
+spawn-position: 3094:3506
+finish
+
+
+
+//The mage, in Edgeville. Has a mage shop.
+npc: 3309
+name: Mage
+examine: Sells Magic equipment.
+spawn-position: 3093:3506
+finish
+
+
+//The make-over mage, in Edgeville. Changes a player's looks.
+npc: 1306
+name: Make-over mage
+examine: Has the ability to change a player's looks.
+spawn-position: 3087:3498
+walk-radius: 2
+finish
+
+//The General store shop keeper, in Edgeville.
+npc: 506
+name: Shop keeper
+examine: Buys and sells items.
+spawn-position: 3080:3509
+walk-radius: 2
+finish
+
+//The Jewelry store, in Edgeville.
+npc: 526
+name: Jewelry trader
+examine: Sells fancy jewelry.
+spawn-position: 3096:3506
+walk-radius: 0
+finish
+
+//The Surgeon, healer and shop in Edgeville.
+npc: 3343
+name: Surgeon General Tafani
+examine: Sells food and heals people!
+spawn-position: 3097:3506
+walk-radius: 0
+finish
+
+//The Pure Pker, shop in Edgeville.
+npc: 2660
+name: Pker
+examine: Kills players in the Wilderness.
+spawn-position: 3087:3504
+walk-radius: 2
+finish
+
+//Rock crabs
+npc: 100
+name: Rock crab
+examine: It has a rock solid shell.
+attackable: true
+walk-radius: 3
+respawn: 10
+maxhit: 1
+hitpoints: 50
+attackspeed: 5
+attackanim: 1312
+defenceanim: 1313
+deathanim: 1314
+attacklevel: 7
+strengthlevel: 7
+defencemelee: 5
+defencerange: 5
+defencemage: 3
+combatlevel: 13
+finish
+
+npc: 100
+spawn-position: 2719:3725
+finish
+
+npc: 100
+spawn-position: 2719:3725
+finish
+
+npc: 100
+spawn-position: 2713:3725
+finish
+
+npc: 100
+spawn-position: 2715:3730
+finish
+
+npc: 100
+spawn-position: 2704:3725
+finish
+
+npc: 100
+spawn-position: 2697:3726
+finish
+
+npc: 100
+spawn-position: 2693:3720
+finish
+
+npc: 100
+spawn-position: 2695:3715
+finish
+
+npc: 100
+spawn-position: 2703:3713
+finish
+
+npc: 100
+spawn-position: 2705:3718
+finish
+
+npc: 100
+spawn-position: 2709:3716
+finish
+
+npc: 100
+spawn-position: 2715:3712
+finish
+
+npc: 100
+spawn-position: 2714:3718
+finish
+
+npc: 100
+spawn-position: 2699:3720
+finish
+
+//Pack Yaks
+npc: 5816
+name: Yak
+examine: How many yaks can a pack yak pack if a yak pack packed yak packs?
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+hitpoints: 50
+attackspeed: 5
+attackanim: 5782
+defenceanim: 5783
+deathanim: 5784
+attacklevel: 7
+strengthlevel: 7
+defencemelee: 5
+defencerange: 5
+defencemage: 3
+combatlevel: 38
+size: 2
+finish
+
+npc: 5816
+spawn-position: 2325:3797
+finish
+
+npc: 5816
+spawn-position: 2325:3793
+finish
+
+npc: 5816
+spawn-position: 2328:3794
+finish
+
+npc: 5816
+spawn-position: 2323:3788
+finish
+
+npc: 5816
+spawn-position: 2321:3790
+finish
+
+npc: 5816
+spawn-position: 2322:3794
+finish
+
+npc: 5816
+spawn-position: 2319:3796
+finish
+
+npc: 5816
+spawn-position: 2317:3791
+finish
+
+//Bandits, Main building
+npc: 690
+name: Bandit
+examine: A not so smooth criminal.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 10
+combatlevel: 74
+hitpoints: 70
+attackspeed: 5
+attackanim: 422
+defenceanim: 404
+deathanim: 2304
+attacklevel: 5
+strengthlevel: 50
+defencemelee: 25
+defencerange: 25
+defencemage: 15
+combat-follow: 8
+aggressive-distance: 4
+finish
+
+npc: 690
+spawn-position: 3158:2977
+finish
+
+npc: 690
+spawn-position: 3160:2979
+finish
+
+npc: 690
+spawn-position: 3159:2982
+finish
+
+npc: 690
+spawn-position: 3164:2978
+finish
+
+npc: 690
+spawn-position: 3159:2980
+finish
+
+npc: 690
+spawn-position: 3162:2982
+finish
+
+npc: 690
+spawn-position: 3163:2984
+finish
+
+npc: 690
+spawn-position: 31692:2986
+finish
+
+npc: 690
+spawn-position: 3161:2983
+finish
+
+npc: 690
+spawn-position: 3164:2987
+finish
+
+npc: 690
+spawn-position: 3163:2989
+finish
+
+npc: 690
+spawn-position: 3160:2988
+finish
+
+npc: 690
+spawn-position: 3158:2986
+finish
+
+//Southern Building
+npc: 690
+spawn-position: 3171:2975
+finish
+
+npc: 690
+spawn-position: 3172:2973
+finish
+
+npc: 690
+spawn-position: 3174:2971
+finish
+
+npc: 690
+spawn-position: 3176:2973
+finish
+
+//Eastern Building
+npc: 690
+spawn-position: 3185:2981
+finish
+
+npc: 690
+spawn-position: 3187:2984
+finish
+
+npc: 690
+spawn-position: 3184:2985
+finish
+
+//Eastern Tent
+npc: 690
+spawn-position: 3181:2974
+finish
+
+npc: 690
+spawn-position: 3183:2975
+finish
+
+//Western Tent
+npc: 690
+spawn-position: 3166:2968
+finish
+
+npc: 690
+spawn-position: 3168:2966
+finish
+
+//Outside
+npc: 690
+spawn-position: 3165:2982
+finish
+
+npc: 690
+spawn-position: 3169:2980
+finish
+
+npc: 690
+spawn-position: 3172:2981
+finish
+
+npc: 690
+spawn-position: 3178:2981
+finish
+
+npc: 690
+spawn-position: 3171:2985
+finish
+
+//Experiment 1, human?
+npc: 1274
+name: Experiment
+examine: Poor creature!
+attackable: true
+walk-radius: 3
+respawn: 10
+maxhit: 1
+hitpoints: 70
+attackspeed: 5
+attackanim: 1616
+defenceanim: 1617
+deathanim: 1618
+attacklevel: 14
+strengthlevel: 10
+defencemelee: 8
+defencerange: 8
+defencemage: 6
+combatlevel: 35
+finish
+
+npc: 1274
+spawn-position: 3559:9945
+finish
+
+//Experiment 2, sheep?
+npc: 1273
+name: Experiment
+examine: Poor creature!
+attackable: true
+walk-radius: 3
+respawn: 15
+maxhit: 3
+hitpoints: 100
+attackspeed: 5
+attackanim: 1626
+defenceanim: 1627
+deathanim: 1628
+attacklevel: 25
+strengthlevel: 18
+defencemelee: 12
+defencerange: 12
+defencemage: 8
+combatlevel: 51
+size: 2
+finish
+
+//Zombie
+npc: 2507
+name: Zombie
+examine: A Zombie! Run!
+attackable: true
+walk-radius: 3
+respawn: 15
+maxhit: 7
+hitpoints: 110
+attackspeed: 4
+attackanim: 5571
+defenceanim: 5574
+deathanim: 5575
+attacklevel: 38
+strengthlevel: 32
+defencemelee: 21
+defencerange: 21
+defencemage: 16
+combatlevel: 65
+finish
+
+//Mutant Tarn & Terror Dog (Respectively)
+npc: 6477
+spawn-position: 3729:5800
+name: Mutant Tarn
+examine: Experimenting gone wrong.
+combatlevel: 210
+attackable: true
+walk-radius: 1
+respawn: 45
+maxhit: 18
+hitpoints: 280
+attackspeed: 5
+attackanim: 5617
+defenceanim: 5618
+deathanim: 5619
+attacklevel: 70
+strengthlevel: 60
+defencerange: 50
+defencemage: 50
+size: 3
+finish
+
+npc: 6471
+spawn-position: 3730:5793
+name: Terror Dog
+examine: Sit.
+combatlevel: 131
+attackable: true
+walk-radius: 3
+respawn: 15
+maxhit: 11
+hitpoints: 150
+attackspeed: 5
+attackanim: 5624
+defenceanim: 5626
+deathanim: 5627
+attacklevel: 60
+strengthlevel: 40
+size: 2
+finish
+
+npc: 6471
+spawn-position: 3732:5782
+finish
+
+npc: 6471
+spawn-position: 3730:5775
+finish
+
+npc: 6471
+spawn-position: 3725:5808
+finish
+
+npc: 6477
+spawn-position: 3736:5777
+finish
+
+npc: 6471
+spawn-position: 3741:5767
+finish
+
+npc: 6471
+spawn-position: 3742:5777
+finish
+
+npc: 6471
+spawn-position: 3740:5784
+finish
+
+npc: 6477
+spawn-position: 3740:5793
+finish
+
+npc: 6471
+spawn-position: 3743:5799
+finish
+
+npc: 6471
+spawn-position: 3742:5806
+finish
+
+npc: 6471
+spawn-position: 3752:5805
+finish
+
+npc: 6477
+spawn-position: 3751:5793
+finish
+
+npc: 6471
+spawn-position: 3748:5785
+finish
+
+npc: 6471
+spawn-position: 3750:5779
+finish
+
+npc: 6471
+spawn-position: 3751:5767
+finish
+
+npc: 6477
+spawn-position: 3760:5766
+finish
+
+npc: 6471
+spawn-position: 3765:5774
+finish
+
+npc: 6471
+spawn-position: 3759:5779
+finish
+
+npc: 6471
+spawn-position: 3767:5786
+finish
+
+npc: 6477
+spawn-position: 3764:5798
+finish
+
+npc: 6471
+spawn-position: 3765:5806
+finish
+
+npc: 6471
+spawn-position: 3759:5808
+finish
+
+npc: 6471
+spawn-position: 3752:5799
+finish
+
+npc: 6471
+spawn-position: 3754:5788
+finish
+
+npc: 6477
+spawn-position: 3759:5787
+finish
+
+//Edgeville Dungeon start
+//Giant Spiders, Edgeville Dungeon
+npc: 2477
+name: Giant Spider
+examine: Let it bite, maybe you'll become spoderman.
+attackable: true
+walk-radius: 3
+respawn: 10
+maxhit: 1
+combatlevel: 2
+hitpoints: 5
+attackspeed: 4
+attackanim: 5327
+defenceanim: 5328
+deathanim: 5329
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+npc: 2477
+spawn-position: 3094:9885
+finish
+
+npc: 2477
+spawn-position: 3100:9884
+finish
+
+//Giant Rat, Edgeville Dungeon
+npc: 2510
+name: Giant Rat
+examine: Now where's that rat poison again?
+attackable: true
+walk-radius: 3
+respawn: 10
+maxhit: 3
+combatlevel: 3
+hitpoints: 5
+attackspeed: 4
+attackanim: 138
+defenceanim: 139
+deathanim: 141
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+npc: 2510
+spawn-position: 3098:9880
+finish
+
+npc: 2510
+spawn-position: 3091:9894
+finish
+
+npc: 2510
+spawn-position: 3091:9897
+finish
+
+npc: 2510
+spawn-position: 3117:9891
+finish
+
+npc: 2510
+spawn-position: 3121:9891
+finish
+
+npc: 2510
+spawn-position: 3119:9888
+finish
+
+//Skeletons, Edgeville Dungeon
+//Skeleteons, lvl 21
+npc: 74
+name: Skeleton
+examine: Eat your meals.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 22
+hitpoints: 29
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+npc: 75
+name: Skeleton
+examine: Eat your meals.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 22
+hitpoints: 29
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+npc: 76
+name: Skeleton
+examine: Eat your meals.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 22
+hitpoints: 24
+attackspeed:4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+//Skeleton, lvl 22
+npc: 73
+name: Skeleton
+examine: Eat your meals.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 22
+hitpoints: 29
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 10
+strengthlevel: 10
+defencemelee: -10
+defencerange: -10
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+//Skeleton, lvl 25
+npc: 80
+name: Skeleton
+examine: Eat your meals.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 4
+combatlevel: 22
+hitpoints: 17
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 15
+strengthlevel: 18
+defencemelee: 17
+defencerange: 0
+defencemage: 5
+combat-follow: 6
+aggressive-distance: 3
+finish
+
+
+npc: 74
+spawn-position: 3095:9890
+finish
+
+npc: 75
+spawn-position: 3096:9893
+finish
+
+npc: 76
+spawn-position: 3095:9899
+finish
+
+npc: 74
+spawn-position: 3094:9905
+finish
+
+npc: 75
+spawn-position: 3100:9906
+finish
+
+npc: 76
+spawn-position: 3101:9910
+finish
+
+npc: 74
+spawn-position: 3096:9911
+finish
+
+npc: 73
+spawn-position: 3107:9910
+finish
+
+npc: 80
+spawn-position: 3111:9909
+finish
+
+npc: 73
+spawn-position: 3114:9908
+finish
+
+npc: 80
+spawn-position: 3118:9910
+finish
+
+npc: 73
+spawn-position: 3121:9909
+finish
+
+npc: 80
+spawn-position: 3126:9908
+finish
+
+npc: 73
+spawn-position: 3131:9904
+finish
+
+npc: 80
+spawn-position: 3134:9906
+finish
+
+npc: 73
+spawn-position: 3133:9909
+finish
+
+npc: 80
+spawn-position: 3131:9913
+finish
+
+npc: 73
+spawn-position: 3129:9915
+finish
+
+npc: 80
+spawn-position: 3133:9915
+finish
+
+npc: 73
+spawn-position: 3143:9869
+finish
+
+npc: 80
+spawn-position: 3142:9874
+finish
+
+npc: 73
+spawn-position: 3140:9878
+finish
+
+npc: 80
+spawn-position: 3136:9878
+finish
+
+npc: 73
+spawn-position: 3133:9874
+finish
+
+npc: 80
+spawn-position: 3137:9870
+finish
+
+//Zombies, Edgeville Dungeon
+npc: 43
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+combatlevel: 18
+hitpoints: 22
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 9
+defencemelee: 10
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 44
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+combatlevel: 18
+hitpoints: 22
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 9
+defencemelee: 10
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 45
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+combatlevel: 18
+hitpoints: 22
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 9
+defencemelee: 10
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+
+npc: 46
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+combatlevel: 18
+hitpoints: 22
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 9
+defencemelee: 10
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 47
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 2
+combatlevel: 18
+hitpoints: 22
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 9
+defencemelee: 10
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 43
+spawn-position: 3140:9910
+finish
+
+npc: 44
+spawn-position: 3141:9904
+finish
+
+npc: 45
+spawn-position: 3145:9901
+finish
+
+npc: 46
+spawn-position: 3149:9904
+finish
+
+npc: 47
+spawn-position: 3146:9907
+finish
+
+npc: 43
+spawn-position: 3140:9895
+finish
+
+npc: 44
+spawn-position: 3139:9890
+finish
+
+npc: 45
+spawn-position: 3139:9885
+finish
+
+npc: 46
+spawn-position: 3141:9883
+finish
+
+npc: 47
+spawn-position: 3146:9882
+finish
+
+npc: 43
+spawn-position: 3145:9891
+finish
+
+npc: 44
+spawn-position: 3150:9883
+finish
+
+npc: 45
+spawn-position: 3150:9889
+finish
+
+npc: 46
+spawn-position: 3150:9893
+finish
+
+//Hobgoblins, Edgeville Dungeon
+//Hobgoblin, lvl 42
+npc: 3050
+name: Hobgoblin
+examine: A hobbit goblin.
+attackable: true
+walk-radius: 3
+respawn: 30
+maxhit: 6
+combatlevel: 42
+hitpoints: 49
+attackspeed: 6
+attackanim: 164
+defenceanim: 165
+deathanim: 167
+attacklevel: 22
+strengthlevel: 24
+defencemelee: 0
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+//Hobgoblin, lvl 28
+npc: 3049
+name: Hobgoblin
+examine: A hobbit goblin.
+attackable: true
+walk-radius: 3
+respawn: 30
+maxhit: 4
+combatlevel: 28
+hitpoints: 29
+attackspeed: 6
+attackanim: 164
+defenceanim: 165
+deathanim: 167
+attacklevel: 20
+strengthlevel: 16
+defencemelee: 0
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 3050
+spawn-position: 3123:9875
+finish
+
+npc: 3050
+spawn-position: 3117:9870
+finish
+
+npc: 3049
+spawn-position: 3128:9876
+finish
+
+npc: 3049
+spawn-position: 3128:9873
+finish
+
+npc: 3049
+spawn-position: 3123:9877
+finish
+
+npc: 3049
+spawn-position: 3124:9880
+finish
+
+npc: 3049
+spawn-position: 3119:9870
+finish
+
+npc: 3049
+spawn-position: 3120:9874
+finish
+
+npc: 3049
+spawn-position: 3116:9870
+finish
+
+//Zombies, lvl 24, Edgeville Dungeon
+npc: 49
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 18
+hitpoints: 27
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 14
+defencemelee: 12
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 50
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 18
+hitpoints: 27
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 14
+defencemelee: 12
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 51
+name: Zombie
+examine: Free-range.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 3
+combatlevel: 18
+hitpoints: 27
+attackspeed: 4
+attackanim: 299
+defenceanim: 300
+deathanim: 302
+attacklevel: 8
+strengthlevel: 14
+defencemelee: 12
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 49
+spawn-position: 3129:9860
+finish
+
+npc: 50
+spawn-position: 3131:9862
+finish
+
+npc: 51
+spawn-position: 3128:9865
+finish
+
+npc: 49
+spawn-position: 3127:9862
+finish
+
+npc: 50
+spawn-position: 3125:9866
+finish
+
+npc: 51
+spawn-position: 3123:9862
+finish
+
+//Hill Giants, Edgeville Dungeon
+npc: 2098
+name: Hill Giant
+examine: Byrne's got nothing on these guys.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 4
+combatlevel: 28
+hitpoints: 35
+attackspeed: 6
+attackanim: 4652
+defenceanim: 4651
+deathanim: 4653
+attacklevel: 18
+strengthlevel: 22
+defencemelee: 26
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 2
+size: 2
+finish
+
+npc: 2099
+name: Hill Giant
+examine: Byrne's got nothing on these guys.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 4
+combatlevel: 28
+hitpoints: 35
+attackspeed: 6
+attackanim: 4652
+defenceanim: 4651
+deathanim: 4653
+attacklevel: 18
+strengthlevel: 22
+defencemelee: 26
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 2
+size: 2
+finish
+
+npc: 2100
+name: Hill Giant
+examine: Byrne's got nothing on these guys.
+attackable: true
+walk-radius: 3
+respawn: 20
+maxhit: 4
+combatlevel: 28
+hitpoints: 35
+attackspeed: 6
+attackanim: 4652
+defenceanim: 4651
+deathanim: 4653
+attacklevel: 18
+strengthlevel: 22
+defencemelee: 26
+defencerange: 0
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 2
+size: 2
+finish
+
+npc: 2098
+spawn-position: 3117:9850
+finish
+
+npc: 2099
+spawn-position: 3121:9845
+finish
+
+npc: 2100
+spawn-position: 3119:9841
+finish
+
+npc: 2098
+spawn-position: 3114:9842
+finish
+
+npc: 2100
+spawn-position: 3115:9844
+finish
+
+npc: 2098
+spawn-position: 3114:9849
+finish
+
+npc: 2099
+spawn-position: 3109:9843
+finish
+
+npc: 2100
+spawn-position: 3109:9840
+finish
+
+npc: 2098
+spawn-position: 3119:9834
+finish
+
+npc: 2099
+spawn-position: 3115:9836
+finish
+
+npc: 2100
+spawn-position: 3109:9834
+finish
+
+npc: 2098
+spawn-position: 3104:9834
+finish
+
+npc: 2099
+spawn-position: 3099:9834
+finish
+
+npc: 2100
+spawn-position: 3098:9829
+finish
+
+npc: 2098
+spawn-position: 3105:9828
+finish
+
+npc: 2099
+spawn-position: 3111:9831
+finish
+
+//Thug, Edgeville Dungeon
+npc: 2883
+name: Thug
+examine: One too many beer.
+attackable: true
+walk-radius: 3
+respawn: 15
+maxhit: 2
+combatlevel: 10
+hitpoints: 18
+attackspeed: 4
+attackanim: 422
+defenceanim: 404
+deathanim: 2304
+attacklevel: 7
+strengthlevel: 5
+defencemelee: 9
+defencerange: 0
+defencemage: 0
+combat-follow: 4
+aggressive-distance: 3
+finish
+
+npc: 2883
+spawn-position: 3132:9925
+finish
+
+npc: 2883
+spawn-position: 3133:9929
+finish
+
+npc: 2883
+spawn-position: 3130:9929
+finish
+
+npc: 2883
+spawn-position: 3132:9934
+finish
+
+//Chaos Druid, Edgeville Dungeon
+npc: 2878
+name: Chaos druid
+examine: A druids late-life crisis.
+attackable: true
+walk-radius: 2
+respawn: 10
+maxhit: 2
+combatlevel: 13
+hitpoints: 20
+attackspeed: 6
+attackanim: 7183
+defenceanim: 424
+deathanim: 2261
+attacklevel: 8
+strengthlevel: 8
+defencemelee: 12
+defencerange: 0
+defencemage: 0
+combat-follow: 4
+aggressive-distance: 3
+finish
+
+npc: 2878
+spawn-position: 3120:9929
+finish
+
+npc: 2878
+spawn-position: 3120:9926
+finish
+
+npc: 2878
+spawn-position: 3117:9925
+finish
+
+npc: 2878
+spawn-position: 3114:9926
+finish
+
+npc: 2878
+spawn-position: 3111:9925
+finish
+
+npc: 2878
+spawn-position: 3112:9928
+finish
+
+npc: 2878
+spawn-position: 3109:9930
+finish
+
+npc: 2878
+spawn-position: 3114:9930
+finish
+
+npc: 2878
+spawn-position: 3109:9933
+finish
+
+npc: 2878
+spawn-position: 3104:9936
+finish
+
+npc: 2878
+spawn-position: 3105:99940
+finish
+
+npc: 2878
+spawn-position: 3106:9942
+finish
+
+npc: 2878
+spawn-position: 3110:9939
+finish
+
+//Deadly red spiders, Edgeville Dungeon
+npc: 3021
+name: Deadly red spider
+examine: Somewhat genetically modified.
+attackable: true
+walk-radius: 3
+respawn: 15
+maxhit: 3
+combatlevel: 34
+hitpoints: 35
+attackspeed: 4
+attackanim: 5327
+defenceanim: 5328
+deathanim: 5329
+attacklevel: 30
+strengthlevel: 25
+defencemelee: 30
+defencerange: 12
+defencemage: 16
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 3021
+spawn-position: 3126:9950
+finish
+
+npc: 3021
+spawn-position: 3124:9950
+finish
+
+npc: 3021
+spawn-position: 3126:9953
+finish
+
+npc: 3021
+spawn-position: 3127:9955
+finish
+
+npc: 3021
+spawn-position: 3123:9956
+finish
+
+npc: 3021
+spawn-position: 3121:9953
+finish
+
+npc: 3021
+spawn-position: 3118:9951
+finish
+
+npc: 3021
+spawn-position: 3117:9950
+finish
+
+npc: 3021
+spawn-position: 3117:9958
+finish
+
+//Skeletons, lvl 45, Edgeville Dungeon
+npc: 82
+name: Skeleton
+examine: Winner of the 1506 undernourishment competition.
+attackable: true
+walk-radius: 3
+respawn: 30
+maxhit: 5
+combatlevel: 45
+hitpoints: 59
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 15
+strengthlevel: 18
+defencemelee: 5
+defencerange: 5
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 83
+name: Skeleton
+examine: Winner of the 1531 undernourishment competition.
+attackable: true
+walk-radius: 3
+respawn: 30
+maxhit: 5
+combatlevel: 45
+hitpoints: 59
+attackspeed: 4
+attackanim: 5485
+defenceanim: 5489
+deathanim: 5491
+attacklevel: 15
+strengthlevel: 18
+defencemelee: 5
+defencerange: 5
+defencemage: 0
+combat-follow: 5
+aggressive-distance: 3
+finish
+
+npc: 82
+spawn-position: 3104:9947
+finish
+
+npc: 83
+spawn-position: 3105:9950
+finish
+
+npc: 82
+spawn-position: 3103:9954
+finish
+
+npc: 83
+spawn-position: 3105:9955
+finish
+
+npc: 82
+spawn-position: 3107:9953
+finish
+
+npc: 83
+spawn-position: 3109:9955
+finish
+
+npc: 82
+spawn-position: 3110:9957
+finish
+
+//Earth Warriors, Edgeville Dungeon
+npc: 2840
+name: Earth Warrior
+examine: A warrior from Ba Sing Se.
+attackable: true
+walk-radius: 3
+respawn: 40
+maxhit: 5
+combatlevel: 51
+hitpoints: 54
+attackspeed: 6
+attackanim: -1
+defenceanim: -1
+deathanim: 2261
+attacklevel: 42
+strengthlevel: 42
+defencemelee: 42
+defencerange: 30
+defencemage: 10
+combat-follow: 4
+aggressive-distance: 3
+finish
+
+npc: 2840
+spawn-position: 3119:9971
+finish
+
+npc: 2840
+spawn-position: 3122:9972
+finish
+
+npc: 2840
+spawn-position: 3124:9974
+finish
+
+npc: 2840
+spawn-position: 3122:9976
+finish
+
+npc: 2840
+spawn-position: 3119:9979
+finish
+
+npc: 2840
+spawn-position: 3117:9974
+finish
+
+//Black Demons, Edgeville Dungeon
+npc: 240
+name: Black demons
+examine: They fear only the lights.
+attackable: true
+walk-radius: 2
+respawn: 45
+maxhit: 18
+combatlevel: 172
+hitpoints: 157
+attackspeed: 6
+attackanim: 64
+defenceanim: 65
+deathanim: 67
+attacklevel: 145
+strengthlevel: 152
+defencemelee: 148
+defencerange: 0
+defencemage: -10
+combat-follow: 6
+aggressive-distance: 3
+size: 3
+finish
+
+npc: 240
+spawn-position: 3097:9956
+finish
+
+npc: 240
+spawn-position: 3092:9952
+finish
+
+npc: 240
+spawn-position: 3079:9953
+finish
+
+npc: 240
+spawn-position: 3083:9957
+finish
+
+npc: 240
+spawn-position: 3086:9962
+finish
+
+npc: 240
+spawn-position: 3089:9957
+finish
+
+//Poison spider, Edgeville Dungeon
+npc: 3023
+name: Poison spider
+examine: Not just another long legs.
+attackable: true
+walk-radius: 2
+respawn: 30
+maxhit: 7
+combatlevel: 64
+hitpoints: 64
+attackspeed: 4
+attackanim: 5327
+defenceanim: 5328
+deathanim: 5329
+attacklevel: 50
+strengthlevel: 52
+defencemelee: 58
+defencerange: 14
+defencemage: 14
+combat-follow: 4
+aggressive-distance: 2
+finish
+
+npc: 3023
+spawn-position: 3087:9950
+finish
+
+npc: 3023
+spawn-position: 3089:9948
+finish
+
+npc: 3023
+spawn-position: 3088:9945
+finish
+
+npc: 3023
+spawn-position: 3089:9942
+finish
+
+npc: 3023
+spawn-position: 3085:9941
+finish
+
+npc: 3023
+spawn-position: 3084:9939
+finish
+
+npc: 3023
+spawn-position: 3087:9938
+finish
+
+npc: 3023
+spawn-position: 3089:9937
+finish
+
+npc: 3023
+spawn-position: 3084:9936
+finish
+
+npc: 3023
+spawn-position: 3089:9934
+finish

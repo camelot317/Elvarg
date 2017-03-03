@@ -1,0 +1,7021 @@
+Tool Leprechaun - 0
+Molanisk - 1
+Aberrant spectre - 2
+Aberrant spectre - 3
+Aberrant spectre - 4
+Aberrant spectre - 5
+Aberrant spectre - 6
+Aberrant spectre - 7
+Nechryael - 8
+Twig - 9
+Death spawn - 10
+Nechryael - 11
+Hudo - 12
+Piles - 13
+Rometti - 14
+Gulluck - 15
+Heckel Funch - 16
+Rug Merchant - 17
+Rug Merchant - 18
+Rug Merchant - 19
+Rug Merchant - 20
+Rug Merchant - 22
+Monkey - 23
+Zombie - 26
+Zombie - 27
+Zombie - 28
+Zombie - 29
+Zombie - 30
+Zombie - 31
+Zombie - 32
+Zombie - 33
+Zombie - 34
+Zombie - 35
+Zombie - 36
+Zombie - 37
+Zombie - 38
+Zombie - 39
+Zombie - 40
+Zombie - 41
+Zombie - 42
+Zombie - 43
+Zombie - 44
+Zombie - 45
+Zombie - 46
+Zombie - 47
+Zombie - 48
+Zombie - 49
+Zombie - 50
+Zombie - 51
+Zombie - 52
+Zombie - 53
+Zombie - 54
+Zombie - 55
+Zombie - 56
+Zombie - 57
+Zombie - 58
+Zombie - 59
+Zombie - 60
+Zombie - 61
+Zombie - 62
+Zombie - 63
+Zombie - 64
+Zombie - 65
+Zombie - 66
+Zombie - 67
+Zombie - 68
+Summoned Zombie - 69
+Skeleton - 70
+Skeleton - 71
+Skeleton - 72
+Skeleton - 73
+Skeleton - 74
+Skeleton - 75
+Skeleton - 76
+Skeleton - 77
+Skeleton - 78
+Skeleton - 79
+Skeleton - 80
+Skeleton - 81
+Skeleton - 82
+Skeleton - 83
+Skeleton Mage - 84
+Ghost - 85
+Ghost - 86
+Ghost - 87
+Ghost - 88
+Ghost - 89
+Ghost - 90
+Ghost - 91
+Ghost - 92
+Ghost - 93
+Ghost - 94
+Ghost - 95
+Ghost - 96
+Ghost - 97
+Souless - 98
+Death wing - 99
+Rock Crab - 100
+Rocks - 101
+Rock Crab - 102
+Rocks - 103
+Hellhound - 104
+Hellhound - 105
+Wolf - 106
+White wolf - 107
+White wolf - 108
+Big Wolf - 109
+Wolf - 110
+Dog - 111
+Wild dog - 112
+Wild dog - 113
+Guard dog - 114
+Big Wolf - 115
+Wolf - 116
+Wolf - 117
+Ignatius Vulcan - 118
+Crawling hand - 120
+Cockatrice - 121
+Basilisk - 122
+Kurask - 123
+Abyssal demon - 124
+Left head - 125
+Middle head - 126
+Right head - 127
+Kalphite Queen - 128
+Tentacle - 129
+Skeleton - 130
+Guard dog - 131
+Hobgoblin - 132
+Troll - 133
+Huge spider - 134
+Hellhound - 135
+Ogre - 136
+Baby red dragon - 137
+Kalphite Soldier - 138
+Steel dragon - 139
+Dagannoth - 140
+Tok-Xil - 141
+Demon - 142
+Rocnar - 143
+Hangman game - 144
+Hangman game - 145
+Hangman game - 146
+Hangman game - 147
+Hangman game - 148
+Hangman game - 149
+Hangman game - 150
+Hangman game - 151
+Hangman game - 152
+Hangman game - 153
+Treasure fairy - 154
+Jacky Jester - 155
+Combat stone - 156
+Combat stone - 157
+Combat stone - 158
+Combat stone - 159
+Combat stone - 160
+Combat stone - 161
+Combat stone - 162
+Combat stone - 163
+Combat stone - 164
+Combat stone - 165
+Combat stone - 166
+Combat stone - 167
+Combat stone - 168
+Combat stone - 169
+Combat stone - 170
+Combat stone - 171
+Combat stone - 172
+Combat stone - 173
+Combat stone - 174
+Combat stone - 175
+Combat stone - 176
+Combat stone - 177
+Combat stone - 178
+Combat stone - 179
+Combat stone - 180
+Combat stone - 181
+Combat stone - 182
+Combat stone - 183
+Combat stone - 184
+Combat stone - 185
+Combat stone - 186
+Combat stone - 187
+Combat stone - 188
+Combat stone - 189
+Combat stone - 190
+Combat stone - 191
+Combat stone - 192
+Combat stone - 193
+Combat stone - 194
+Combat stone - 195
+Combat stone - 196
+Combat stone - 197
+Combat stone - 198
+Combat stone - 199
+Combat stone - 200
+Combat stone - 201
+Combat stone - 202
+Combat stone - 203
+Combat stone - 204
+Combat stone - 205
+Combat stone - 206
+Combat stone - 207
+Combat stone - 208
+Combat stone - 209
+Combat stone - 210
+Combat stone - 211
+Combat stone - 212
+Combat stone - 213
+Combat stone - 214
+Combat stone - 215
+Combat stone - 216
+Combat stone - 217
+Combat stone - 218
+Combat stone - 219
+Combat stone - 220
+Rick - 221
+Maid - 223
+Cook - 225
+Butler - 227
+Demon butler - 229
+Wolf - 231
+Jungle Wolf - 232
+Macaroni Penguin - 233
+Butterfly - 234
+Butterfly - 235
+Butterfly - 236
+Butterfly - 237
+Butterfly - 238
+King Black Dragon - 239
+Black demon - 240
+Baby dragon - 241
+Baby dragon - 242
+Baby dragon - 243
+Baby dragon - 244
+Baby dragon - 245
+Baby dragon - 246
+Red dragon - 247
+Red dragon - 248
+Red dragon - 249
+Red dragon - 250
+Red dragon - 251
+Black dragon - 252
+Black dragon - 253
+Black dragon - 254
+Black dragon - 255
+Black dragon - 256
+Black dragon - 257
+Black dragon - 258
+Black dragon - 259
+Green dragon - 260
+Green dragon - 261
+Green dragon - 262
+Green dragon - 263
+Green dragon - 264
+Blue dragon - 265
+Blue dragon - 266
+Blue dragon - 267
+Blue dragon - 268
+Blue dragon - 269
+Bronze dragon - 270
+Bronze dragon - 271
+Iron dragon - 272
+Iron dragon - 273
+Steel dragon - 274
+Steel dragon - 275
+Town crier - 276
+Town crier - 277
+Town crier - 278
+Town crier - 279
+Town crier - 280
+Gull - 281
+Cormorant - 282
+Pelican - 283
+Gull - 284
+Gull - 285
+Gull - 286
+Cormorant - 287
+Pelican - 288
+Ghoul - 289
+Dwarf - 290
+Chaos dwarf - 291
+Dwarf - 292
+Dwarf - 293
+Dwarf - 294
+Dwarf - 295
+Dwarf - 296
+Thordur - 297
+Thordur - 298
+Gunthor the brave - 299
+Jailer - 300
+Black Heather - 301
+Donny the lad - 302
+Speedy Keith - 303
+Salarin the twisted - 304
+Witch - 305
+Lumbridge Guide - 306
+Dr Jekyll - 307
+Reacher - 309
+Ayesha - 310
+Adam - 311
+Frog - 312
+Reacher - 313
+Dr Jekyll - 314
+Emblem Trader - 315
+Emblem Trader - 316
+Paul - 317
+Dark core - 318
+Corporeal Beast - 319
+Dark energy core - 320
+Mime - 321
+Drunken Dwarf - 322
+Strange plant - 323
+ - 325
+Genie - 326
+Genie - 327
+Reacher - 328
+Reacher - 329
+Swarm - 330
+Reacher - 331
+Strange watcher - 332
+Strange watcher - 333
+Strange watcher - 334
+Reacher - 335
+Reacher - 336
+Sergeant Damien - 337
+Suspect - 338
+Suspect - 339
+Suspect - 340
+Suspect - 341
+Molly - 342
+Suspect - 343
+Suspect - 344
+Suspect - 345
+Suspect - 346
+Suspect - 347
+Suspect - 348
+Suspect - 349
+Suspect - 350
+Suspect - 351
+Molly - 352
+Suspect - 353
+Suspect - 354
+Suspect - 355
+Molly - 356
+Suspect - 357
+Suspect - 358
+Suspect - 359
+Suspect - 360
+Molly - 361
+Molly - 362
+Molly - 363
+Molly - 364
+Molly - 365
+Molly - 366
+Molly - 367
+Prison Pete - 368
+Balloon Animal - 369
+Balloon Animal - 370
+Balloon Animal - 371
+Freaky Forester - 372
+Pheasant - 373
+Pheasant - 374
+Rick Turpentine - 375
+Rick Turpentine - 376
+Bee keeper - 377
+Bees! - 378
+Quiz Master - 379
+Pillory Guard - 380
+Tramp - 381
+Tramp - 382
+Tramp - 383
+Man - 385
+Avan - 386
+Avan - 387
+Dark Core - 388
+Reacher - 389
+Evil Bob - 390
+Evil Bob - 391
+Servant - 392
+Servant - 393
+Banker - 394
+Banker - 395
+Banker - 396
+Banker - 397
+Banker - 398
+Banker - 399
+Banker - 400
+Turael - 401
+Mazchna - 402
+Vannaka - 403
+Chaeldar - 404
+Duradel - 405
+Cave crawler - 406
+Cave crawler - 407
+Cave crawler - 408
+Cave crawler - 409
+Kurask - 410
+Kurask - 411
+Gargoyle - 412
+Gargoyle - 413
+Banshee - 414
+Abyssal demon - 415
+Abyssal demon - 416
+Basilisk - 417
+Basilisk - 418
+Cockatrice - 419
+Cockatrice - 420
+Rockslug - 421
+Rockslug - 422
+Dust devil - 423
+Dust devil - 424
+Smokedevil - 425
+Turoth - 426
+Turoth - 427
+Turoth - 428
+Turoth - 429
+Turoth - 430
+Turoth - 431
+Turoth - 432
+Pyrefiend - 433
+Pyrefiend - 434
+Pyrefiend - 435
+Pyrefiend - 436
+Jelly - 437
+Jelly - 438
+Jelly - 439
+Jelly - 440
+Jelly - 441
+Jelly - 442
+Infernal Mage - 443
+Infernal Mage - 444
+Infernal Mage - 445
+Infernal Mage - 446
+Infernal Mage - 447
+Crawling Hand - 448
+Crawling Hand - 449
+Crawling Hand - 450
+Crawling Hand - 451
+Crawling Hand - 452
+Crawling Hand - 453
+Crawling Hand - 454
+Crawling Hand - 455
+Crawling Hand - 456
+Crawling Hand - 457
+Lizard - 458
+Desert Lizard - 459
+Desert Lizard - 460
+Desert Lizard - 461
+Small Lizard - 462
+Small Lizard - 463
+Harpie Bug Swarm - 464
+Skeletal Wyvern - 465
+Skeletal Wyvern - 466
+Skeletal Wyvern - 467
+Skeletal Wyvern - 468
+Killerwatt - 469
+Killerwatt - 470
+Fungi - 471
+Fungi - 472
+Zygomite - 473
+Zygomite - 474
+Hole in the wall - 475
+Wall beast - 476
+Giant frog - 477
+Big frog - 478
+Frog - 479
+Cave slime - 480
+Cave bug - 481
+Cave bug larva - 482
+Cave bug - 483
+Bloodveld - 484
+Bloodveld - 485
+Bloodveld - 486
+Bloodveld - 487
+Storm Cloud - 488
+Storm Cloud - 489
+Entomologist - 491
+Cave kraken - 492
+Whirlpool - 493
+Kraken - 494
+Venenatis spiderling - 495
+Whirlpool - 496
+Callisto cub - 497
+Smoke devil - 498
+Thermonuclear smoke devil - 499
+Olivia - 500
+Sarah - 501
+Vanessa - 502
+Richard - 503
+Alice - 504
+Bob - 505
+Shop keeper - 506
+Shop assistant - 507
+Shop keeper - 508
+Shop assistant - 509
+Shop keeper - 510
+Shop assistant - 511
+Shop keeper - 512
+Shop assistant - 513
+Shop keeper - 514
+Shop assistant - 515
+Shop keeper - 516
+Shop assistant - 517
+Shop keeper - 518
+Shop assistant - 519
+Fairy shop keeper - 520
+Fairy shop assistant - 521
+Valaine - 522
+Scavvo - 523
+Peksa - 524
+Silk trader - 525
+Gem trader - 526
+Zeke - 527
+Louie Legs - 528
+Karim - 529
+Ranael - 530
+Dommik - 531
+Zaff - 532
+Baraek - 533
+Thessalia - 534
+Horvik - 535
+Lowe - 536
+Shop keeper - 537
+Shop assistant - 538
+Elfinlocks - 539
+Clockwork cat - 540
+Clockwork cat - 541
+Monk - 542
+Monk - 543
+Monk - 544
+Monk - 545
+Rufus - 546
+Mi-Gor - 547
+Puffin - 548
+Puffin - 549
+Brother Tranquility - 550
+Brother Tranquility - 551
+Brother Tranquility - 552
+Monk - 553
+Monk - 554
+Monk - 555
+Monk - 556
+Zombie monk - 557
+Zombie monk - 558
+Zombie monk - 559
+Zombie monk - 560
+Sorebones - 561
+Sorebones - 562
+Zombie pirate - 563
+Zombie pirate - 564
+Zombie pirate - 565
+Zombie pirate - 566
+Zombie pirate - 567
+Zombie pirate - 568
+Zombie pirate - 569
+Zombie pirate - 570
+Zombie pirate - 571
+Zombie pirate - 572
+Zombie pirate - 573
+Zombie pirate - 574
+Zombie pirate - 575
+Zombie pirate - 576
+Zombie pirate - 577
+Zombie pirate - 578
+Zombie pirate - 579
+Zombie pirate - 580
+Zombie pirate - 581
+Zombie pirate - 582
+Zombie pirate - 583
+Zombie pirate - 584
+Zombie pirate - 585
+Zombie pirate - 586
+Zombie pirate - 587
+Zombie pirate - 588
+Zombie pirate - 589
+Zombie pirate - 590
+Zombie pirate - 591
+Zombie pirate - 592
+Zombie pirate - 593
+Zombie pirate - 594
+Zombie pirate - 595
+Zombie pirate - 596
+Zombie pirate - 597
+Zombie pirate - 598
+Zombie pirate - 599
+Barrelchest - 600
+Pirate Pete - 601
+Pirate Pete - 602
+Captain Braindeath - 603
+50% Luke - 604
+Davey - 605
+Captain Donnie - 606
+Zombie protester - 607
+Zombie protester - 608
+Zombie protester - 609
+Zombie protester - 610
+Zombie protester - 611
+Zombie protester - 612
+Zombie pirate - 613
+Zombie pirate - 614
+Zombie pirate - 615
+Zombie pirate - 616
+Zombie pirate - 617
+Zombie pirate - 618
+Zombie swab - 619
+Zombie swab - 620
+Zombie swab - 621
+Zombie swab - 622
+Zombie swab - 623
+Zombie swab - 624
+Evil spirit - 625
+Fever spider - 626
+Brewer - 627
+Brewer - 628
+Brewer - 629
+Brewer - 630
+Brewer - 631
+Brewer - 632
+Brewer - 633
+Brewer - 634
+Fishing spot - 635
+Karamthulhu - 636
+Aubury - 637
+Elf Tracker - 638
+Tyras guard - 639
+Ug - 640
+Aga - 641
+Arrg - 642
+Arrg - 643
+Ug - 644
+Ice wolf - 645
+Ice wolf - 646
+Ice wolf - 647
+Ice Troll - 648
+Ice Troll - 649
+Ice Troll - 650
+Ice Troll - 651
+Ice Troll - 652
+Ice Troll - 653
+Ice Troll - 654
+Goblin - 655
+Goblin - 656
+Goblin - 657
+Goblin - 658
+Goblin - 659
+Goblin - 660
+Goblin - 661
+Goblin - 662
+Goblin - 663
+Goblin - 664
+Goblin - 665
+Goblin - 666
+Goblin - 667
+Goblin - 668
+General Bentnoze - 669
+General Wartface - 670
+Grubfoot - 671
+Grubfoot - 672
+Grubfoot - 673
+Goblin - 674
+General Bentnoze - 675
+General Wartface - 676
+Goblin - 677
+Goblin - 678
+Rasolo - 679
+Giant skeleton - 680
+Giant skeleton - 681
+Damis - 682
+Damis - 683
+Archaeologist - 684
+Stranger - 685
+Malak - 686
+Bartender - 687
+Eblis - 688
+Eblis - 689
+Bandit - 690
+Bandit - 691
+Bandit - 692
+Bandit - 693
+Bandit - 694
+Bandit - 695
+Troll child - 696
+Troll child - 697
+Ice troll - 698
+Ice troll - 699
+Ice troll - 700
+Ice troll - 701
+Ice troll - 702
+Ice troll - 703
+Ice troll - 704
+Ice troll - 705
+Ice block - 706
+Ice block - 707
+Troll father - 708
+Troll mother - 709
+Ice wolf - 710
+Ice wolf - 711
+Ice wolf - 712
+Ice wolf - 713
+Ice wolf - 714
+Ice wolf - 715
+Mummy - 717
+Mummy ashes - 718
+Mummy ashes - 719
+Mummy - 720
+Mummy - 721
+Mummy - 722
+Mummy - 723
+Mummy - 724
+Mummy - 725
+Mummy - 726
+Mummy - 727
+Mummy - 728
+Scarabs - 729
+Azzanadra - 730
+Sheep - 731
+Fred the Farmer - 732
+Bandit Leader - 733
+Bandit - 734
+Bandit - 735
+Bandit - 736
+Bandit - 737
+Bandit champion - 738
+Cowardly Bandit - 739
+My Arm - 740
+My Arm - 741
+My Arm - 742
+My Arm - 750
+My Arm - 751
+My Arm - 752
+Adventurer - 753
+Captain Barnaby - 754
+Murcaily - 755
+Jagbakoba - 756
+Tool Leprechaun - 757
+Flies - 758
+Unnamed troll child - 759
+Drunken dwarf's leg - 760
+Baby Roc - 762
+Giant Roc - 763
+Shadow - 764
+Queen Sigrid - 765
+Banker - 766
+Arnor - 767
+Haming - 768
+Moldof - 769
+Helga - 770
+Matilda - 771
+Ashild - 772
+Skraeling - 773
+Skraeling - 774
+Fishmonger - 775
+Greengrocer - 776
+Ethereal Man - 777
+Ethereal Lady - 778
+Ethereal Numerator - 779
+Ethereal Expert - 780
+Ethereal Perceptive - 781
+Ethereal Guide - 782
+Ethereal Fluke - 783
+Ethereal Mimic - 784
+Me - 785
+Me - 786
+Suqah - 787
+Suqah - 788
+Suqah - 789
+Suqah - 790
+Suqah - 791
+Suqah - 792
+Suqah - 793
+Scarab mage - 794
+Locust rider - 795
+Locust rider - 796
+Giant scarab - 797
+Giant scarab - 798
+Scarab mage - 799
+Locust rider - 800
+Locust rider - 801
+Olaf the Bard - 802
+Lalli - 803
+Golden sheep - 804
+Golden sheep - 805
+Golden sheep - 806
+Golden sheep - 807
+Fossegrimen - 808
+Ospak - 809
+Styrmir - 810
+Torbrund - 811
+Fridgeir - 812
+Longhall Bouncer - 813
+Guildmaster - 814
+Duke Horacio - 815
+Elvarg - 816
+Elvarg - 817
+Klarense - 819
+Wormbrain - 820
+Oracle - 821
+Oziach - 822
+Melzar the Mad - 823
+Captain Ned - 824
+Cabin boy Jenkins - 825
+Cabin boy Jenkins - 826
+Larry - 827
+Larry - 828
+Larry - 829
+Penguin - 830
+Penguin - 831
+Penguin - 832
+KGP Guard - 833
+Pescaling Pax - 834
+Ping - 835
+Ping - 836
+Pong - 837
+Pong - 838
+Ping - 839
+Pong - 840
+KGP Agent - 841
+KGP Agent - 842
+Noodle - 844
+Penguin - 845
+Penguin suit - 846
+Agility Instructor - 847
+Army Commander - 848
+Penguin - 849
+Penguin - 850
+Penguin - 851
+Icelord - 852
+Icelord - 853
+Icelord - 854
+Icelord - 855
+Crusher - 856
+Crusher - 857
+Crusher - 858
+Crusher - 859
+Grish - 860
+Uglug Nar - 861
+Pilg - 862
+Grug - 863
+Ogre guard - 864
+Ogre guard - 865
+Zogre - 866
+Zogre - 867
+Zogre - 868
+Zogre - 869
+Zogre - 870
+Zogre - 871
+Skogre - 872
+Zogre - 873
+Zogre - 874
+Zogre - 875
+Zogre - 876
+Zogre - 877
+Skogre - 878
+Skogre - 879
+Zombie - 880
+Zavistic Rarve - 881
+Slash Bash - 882
+Sithik Ints - 883
+Sithik Ints - 884
+Gargh - 885
+Scarg - 886
+Gruh - 887
+Irwin Feaselbaum - 888
+Eluned - 889
+Islwyn - 890
+Moss giant - 891
+Golrie - 892
+Father Reen - 893
+Father Reen - 894
+Father Badden - 895
+Father Badden - 896
+Denath - 897
+Denath - 898
+Eric - 899
+Eric - 900
+Evil Dave - 901
+Evil Dave - 902
+Matthew - 903
+Matthew - 904
+Jennifer - 905
+Jennifer - 906
+Tanya - 907
+Tanya - 908
+Patrick - 909
+Patrick - 910
+Agrith Naar - 911
+Sand storm - 912
+Clay golem - 917
+Clay golem - 918
+Ghost - 920
+Father Aereck - 921
+Restless ghost - 922
+Father Urhney - 923
+Skeleton - 924
+Rock - 925
+Stick - 926
+Pee Hat - 927
+Kraka - 928
+Dung - 929
+Ash - 930
+Thrower Troll - 931
+Thrower Troll - 932
+Thrower Troll - 933
+Thrower Troll - 934
+Thrower Troll - 935
+Mountain troll - 936
+Mountain troll - 937
+Mountain troll - 938
+Mountain troll - 939
+Mountain troll - 940
+Mountain troll - 941
+Mountain troll - 942
+Filliman Tarlock - 943
+Nature Spirit - 944
+Ghast - 945
+Ghast - 946
+Ulizius - 947
+Klenter - 948
+Mummy - 949
+Mummy - 950
+Mummy - 951
+Mummy - 952
+Mummy - 953
+Weird Old Man - 954
+Kalphite Worker - 955
+Kalphite Worker - 956
+Kalphite Soldier - 957
+Kalphite Soldier - 958
+Kalphite Guardian - 959
+Kalphite Guardian - 960
+Kalphite Worker - 961
+Kalphite Guardian - 962
+Kalphite Queen - 963
+Hellpuppy - 964
+Kalphite Queen - 965
+Kalphite Larva - 966
+Anna - 967
+David - 968
+Anna - 969
+Dagannoth - 970
+Dagannoth - 971
+Dagannoth - 972
+Dagannoth - 973
+Dagannoth - 974
+Dagannoth - 975
+Dagannoth - 976
+Dagannoth - 977
+Dagannoth - 978
+Dagannoth - 979
+Dagannoth mother - 980
+Dagannoth mother - 981
+Dagannoth mother - 982
+Dagannoth mother - 983
+Dagannoth mother - 984
+Dagannoth mother - 985
+Dagannoth mother - 986
+Dagannoth mother - 987
+Dagannoth mother - 988
+Veliaf Hurtz - 989
+Sigmund - 990
+Sigmund - 991
+Sigmund - 992
+Sigmund - 993
+Sigmund - 994
+Guard - 995
+Nardok - 996
+Dartog - 997
+Guard - 998
+Guard - 999
+Guard - 1000
+Guard - 1001
+Guard - 1002
+Guard - 1003
+Guard - 1004
+Guard - 1005
+Guard - 1006
+Guard - 1007
+Guard - 1008
+Guard - 1009
+Gertrude's cat - 1010
+Gambler - 1011
+Gambler - 1012
+Barman - 1013
+Gambler - 1014
+Gambler - 1015
+Gambler - 1016
+Gambler - 1017
+Gambler - 1018
+Gambler - 1019
+Rat - 1020
+Rat - 1021
+Rat - 1022
+Fancy dress shop owner - 1023
+Shop keeper - 1024
+Grum - 1025
+Wydin - 1026
+Gerrant - 1027
+Brian - 1028
+Jiminua - 1029
+Shop keeper - 1030
+Candle maker - 1031
+Arhein - 1032
+Jukat - 1033
+Lunderwin - 1034
+Irksol - 1035
+Fairy - 1036
+Zambo - 1037
+Silver merchant - 1038
+Gem merchant - 1039
+Baker - 1040
+Spice seller - 1041
+Fur trader - 1042
+Silk merchant - 1043
+Hickton - 1044
+Harry - 1045
+Cassie - 1046
+Frincos - 1047
+Drogo dwarf - 1048
+Flynn - 1049
+Wayne - 1050
+Dwarf - 1051
+Betty - 1052
+Herquin - 1053
+Launa - 1054
+Launa - 1055
+Brana - 1056
+Tolna - 1057
+Tolna - 1058
+Tolna - 1059
+Angry bear - 1060
+Angry unicorn - 1061
+Angry giant rat - 1062
+Angry giant rat - 1063
+Angry giant rat - 1064
+Angry goblin - 1065
+Fear reaper - 1066
+Confusion beast - 1067
+Confusion beast - 1068
+Confusion beast - 1069
+Confusion beast - 1070
+Confusion beast - 1071
+Hopeless creature - 1072
+Hopeless creature - 1073
+Hopeless creature - 1074
+Tolna - 1075
+Tolna - 1076
+Tolna - 1077
+Runa - 1078
+Halla - 1079
+Finn - 1080
+Osvald - 1081
+Runolf - 1082
+Tjorvi - 1083
+Ingrid - 1084
+Thora - 1085
+Signy - 1086
+Hild - 1087
+Armod - 1088
+Beigarth - 1089
+Reinn - 1090
+Alviss - 1091
+Fullangr - 1092
+Jari - 1093
+Thorodin - 1094
+Ferd - 1095
+Donal - 1096
+Sea Snake Young - 1097
+Sea Snake Hatchling - 1098
+Guard - 1099
+Guard - 1100
+Giant Sea Snake - 1101
+Elena - 1102
+Da Vinci - 1103
+Da Vinci - 1104
+Chancy - 1105
+Chancy - 1106
+Hops - 1107
+Hops - 1108
+Guidor's wife - 1109
+Guidor - 1110
+Guard - 1111
+Guard - 1112
+Guard - 1113
+Mourner - 1114
+Mourner - 1115
+Kilron - 1116
+Omart - 1117
+Man - 1118
+Woman - 1119
+Dominic Onion - 1120
+ - 1121
+ - 1122
+ - 1123
+ - 1124
+ - 1125
+Barrelchest (hard) - 1126
+Giant scarab (hard) - 1127
+Dessous (hard) - 1128
+Kamil (hard) - 1129
+Woman - 1130
+Woman - 1131
+Child - 1132
+Child - 1133
+Damis (hard) - 1134
+Damis (hard) - 1135
+Mourner - 1136
+Priest - 1137
+Man - 1138
+Woman - 1139
+Woman - 1140
+Woman - 1141
+Woman - 1142
+King Lathas - 1143
+Paladin - 1144
+Jerico - 1145
+Chemist - 1146
+Guard - 1147
+Mourner - 1148
+Mourner - 1149
+Mourner - 1150
+Mourner - 1151
+Nurse Sarah - 1152
+Ogre - 1153
+Shark - 1154
+Shark - 1155
+Shark - 1156
+Archer - 1157
+Warrior - 1158
+Monk - 1159
+Wizard - 1160
+Fairy Queen - 1161
+Shamus - 1162
+Tree spirit - 1163
+Cave monk - 1164
+Monk of Entrana - 1165
+Monk of Entrana - 1166
+Monk of Entrana - 1167
+Monk of Entrana - 1168
+Monk of Entrana - 1169
+Monk of Entrana - 1170
+Monk - 1171
+Rommik - 1172
+Gaius - 1173
+Jatix - 1174
+Davon - 1175
+Zenesha - 1176
+Aemad - 1177
+Kortan - 1178
+Lumbridge Guide - 1179
+Lumbridge Guide - 1181
+? ? ? ? - 1182
+? ? ? ? - 1183
+? ? ? ? - 1184
+? ? ? ? - 1185
+? ? ? ? - 1186
+? ? ? ? - 1187
+? ? ? ? - 1188
+? ? ? ? - 1189
+? ? ? ? - 1190
+? ? ? ? - 1191
+General Wartface - 1192
+General Bentnoze - 1193
+General Wartface - 1195
+General Bentnoze - 1197
+Ceril Carnillean - 1198
+Claus the chef - 1199
+Guard - 1200
+Philipe Carnillean - 1201
+Henryeta Carnillean - 1202
+Butler Jones - 1203
+Alomone - 1204
+Hazeel - 1205
+Clivet - 1206
+Hazeel Cultist - 1207
+Khazard Guard - 1208
+Khazard Guard - 1209
+Khazard Guard - 1210
+Khazard Guard - 1211
+Khazard Guard - 1212
+General Khazard - 1213
+Khazard barman - 1214
+Kelvin - 1215
+Joe - 1216
+Fightslave - 1217
+Hengrad - 1218
+Lady Servil - 1219
+Jeremy Servil - 1220
+Jeremy Servil - 1221
+Justin Servil - 1222
+Local - 1223
+Bouncer - 1224
+Khazard Ogre - 1225
+Khazard Scorpion - 1226
+Arzinian Avatar of Strength - 1227
+Arzinian Avatar of Strength - 1228
+Arzinian Avatar of Strength - 1229
+Arzinian Avatar of Ranging - 1230
+Arzinian Avatar of Ranging - 1231
+Arzinian Avatar of Ranging - 1232
+Arzinian Avatar of Magic - 1233
+Arzinian Avatar of Magic - 1234
+Arzinian Avatar of Magic - 1235
+Arzinian Being of Bordanzan - 1236
+Saboteur - 1237
+Gnome shop keeper - 1238
+Cute creature - 1240
+Evil creature - 1241
+Cute creature - 1243
+Evil creature - 1244
+Cute creature - 1246
+Evil creature - 1247
+Cute creature - 1249
+Evil creature - 1250
+Cute creature - 1252
+Evil creature - 1253
+Cute creature - 1255
+Evil creature - 1256
+fluffie - 1257
+fluffie - 1258
+Odd Old Man - 1259
+Fortunato - 1260
+Ram - 1261
+Ram - 1262
+Ram - 1263
+Ram - 1264
+Ram - 1265
+Bones - 1266
+Vulture - 1267
+Vulture - 1268
+Dr Fenkenstrain - 1269
+Fenkenstrain's Monster - 1270
+Lord Rologarth - 1271
+Gardener Ghost - 1272
+Experiment - 1273
+Experiment - 1274
+Experiment - 1275
+Loar Shadow - 1276
+Loar Shade - 1277
+Shade Spirit - 1278
+Phrin Shadow - 1279
+Phrin Shade - 1280
+Riyl Shadow - 1281
+Riyl Shade - 1282
+Asyn Shadow - 1283
+Asyn Shade - 1284
+Fiyr Shadow - 1285
+Fiyr Shade - 1286
+Afflicted(Ulsquire) - 1287
+Ulsquire Shauncy - 1288
+Afflicted(Razmire) - 1289
+Razmire Keelgan - 1290
+Mort'ton Local - 1291
+Mort'ton Local - 1292
+Afflicted - 1293
+Afflicted - 1294
+Mort'ton local - 1295
+Mort'ton local - 1296
+Afflicted - 1297
+Afflicted - 1298
+Roachey - 1299
+Frenita - 1300
+Nurmof - 1301
+Tea seller - 1302
+Fat Tony - 1303
+Noterazzo - 1304
+Hairdresser - 1305
+Make-over mage - 1306
+Make-over mage - 1307
+Diango - 1308
+Brian - 1309
+Bartender - 1310
+Bartender - 1311
+Bartender - 1312
+Bartender - 1313
+Bartender - 1314
+Emily - 1315
+Kaylee - 1316
+Tina - 1317
+Bartender - 1318
+Bartender - 1319
+Bartender - 1320
+Tarquin - 1323
+Sigurd - 1324
+Hari - 1325
+Barfy Bill - 1326
+Tyras guard - 1327
+Trader Stan - 1328
+Trader Crewmember - 1329
+Trader Crewmember - 1330
+Trader Crewmember - 1331
+Trader Crewmember - 1332
+Trader Crewmember - 1333
+Trader Crewmember - 1334
+Jack Seagull - 1335
+Longbow Ben - 1336
+Ahab - 1337
+Seagull - 1338
+Seagull - 1339
+Matthias - 1340
+Matthias - 1341
+Gyr Falcon - 1342
+Gyr Falcon - 1343
+Gyr Falcon - 1344
+Gyr Falcon - 1345
+Prickly kebbit - 1346
+Sabre-toothed kebbit - 1347
+Barb-tailed kebbit - 1348
+Wild kebbit - 1349
+Artimeus - 1350
+Seth Groats - 1351
+Tassie Slipcast - 1352
+Hammerspike Stoutbeard - 1353
+Dwarf gang member - 1354
+Dwarf gang member - 1355
+Dwarf gang member - 1356
+Phantuwti Fanstuwi Farsight - 1357
+Tindel Marchant - 1358
+Gnormadium Avlafrim - 1359
+Petra Fiyed - 1360
+Jimmy the Chisel - 1361
+Slagilith - 1362
+Rock pile - 1363
+Slagilith - 1364
+Fire elemental - 1365
+Earth elemental - 1366
+Earth elemental - 1367
+Elemental rock - 1368
+Air elemental - 1369
+Water elemental - 1370
+Guard - 1371
+Guard - 1372
+Hamal the Chieftain - 1373
+Ragnar - 1374
+Svidi - 1375
+Jokul - 1376
+The Kendal - 1377
+The Kendal - 1378
+Camp dweller - 1379
+Camp dweller - 1380
+Camp dweller - 1381
+Camp dweller - 1382
+Camp dweller - 1383
+Mountain Goat - 1384
+Mountain Goat - 1385
+Mountain Goat - 1386
+Mountain Goat - 1387
+Bald Headed Eagle - 1388
+Bernald - 1389
+Ellamaria - 1390
+Trolley - 1391
+Trolley - 1392
+Trolley - 1393
+Billy, a guard of Falador - 1395
+Bob, another guard of Falador - 1396
+Brother Althric - 1397
+PKMaster0036 - 1398
+King Roald - 1399
+Nulodion - 1400
+Dwarf - 1401
+Dwarf - 1402
+Dwarf - 1403
+Dwarf - 1404
+Dwarf - 1405
+Dwarf - 1406
+Dwarf - 1407
+Dwarf - 1408
+Black Guard - 1409
+Black Guard - 1410
+Black Guard - 1411
+Black Guard - 1412
+Engineering assistant - 1413
+Engineering assistant - 1414
+Engineer - 1415
+Squirrel - 1416
+Squirrel - 1417
+Squirrel - 1418
+Raccoon - 1419
+Raccoon - 1420
+Raccoon - 1421
+Hazelmere - 1422
+King Narnode Shareen - 1423
+Glough - 1425
+Charlie - 1428
+Foreman - 1429
+Shipyard worker - 1430
+Femi - 1431
+Black demon - 1432
+Gnome guard - 1433
+Garkor - 1434
+Lumo - 1435
+Bunkdo - 1436
+Carado - 1437
+Lumdo - 1438
+Karam - 1439
+Bunkwicket - 1440
+Waymottin - 1441
+Zooknock - 1442
+Jungle Demon - 1443
+Daero - 1444
+Daero - 1445
+Waydar - 1446
+Pirate - 1447
+Thief - 1448
+Lumdo - 1453
+Lumdo - 1454
+G.L.O. Caranock - 1460
+Mugger - 1461
+Small ninja monkey - 1462
+Medium ninja monkey - 1463
+Gorilla - 1464
+Bearded gorilla - 1465
+Ancient monkey - 1466
+Small zombie monkey - 1467
+Large zombie monkey - 1468
+Monkey - 1469
+Rantz - 1470
+Fycie - 1471
+Bugs - 1472
+Swamp toad - 1473
+Bloated Toad - 1474
+Chompy bird - 1475
+Chompy bird - 1476
+Eudav - 1477
+Oronwen - 1478
+Banker - 1479
+Banker - 1480
+Dalldav - 1481
+Gethin - 1482
+Nickolaus - 1483
+Nickolaus - 1484
+Nickolaus - 1485
+Nickolaus - 1486
+Desert eagle - 1487
+Jungle eagle - 1488
+Polar eagle - 1489
+Eagle - 1490
+Kebbit - 1494
+Charlie - 1495
+Boulder - 1496
+Fishing spot - 1497
+Fishing spot - 1498
+Fishing spot - 1499
+Fishing spot - 1500
+Aleck - 1501
+Leon - 1502
+Hunting expert - 1503
+Hunting expert - 1504
+Ferret - 1505
+Fishing spot - 1506
+Fishing spot - 1507
+Fishing spot - 1508
+Fishing spot - 1509
+Fishing spot - 1510
+Fishing spot - 1511
+Fishing spot - 1512
+Fishing spot - 1513
+Fishing spot - 1514
+Fishing spot - 1515
+Fishing spot - 1516
+Fishing spot - 1517
+Fishing spot - 1518
+Fishing spot - 1519
+Fishing spot - 1520
+Fishing spot - 1521
+Fishing spot - 1522
+Fishing spot - 1523
+Fishing spot - 1524
+Fishing spot - 1525
+Fishing spot - 1526
+Fishing spot - 1527
+Fishing spot - 1528
+Fishing spot - 1529
+Fishing spot - 1530
+Fishing spot - 1531
+Fishing spot - 1532
+Fishing spot - 1533
+Fishing spot - 1534
+Fishing spot - 1535
+Fishing spot - 1536
+Skeleton hero - 1537
+Skeleton brute - 1538
+Skeleton warlord - 1539
+Skeleton heavy - 1540
+Skeleton thug - 1541
+Fishing spot - 1542
+Gargoyle - 1543
+Fishing spot - 1544
+Black knight - 1545
+Guard - 1546
+Guard - 1547
+Guard - 1548
+Guard - 1549
+Guard - 1550
+Guard - 1551
+Guard - 1552
+Crab - 1553
+Seagull - 1554
+Seagull - 1555
+Fire wizard - 1556
+Water wizard - 1557
+Earth wizard - 1558
+Air wizard - 1559
+Ordan - 1560
+Jorzik - 1561
+Smiddi Ryak (hard) - 1562
+Rolayne Twickit (hard) - 1563
+Jayene Kliyn (medium) - 1564
+Valantay Eppel (medium) - 1565
+Dalcian Fang (easy) - 1566
+Fyiona Fray (easy) - 1567
+Abidor Crank - 1568
+Benjamin - 1569
+Liam - 1570
+Miala - 1571
+Verak - 1572
+Forester (hard) - 1573
+Woman-at-arms (hard) - 1574
+Apprentice (medium) - 1575
+Ranger (medium) - 1576
+Adventurer (easy) - 1577
+Mage (easy) - 1578
+Hiylik Myna - 1579
+Dummy - 1580
+Dummy - 1581
+Dummy - 1582
+Dummy - 1583
+Dummy - 1584
+Dummy - 1585
+Dummy - 1586
+Dummy - 1587
+Dummy - 1588
+Dummy - 1589
+Dummy - 1590
+Dummy - 1591
+Dummy - 1592
+Dummy - 1593
+Dummy - 1594
+Dummy - 1595
+Dummy - 1596
+Dummy - 1597
+Dummy - 1598
+Dummy - 1599
+Gundai - 1600
+Lundail - 1601
+Chamber guardian - 1602
+Kolodion - 1603
+Kolodion - 1604
+Kolodion - 1605
+Kolodion - 1606
+Kolodion - 1607
+Kolodion - 1608
+Kolodion - 1609
+Battle mage - 1610
+Battle mage - 1611
+Battle mage - 1612
+Phials - 1614
+Banknote Exchange Merchant - 1615
+High Priestess Zul-Harcinqa - 1616
+Priestess Zul-Gwenwynig - 1617
+Cat - 1619
+Cat - 1620
+Cat - 1621
+Cat - 1622
+Cat - 1623
+Cat - 1624
+Hellcat - 1625
+Lazy cat - 1626
+Lazy cat - 1627
+Lazy cat - 1628
+Lazy cat - 1629
+Lazy cat - 1630
+Lazy cat - 1631
+Lazy hellcat - 1632
+Baby impling - 1635
+Young impling - 1636
+Gourmet impling - 1637
+Earth impling - 1638
+Essence impling - 1639
+Eclectic impling - 1640
+Nature impling - 1641
+Magpie impling - 1642
+Ninja impling - 1643
+Dragon impling - 1644
+Baby impling - 1645
+Young impling - 1646
+Gourmet impling - 1647
+Earth impling - 1648
+Essence impling - 1649
+Eclectic impling - 1650
+Nature impling - 1651
+Magpie impling - 1652
+Ninja impling - 1653
+Dragon impling - 1654
+Egg launcher - 1655
+Commander Connad - 1656
+Captain Cain - 1657
+Private Paldo - 1658
+Private Pendron - 1659
+Private Pierreb - 1660
+Private Paldon - 1661
+Major Attack - 1662
+Major Collect - 1663
+Major Defend - 1664
+Major Heal - 1665
+Sergeant Sambur - 1666
+Penance Fighter - 1667
+Penance Ranger - 1668
+Penance Runner - 1669
+Penance Healer - 1670
+Strange Old Man - 1671
+Ahrim the Blighted - 1672
+Dharok the Wretched - 1673
+Guthan the Infested - 1674
+Karil the Tainted - 1675
+Torag the Corrupted - 1676
+Verac the Defiled - 1677
+Bloodworm - 1678
+Crypt rat - 1679
+Giant crypt rat - 1680
+Giant crypt rat - 1681
+Giant crypt rat - 1682
+Crypt spider - 1683
+Giant crypt spider - 1684
+Skeleton - 1685
+Skeleton - 1686
+Skeleton - 1687
+Skeleton - 1688
+Splatter - 1689
+Splatter - 1690
+Splatter - 1691
+Splatter - 1692
+Splatter - 1693
+Shifter - 1694
+Shifter - 1695
+Shifter - 1696
+Shifter - 1697
+Shifter - 1698
+Shifter - 1699
+Shifter - 1700
+Shifter - 1701
+Shifter - 1702
+Shifter - 1703
+Ravager - 1704
+Ravager - 1705
+Ravager - 1706
+Ravager - 1707
+Ravager - 1708
+Spinner - 1709
+Spinner - 1710
+Spinner - 1711
+Spinner - 1712
+Spinner - 1713
+Torcher - 1714
+Torcher - 1715
+Torcher - 1716
+Torcher - 1717
+Torcher - 1718
+Torcher - 1719
+Torcher - 1720
+Torcher - 1721
+Torcher - 1722
+Torcher - 1723
+Defiler - 1724
+Defiler - 1725
+Defiler - 1726
+Defiler - 1727
+Defiler - 1728
+Defiler - 1729
+Defiler - 1730
+Defiler - 1731
+Defiler - 1732
+Defiler - 1733
+Brawler - 1734
+Brawler - 1735
+Brawler - 1736
+Brawler - 1737
+Brawler - 1738
+Portal - 1739
+Portal - 1740
+Portal - 1741
+Portal - 1742
+Portal - 1743
+Portal - 1744
+Portal - 1745
+Portal - 1746
+Portal - 1747
+Portal - 1748
+Portal - 1749
+Portal - 1750
+Portal - 1751
+Portal - 1752
+Portal - 1753
+Portal - 1754
+Void Knight - 1755
+Void Knight - 1756
+Void Knight - 1757
+Void Knight - 1758
+Squire - 1759
+Squire - 1760
+Squire - 1761
+Squire - 1762
+Squire - 1764
+Squire - 1765
+Squire - 1766
+Squire - 1767
+Squire - 1768
+Squire - 1769
+Squire - 1770
+Squire (Novice) - 1771
+Squire (Intermediate) - 1772
+Squire (Veteran) - 1773
+Uri - 1774
+Uri - 1775
+Uri - 1776
+Double agent - 1777
+Double agent - 1778
+Guardian mummy - 1779
+Annoyed guardian mummy - 1780
+Tarik - 1781
+Scarab swarm - 1782
+Malignius Mortifer - 1783
+Zombie - 1784
+Skeleton - 1785
+Ghost - 1786
+Skeleton mage - 1787
+Betty - 1788
+Grum - 1789
+Gerrant - 1790
+Wydin - 1791
+Goat - 1792
+Goat - 1793
+Billy Goat - 1794
+Goat - 1795
+Goat - 1796
+Billy Goat - 1797
+White Knight - 1798
+White Knight - 1799
+White Knight - 1800
+Summer Elemental - 1801
+Summer Elemental - 1802
+Summer Elemental - 1803
+Summer Elemental - 1804
+Summer Elemental - 1805
+Summer Elemental - 1806
+Sorceress - 1807
+Apprentice - 1808
+Osman - 1809
+Osman - 1810
+Osman - 1811
+Del-Monty - 1813
+San Fan - 1814
+Fancy Dan - 1815
+Honest Jimmy - 1816
+Monkey - 1817
+Swarm - 1818
+Blue Monkey - 1825
+Red Monkey - 1826
+Parrot - 1827
+Parrot - 1828
+White Knight - 1829
+Shark - 1830
+Swan - 1831
+Black swan - 1832
+Bandit shopkeeper - 1833
+Gorak - 1834
+Cosmic Being - 1835
+Duck - 1838
+Duck - 1839
+Fairy Godfather - 1840
+Fairy Nuff - 1841
+Fairy Queen - 1842
+Centaur - 1843
+Centaur - 1844
+Stag - 1845
+Wood Dryad - 1846
+Fairy Very Wise - 1847
+Fairy - 1848
+Fairy - 1849
+Fairy - 1850
+Fairy - 1851
+Rabbit - 1852
+Rabbit - 1853
+Butterfly - 1854
+Butterfly - 1855
+Starflower - 1856
+Starflower - 1857
+Tree spirit - 1861
+Tree spirit - 1862
+Tree spirit - 1863
+Tree spirit - 1864
+Tree spirit - 1865
+Tree spirit - 1866
+Sir Amik Varze - 1867
+Sir Amik Varze - 1869
+Evil Chicken - 1870
+Baby black dragon - 1871
+Baby black dragon - 1872
+K'klik - 1873
+Ice troll runt - 1874
+Ice troll male - 1875
+Ice troll female - 1876
+Ice troll grunt - 1877
+Mawnis Burowgar - 1878
+Mawnis Burowgar - 1879
+Fridleif Shieldson - 1880
+Thakkrad Sigmundson - 1881
+Maria Gunnars - 1882
+Maria Gunnars - 1883
+Jofridr Mordstatter - 1884
+Morten Holdstrom - 1885
+Gunnar Holdstrom - 1886
+Anne Isaakson - 1887
+Lisse Isaakson - 1888
+Honour guard - 1889
+Honour guard - 1890
+Honour guard - 1891
+Honour guard - 1892
+Kjedelig Uppsen - 1893
+Trogen Konungarde - 1894
+Slug Hemligssen - 1895
+Candle seller - 1896
+King Gjuki Sorvott IV - 1897
+HRH Hrafn - 1898
+Thorkel Silkbeard - 1899
+Mord Gunnars - 1900
+Art Critic Jacques - 1901
+Historian Minas - 1902
+Barnabus Hurma - 1903
+Marius Giste - 1904
+Caden Azro - 1905
+Thias Leacke - 1906
+Sinco Doar - 1907
+Tinse Torpe - 1908
+Information clerk - 1909
+Museum guard - 1910
+Museum guard - 1911
+Museum guard - 1912
+Teacher and pupil - 1913
+Schoolgirl - 1914
+Schoolgirl - 1915
+Schoolgirl - 1916
+Schoolgirl - 1917
+Schoolgirl - 1918
+Schoolboy - 1919
+Schoolboy - 1920
+Schoolgirl - 1921
+Teacher and pupil - 1922
+Teacher and pupil - 1923
+Schoolboy - 1924
+Teacher - 1925
+Schoolgirl - 1926
+Workman - 1927
+Workman - 1928
+Workman - 1929
+Workman - 1930
+Workman - 1931
+Workman - 1932
+Dig Site workman - 1933
+Barge workman - 1934
+Barge workman - 1935
+Barge workman - 1936
+Barge workman - 1937
+Barge foreman - 1938
+Ed Wood - 1939
+Mord Gunnars - 1940
+Hring Hring - 1941
+Flosi Dalksson - 1942
+Raum Urda-Stein - 1943
+Skuli Myrka - 1944
+Keepa Kettilon - 1945
+Guard - 1947
+Guard - 1948
+Guard - 1949
+Guard - 1950
+Freygerd - 1951
+Lensa - 1952
+Vanligga Gastfrihet - 1990
+Sassilik - 1991
+Miner - 1992
+Miner - 1993
+Eric - 1997
+Gruva Patrull - 1998
+Brendt - 1999
+Grundt - 2000
+Duckling - 2001
+Ducklings - 2002
+Duck - 2003
+Drake - 2004
+Lesser demon - 2005
+Lesser demon - 2006
+Lesser demon - 2007
+Lesser demon - 2008
+Lesser demon - 2018
+Greater demon - 2025
+Greater demon - 2026
+Greater demon - 2027
+Greater demon - 2028
+Greater demon - 2029
+Greater demon - 2030
+Greater demon - 2031
+Greater demon - 2032
+Priestess Zul-Gwenwynig - 2033
+Zul-Urgish - 2034
+Zul-Cheray - 2035
+Zul-Gutusolly - 2036
+Sacrifice - 2037
+Zul-Onan - 2038
+Zul-Aniel - 2039
+Zul-Areth - 2040
+Broken Handz - 2041
+Zulrah - 2042
+Zulrah - 2043
+Zulrah - 2044
+Snakeling - 2045
+Snakeling - 2046
+Snakeling - 2047
+Black demon - 2048
+Black demon - 2049
+Black demon - 2050
+Black demon - 2051
+Black demon - 2052
+Fritz the Glassblower - 2053
+Chaos Elemental - 2054
+Chaos Elemental Jr. - 2055
+Dark wizard - 2056
+Dark wizard - 2057
+Dark wizard - 2058
+Dark wizard - 2059
+Dodgy Squire - 2060
+Glough - 2061
+Oomlie bird - 2062
+Penguin - 2063
+Terrorbird - 2064
+Terrorbird - 2065
+Terrorbird - 2066
+Mounted terrorbird gnome - 2067
+Mounted terrorbird gnome - 2068
+Crow - 2069
+Crow - 2070
+Crow - 2071
+Crow - 2072
+Crow - 2073
+Crow - 2074
+Fire giant - 2075
+Fire giant - 2076
+Fire giant - 2077
+Fire giant - 2078
+Fire giant - 2079
+Fire giant - 2080
+Fire giant - 2081
+Fire giant - 2082
+Fire giant - 2083
+Fire giant - 2084
+Ice giant - 2085
+Ice giant - 2086
+Ice giant - 2087
+Ice giant - 2088
+Ice giant - 2089
+Moss giant - 2090
+Moss giant - 2091
+Moss giant - 2092
+Moss giant - 2093
+Jogre - 2094
+Ogre - 2095
+Ogre - 2096
+Cyclops - 2097
+Hill Giant - 2098
+Hill Giant - 2099
+Hill Giant - 2100
+Hill Giant - 2101
+Hill Giant - 2102
+Hill Giant - 2103
+Ork - 2104
+Ork - 2105
+Ork - 2106
+Ork - 2107
+Wise Old Man - 2108
+Wise Old Man - 2110
+Wise Old Man - 2111
+Wise Old Man - 2112
+Wise Old Man - 2113
+Bed - 2114
+Thing under the bed - 2115
+Miss Schism - 2116
+Banker - 2117
+Banker - 2118
+Banker - 2119
+Market Guard - 2120
+Olivia - 2121
+Pillory Guard - 2122
+Bank guard - 2123
+Badger - 2125
+Badger - 2126
+Snakeling - 2127
+Snakeling - 2128
+Snakeling - 2129
+Snakeling - 2130
+Snakeling - 2131
+Snakeling - 2132
+Tiles - 2133
+Aisles - 2134
+Lorelai - 2135
+Rory - 2136
+Cyclops - 2137
+Cyclops - 2138
+Cyclops - 2139
+Cyclops - 2140
+Cyclops - 2141
+Cyclops - 2142
+Giant frog - 2143
+Big frog - 2144
+Frog - 2145
+Fishing spot - 2146
+Veos - 2147
+Grand Exchange Clerk - 2148
+Grand Exchange Clerk - 2149
+Grand Exchange Clerk - 2150
+Grand Exchange Clerk - 2151
+Brugsen Bursen - 2152
+Gunnjorn - 2153
+TzHaar-Mej - 2154
+TzHaar-Mej - 2155
+TzHaar-Mej - 2156
+TzHaar-Mej - 2157
+TzHaar-Mej - 2158
+TzHaar-Mej - 2159
+TzHaar-Mej - 2160
+TzHaar-Hur - 2161
+TzHaar-Hur - 2162
+TzHaar-Hur - 2163
+TzHaar-Hur - 2164
+TzHaar-Hur - 2165
+TzHaar-Hur - 2166
+TzHaar-Xil - 2167
+TzHaar-Xil - 2168
+TzHaar-Xil - 2169
+TzHaar-Xil - 2170
+TzHaar-Xil - 2171
+TzHaar-Xil - 2172
+TzHaar-Ket - 2173
+TzHaar-Ket - 2174
+TzHaar-Ket - 2175
+TzHaar-Ket - 2176
+TzHaar-Ket - 2177
+TzHaar-Ket - 2178
+TzHaar-Ket - 2179
+TzHaar-Mej-Jal - 2180
+TzHaar-Mej-Kah - 2181
+TzHaar-Ket-Zuh - 2182
+TzHaar-Hur-Tel - 2183
+TzHaar-Hur-Lek - 2184
+TzHaar-Mej-Roh - 2185
+TzHaar-Ket - 2186
+TzHaar-Ket - 2187
+Rocks - 2188
+Tz-Kih - 2189
+Tz-Kih - 2190
+Tz-Kek - 2191
+Tz-Kek - 2192
+Tok-Xil - 2193
+Tok-Xil - 2194
+William - 2195
+Ian - 2196
+Larry - 2197
+Darren - 2198
+Edward - 2199
+Richard - 2200
+Neil - 2201
+Edmond - 2202
+Simon - 2203
+Sam - 2204
+Commander Zilyana - 2205
+Starlight - 2206
+Growler - 2207
+Bree - 2208
+Saradomin priest - 2209
+Spiritual warrior - 2210
+Spiritual ranger - 2211
+Spiritual mage - 2212
+Knight of Saradomin - 2213
+Knight of Saradomin - 2214
+General Graardor - 2215
+Sergeant Strongstack - 2216
+Sergeant Steelwill - 2217
+Sergeant Grimspike - 2218
+Purple Pewter Director - 2219
+Purple Pewter Director - 2220
+Blue Opal Director - 2221
+Yellow Fortune Director - 2222
+Green Gemstone Director - 2223
+White Chisel Director - 2224
+Silver Cog Director - 2225
+Brown Engine Director - 2226
+Red Axe Director - 2227
+Commander Veldaban - 2228
+Red Axe Cat - 2229
+Red Axe Cat - 2230
+Black Guard Berserker - 2232
+Ogre - 2233
+Jogre - 2234
+Cyclops - 2235
+Cyclops - 2236
+Ork - 2237
+Ork - 2238
+Ork - 2239
+Ork - 2240
+Hobgoblin - 2241
+Spiritual ranger - 2242
+Spiritual warrior - 2243
+Spiritual mage - 2244
+Goblin - 2245
+Goblin - 2246
+Goblin - 2247
+Goblin - 2248
+Goblin - 2249
+Door-support - 2250
+Door - 2251
+Door - 2252
+Door-support - 2253
+Door - 2254
+Door - 2255
+Door-support - 2256
+Door - 2257
+Door - 2258
+Dagannoth - 2259
+Askeladden - 2260
+Giant Rock Crab - 2261
+Boulder - 2262
+Bardur - 2263
+Dagannoth fledgeling - 2264
+Dagannoth Supreme - 2265
+Dagannoth Prime - 2266
+Dagannoth Rex - 2267
+Cave goblin - 2268
+Cave goblin - 2269
+Cave goblin - 2270
+Cave goblin - 2271
+Cave goblin - 2272
+Cave goblin - 2273
+Cave goblin - 2274
+Cave goblin - 2275
+Cave goblin - 2276
+Cave goblin - 2277
+Cave goblin - 2278
+Cave goblin - 2279
+Cave goblin - 2280
+Cave goblin - 2281
+Cave goblin - 2282
+Cave goblin - 2283
+Cave goblin - 2284
+Cave goblin - 2285
+Ur-zek - 2286
+Ur-vass - 2287
+Ur-taal - 2288
+Ur-meg - 2289
+Ur-lun - 2290
+Ur-pel - 2291
+Banker - 2292
+Banker - 2293
+Bartak - 2294
+Turgall - 2295
+Reldak - 2296
+Miltog - 2297
+Mernik - 2298
+Cave goblin - 2299
+Crate goblin - 2300
+Cave goblin - 2301
+Goblin scribe - 2302
+Oldak - 2303
+Gourmet - 2304
+Gourmet - 2305
+Gourmet - 2306
+Gourmet - 2307
+Turgok - 2308
+Markog - 2309
+Durgok - 2310
+Tindar - 2311
+Gundik - 2312
+Zenkog - 2313
+Lurgon - 2314
+Ur-tag - 2315
+Guard - 2316
+Guard - 2317
+Zanik - 2318
+Young 'un - 2319
+Tyke - 2320
+Nipper - 2321
+Nipper - 2322
+Cave goblin child - 2323
+Cave goblin child - 2324
+Cave goblin child - 2325
+Cave goblin child - 2326
+Cave goblin child - 2327
+Cave goblin child - 2328
+Cave goblin child - 2329
+Cave goblin child - 2330
+Cave goblin child - 2331
+Cave goblin child - 2332
+Cave goblin child - 2333
+Cave goblin child - 2334
+Cave goblin child - 2335
+Cave goblin child - 2336
+Cave goblin child - 2337
+Cave goblin child - 2338
+Spit goblin - 2339
+Goblin fish - 2340
+Movario - 2341
+Darve - 2342
+Moths - 2343
+Barlak - 2344
+Saniboch - 2345
+Dromund's cat - 2346
+Blasidar the sculptor - 2347
+Riki the sculptor's model - 2348
+Riki the sculptor's model - 2349
+Riki the sculptor's model - 2350
+Riki the sculptor's model - 2351
+Riki the sculptor's model - 2352
+Riki the sculptor's model - 2353
+Riki the sculptor's model - 2354
+Riki the sculptor's model - 2355
+Vigr - 2356
+Santiri - 2357
+Saro - 2358
+Gunslik - 2359
+Wemund - 2360
+Randivor - 2361
+Hervi - 2362
+Nolar - 2363
+Gulldamar - 2364
+Tati - 2365
+Agmundi - 2366
+Vermundi - 2367
+Banker - 2368
+Banker - 2369
+Librarian - 2370
+Assistant - 2371
+Customer - 2372
+Customer - 2373
+Dromund - 2374
+Rind the gardener - 2375
+Factory Manager - 2376
+Factory Worker - 2377
+Factory Worker - 2378
+Factory Worker - 2379
+Factory Worker - 2380
+Inn Keeper - 2381
+Inn Keeper - 2382
+Barmaid - 2383
+Barman - 2384
+Cart conductor - 2385
+Cart conductor - 2386
+Cart conductor - 2387
+Cart conductor - 2388
+Cart conductor - 2389
+Cart conductor - 2390
+Cart conductor - 2391
+Cart conductor - 2392
+Rowdy dwarf - 2393
+Hegir - 2394
+Haera - 2395
+Runvastr - 2396
+Sune - 2397
+Bentamir - 2398
+Ulifed - 2399
+Reinald - 2400
+Karl - 2401
+Gauss - 2402
+Myndill - 2403
+Kjut - 2404
+Tombar - 2405
+Odmar - 2406
+Audmann - 2407
+Drunken Dwarf - 2408
+Drunken Dwarf - 2409
+Red Axe Director - 2410
+Red Axe Director - 2411
+Red Axe Henchman - 2412
+Red Axe Henchman - 2413
+Red Axe Henchman - 2414
+Colonel Grimsson - 2415
+Colonel Grimsson - 2416
+Ogre shaman - 2417
+Ogre shaman - 2418
+Grunsh - 2419
+Gnome emissary - 2420
+Gnome companion - 2421
+Gnome companion - 2422
+Chaos dwarf - 2423
+Gunslik - 2424
+Nolar - 2425
+Factory Worker - 2426
+Cart conductor - 2427
+Gauss - 2428
+Drunken Dwarf - 2429
+Rowdy dwarf - 2430
+Ulifed - 2431
+Dwarven Boatman - 2432
+Dwarven Boatman - 2433
+Dwarven Miner - 2434
+Dwarven Miner - 2435
+Dwarven Miner - 2436
+Dwarven Miner - 2437
+Dwarven Miner - 2438
+Dwarven Miner - 2439
+Dwarven Miner - 2440
+Dwarven Miner - 2441
+Dwarven Miner - 2442
+Dwarven Miner - 2443
+Dwarven Miner - 2444
+Dwarven Miner - 2445
+Dwarven Miner - 2446
+Dwarven Miner - 2447
+Dwarven Miner - 2448
+Buinn - 2449
+Animated Bronze Armour - 2450
+Animated Iron Armour - 2451
+Animated Steel Armour - 2452
+Animated Black Armour - 2453
+Animated Mithril Armour - 2454
+Animated Adamant Armour - 2455
+Animated Rune Armour - 2456
+Ghommal - 2457
+Harrallak Menarous - 2458
+Gamfred - 2459
+Ajjat - 2460
+Kamfreena - 2461
+Shanomi - 2462
+Cyclops - 2463
+Cyclops - 2464
+Cyclops - 2465
+Cyclops - 2466
+Cyclops - 2467
+Cyclops - 2468
+Lidio - 2469
+Lilly - 2470
+Anton - 2471
+Jade - 2472
+Sloane - 2473
+Catablepon - 2474
+Catablepon - 2475
+Catablepon - 2476
+Giant spider - 2477
+Spider - 2478
+Scorpion - 2479
+Scorpion - 2480
+Minotaur - 2481
+Minotaur - 2482
+Minotaur - 2483
+Goblin - 2484
+Goblin - 2485
+Goblin - 2486
+Goblin - 2487
+Goblin - 2488
+Goblin - 2489
+Wolf - 2490
+Wolf - 2491
+Rat - 2492
+Litara - 2493
+Gate of War - 2494
+Ricketty door - 2495
+Oozing barrier - 2496
+Portal of Death - 2497
+Flesh Crawler - 2498
+Flesh Crawler - 2499
+Flesh Crawler - 2500
+Zombie - 2501
+Zombie - 2502
+Zombie - 2503
+Zombie - 2504
+Zombie - 2505
+Zombie - 2506
+Zombie - 2507
+Zombie - 2508
+Zombie - 2509
+Giant rat - 2510
+Giant rat - 2511
+Giant rat - 2512
+Rat - 2513
+Ankou - 2514
+Ankou - 2515
+Ankou - 2516
+Ankou - 2517
+Ankou - 2518
+Ankou - 2519
+Skeleton - 2520
+Skeleton - 2521
+Skeleton - 2522
+Skeleton - 2523
+Skeleton - 2524
+Skeleton - 2525
+Skeleton - 2526
+Ghost - 2527
+Ghost - 2528
+Ghost - 2529
+Ghost - 2530
+Ghost - 2531
+Ghost - 2532
+Ghost - 2533
+Ghost - 2534
+Johanhus Ulsbrecht - 2535
+H.A.M. Guard - 2536
+H.A.M. Guard - 2537
+H.A.M. Guard - 2538
+H.A.M. Deacon - 2539
+H.A.M. Member - 2540
+H.A.M. Member - 2541
+H.A.M. Member - 2542
+H.A.M. Member - 2543
+Mounted terrorchick gnome - 2544
+Captain Lamdoo - 2545
+Terrorchick gnome - 2546
+Gianne jnr. - 2547
+Timble - 2548
+Tamble - 2549
+Spang - 2550
+Brambickle - 2551
+Wingstone - 2552
+Penwie - 2553
+Generic Diplomat - 2554
+Ambassador Gimblewap - 2555
+Ambassador Spanfipple - 2556
+Ambassador Ferrnook - 2557
+Professor Manglethorp - 2558
+Damwin - 2559
+Professor Onglewip - 2560
+Professor Imblewyn - 2561
+Perrdur - 2562
+Dalila - 2563
+Sorrn - 2564
+Mimm - 2565
+Eebel - 2566
+Ermin - 2567
+Portobello - 2568
+Captain Ninto - 2569
+Captain Daerkin - 2570
+Meegle - 2571
+Wurbel - 2572
+Sarble - 2573
+Guard Vemmeldo - 2574
+Burkor - 2575
+Froono - 2576
+Abbot Langley - 2577
+Brother Jered - 2578
+Monk - 2579
+Mage of Zamorak - 2580
+Mage of Zamorak - 2581
+Mage of Zamorak - 2582
+Dark mage - 2583
+Abyssal leech - 2584
+Abyssal guardian - 2585
+Abyssal walker - 2586
+Skippy - 2587
+Skippy - 2588
+Skippy - 2589
+Skippy - 2590
+A pile of broken glass - 2591
+Mogre - 2592
+Werewolf - 2593
+Werewolf - 2594
+Werewolf - 2595
+Werewolf - 2596
+Werewolf - 2597
+Werewolf - 2598
+Werewolf - 2599
+Werewolf - 2600
+Werewolf - 2601
+Werewolf - 2602
+Werewolf - 2603
+Werewolf - 2604
+Werewolf - 2605
+Werewolf - 2606
+Werewolf - 2607
+Werewolf - 2608
+Werewolf - 2609
+Werewolf - 2610
+Werewolf - 2611
+Werewolf - 2612
+Boris - 2613
+Imre - 2614
+Yuri - 2615
+Joseph - 2616
+Nikolai - 2617
+Eduard - 2618
+Lev - 2619
+Georgy - 2620
+Svetlana - 2621
+Irina - 2622
+Alexis - 2623
+Milla - 2624
+Galina - 2625
+Sofiya - 2626
+Ksenia - 2627
+Yadviga - 2628
+Nikita - 2629
+Vera - 2630
+Zoja - 2631
+Liliya - 2632
+Banker - 2633
+Myre Blamish Snail - 2634
+Bob - 2635
+Bob - 2636
+Sphinx - 2637
+Neite - 2638
+Robert the Strong - 2639
+Odysseus - 2640
+Dragonkin - 2641
+King Black Dragon - 2642
+R4ng3rNo0b889 - 2643
+Love Cats - 2644
+Blood Blamish Snail - 2645
+Ochre Blamish Snail - 2646
+Bruise Blamish Snail - 2647
+Bark Blamish Snail - 2648
+Myre Blamish Snail - 2649
+Blood Blamish Snail - 2650
+Ochre Blamish Snail - 2651
+Bruise Blamish Snail - 2652
+Fishing spot - 2653
+Fishing spot - 2654
+Fishing spot - 2655
+Aluft Gianne snr. - 2656
+Gnome Waiter - 2657
+Head chef - 2658
+Purepker895 - 2659
+Qutiedoll - 2660
+1337sp34kr - 2661
+Elfinlocks - 2662
+Elstan - 2663
+Dantaera - 2664
+Kragen - 2665
+Lyra - 2666
+Francis - 2667
+<col=00ffff>Combat dummy</col> - 2668
+Garth - 2669
+Ellena - 2670
+Selena - 2671
+Vasquen - 2672
+Rhonen - 2673
+Dreven - 2674
+Taria - 2675
+Rhazien - 2676
+Torrell - 2677
+Alain - 2678
+Heskel - 2679
+Treznor - 2680
+Fayeth - 2681
+Bolongo - 2682
+Gileth - 2683
+Frizzy Skernip - 2684
+Yulf Squecks - 2685
+Praistan Ebola - 2686
+Prissy Scilla - 2687
+Imiago - 2688
+Liliwen - 2689
+Cool Mom227 - 2690
+ - 2691
+Chicken - 2692
+Chicken - 2693
+Rooster - 2694
+Li'l lamb - 2695
+Lamb - 2696
+Sheep - 2697
+Sheep - 2698
+Sheep - 2699
+Reacher - 2700
+Reacher - 2701
+Reacher - 2702
+Reach - 2703
+Reach - 2704
+Reach - 2705
+Reach - 2706
+Reach - 2707
+Reach - 2708
+Reacher - 2709
+Reacher - 2710
+Reacher - 2711
+Reacher - 2712
+Wise Old Man - 2713
+Combat stone - 2714
+Combat stone - 2715
+Combat stone - 2716
+Combat stone - 2717
+Combat stone - 2718
+Combat stone - 2719
+Combat stone - 2720
+Combat stone - 2721
+Combat stone - 2722
+Combat stone - 2723
+Combat stone - 2724
+Combat stone - 2725
+Combat stone - 2726
+Combat stone - 2727
+Combat stone - 2728
+Combat stone - 2729
+Combat stone - 2730
+Combat stone - 2731
+Combat stone - 2732
+Combat stone - 2733
+Combat stone - 2734
+Combat stone - 2735
+Combat stone - 2736
+Combat stone - 2737
+Combat stone - 2738
+Combat stone - 2739
+Combat stone - 2740
+Combat stone - 2741
+Combat stone - 2742
+Combat stone - 2743
+Combat stone - 2744
+Combat stone - 2745
+Combat stone - 2746
+Combat stone - 2747
+Combat stone - 2748
+Combat stone - 2749
+Combat stone - 2750
+Combat stone - 2751
+Combat stone - 2752
+Combat stone - 2753
+Combat stone - 2754
+Combat stone - 2755
+Combat stone - 2756
+Combat stone - 2757
+Combat stone - 2758
+Combat stone - 2759
+Combat stone - 2760
+Combat stone - 2761
+Combat stone - 2762
+Combat stone - 2763
+Combat stone - 2764
+Combat stone - 2765
+Combat stone - 2766
+Combat stone - 2767
+Combat stone - 2768
+Combat stone - 2769
+Combat stone - 2770
+Combat stone - 2771
+Combat stone - 2772
+Combat stone - 2773
+Combat stone - 2774
+Combat stone - 2775
+Combat stone - 2776
+Combat stone - 2777
+Combat stone - 2778
+Toy Soldier - 2779
+Toy Doll - 2780
+Toy Mouse - 2781
+Clockwork cat - 2782
+Hirko - 2783
+Holoy - 2784
+Hura - 2785
+Sheep - 2786
+Sheep - 2787
+Sheep - 2788
+Sheep - 2789
+Sheep - 2790
+Sheep - 2791
+Sheep - 2792
+Sheep - 2793
+Sheep - 2794
+Sheep - 2795
+Sheep - 2796
+Sheep - 2797
+Sheep - 2798
+Sheep - 2799
+Sheep - 2800
+Sheep - 2801
+Sheep - 2802
+Sheep - 2803
+Sheep - 2804
+Cow - 2805
+Cow - 2806
+Cow calf - 2807
+Cow - 2808
+Cow calf - 2809
+Cow - 2810
+Pig - 2811
+Pig - 2812
+Piglet - 2813
+Piglet - 2814
+Piglet - 2815
+Cow calf - 2816
+Sheepdog - 2817
+Rooster - 2818
+Chicken - 2819
+Chicken - 2820
+Chicken - 2821
+Pig - 2822
+Pig - 2823
+Piglet - 2824
+Piglet - 2825
+Piglet - 2826
+Bat - 2827
+Dryad - 2828
+Fairy - 2829
+Leprechaun - 2830
+Lizard man - 2831
+Orc - 2832
+Troll - 2833
+Giant bat - 2834
+Camel - 2835
+Golem - 2836
+Unicorn - 2837
+Grizzly bear - 2838
+Black bear - 2839
+Earth warrior - 2840
+Ice warrior - 2841
+Ice warrior - 2842
+Otherworldly being - 2843
+Magic axe - 2844
+Snake - 2845
+Skavid - 2846
+Yeti - 2847
+Monkey - 2848
+Black unicorn - 2849
+Mammoth - 2850
+Ice warrior - 2851
+Fly trap - 2852
+Shadow warrior - 2853
+Rat - 2854
+Rat - 2855
+Giant rat - 2856
+Giant rat - 2857
+Giant rat - 2858
+Giant rat - 2859
+Giant rat - 2860
+Giant rat - 2861
+Giant rat - 2862
+Giant rat - 2863
+Giant rat - 2864
+Dungeon rat - 2865
+Dungeon rat - 2866
+Dungeon rat - 2867
+Dark wizard - 2868
+Invrigar the Necromancer - 2869
+Dark wizard - 2870
+Mugger - 2871
+Witch - 2872
+Witch - 2873
+Black Knight - 2874
+Black Knight - 2875
+Highwayman - 2876
+Highwayman - 2877
+Chaos druid - 2878
+Pirate - 2879
+Pirate - 2880
+Pirate - 2881
+Pirate - 2882
+Thug - 2883
+Rogue - 2884
+Monk of Zamorak - 2885
+Monk of Zamorak - 2886
+Monk of Zamorak - 2887
+Tribesman - 2888
+Dark warrior - 2889
+Chaos druid warrior - 2890
+Necromancer - 2891
+Bandit - 2892
+Guard Bandit - 2893
+Barbarian guard - 2894
+Cook - 2895
+Cook - 2896
+Banker - 2897
+Banker - 2898
+Iffie - 2899
+Elsie - 2900
+Cleaner - 2901
+Stray dog - 2902
+Orange salamander - 2903
+Red salamander - 2904
+Black salamander - 2905
+Swamp lizard - 2906
+Sabre-toothed kyatt - 2907
+Spined larupia - 2908
+Horned graahk - 2909
+Chinchompa - 2910
+Carnivorous chinchompa - 2911
+Black chinchompa - 2912
+Master fisher - 2913
+Otto Godblessed - 2914
+Otto Godblessed - 2915
+Waterfiend - 2916
+Waterfiend - 2917
+Brutal green dragon - 2918
+Mithril dragon - 2919
+Confused barbarian - 2920
+Lost barbarian - 2921
+Stray dog - 2922
+Blast Furnace Foreman - 2923
+Tin ore - 2924
+Copper ore - 2925
+Iron ore - 2926
+Mithril ore - 2927
+Adamantite ore - 2928
+Runite ore - 2929
+Silver ore - 2930
+Gold ore - 2931
+Coal - 2932
+Perfect gold ore - 2933
+Nail beast - 2946
+Nail beast - 2947
+Nail beast - 2948
+Squire - 2949
+Void Knight - 2950
+Void Knight - 2951
+Void Knight - 2952
+Void Knight - 2953
+Zamorak wizard - 2954
+Saradomin wizard - 2955
+Spring Elemental - 2956
+Spring Elemental - 2957
+Spring Elemental - 2958
+Spring Elemental - 2959
+Spring Elemental - 2960
+Spring Elemental - 2961
+Spring Elemental - 2962
+Spring Elemental - 2963
+King Awowogei - 2972
+King Awowogei - 2974
+Mizaru - 2975
+Kikazaru - 2976
+Iwazaru - 2977
+Big Snake - 2978
+Mawnis Burowgar - 2980
+Honour guard - 2981
+Honour guard - 2982
+Fridleif Shieldson - 2983
+Thakkrad Sigmundson - 2984
+Velorina - 2985
+Necrovarus - 2986
+Gravingas - 2987
+Ghost disciple - 2988
+Ak-Haranu - 2989
+Undead cow - 2992
+Undead chicken - 2993
+Giant lobster - 2994
+Robin - 2995
+Old crone - 2996
+Old man - 2997
+Ghost villager - 2998
+Tortured soul - 2999
+Ghost shopkeeper - 3000
+Ghost innkeeper - 3001
+Ghost farmer - 3002
+Ghost banker - 3003
+Ghost sailor - 3004
+Ghost captain - 3005
+Ghost captain - 3006
+Ghost guard - 3007
+Ghost (?) - 3008
+Ghost (?) - 3009
+Guard - 3010
+Guard - 3011
+Trainee Guard - 3012
+Captain - 3013
+Man - 3014
+Woman - 3015
+Shadow spider - 3016
+Giant spider - 3017
+Giant spider - 3018
+Spider - 3019
+Jungle spider - 3020
+Deadly red spider - 3021
+Ice spider - 3022
+Poison spider - 3023
+Scorpion - 3024
+Poison Scorpion - 3025
+Pit Scorpion - 3026
+King Scorpion - 3027
+Goblin - 3028
+Goblin - 3029
+Goblin - 3030
+Goblin - 3031
+Goblin - 3032
+Goblin - 3033
+Goblin - 3034
+Goblin - 3035
+Goblin - 3036
+Goblin - 3037
+Goblin - 3038
+Goblin - 3039
+Goblin - 3040
+Goblin - 3041
+Goblin - 3042
+Goblin - 3043
+Goblin - 3044
+Goblin - 3045
+Goblin - 3046
+Goblin - 3047
+Goblin - 3048
+Hobgoblin - 3049
+Hobgoblin - 3050
+Goblin - 3051
+Goblin - 3052
+Goblin - 3053
+Goblin - 3054
+Barbarian - 3055
+Barbarian - 3056
+Barbarian - 3057
+Barbarian - 3058
+Barbarian - 3059
+Barbarian - 3060
+Barbarian - 3061
+Barbarian - 3062
+Hunding - 3063
+Barbarian - 3064
+Barbarian - 3065
+Barbarian - 3066
+Barbarian - 3067
+Barbarian - 3068
+Barbarian - 3069
+Barbarian - 3070
+Barbarian - 3071
+Barbarian - 3072
+Goblin - 3073
+Goblin - 3074
+Goblin - 3075
+Goblin - 3076
+Hans - 3077
+Man - 3078
+Man - 3079
+Man - 3080
+Man - 3081
+Man - 3082
+Woman - 3083
+Woman - 3084
+Woman - 3085
+Farmer - 3086
+Farmer - 3087
+Farmer - 3088
+Farmer - 3089
+Farmer - 3090
+Farmer - 3091
+Thief - 3092
+Thief - 3093
+Guard - 3094
+Tramp - 3095
+Barbarian - 3096
+Wizard - 3097
+Druid - 3098
+Hellpuppy - 3099
+Warrior woman - 3100
+Man - 3101
+Barbarian - 3102
+Paladin - 3104
+Paladin - 3105
+Hero - 3106
+Forester - 3107
+Knight of Ardougne - 3108
+Man - 3109
+Woman - 3110
+Knight of Ardougne - 3111
+Archer - 3112
+Zoo keeper - 3113
+Chuck - 3114
+Farid Morrisane (ores and bars) - 3115
+Tz-Kih - 3116
+Tz-Kih - 3117
+Tz-Kek - 3118
+Tz-Kek - 3119
+Tz-Kek - 3120
+Tok-Xil - 3121
+Tok-Xil - 3122
+Yt-MejKot - 3123
+Yt-MejKot - 3124
+Ket-Zek - 3125
+Ket-Zek - 3126
+TzTok-Jad - 3127
+Yt-HurKot - 3128
+K'ril Tsutsaroth - 3129
+Tstanon Karlak - 3130
+Zakl'n Gritch - 3131
+Balfrug Kreeyath - 3132
+Hellhound - 3133
+Imp - 3134
+Werewolf - 3135
+Werewolf - 3136
+Vampire - 3137
+Bloodveld - 3138
+Pyrefiend - 3139
+Icefiend - 3140
+Gorak - 3141
+Gnome Coach - 3142
+Gnome baller - 3143
+Gnome baller - 3144
+Gnome baller - 3145
+Gnome baller - 3146
+Gnome baller - 3147
+Gnome baller - 3148
+Gnome baller - 3149
+Gnome baller - 3150
+Gnome baller - 3151
+Gnome baller - 3152
+Gnome baller - 3153
+Gnome baller - 3154
+Gnome winger - 3155
+Gnome winger - 3156
+Gnome ball referee - 3157
+Cheerleader - 3158
+Spiritual warrior - 3159
+Spiritual ranger - 3160
+Spiritual mage - 3161
+Kree'arra - 3162
+Wingman Skree - 3163
+Flockleader Geerin - 3164
+Flight Kilisa - 3165
+Spiritual warrior - 3166
+Spiritual ranger - 3167
+Spiritual mage - 3168
+Aviansie - 3169
+Aviansie - 3170
+Aviansie - 3171
+Aviansie - 3172
+Aviansie - 3173
+Aviansie - 3174
+Aviansie - 3175
+Aviansie - 3176
+Aviansie - 3177
+Aviansie - 3178
+Aviansie - 3179
+Aviansie - 3180
+Aviansie - 3181
+Aviansie - 3182
+Aviansie - 3183
+Dagannoth spawn - 3184
+Dagannoth - 3185
+Brian O'Richard - 3189
+Rogue Guard - 3190
+Rogue Guard - 3191
+Rogue Guard - 3192
+Martin Thwait - 3193
+Emerald Benedict - 3194
+Spin Blades - 3195
+Spin Blades - 3196
+Snake - 3199
+Monkey - 3200
+Albino bat - 3201
+Crab - 3202
+Giant mosquito - 3203
+Jungle horror - 3204
+Jungle horror - 3205
+Jungle horror - 3206
+Jungle horror - 3207
+Jungle horror - 3208
+Cave horror - 3209
+Cave horror - 3210
+Cave horror - 3211
+Cave horror - 3212
+Cave horror - 3213
+Cavey Davey - 3214
+Patchy - 3215
+Melee combat tutor - 3216
+Ranged combat tutor - 3217
+Magic combat tutor - 3218
+Cooking tutor - 3219
+Crafting tutor - 3220
+Fishing tutor - 3221
+Mining tutor - 3222
+Prayer tutor - 3223
+Smithing apprentice - 3224
+Master smithing tutor - 3225
+Woodsman tutor - 3226
+Banker tutor - 3227
+Ellis - 3231
+Wizard - 3232
+Leech - 3233
+Vampire - 3234
+Spider - 3235
+Mist - 3236
+Vampire - 3237
+Vampyric hound - 3238
+Vampire - 3239
+Tree - 3240
+Blandebir - 3241
+Metarialus - 3242
+Barman - 3243
+Priest - 3244
+Guard - 3245
+Wizard Frumscone - 3246
+Magic Store owner - 3247
+Wizard Distentor - 3248
+Robe Store owner - 3249
+Door man - 3250
+Watchman - 3251
+Soldier - 3252
+Wyson the gardener - 3253
+Sigbert the Adventurer - 3254
+Shipyard worker - 3255
+Shipyard worker - 3256
+Master Farmer - 3257
+Master Farmer - 3258
+Market Guard - 3259
+Man - 3260
+Gee - 3261
+Donie - 3262
+Drunken man - 3263
+Man - 3264
+Man - 3265
+Man - 3266
+Woman - 3267
+Woman - 3268
+Guard - 3269
+Guard - 3270
+Guard - 3271
+Guard - 3272
+Guard - 3273
+Guard - 3274
+Gardener - 3275
+Gardener - 3276
+Apprentice workman - 3277
+Workman - 3278
+Cuffs - 3279
+Narf - 3280
+Rusty - 3281
+Jeff - 3282
+Guard - 3283
+Hengel - 3284
+Anja - 3285
+Hobgoblin - 3286
+Hobgoblin - 3287
+Hobgoblin - 3288
+Hobgoblin - 3289
+Frog - 3290
+Postie Pete - 3291
+Master Chef - 3305
+Survival Expert - 3306
+Combat Instructor - 3307
+RuneScape Guide - 3308
+Magic Instructor - 3309
+Financial Advisor - 3310
+Mining Instructor - 3311
+Quest Guide - 3312
+Giant rat - 3313
+Giant rat - 3314
+Giant rat - 3315
+Chicken - 3316
+Fishing spot - 3317
+Banker - 3318
+Brother Brace - 3319
+Skippy - 3320
+Larxus - 3321
+Mystery figure - 3322
+Mystery figure - 3323
+Mystery figure - 3324
+Mystery figure - 3325
+Mystery figure - 3326
+Mystery figure - 3327
+Earth Warrior Champion - 3328
+Giant Champion - 3329
+Ghoul Champion - 3330
+Mubariz - 3331
+Trees - 3332
+Trees - 3333
+Cavemouth - 3334
+Bullrush - 3335
+Bullrush - 3336
+Cave Scenery - 3337
+Cave Scenery - 3338
+Cave Scenery - 3339
+Fadli - 3340
+A'abla - 3341
+Sabreen - 3342
+Surgeon General Tafani - 3343
+Jaraah - 3344
+Zahwa - 3345
+Ima - 3346
+Sabeil - 3347
+Jadid - 3348
+Dalal - 3349
+Afrah - 3350
+Jeed - 3351
+Hamid - 3352
+Goblin Champion - 3353
+Hobgoblin Champion - 3354
+Imp Champion - 3355
+Jogre Champion - 3356
+Lesser Demon Champion - 3357
+Skeleton Champion - 3358
+Zombies Champion - 3359
+Leon d'Cour - 3360
+Dwarf - 3361
+Dwarf - 3362
+Dwarf - 3363
+Stankers - 3364
+Juan - 3369
+Elemental balance - 3370
+Elemental balance - 3371
+Elemental balance - 3372
+Elemental balance - 3373
+Elemental balance - 3374
+Elemental balance - 3375
+Elemental balance - 3376
+Elemental balance - 3377
+Elemental balance - 3378
+Elemental balance - 3379
+Elemental balance - 3380
+Elemental balance - 3381
+Elemental balance - 3382
+Elemental balance - 3383
+Elemental balance - 3384
+Elemental balance - 3385
+Elemental balance - 3386
+Elemental balance - 3387
+Osman - 3388
+Pirate Pete - 3389
+Mountain Dwarf - 3390
+General Wartface - 3391
+General Bentnoze - 3392
+Lumbridge Guide - 3393
+Evil Dave - 3394
+Sir Amik Varze - 3395
+Awowogei - 3396
+Awowogei - 3397
+Skrach Uglogwee - 3398
+Culinaromancer - 3400
+Elemental balance - 3401
+Elemental balance - 3402
+Elemental balance - 3403
+Elemental balance - 3404
+Elemental balance - 3405
+Elemental balance - 3406
+Elemental balance - 3407
+Elemental balance - 3408
+Elemental balance - 3409
+Elemental balance - 3410
+Elemental balance - 3411
+Elemental balance - 3412
+Koftik - 3413
+Idris - 3414
+Essyllt - 3415
+Morvran - 3416
+Fishing spot - 3417
+Fishing spot - 3418
+Fishing spot - 3419
+Rabbit - 3420
+Rabbit - 3421
+Rabbit - 3422
+Grizzly bear - 3423
+Grizzly bear cub - 3424
+Grizzly bear cub - 3425
+Dire Wolf - 3426
+Lord Iorwerth - 3427
+Elf warrior - 3428
+Elf warrior - 3429
+Elven city guard - 3430
+Elf warrior - 3431
+Arianwyn - 3432
+Tyras guard - 3433
+Tyras guard - 3434
+Tyras guard - 3435
+Tyras guard - 3436
+General Hining - 3437
+Quartermaster - 3438
+King's messenger - 3439
+Will o' the wisp - 3440
+Will o' the wisp - 3441
+Ali the dyer - 3442
+Lucien - 3443
+Lucien - 3444
+Guardian of Armadyl - 3445
+Guardian of Armadyl - 3446
+Winelda - 3447
+Fire Warrior of Lesarkus - 3448
+Shadow Hound - 3449
+Mysterious ghost - 3450
+Mysterious ghost - 3451
+Mysterious ghost - 3452
+Mysterious ghost - 3453
+Mysterious ghost - 3454
+Mysterious ghost - 3455
+Fareed - 3456
+Elemental balance - 3457
+Kamil - 3458
+Dessous - 3459
+Dessous - 3460
+Ruantun - 3461
+Cyrisus - 3462
+Cyrisus - 3463
+Cyrisus - 3464
+Fallen Man - 3465
+Fallen Man - 3466
+Cyrisus - 3467
+Cyrisus - 3468
+Cyrisus - 3469
+Cyrisus - 3470
+Cyrisus - 3471
+'Bird's-Eye' Jack - 3472
+The Inadequacy - 3473
+The Everlasting - 3474
+The Untouchable - 3475
+The Illusive - 3476
+A Doubt - 3477
+The Illusive - 3478
+Morgan - 3479
+Dr Harlow - 3480
+Count Draynor - 3481
+Count Draynor - 3482
+Will o' the wisp - 3483
+Monk of Zamorak - 3484
+Monk of Zamorak - 3485
+Monk of Zamorak - 3486
+Drezel - 3488
+Drezel - 3489
+Jorral - 3490
+Melina - 3491
+Melina - 3492
+Droalak - 3493
+Droalak - 3494
+Dron - 3495
+Blanin - 3496
+Gertrude's cat - 3497
+Kitten - 3498
+Crate - 3499
+Gertrude - 3500
+Shilop - 3501
+Philop - 3502
+Wilough - 3503
+Kanel - 3504
+Civilian - 3505
+Civilian - 3506
+Civilian - 3507
+Bouncer - 3508
+Bouncer - 3509
+General Khazard - 3510
+Scout - 3511
+Scout - 3512
+Scout - 3513
+Scout - 3514
+Sin Seer - 3515
+Ghost - 3516
+Renegade Knight - 3517
+Thrantax the Mighty - 3518
+Sir Lancelot - 3519
+Sir Gawain - 3520
+Sir Kay - 3521
+Sir Bedivere - 3522
+Sir Tristram - 3523
+Sir Pelleas - 3524
+Sir Lucan - 3525
+Sir Palomedes - 3526
+Sir Mordred - 3527
+Morgan Le Faye - 3528
+Merlin - 3529
+The Lady of the Lake - 3530
+King Arthur - 3531
+Beggar - 3532
+Ali Morrisane - 3533
+Drunken Ali - 3534
+Ali The barman - 3535
+Ali the Kebab seller - 3536
+Market seller - 3537
+Ali the Camel Man - 3538
+Street urchin - 3539
+Ali the Mayor - 3540
+Ali the Hag - 3541
+Ali the Snake Charmer - 3542
+Ali the Camel - 3543
+Desert snake - 3544
+Snake - 3545
+Blackjack seller - 3546
+Menaphite Leader - 3547
+Ali the Operator - 3548
+Menaphite Thug - 3549
+Menaphite Thug - 3550
+Tough Guy - 3551
+Villager - 3552
+Villager - 3553
+Villager - 3554
+Villager - 3555
+Villager - 3556
+Villager - 3557
+Villager - 3558
+Villager - 3559
+Villager - 3560
+Veronica - 3561
+Professor Oddenstein - 3562
+Ernest - 3563
+Chicken - 3564
+Skeleton - 3565
+Witch - 3566
+Pentyn - 3568
+Aristarchus - 3569
+Boneguard - 3570
+Pile of bones - 3571
+Desert Spirit - 3572
+Crust of ice - 3573
+Furnace grate - 3574
+Enakhra - 3575
+Enakhra - 3576
+Boneguard - 3577
+Akthanakos - 3578
+Akthanakos - 3579
+Lazim - 3580
+Enakhra - 3581
+Akthanakos - 3582
+Knight - 3583
+Skeleton - 3584
+Effigy - 3585
+Effigy - 3586
+Bonafido - 3587
+Homunculus - 3588
+Homunculus - 3589
+Homunculus - 3590
+Cage - 3591
+'Transmute' The Alchemist - 3592
+'Transmute' The Alchemist - 3593
+'Currency' The Alchemist - 3594
+'Currency' The Alchemist - 3595
+'Black-eye' - 3596
+'No fingers' - 3597
+'Gummy' - 3598
+'The Guns' - 3599
+Frogeel - 3600
+Unicow - 3601
+Spidine - 3602
+Swordchick - 3603
+Jubster - 3604
+Newtroost - 3605
+Brother Kojo - 3606
+Dungeon rat - 3607
+Dungeon rat - 3608
+Dungeon rat - 3609
+Mine cart - 3610
+Zealot - 3611
+Possessed pickaxe - 3612
+Iron pickaxe - 3613
+Corpse - 3614
+Skeletal miner - 3615
+Treus Dayth - 3616
+Ghost - 3617
+Loading crane - 3618
+Innocent-looking key - 3619
+Mine cart - 3620
+Mine cart - 3621
+Mine cart - 3622
+Mine cart - 3623
+Mine cart - 3624
+Ghost - 3625
+Haze - 3626
+Mischievous ghost - 3627
+Digsite workman - 3628
+Doug Deeping - 3629
+Digsite workman - 3630
+Digsite workman - 3631
+Student - 3632
+Student - 3633
+Student - 3634
+Examiner - 3635
+Examiner - 3636
+Examiner - 3637
+Researcher - 3638
+Archaeological expert - 3639
+Panning guide - 3640
+Nick - 3641
+Nisha - 3642
+Redbeard Frank - 3643
+Captain Tobias - 3644
+Seaman Lorris - 3645
+Seaman Thresnor - 3646
+Luthas - 3647
+Customs officer - 3648
+Captain Barnaby - 3649
+Gardener - 3651
+Man - 3652
+Lumberjack Leif - 3653
+Miner Magnus - 3654
+Fisherman Frodi - 3655
+Gardener Gunnhild - 3656
+Fishing spot - 3657
+Carpenter Kjallak - 3658
+Farmer Fromund - 3659
+Reacher - 3660
+Chicken - 3661
+Chicken - 3662
+Rooster - 3663
+Rabbit - 3664
+Rabbit - 3665
+Prince Brand - 3666
+Princess Astrid - 3667
+King Vargas - 3668
+Guard - 3669
+Derrik - 3671
+Farmer - 3672
+Flower Girl - 3673
+Ragnar - 3674
+Einar - 3675
+Alrik - 3676
+Thorhild - 3677
+Halla - 3678
+Yrsa - 3679
+Sailor - 3680
+Rannveig - 3681
+Thora - 3682
+Valgerd - 3683
+Skraeling - 3684
+Broddi - 3685
+Skraeling - 3686
+Ragnvald - 3687
+Fishmonger - 3688
+Greengrocer - 3689
+Juvinate guard - 3690
+Juvinate guard - 3691
+Vampyre juvenile - 3692
+Vampyre juvenile - 3693
+Vampyre juvinate - 3694
+Vampyre juvinate - 3695
+Held vampyre juvenile - 3696
+Held vampyre juvenile - 3697
+Held vampyre juvinate - 3698
+Held vampyre juvinate - 3699
+Vampyre juvinate - 3700
+Former vampyre - 3701
+Former vampyre - 3702
+Former vampyre - 3703
+Former vampyre - 3704
+Former vampyre - 3705
+Former vampyre - 3706
+Angry vampyre - 3707
+Angry vampyre - 3708
+Vyrewatch - 3709
+Vyrewatch - 3710
+Vyrewatch - 3711
+Vyrewatch - 3712
+Flying female vampire - 3713
+Flying female vampire - 3714
+Flying female vampire - 3715
+Flying female vampire - 3716
+Vyrewatch - 3717
+Vyrewatch - 3718
+Vyrewatch - 3719
+Vyrewatch - 3720
+Vyrewatch - 3721
+Vyrewatch - 3722
+Vyrewatch - 3723
+Vyrewatch - 3724
+Vyrewatch - 3725
+Vyrewatch - 3726
+Vyrewatch - 3727
+Vyrewatch - 3728
+Vyrewatch - 3729
+Vyrewatch - 3730
+Vyrewatch - 3731
+Vyrewatch - 3732
+Vanstrom Klause - 3733
+Vanstrom Klause - 3734
+Vanstrom Klause - 3735
+Vanstrom Klause - 3736
+Vanstrom Klause - 3737
+Vanstrom Klause - 3738
+Vanstrom Klause - 3739
+Vanescula Drakan - 3740
+Vanescula Drakan - 3741
+Vanescula Drakan - 3742
+Vanescula Drakan - 3743
+Ranis Drakan - 3744
+Ranis Drakan - 3745
+Ranis Drakan - 3746
+Ranis Drakan - 3747
+Vyrewatch - 3748
+Vyrewatch - 3749
+Vyrewatch - 3750
+Vyrewatch - 3751
+Vyrewatch - 3752
+Vyrewatch - 3753
+Vyrewatch - 3754
+Vyrewatch - 3755
+Vyrewatch - 3756
+Vyrewatch - 3757
+Vyrewatch - 3758
+Vyrewatch - 3759
+Vyrewatch - 3760
+Vyrewatch - 3761
+Vyrewatch - 3762
+Vyrewatch - 3763
+Flying female vampire - 3764
+Flying female vampire - 3765
+Flying female vampire - 3766
+Flying female vampire - 3767
+Vyrewatch - 3768
+Vyrewatch - 3769
+Vyrewatch - 3770
+Vyrewatch - 3771
+Old Man Ral - 3772
+Vertida Sefalatis - 3773
+Aeonisig Raispher - 3774
+Safalaan - 3775
+Sarius Guile - 3776
+Elemental balance - 3777
+Sarius Guile - 3778
+Trader Sven - 3779
+Meiyerditch citizen - 3780
+Meiyerditch citizen - 3781
+Meiyerditch citizen - 3782
+Meiyerditch citizen - 3783
+Meiyerditch citizen - 3784
+Meiyerditch citizen - 3785
+Meiyerditch citizen - 3786
+Meiyerditch citizen - 3787
+Meiyerditch citizen - 3788
+Meiyerditch citizen - 3789
+Meiyerditch citizen - 3790
+Meiyerditch citizen - 3791
+Meiyerditch citizen - 3792
+Meiyerditch citizen - 3793
+Meiyerditch citizen - 3794
+Meiyerditch citizen - 3795
+Meiyerditch citizen - 3796
+Meiyerditch citizen - 3797
+Meiyerditch citizen - 3798
+Meiyerditch citizen - 3799
+Meiyerditch citizen - 3800
+Meiyerditch citizen - 3801
+Meiyerditch citizen - 3802
+Meiyerditch citizen - 3803
+Meiyerditch citizen - 3804
+Meiyerditch citizen - 3805
+Meiyerditch citizen - 3806
+Meiyerditch citizen - 3807
+Meiyerditch citizen - 3808
+A Meiyerditch child - 3809
+A Meiyerditch child - 3810
+A Meiyerditch child - 3811
+A Meiyerditch child - 3812
+A Meiyerditch child - 3813
+A Meiyerditch child - 3814
+A Meiyerditch child - 3815
+A Meiyerditch child - 3816
+A Meiyerditch child - 3817
+A Meiyerditch child - 3818
+Meiyerditch miner - 3819
+Meiyerditch miner - 3820
+Meiyerditch miner - 3821
+Meiyerditch miner - 3822
+Meiyerditch miner - 3823
+Meiyerditch miner - 3824
+Shadowy figure - 3825
+Shadowy figure - 3826
+Shadowy figure - 3827
+Stray dog - 3829
+Stray dog - 3830
+Cat - 3831
+Cat - 3832
+Boat - 3833
+Boat - 3834
+Oneiromancer - 3835
+House - 3836
+Baba Yaga - 3837
+Pauline Polaris - 3838
+Meteora - 3839
+Melana Moonlander - 3840
+Selene - 3841
+Rimae Sirsalis - 3842
+Sirsal Banker - 3843
+Clan Guard - 3844
+Enchanted Broom - 3845
+Enchanted Broom - 3846
+Enchanted Broom - 3847
+Enchanted Bucket - 3848
+Enchanted Bucket - 3849
+Bouquet Mac Hyacinth - 3850
+Moss giant - 3851
+Moss giant - 3852
+Parrot - 3853
+Lokar Searunner - 3855
+Cabin boy - 3856
+'Beefy' Burns - 3858
+'Eagle-eye' Shultz - 3859
+First mate 'Davey-boy' - 3860
+'Birds-Eye' Jack - 3861
+'Picarron' Pete - 3862
+Jake - 3863
+Bedread the bold - 3864
+Wilson - 3865
+Tommy 2-times - 3866
+Murky Pat - 3867
+Jack Sails - 3868
+Palmer - 3869
+'Betty' B.Boppin - 3870
+'Beedy-eye' Jones - 3871
+Jenny Blade - 3872
+'Lecherous' Lee - 3873
+'Sticky' Sanders - 3874
+Jex - 3875
+Maisa - 3876
+Osman - 3877
+Osman - 3878
+Osman - 3879
+Osman - 3880
+Sophanem guard - 3881
+Sophanem guard - 3882
+Sophanem guard - 3883
+Sophanem guard - 3884
+Menaphite guard - 3885
+Coenus - 3886
+Banker - 3887
+Banker - 3888
+Stone mason - 3889
+Nathifa - 3890
+Urbi - 3891
+Jamila - 3892
+Doric - 3893
+Sigmund The Merchant - 3894
+Peer the Seer - 3895
+Thorvald the Warrior - 3896
+Koschei the deathless - 3897
+Koschei the deathless - 3898
+Koschei the deathless - 3899
+Koschei the deathless - 3900
+Fox - 3901
+Bunny - 3902
+Bunny - 3903
+Gull - 3904
+Gull - 3905
+Gull - 3906
+Gull - 3907
+Bear Cub - 3908
+Bear Cub - 3909
+Unicorn Foal - 3910
+Black unicorn Foal - 3911
+Wolf - 3912
+Fishing spot - 3913
+Fishing spot - 3914
+Fishing spot - 3915
+Bjorn - 3916
+Eldgrim - 3917
+Prince Brand - 3918
+Princess Astrid - 3919
+Manni the Reveller - 3920
+Council workman - 3921
+The Draugen - 3922
+Butterfly - 3923
+Sigli the Huntsman - 3924
+Swensen the Navigator - 3925
+Brundt the Chieftain - 3926
+Askeladden - 3927
+Guard - 3928
+Guard - 3929
+Town Guard - 3930
+Town Guard - 3931
+Thora the Barkeep - 3932
+Yrsa - 3933
+Fisherman - 3934
+Skulgrimen - 3935
+Sailor - 3936
+Agnar - 3937
+Freidir - 3938
+Borrokar - 3939
+Lanzig - 3940
+Pontak - 3941
+Freygerd - 3942
+Lensa - 3943
+Jennella - 3944
+Sassilik - 3945
+Inga - 3946
+Fish monger - 3947
+Fur trader - 3948
+Market Guard - 3949
+Warrior - 3950
+Legends guard - 3951
+Legends guard - 3952
+Radimus Erkle - 3953
+Jungle forester - 3954
+Jungle forester - 3955
+Gujuo - 3956
+Ungadulu - 3957
+Ungadulu - 3958
+Jungle savage - 3959
+Fionella - 3960
+Siegfried Erkle - 3961
+Nezikchened - 3962
+Viyeldi - 3963
+San Tojalon - 3964
+Irvig Senay - 3965
+Ranalph Devere - 3966
+Boulder - 3967
+Echned Zekin - 3968
+Zombie rat - 3969
+Zombie rat - 3970
+Zombie rat - 3971
+Skeleton - 3972
+Skeleton - 3973
+Skeleton - 3974
+Ghost - 3975
+Ghost - 3976
+Ghost - 3977
+Ghost - 3978
+Ghost - 3979
+Zombie - 3980
+Zombie - 3981
+Lesser demon - 3982
+Councillor Halgrive - 3983
+Doctor Orbon - 3984
+Farmer Brumty - 3985
+Sick-looking sheep (1) - 3986
+Sick-looking sheep (2) - 3987
+Sick-looking sheep (3) - 3988
+Sick-looking sheep (4) - 3989
+Boy - 3994
+Nora T. Hagg - 3995
+Witch's experiment - 3996
+Witch's experiment (second form) - 3997
+Witch's experiment (third form) - 3998
+Witch's experiment (fourth form) - 3999
+Mouse - 4000
+Chompy chick - 4001
+Chompy chick - 4002
+Ilfeen - 4003
+Shadow - 4004
+Dark beast - 4005
+Mourner - 4006
+Slave - 4007
+Slave - 4008
+Slave - 4009
+Thorgel - 4010
+Bill Teach - 4011
+Bill Teach - 4012
+Bill Teach - 4014
+Bill Teach - 4015
+Bill Teach - 4016
+Charley - 4017
+Smith - 4018
+Joe - 4019
+Mama - 4020
+Mama - 4021
+Mike - 4022
+Pirate - 4023
+Pirate - 4024
+Pirate - 4025
+Pirate - 4026
+Pirate - 4027
+Pirate - 4028
+Pirate - 4029
+Pirate - 4030
+Pirate - 4031
+Pirate - 4032
+Pirate - 4033
+Pirate - 4034
+Pirate - 4035
+Pirate - 4036
+Pirate - 4037
+Pirate - 4038
+Pirate - 4039
+Pirate - 4040
+Pirate - 4041
+Pirate - 4042
+Pirate - 4043
+Pirate - 4044
+Pirate - 4045
+Pirate - 4046
+Pirate - 4047
+Pirate - 4048
+Pirate - 4049
+Pirate - 4050
+Pirate - 4051
+Pirate - 4052
+Gull - 4053
+Banker - 4054
+Banker - 4055
+Grail Maiden - 4056
+Sir Percival - 4057
+King Percival - 4058
+Merlin - 4059
+Peasant - 4060
+Peasant - 4061
+High Priest - 4062
+Crone - 4063
+Galahad - 4064
+Fisherman - 4065
+The Fisher King - 4066
+Black Knight Titan - 4067
+Monk - 4068
+Bonzo - 4069
+Sinister Stranger - 4070
+Sinister Stranger - 4071
+Morris - 4072
+Big Dave - 4073
+Joshua - 4074
+Grandpa Jack - 4075
+Forester - 4076
+Austri - 4077
+Vestri - 4078
+Fishing spot - 4079
+Fishing spot - 4080
+Fishing spot - 4081
+Fishing spot - 4082
+Denulth - 4083
+Sergeant - 4084
+Sergeant - 4085
+Soldier - 4086
+Soldier - 4087
+Soldier - 4088
+Soldier - 4089
+Soldier - 4090
+Soldier - 4091
+Soldier - 4092
+Saba - 4093
+Tenzing - 4094
+Eadburg - 4095
+Archer - 4096
+Archer - 4097
+Archer - 4098
+Guard - 4099
+Guard - 4100
+Harold - 4101
+Tostig - 4102
+Eohric - 4103
+Servant - 4104
+Dunstan - 4105
+Wistan - 4106
+Breoca - 4107
+Ocga - 4108
+Penda - 4109
+Hygd - 4110
+Ceolburg - 4111
+Hild - 4112
+Bob - 4113
+White Knight - 4114
+Fareed (hard) - 4115
+Billy - 4116
+Mountain goat - 4117
+Eadgar - 4118
+Godric - 4119
+Troll general - 4120
+Troll general - 4121
+Troll general - 4122
+Troll spectator - 4123
+Troll spectator - 4124
+Troll spectator - 4125
+Troll spectator - 4126
+Troll spectator - 4127
+Troll spectator - 4128
+Troll spectator - 4129
+Dad - 4130
+Twig - 4131
+Berry - 4132
+Twig - 4133
+Berry - 4134
+Thrower troll - 4135
+Thrower troll - 4136
+Thrower troll - 4137
+Thrower troll - 4138
+Thrower troll - 4139
+Cook - 4140
+Cook - 4141
+Cook - 4142
+Mountain troll - 4143
+Mushroom - 4144
+Mountain goat - 4145
+Mountain goat - 4146
+Mountain goat - 4147
+Guard - 4148
+Guard - 4149
+Guard - 4150
+Guard - 4151
+Guard - 4152
+Guard - 4153
+Guard - 4154
+Guard - 4155
+Guard - 4156
+Burntmeat - 4157
+Rat Burgiss - 4158
+Surok Magis - 4159
+Surok Magis - 4160
+Zaff - 4161
+Anna Jones - 4162
+King Roald - 4163
+Mishkal'un Dorn - 4164
+Dakh'thoulan Aegis - 4165
+Sil'as Dahcsnu - 4166
+Outlaw - 4167
+Outlaw - 4168
+Outlaw - 4169
+Outlaw - 4170
+Outlaw - 4171
+Outlaw - 4172
+Outlaw - 4173
+Outlaw - 4174
+Outlaw - 4175
+Outlaw - 4176
+Monkey - 4177
+Bench - 4178
+Hadley - 4179
+Gerald - 4180
+Almera - 4181
+Hudon - 4182
+Golrie - 4183
+Crocodile - 4184
+Jackal - 4185
+Locust - 4186
+<col=ff9040>Oddskull</col> - 4187
+Plague frog - 4188
+Plague cow - 4189
+Plague cow - 4190
+Plague cow - 4191
+Scarab swarm - 4192
+Wanderer - 4193
+Wanderer - 4194
+Het - 4195
+Apmeken - 4196
+Scabaras - 4197
+Crondis - 4198
+Icthlarin - 4199
+Slave - 4200
+Slave - 4201
+Embalmer - 4202
+Carpenter - 4203
+Raetul - 4204
+Siamun - 4205
+High Priest - 4206
+Priest - 4207
+Priest - 4208
+Sphinx - 4209
+Possessed Priest - 4210
+Neite - 4211
+Donovan the Family Handyman - 4212
+Pierre - 4213
+Hobbes - 4214
+Louisa - 4215
+Mary - 4216
+Stanford - 4217
+Guard - 4218
+Gossip - 4219
+Anna - 4220
+Bob - 4221
+Carol - 4222
+David - 4223
+Elizabeth - 4224
+Frank - 4225
+Sinclair - 4226
+Poison Salesman - 4227
+Sinclair Guard dog - 4228
+Love Cats - 4229
+Neite - 4230
+Bob - 4231
+Beite - 4232
+Gnome - 4233
+Gnome - 4234
+Odysseus - 4235
+Neite - 4236
+Unferth - 4237
+Unferth - 4238
+Unferth - 4239
+Unferth - 4240
+Unferth - 4241
+Reldo - 4242
+Reldo - 4243
+Brother Omad - 4244
+Brother Cedric - 4245
+Monk - 4246
+Thief - 4247
+Head Thief - 4248
+Alrena - 4249
+Alrena - 4250
+Alrena - 4251
+Bravek - 4252
+Bravek - 4253
+Carla - 4254
+Clerk - 4255
+Edmond - 4256
+Elena - 4257
+Head mourner - 4258
+Mourner - 4259
+Mourner - 4260
+Mourner - 4261
+Recruiter - 4262
+Ted Rehnison - 4263
+Martha Rehnison - 4264
+Billy Rehnison - 4265
+Milli Rehnison - 4266
+Jethick - 4267
+Man - 4268
+Man - 4269
+Man - 4270
+Man - 4271
+Man - 4272
+Mourner - 4273
+Leela - 4274
+Joe - 4275
+Jail guard - 4276
+Jail guard - 4277
+Jail guard - 4278
+Jail guard - 4279
+Ned - 4280
+Lady Keli - 4281
+Prince Ali - 4282
+Prince Ali - 4283
+Aggie - 4284
+Osman - 4286
+Border Guard - 4287
+Border Guard - 4288
+Gull - 4289
+Gull - 4290
+Herman Caranos - 4291
+Franklin Caranos - 4292
+Arnold Lydspor - 4293
+Devin Mendelberg - 4294
+George Laxmeister - 4295
+Ramara du Croissant - 4296
+Kathy Corkat - 4298
+Kathy Corkat - 4299
+Elemental balance - 4301
+Elemental balance - 4302
+Kalphite Queen - 4303
+Kalphite Queen - 4304
+Drunken Dwarf - 4305
+Wise Old Man - 4306
+Wise Old Man - 4307
+Sea troll - 4308
+Sea troll - 4309
+Sea troll - 4310
+Sea troll - 4311
+Skeleton Mage - 4312
+Sea troll - 4313
+Sea Troll General - 4314
+Sea Troll Queen - 4315
+Fishing spot - 4316
+Caleb - 4317
+Skeleton Mage - 4318
+Skeleton Mage - 4319
+Morgan Le Faye - 4320
+Renegade knight - 4321
+Zanik - 4322
+Zanik - 4323
+Zanik - 4324
+Light creature - 4325
+Zanik - 4326
+HAM member - 4327
+Sigmund - 4328
+H.A.M. Deacon - 4329
+Johanhus Ulsbrecht - 4330
+Black Knight - 4331
+Guard - 4332
+Court judge - 4333
+Jury - 4334
+Guard - 4335
+Guard - 4336
+Prosecutor - 4337
+Arthur - 4340
+Sir Lucan - 4342
+Sir Palomedes - 4343
+Sir Lancelot - 4344
+Sir Bedivere - 4345
+Sir Tristram - 4346
+Sir Pelleas - 4347
+Sir Gawain - 4348
+Sir Kay - 4349
+Sir Pelleas - 4350
+Sir Gawain - 4351
+Sir Kay - 4352
+Squire - 4353
+Sir Lancelot - 4354
+Sir Kay - 4355
+Sir Gawain - 4356
+Sir Lucan - 4357
+Sir Palomedes - 4358
+Sir Tristram - 4359
+Sir Pelleas - 4360
+Sir Bedivere - 4361
+Ogre chieftain - 4362
+Ogre chieftain - 4363
+Og - 4364
+Grew - 4365
+Toban - 4366
+Gorad - 4367
+Ogre guard - 4368
+Ogre guard - 4369
+Ogre guard - 4370
+Ogre guard - 4371
+Ogre guard - 4372
+City guard - 4373
+Scared skavid - 4374
+Mad skavid - 4375
+Skavid - 4376
+Skavid - 4377
+Skavid - 4378
+Skavid - 4379
+Skavid - 4380
+Enclave guard - 4381
+Ogre shaman - 4382
+Ogre shaman - 4383
+Ogre shaman - 4384
+Blue dragon - 4385
+Ogre shaman - 4386
+Ogre shaman - 4387
+Ogre shaman - 4388
+Ogre shaman - 4389
+Ogre shaman - 4390
+Ogre shaman - 4391
+Ogre shaman - 4392
+Ogre shaman - 4393
+Ogre shaman - 4394
+Ogre shaman - 4395
+Ogre shaman - 4396
+Watchtower Wizard - 4397
+Wizard - 4398
+Wizard - 4399
+Wizard - 4400
+Ogre trader - 4401
+Ogre merchant - 4402
+Ogre trader - 4403
+Ogre trader - 4404
+Tower guard - 4405
+Colonel Radick - 4406
+Ava - 4407
+Witch - 4409
+Alice's husband - 4411
+Alice's husband - 4412
+Alice's husband - 4413
+Alice's husband - 4414
+Tree - 4416
+Undead tree - 4417
+ Sneaky undead fowl - 4419
+Cow31337Killer - 4420
+Undead cow - 4421
+Alice - 4422
+Jossik - 4423
+Jossik - 4424
+Larrissa - 4425
+Larrissa - 4426
+Vampyre Juvinate - 4427
+Vampyre Juvinate - 4428
+Vampyre Juvinate - 4429
+Vampyre Juvinate - 4430
+Vampyre Juvinate - 4431
+Held Vampyre Juvinate - 4432
+Vampyre Juvinate - 4433
+Vampyre Juvinate - 4434
+Mist - 4435
+Vampyre Juvenile - 4436
+Vampyre Juvenile - 4437
+Vampyre Juvenile - 4438
+Held Vampyre Juvenile - 4439
+Ivan Strom - 4440
+Ivan Strom - 4441
+Vampyre Juvinate - 4442
+Vampyre Juvinate - 4443
+Elisabeta - 4444
+Aurel - 4445
+Sorin - 4446
+Luscion - 4447
+Sergiu - 4448
+Radu - 4449
+Grigore - 4450
+Ileana - 4451
+Valeria - 4452
+Emilia - 4453
+Florin - 4454
+Catalina - 4455
+Ivan - 4456
+Victor - 4457
+Helena - 4458
+Teodor - 4459
+Marius - 4460
+Gabriela - 4461
+Vladimir - 4462
+Calin - 4463
+Mihail - 4464
+Nicoleta - 4465
+Simona - 4466
+Vasile - 4467
+Razvan - 4468
+Luminata - 4469
+Cornelius - 4470
+Cornelius - 4471
+Benjamin - 4472
+Liam - 4473
+Miala - 4474
+Verak - 4475
+Fishing spot - 4476
+Fishing spot - 4477
+Sorin - 4478
+Wiskit - 4480
+Vampyre Juvinate - 4481
+Vampyre Juvinate - 4482
+Gadderanks - 4483
+Gadderanks - 4484
+Gadderanks - 4485
+Vampyre Juvinate - 4486
+Vampyre Juvinate - 4487
+Olaf Hradson - 4488
+Volf Olafson - 4489
+Ingrid Hradson - 4490
+Skeleton fremennik - 4491
+Skeleton fremennik - 4492
+Skeleton fremennik - 4493
+Skeleton fremennik - 4494
+Skeleton fremennik - 4495
+Skeleton fremennik - 4496
+Skeleton fremennik - 4497
+Skeleton fremennik - 4498
+Skeleton fremennik - 4499
+Ulfric - 4500
+Brine rat - 4501
+Boulder - 4502
+Boulder - 4503
+Giant bat - 4504
+Ulfric - 4505
+Zanik - 4506
+Zanik - 4508
+Zanik - 4509
+Zanik - 4510
+Zanik - 4511
+Dwarf - 4512
+H.A.M. Member - 4513
+H.A.M. Member - 4514
+Guard - 4516
+Guard - 4517
+Guard - 4518
+Guard - 4519
+Guard - 4520
+Guard - 4521
+Guard - 4522
+Guard - 4523
+Guard - 4524
+Guard - 4525
+Guard - 4526
+Chadwell - 4527
+Koftik - 4528
+Koftik - 4529
+Koftik - 4530
+Koftik - 4531
+Koftik - 4532
+Blessed spider - 4533
+Blessed giant rat - 4534
+Blessed giant rat - 4535
+Slave - 4536
+Slave - 4537
+Slave - 4538
+Slave - 4539
+Slave - 4540
+Slave - 4541
+Slave - 4542
+Boulder - 4543
+Unicorn - 4544
+Sir Jerro - 4545
+Sir Carl - 4546
+Sir Harry - 4547
+Half-soulless - 4548
+Kardia - 4549
+Witch's cat - 4550
+Niloof - 4551
+Klank - 4552
+Kamen - 4553
+Kalrag - 4554
+Othainian - 4555
+Doomion - 4556
+Holthion - 4557
+Dark mage - 4558
+Disciple of Iban - 4559
+Lord Iban - 4560
+Spider - 4561
+Giant bat - 4562
+Monk - 4563
+Dead Monk - 4564
+High Priest - 4565
+Monk - 4566
+Monk - 4567
+Assassin - 4568
+Red Axe Henchman - 4569
+Red Axe Henchman - 4570
+Ogre shaman - 4571
+The Beast - 4572
+Bellemorde - 4573
+Pox - 4574
+Pox - 4575
+Bones - 4576
+Ceril Carnillean - 4577
+Councillor Halgrive - 4578
+Spice seller - 4579
+Fur trader - 4580
+Gem merchant - 4581
+Silver merchant - 4582
+Silk merchant - 4583
+Zenesha - 4584
+Ali Morrisane - 4585
+Grimesquit - 4586
+Phingspet - 4587
+Hooknosed Jack - 4588
+Jimmy Dazzler - 4589
+The Face - 4590
+Felkrash - 4591
+Smokin' Joe - 4592
+Rat - 4593
+Rat - 4594
+King rat - 4595
+Turbogroomer - 4596
+Pusskins - 4597
+Loki - 4598
+Captain Tom - 4599
+Treacle - 4600
+Mittens - 4601
+Claude - 4602
+Topsy - 4603
+Rauborn - 4604
+Vaeringk - 4605
+Oxi - 4606
+Fior - 4607
+Sagira - 4608
+Anleif - 4609
+Rat - 4610
+Rat - 4611
+Rat - 4612
+Rat - 4613
+Rat - 4614
+Rat - 4615
+Rat - 4616
+Rat - 4617
+Rat - 4618
+Hetty - 4619
+Elemental balance - 4620
+Elemental balance - 4621
+Elemental balance - 4622
+Elemental balance - 4623
+Elemental balance - 4624
+Trufitus - 4625
+Cook - 4626
+Millie Miller - 4627
+Gillie Groats - 4628
+Ana - 4629
+Ana - 4630
+Female slave - 4631
+Male slave - 4632
+Escaping slave - 4633
+Rowdy slave - 4634
+Mercenary Captain - 4635
+Captain Siad - 4636
+Al Shabim - 4637
+Bedabin Nomad - 4638
+Bedabin Nomad Guard - 4639
+Irena - 4640
+Irena - 4641
+Shantay - 4642
+Shantay Guard - 4643
+Oaknock the Engineer - 4644
+Glouphrie the Untrusted - 4645
+King Healthorg - 4646
+Hazelmere - 4647
+Shantay Guard - 4648
+Desert Wolf - 4649
+Desert Wolf - 4650
+Desert Wolf - 4651
+Ugthanki - 4652
+Mine cart driver - 4653
+Rowdy Guard - 4654
+Bedabin Nomad Fighter - 4655
+Mercenary - 4656
+Mercenary - 4657
+Mercenary - 4658
+Mercenary - 4659
+Guard - 4660
+Guard - 4661
+Guard - 4662
+Guard - 4663
+Guard - 4664
+Guard - 4665
+Guard - 4666
+Guard - 4667
+Guard - 4668
+Guard - 4669
+Male slave - 4670
+Male slave - 4671
+Female slave - 4672
+Female slave - 4673
+Cart Camel - 4674
+Mine Cart - 4675
+Mine Cart - 4676
+Ana - 4677
+Mercenary - 4678
+Sir Spishyus - 4679
+Lady Table - 4680
+Sir Kuam Ferentse - 4681
+Sir Leye - 4682
+Sir Tinley - 4683
+Sir Ren Itchood - 4684
+Miss Cheevers - 4685
+Ms. Hynn Terprett - 4686
+Sir Tiffy Cashien - 4687
+Angry unicorn - 4688
+Angry giant rat - 4689
+Angry giant rat - 4690
+Angry goblin - 4691
+Angry bear - 4692
+Fear reaper - 4693
+Confusion beast - 4694
+Hopeless creature - 4695
+Hopeless beast - 4696
+Hopeless beast - 4697
+Timfraku - 4698
+Tiadeche - 4699
+Tiadeche - 4700
+Tinsay - 4701
+Tinsay - 4702
+Tamayu - 4703
+Tamayu - 4704
+Tamayu - 4705
+Tamayu - 4706
+Lubufu - 4707
+The Shaikahan - 4708
+The Shaikahan - 4709
+Fishing spot - 4710
+Fishing spot - 4711
+Fishing spot - 4712
+Fishing spot - 4713
+Fishing spot - 4714
+Auguste - 4715
+Auguste - 4716
+Auguste - 4717
+Auguste - 4718
+Assistant Serf - 4719
+Assistant Brock - 4720
+Assistant Marrow - 4721
+Assistant Le Smith - 4722
+Assistant Stan - 4723
+Bob - 4724
+Curly - 4725
+Moe - 4726
+Larry - 4727
+Thurgo - 4733
+Gull - 4734
+Gull - 4735
+Sir Vyvin - 4736
+Squire - 4737
+Genie - 4738
+Nirrie - 4739
+Tirrie - 4740
+Hallak - 4741
+Black golem - 4742
+White golem - 4743
+Grey golem - 4744
+Ghaslor the Elder - 4745
+Ali the Carter - 4746
+Usi - 4747
+Nkuku - 4748
+Garai - 4749
+Habibah - 4750
+Meskhenet - 4751
+Zahra - 4752
+Zahur - 4753
+Seddu - 4754
+Kazemde - 4755
+Awusah the Mayor - 4756
+Tarik - 4757
+Poltenip - 4758
+Radat - 4759
+Shiratti the Custodian - 4760
+Rokuh - 4761
+Nardah Banker - 4762
+Target - 4763
+Target - 4764
+Tegid - 4766
+Thistle - 4767
+Parrots - 4768
+Parroty Pete - 4769
+Fake Man - 4770
+Sir Amik Varze - 4771
+Fortress Guard - 4772
+Fortress Guard - 4773
+Fortress Guard - 4774
+Fortress Guard - 4775
+Fortress Guard - 4776
+Black Knight Captain - 4777
+Witch - 4778
+Greldo - 4779
+Black Cat - 4780
+Col. O'Niall - 4781
+Col. O'Niall - 4782
+Mayor Hobb - 4783
+Mayor Hobb - 4784
+Brother Maledict - 4787
+Brother Maledict - 4788
+Ezekial Lovecraft - 4789
+Witchaven villager - 4790
+Witchaven villager - 4791
+Witchaven villager - 4792
+Witchaven villager - 4793
+Witchaven villager - 4794
+Witchaven villager - 4795
+Mother Mallum - 4796
+Slug Prince - 4797
+Slug Prince - 4798
+Giant lobster - 4799
+Giant Lobster - 4800
+Sea slug - 4801
+Jeb - 4802
+Jeb - 4803
+Sir Tinley - 4804
+Hobgoblin - 4805
+Evil Dave - 4806
+Evil Dave - 4807
+Doris - 4808
+Hell-Rat - 4809
+An old Dwarf - 4810
+Rohak - 4811
+Rohak - 4812
+Icefiend - 4813
+Pirate Pete - 4814
+Pirate Pete - 4816
+Mogre Guard - 4817
+Nung - 4818
+Crab - 4819
+Mudskipper - 4820
+Mudskipper - 4821
+Crab - 4822
+Fish - 4823
+Fish - 4824
+Fish - 4825
+Fish - 4826
+Fish - 4827
+Fish - 4828
+Fish - 4829
+Fish - 4830
+Fish - 4831
+Fish - 4832
+Fish - 4833
+Fish - 4834
+Fish - 4835
+Fish - 4836
+Fish - 4837
+Fish - 4838
+Fish - 4839
+Fish - 4840
+Fish - 4841
+Fish - 4842
+Fish - 4843
+Fish - 4844
+Fish - 4845
+Fish - 4846
+Gypsy - 4847
+Gypsy - 4848
+Culinaromancer - 4849
+Goblin Cook - 4850
+Goblin Cook - 4851
+Goblin Cook - 4852
+Skrach Uglogwee - 4853
+Skrach Uglogwee - 4854
+Rantz - 4855
+Rantz - 4856
+Rantz - 4857
+Ogre boat - 4858
+Ogre boat - 4859
+Balloon Toad - 4860
+Balloon Toad - 4861
+Balloon Toad - 4862
+Jubbly bird - 4863
+Jubbly bird - 4864
+Elemental balance - 4865
+Elemental balance - 4866
+Elemental balance - 4867
+Elemental balance - 4868
+Elemental balance - 4869
+Elemental balance - 4870
+Elemental balance - 4871
+Culinaromancer - 4872
+Culinaromancer - 4873
+Culinaromancer - 4874
+Culinaromancer - 4875
+Culinaromancer - 4876
+Culinaromancer - 4877
+Culinaromancer - 4878
+Culinaromancer - 4879
+Agrith-Na-Na - 4880
+Flambeed - 4881
+Karamel - 4882
+Dessourt - 4883
+Gelatinnoth Mother - 4884
+Gelatinnoth Mother - 4885
+Gelatinnoth Mother - 4886
+Gelatinnoth Mother - 4887
+Gelatinnoth Mother - 4888
+Gelatinnoth Mother - 4889
+Dondakan the Dwarf - 4890
+Dondakan the Dwarf - 4891
+Dondakan the Dwarf - 4892
+Dwarven Engineer - 4893
+Rolad - 4894
+Khorvak, a dwarven engineer - 4895
+Dwarven Ferryman - 4896
+Dwarven Ferryman - 4897
+Dwarven Boatman - 4898
+Miodvetnir - 4899
+Dernu - 4900
+Derni - 4901
+Goblin - 4902
+Goblin - 4903
+Goblin - 4904
+Goblin - 4905
+Goblin - 4906
+Gnome soldier - 4907
+Gnome soldier - 4908
+Gnome soldier - 4909
+Gnome soldier - 4910
+Gnome soldier - 4911
+Healthorg and tortoise - 4912
+Brimstail - 4913
+Brimstail - 4914
+Garv - 4915
+Grubor - 4916
+Trobert - 4917
+Seth - 4918
+Grip - 4919
+Alfonse the waiter - 4920
+Charlie the cook - 4921
+Ice Queen - 4922
+Achietties - 4923
+Helemos - 4924
+Velrak the explorer - 4925
+Pirate Guard - 4926
+Entrana firebird - 4927
+Fishing spot - 4928
+Lord Daquarius - 4929
+Solus Dellagar - 4930
+Savant - 4931
+Lord Daquarius - 4932
+Solus Dellagar - 4933
+Black Knight - 4934
+Lord Daquarius - 4935
+Mage of Zamorak - 4936
+Mage of Zamorak - 4937
+Mage of Zamorak - 4938
+Woman - 4958
+Black Knight - 4959
+Black Knight - 4960
+Ranger - 4961
+Solus Dellagar - 4962
+King Bolren - 4963
+Commander Montai - 4964
+Bolkoy - 4965
+Remsai - 4966
+Elkoy - 4967
+Elkoy - 4968
+Khazard trooper - 4969
+Khazard trooper - 4970
+Khazard warlord - 4971
+Khazard commander - 4972
+Gnome troop - 4973
+Gnome troop - 4974
+Tracker gnome 1 - 4975
+Tracker gnome 2 - 4976
+Tracker gnome 3 - 4977
+Local Gnome - 4978
+Local Gnome - 4979
+Kalron - 4980
+Spirit tree - 4981
+Spirit tree - 4982
+Dimintheis - 4984
+Boot - 4985
+Chronozon - 4987
+Elemental balance - 4989
+Elemental balance - 4990
+Elemental balance - 4991
+Elemental balance - 4992
+Elemental balance - 4993
+Elemental balance - 4994
+Elemental balance - 4995
+Elemental balance - 4996
+Elemental balance - 4997
+Elemental balance - 4998
+Elemental balance - 4999
+Elemental balance - 5000
+Elemental balance - 5001
+Elemental balance - 5002
+Elemental balance - 5003
+Elemental balance - 5004
+Wizard Mizgog - 5005
+Wizard Grayzag - 5006
+Imp - 5007
+Imp - 5008
+Elemental balance - 5009
+Elemental balance - 5010
+Elemental balance - 5011
+Elemental balance - 5012
+Elemental balance - 5013
+Elemental balance - 5014
+Elemental balance - 5015
+Elemental balance - 5016
+Elemental balance - 5017
+Elemental balance - 5018
+Elemental balance - 5019
+Elemental balance - 5020
+Elemental balance - 5021
+Combat stone - 5022
+Combat stone - 5023
+Combat stone - 5024
+Combat stone - 5025
+Combat stone - 5026
+Combat stone - 5027
+Combat stone - 5028
+Combat stone - 5029
+Combat stone - 5030
+Combat stone - 5031
+Combat stone - 5032
+Combat stone - 5033
+Sedridor - 5034
+Juliet - 5035
+Apothecary - 5036
+Romeo - 5037
+Father Lawrence - 5038
+Draul Leptoc - 5039
+Phillipa - 5040
+Martina Scorsby - 5041
+Jeremy Clerksin - 5042
+Suit of armour - 5043
+Sanfew - 5044
+Kaqemeex - 5045
+Cyreg Paddlehorn - 5046
+Curpile Fyod - 5047
+Veliaf Hurtz - 5048
+Sani Piliu - 5049
+Harold Evans - 5050
+Radigad Ponfit - 5051
+Polmafi Ferdygris - 5052
+Ivan Strom - 5053
+Skeleton Hellhound - 5054
+Stranger - 5055
+Vanstrom Klause - 5056
+Mist - 5057
+Vanstrom Klause - 5058
+Vanstrom Klause - 5059
+Vanstrom Klause - 5060
+Sea slug - 5061
+Kennith - 5062
+Kennith - 5063
+Bailey - 5066
+Caroline - 5067
+Holgart - 5068
+Holgart - 5069
+Holgart - 5070
+Holgart - 5071
+Holgart - 5072
+Holgart - 5073
+Kent - 5074
+Fisherman - 5075
+Fisherman - 5076
+Fisherman - 5077
+Fisherman - 5078
+Delrith - 5079
+Weakened Delrith - 5080
+Traiborn - 5081
+Gypsy Aris - 5082
+Sir Prysin - 5083
+Sir Prysin - 5084
+Captain Rovin - 5085
+Dark wizard - 5086
+Dark wizard - 5087
+Dark wizard - 5088
+Dark wizard - 5089
+Denath - 5090
+Denath - 5091
+Wally - 5092
+Combat stone - 5093
+Combat stone - 5094
+Combat stone - 5095
+Combat stone - 5096
+Combat stone - 5097
+Combat stone - 5098
+Combat stone - 5099
+Combat stone - 5100
+Combat stone - 5101
+Combat stone - 5102
+Combat stone - 5103
+Combat stone - 5104
+Combat stone - 5105
+Combat stone - 5106
+Combat stone - 5107
+Combat stone - 5108
+Combat stone - 5109
+Combat stone - 5110
+Combat stone - 5111
+Combat stone - 5112
+Combat stone - 5113
+Combat stone - 5114
+Combat stone - 5115
+Combat stone - 5116
+Combat stone - 5117
+Sylas - 5118
+Grimgnash - 5119
+Rupert the Beard - 5120
+Rupert the Beard - 5121
+Drain pipe - 5122
+Rupert the Beard - 5123
+Rupert the Beard - 5124
+Miazrqa - 5125
+Experiment No.2 - 5126
+Mouse - 5127
+Mouse - 5128
+Glod - 5129
+Gnome - 5130
+Winkin - 5131
+Gnome - 5132
+Cage - 5133
+Broken clay golem - 5134
+Damaged clay golem - 5135
+Clay golem - 5136
+Desert Phoenix - 5137
+Elissa - 5138
+Sigmund - 5139
+Zanik - 5140
+Guard - 5141
+Sigmund - 5142
+Sigmund - 5143
+Sigmund - 5144
+Sigmund - 5145
+Sigmund - 5146
+Zanik - 5147
+Zanik - 5148
+General Bentnoze - 5149
+General Wartface - 5150
+Grubfoot - 5151
+Goblin - 5152
+Goblin - 5153
+Goblin - 5154
+Zanik - 5155
+Ur-tag - 5156
+H.A.M. Archer - 5157
+H.A.M. Mage - 5158
+Zanik - 5159
+Sigmund and Zanik - 5160
+Sergeant Mossfists - 5161
+Sergeant Slimetoes - 5162
+Cave goblin - 5163
+Cave goblin - 5164
+Cave goblin - 5165
+Cave goblin - 5166
+Cave goblin - 5167
+Cave goblin - 5168
+Ticket goblin - 5169
+Dwarf - 5170
+Dwarf - 5171
+Dwarf - 5172
+Dwarf - 5173
+Dwarf - 5174
+Dwarf - 5175
+Ticket dwarf - 5176
+Ambassador Alvijar - 5177
+Builder - 5178
+Builder - 5179
+Builder - 5180
+Builder - 5181
+Tegdak - 5182
+Zanik - 5184
+Guard - 5185
+Guard - 5186
+Guard - 5187
+Guard - 5188
+Guard - 5189
+Lollk - 5190
+Captain Lawgof - 5191
+Goblin - 5192
+Goblin - 5193
+Baby dragon - 5194
+Goblin - 5195
+Goblin - 5196
+Goblin - 5197
+Goblin - 5198
+Goblin - 5199
+Goblin - 5200
+Goblin - 5201
+Goblin - 5202
+Goblin - 5203
+Goblin - 5204
+Goblin - 5205
+Goblin - 5206
+Goblin - 5207
+Goblin - 5208
+Charlie the Tramp - 5209
+Katrine - 5210
+Weaponsmaster - 5211
+Straven - 5212
+Jonny the beard - 5213
+Curator Haig Halen - 5214
+King Roald - 5215
+Benny - 5216
+Thief - 5217
+Thief - 5218
+Thief - 5219
+Thief - 5220
+Jig cart - 5221
+Jig cart - 5222
+Jig cart - 5223
+Jig cart - 5224
+Jig cart - 5225
+Jig cart - 5226
+Barbarian guard - 5227
+Kharid Scorpion - 5228
+Kharid Scorpion - 5229
+Kharid Scorpion - 5230
+Seer - 5231
+Thormac - 5232
+Fishing spot - 5233
+Fishing spot - 5234
+Monkey minder - 5235
+Skeleton - 5237
+Spider - 5238
+Spider - 5239
+Bird - 5240
+Bird - 5241
+Scorpion - 5242
+Jungle spider - 5243
+Snake - 5244
+Dugopul - 5245
+Salenab - 5246
+Trefaji - 5247
+Aberab - 5248
+Solihib - 5249
+Daga - 5250
+Tutab - 5251
+Ifaba - 5252
+Hamab - 5253
+Hafuba - 5254
+Denadu - 5255
+Lofu - 5256
+Kruk - 5257
+Duke - 5258
+Oipuis - 5259
+Uyoro - 5260
+Ouhai - 5261
+Uodai - 5262
+Padulah - 5263
+Awowogei - 5264
+Uwogo - 5265
+Muruwoi - 5266
+Sleeping Monkey - 5267
+Monkey Child - 5268
+The Monkey's Uncle - 5269
+The Monkey's Aunt - 5270
+Monkey Guard - 5271
+Monkey Archer - 5272
+Monkey Archer - 5273
+Monkey Archer - 5274
+Monkey Guard - 5275
+Monkey Guard - 5276
+Elder Guard - 5277
+Elder Guard - 5278
+Monkey - 5279
+Monkey - 5280
+Monkey Zombie - 5281
+Monkey Zombie - 5282
+Monkey Zombie - 5283
+Bonzara - 5284
+Mourner - 5285
+Mourner - 5286
+Mourner - 5287
+Embalmer - 5288
+Carpenter - 5289
+Linen worker - 5290
+Priest - 5291
+Arianwyn - 5292
+Elf warrior - 5293
+Elf warrior - 5294
+Elf warrior - 5295
+Elf warrior - 5296
+Goreu - 5297
+Ysgawyn - 5298
+Arvel - 5299
+Mawrth - 5300
+Kelyn - 5301
+Eoin - 5302
+Iona - 5303
+Eluned - 5304
+Sick-looking sheep (1) - 5305
+Sick-looking sheep (2) - 5306
+Sick-looking sheep (3) - 5307
+Sick-looking sheep (4) - 5308
+Gnome - 5309
+Head mourner - 5310
+Mourner - 5311
+Mourner - 5312
+RPDT employee - 5313
+Wizard Cromperty - 5314
+Horacio - 5315
+Kangai Mau - 5316
+Eagle - 5317
+Eagle - 5318
+Eagle - 5319
+Eagle - 5320
+Combat stone - 5321
+Sigmund - 5322
+Sigmund - 5323
+Ur-tag - 5326
+Duke Horacio - 5327
+Mistag - 5328
+Sigmund - 5329
+Cave goblin miner - 5330
+Cave goblin miner - 5331
+Cave goblin miner - 5332
+Cave goblin miner - 5333
+Cave goblin guard - 5334
+Cave goblin guard - 5335
+Cave goblin miner - 5336
+Cave goblin miner - 5337
+Cave goblin miner - 5338
+Cave goblin miner - 5339
+Mosol Rei - 5340
+Spirit of Zadimus - 5341
+Undead one - 5342
+Undead one - 5343
+Undead one - 5344
+Undead one - 5345
+Undead one - 5346
+Undead one - 5347
+Undead one - 5348
+Undead one - 5349
+Undead one - 5350
+Undead one - 5351
+Rashiliyia - 5352
+Nazastarool - 5353
+Nazastarool - 5354
+Nazastarool - 5355
+Hajedy - 5356
+Vigroy - 5357
+Kaleb Paramaya - 5358
+Yohnus - 5359
+Seravel - 5360
+Yanni Salika - 5361
+Obli - 5362
+Fernahei - 5363
+Captain Shanks - 5364
+Observatory assistant - 5365
+Observatory professor - 5366
+Observatory professor - 5367
+Sleeping guard - 5368
+Goblin guard - 5369
+Ghost - 5370
+Spirit of Scorpius - 5371
+Grave scorpion - 5372
+Poison spider - 5373
+Naghead - 5374
+Wagchin - 5375
+Goblin - 5376
+Goblin - 5377
+Greasycheeks - 5378
+Smellytoes - 5379
+Creakyknees - 5380
+Clothears - 5381
+Guard Captain - 5383
+Sandy - 5384
+Sandy - 5385
+Mazion - 5386
+Blaec - 5387
+Reeso - 5388
+Combat stone - 5389
+Combat stone - 5390
+Combat stone - 5391
+Combat stone - 5392
+Combat stone - 5393
+Combat stone - 5394
+Combat stone - 5395
+Combat stone - 5396
+Combat stone - 5397
+Combat stone - 5398
+Combat stone - 5399
+Combat stone - 5400
+Combat stone - 5401
+Combat stone - 5402
+Combat stone - 5403
+Combat stone - 5404
+Combat stone - 5405
+Combat stone - 5406
+Combat stone - 5407
+Combat stone - 5408
+Combat stone - 5409
+Combat stone - 5410
+Combat stone - 5412
+Combat stone - 5413
+Combat stone - 5414
+Combat stone - 5415
+Combat stone - 5416
+Chief servant - 5417
+Taxidermist - 5418
+Estate agent - 5419
+Stonemason - 5420
+Sir Renitee - 5421
+Sawmill operator - 5422
+Garden supplier - 5423
+Capt' Arnav - 5426
+Flippa - 5427
+Tilt - 5428
+Frog - 5429
+Frog - 5430
+Frog - 5431
+Frog - 5432
+Caleb - 5433
+Frog prince - 5434
+Frog princess - 5435
+Niles - 5436
+Miles - 5437
+Giles - 5438
+Niles - 5439
+Miles - 5440
+Giles - 5441
+Security Guard - 5442
+Johnathon - 5443
+Cap'n Hand - 5444
+Johnathon - 5445
+Advisor Ghrim - 5447
+Advisor Ghrim - 5448
+Bob Barter (herbs) - 5449
+Murky Matt (runes) - 5450
+Relobo Blinyo (logs) - 5451
+Hofuthand (weapons and armour) - 5452
+Banker - 5453
+Banker - 5454
+Banker - 5455
+Banker - 5456
+Druid - 5457
+Suspect - 5458
+Suspect - 5459
+Suspect - 5460
+Suspect - 5461
+Suspect - 5462
+Suspect - 5463
+Molly - 5464
+Suspect - 5465
+Suspect - 5466
+Molly - 5467
+Suspect - 5468
+Suspect - 5469
+Suspect - 5470
+Molly - 5471
+Suspect - 5472
+Suspect - 5473
+Molly - 5474
+Suspect - 5475
+Molly - 5476
+Suspect - 5477
+Molly - 5478
+Suspect - 5479
+Molly - 5480
+Suspect - 5481
+Suspect - 5482
+Suspect - 5483
+Suspect - 5484
+Molly - 5485
+Molly - 5486
+Molly - 5487
+Balloon Animal - 5488
+Balloon Animal - 5489
+Balloon Animal - 5491
+Balloon Animal - 5492
+Balloon Animal - 5493
+Pheasant - 5500
+Pheasant - 5502
+Dunce - 5503
+Mr. Mordaut - 5504
+Giant - 5505
+Mummy - 5506
+Zombie - 5507
+Goblin - 5508
+Goblin - 5509
+Sandwich lady - 5510
+Guard Recruiter - 5511
+Gardener - 5512
+Elite Void Knight - 5513
+Lesser Fanatic - 5514
+Luna - 5515
+TzHaar-Mej - 5516
+The 'Wedge' - 5517
+Elder Gnome child - 5518
+Two-pints - 5519
+Jarr - 5520
+Le-sabrè - 5521
+Flax keeper - 5522
+Hatius Cosaintus - 5523
+Sir Rebral - 5524
+Toby - 5525
+Thorodin - 5526
+Twiggy O'Korn - 5527
+Squirrel - 5528
+Hunting expert - 5529
+Spotted kebbit - 5531
+Dark kebbit - 5532
+Dashing kebbit - 5533
+Whirlpool - 5534
+Enormous Tentacle - 5535
+Vet'ion Jr. - 5536
+Vet'ion Jr. - 5537
+Egg - 5538
+Egg - 5539
+Egg - 5540
+Egg - 5541
+Egg - 5542
+Egg - 5543
+Jack - 5544
+Jill - 5545
+Jeff - 5546
+Scorpia's offspring - 5547
+Tropical wagtail - 5548
+Crimson swift - 5549
+Cerulean twitch - 5550
+Golden warbler - 5551
+Copper longtail - 5552
+Black warlock - 5553
+Snowy knight - 5554
+Sapphire glacialis - 5555
+Ruby harvest - 5556
+Venenatis spiderling - 5557
+Callisto cub - 5558
+Vet'ion Jr. - 5559
+Vet'ion Jr. - 5560
+Scorpia's offspring - 5561
+Mercy - 5562
+Angry barbarian spirit - 5563
+Enraged barbarian spirit - 5564
+Berserk barbarian spirit - 5565
+Ferocious barbarian spirit - 5566
+Death - 5567
+Zombie - 5568
+Most of a Zombie - 5569
+Most of a Zombie - 5570
+Zombie - 5571
+Most of a Zombie - 5572
+Zombie Head - 5573
+Zombie - 5574
+Half-Zombie - 5575
+Other Half-Zombie - 5576
+Child - 5577
+Child - 5578
+Child - 5579
+Child - 5580
+Child - 5581
+Child - 5582
+Zombie - 5583
+Wily cat - 5584
+Wily cat - 5585
+Wily cat - 5586
+Wily cat - 5587
+Wily cat - 5588
+Wily cat - 5589
+Wily hellcat - 5590
+Kitten - 5591
+Kitten - 5592
+Kitten - 5593
+Kitten - 5594
+Kitten - 5595
+Kitten - 5596
+Hell-kitten - 5597
+Overgrown cat - 5598
+Overgrown cat - 5599
+Overgrown cat - 5600
+Overgrown cat - 5601
+Overgrown cat - 5602
+Overgrown cat - 5603
+Overgrown hellcat - 5604
+Peaceful barbarian spirit - 5605
+Miner - 5606
+Murphy - 5607
+Murphy - 5608
+Murphy - 5609
+Murphy - 5610
+Shark - 5611
+Shark - 5612
+Sam - 5613
+Rachael - 5614
+Swamp snake - 5615
+Swamp snake - 5616
+Swamp snake - 5617
+Swamp snake - 5618
+Dead swamp snake - 5619
+Dead swamp snake - 5620
+Dead swamp snake - 5621
+Ghast - 5622
+Ghast - 5623
+Ghast - 5624
+Ghast - 5625
+Ghast - 5626
+Ghast - 5627
+Giant snail - 5628
+Giant snail - 5629
+Giant snail - 5630
+Riyl shadow - 5631
+Asyn shadow - 5632
+Shade - 5633
+Juvinate - 5634
+Juvinate - 5635
+Juvinate - 5636
+Held vampyre juvinate - 5637
+Held vampyre juvinate - 5638
+Held vampyre juvinate - 5639
+Angry juvinate - 5640
+Angry juvinate - 5641
+Angry juvinate - 5642
+Tentacle - 5643
+Head - 5644
+Head - 5645
+Tentacle - 5646
+Zombie - 5647
+Undead Lumberjack - 5648
+Undead Lumberjack - 5649
+Undead Lumberjack - 5650
+Undead Lumberjack - 5651
+Undead Lumberjack - 5652
+Undead Lumberjack - 5653
+Undead Lumberjack - 5654
+Undead Lumberjack - 5655
+Undead Lumberjack - 5656
+Undead Lumberjack - 5657
+Undead Lumberjack - 5658
+Undead Lumberjack - 5659
+Undead Lumberjack - 5660
+Undead Lumberjack - 5661
+Undead Lumberjack - 5662
+Undead Lumberjack - 5663
+Undead Lumberjack - 5665
+Undead Lumberjack - 5666
+Undead Lumberjack - 5667
+Undead Lumberjack - 5668
+Undead Lumberjack - 5669
+Undead Lumberjack - 5670
+Undead Lumberjack - 5671
+Undead Lumberjack - 5672
+Undead Lumberjack - 5673
+Undead Lumberjack - 5674
+Undead Lumberjack - 5675
+Undead Lumberjack - 5676
+Undead Lumberjack - 5677
+Undead Lumberjack - 5678
+Undead Lumberjack - 5679
+Undead Lumberjack - 5680
+Undead Lumberjack - 5681
+Undead Lumberjack - 5682
+Undead Lumberjack - 5683
+Undead Lumberjack - 5684
+Undead Lumberjack - 5685
+Undead Lumberjack - 5686
+Undead Lumberjack - 5687
+Undead Lumberjack - 5688
+Undead Lumberjack - 5689
+Undead Lumberjack - 5690
+Undead Lumberjack - 5691
+Undead Lumberjack - 5692
+Undead Lumberjack - 5693
+Undead Lumberjack - 5694
+Undead Lumberjack - 5695
+Undead Lumberjack - 5696
+Undead Lumberjack - 5697
+Undead Lumberjack - 5698
+Undead Lumberjack - 5699
+Undead Lumberjack - 5700
+Undead Lumberjack - 5701
+Undead Lumberjack - 5702
+Undead Lumberjack - 5703
+Undead Lumberjack - 5704
+Undead Lumberjack - 5705
+Undead Lumberjack - 5706
+Undead Lumberjack - 5707
+Undead Lumberjack - 5708
+Undead Lumberjack - 5709
+Undead Lumberjack - 5710
+Undead Lumberjack - 5711
+Undead Lumberjack - 5712
+Undead Lumberjack - 5713
+Undead Lumberjack - 5714
+Undead Lumberjack - 5715
+Undead Lumberjack - 5716
+Undead Lumberjack - 5717
+Undead Lumberjack - 5718
+Undead Lumberjack - 5719
+Undead Lumberjack - 5720
+Lanthus - 5721
+Barricade - 5722
+Barricade - 5723
+Barricade - 5724
+Barricade - 5725
+Sheep - 5726
+Rabbit - 5727
+Imp - 5728
+Elnock Inquisitor - 5734
+Impling - 5735
+Fairy Aeryka - 5736
+Wandering impling - 5737
+Imp defender - 5738
+Penance Fighter - 5739
+Penance Fighter - 5740
+Penance Fighter - 5741
+Penance Fighter - 5742
+Penance Fighter - 5743
+Penance Fighter - 5744
+Penance Fighter - 5745
+Penance Fighter - 5746
+Penance Fighter - 5747
+Penance Runner - 5748
+Penance Runner - 5749
+Penance Runner - 5750
+Penance Runner - 5751
+Penance Runner - 5752
+Penance Runner - 5753
+Penance Runner - 5754
+Penance Runner - 5755
+Penance Runner - 5756
+Penance Ranger - 5757
+Penance Ranger - 5758
+Penance Ranger - 5759
+Penance Ranger - 5760
+Penance Ranger - 5761
+Penance Ranger - 5762
+Penance Ranger - 5763
+Penance Ranger - 5764
+Penance Ranger - 5765
+Penance Healer - 5766
+Penance Healer - 5767
+Penance Healer - 5768
+Penance Healer - 5769
+Penance Healer - 5770
+Penance Healer - 5771
+Penance Healer - 5772
+Penance Healer - 5773
+Penance Healer - 5774
+Penance Queen - 5775
+Queen spawn - 5776
+Egg launcher - 5777
+Egg launcher - 5778
+Giant Mole - 5779
+Baby Mole - 5780
+Baby Mole - 5781
+Baby Mole - 5782
+Light creature - 5783
+Light creature - 5784
+Juna - 5785
+Simon Templeton - 5786
+Pyramid block - 5787
+Pyramid block - 5788
+Cap'n Izzy No-Beard - 5789
+Pirate Jackie the Fruit - 5790
+Giant bat - 5791
+Party Pete - 5792
+Knight - 5793
+Megan - 5794
+Lucy - 5795
+Winter Elemental - 5796
+Winter Elemental - 5797
+Winter Elemental - 5798
+Winter Elemental - 5799
+Winter Elemental - 5800
+Winter Elemental - 5801
+Autumn Elemental - 5802
+Autumn Elemental - 5803
+Autumn Elemental - 5804
+Autumn Elemental - 5805
+Autumn Elemental - 5806
+Autumn Elemental - 5807
+Reacher - 5808
+Tanner - 5809
+Master Crafter - 5810
+Master Crafter - 5811
+Master Crafter - 5812
+Miner - 5813
+Miner - 5814
+Bert - 5815
+Yak - 5816
+Iceberg - 5817
+Iceberg - 5818
+Bert - 5819
+Fishing spot - 5820
+Fishing spot - 5821
+Ice Troll King - 5822
+Ice troll runt - 5823
+Ice troll male - 5824
+Ice troll female - 5825
+Ice troll grunt - 5826
+Bork Sigmundson - 5827
+Ice troll runt - 5828
+Ice troll male - 5829
+Ice troll female - 5830
+Ice troll grunt - 5831
+Martin the Master Gardener - 5832
+Frog - 5833
+Storm cloud - 5834
+Co-ordinator - 5835
+Fairy Nuff - 5836
+Fairy Godfather - 5837
+Slim Louie - 5838
+Fat Rocco - 5839
+Gatekeeper - 5840
+Zandar Horfyre - 5841
+Cow - 5842
+Sheep - 5843
+Sheep - 5844
+Sheep - 5845
+Sheep - 5846
+Zanaris choir - 5847
+Tanglefoot - 5848
+Baby tanglefoot - 5853
+Baby tanglefoot - 5854
+Gatekeeper - 5855
+Fairy chef - 5856
+ - 5860
+ - 5861
+Cerberus - 5862
+Cerberus - 5863
+Captain Ned - 5864
+Cerberus - 5866
+Summoned Soul - 5867
+Summoned Soul - 5868
+Summoned Soul - 5869
+Key Master - 5870
+King Arthur - 5871
+Baby dragon - 5872
+Baby dragon - 5873
+Black demon - 5874
+Black demon - 5875
+Black demon - 5876
+Black demon - 5877
+Blue dragon - 5878
+Blue dragon - 5879
+Blue dragon - 5880
+Blue dragon - 5881
+Blue dragon - 5882
+Abyssal orphan - 5883
+Abyssal orphan - 5884
+James - 5885
+Abyssal Sire - 5886
+Abyssal Sire - 5887
+Abyssal Sire - 5888
+Abyssal Sire - 5889
+Abyssal Sire - 5890
+Abyssal Sire - 5891
+TzRek-Jad - 5892
+TzRek-Jad - 5893
+ - 5894
+<col=00ffff>Portal</col> - 5895
+<col=00efef>Portal</col> - 5897
+Probita - 5906
+Chaos Elemental Jr. - 5907
+Abyssal Sire - 5908
+Tentacle - 5909
+Tentacle - 5910
+Tentacle - 5911
+Tentacle - 5912
+Tentacle - 5913
+Respiratory system - 5914
+<col=00ffff>Vent</col> - 5915
+Spawn - 5916
+Spawn - 5917
+Scion - 5918
+Grace - 5919
+Mark - 5920
+BigRedJapan - 5921
+Skullball - 5922
+Skullball Boss - 5923
+Agility Boss - 5924
+Skullball Trainer - 5925
+Agility Trainer - 5926
+Agility Trainer - 5927
+Werewolf - 5928
+Knight - 5929
+ - 5931
+Egg - 5932
+Egg - 5933
+Egg - 5934
+Sand Crab - 5935
+Sandy rocks - 5936
+Jarvald - 5937
+Wallasalki - 5938
+Wallasalki - 5939
+Giant Rock Crab - 5940
+Boulder - 5941
+Dagannoth - 5942
+Dagannoth - 5943
+Rock lobster - 5944
+Rock - 5945
+Suspicious water - 5946
+Spinolyp - 5947
+Suspicious water - 5948
+Al the Camel - 5949
+Elly the Camel - 5950
+Ollie the Camel - 5951
+Cam the Camel - 5952
+Alice the Camel - 5954
+Neferti the Camel - 5955
+Ali the Leaflet Dropper - 5956
+Ali the Smith - 5957
+Ali the Farmer - 5958
+Ali the Tailor - 5959
+Ali the Guard - 5960
+Spinolyp - 5961
+Suspicious water - 5962
+Spinolyp - 5963
+Khazard trooper - 5964
+Khazard trooper - 5965
+Gnome troop - 5966
+Gnome troop - 5967
+Gnome - 5968
+Gnome - 5969
+Gnome - 5970
+Mounted terrorbird gnome - 5971
+Mounted terrorbird gnome - 5972
+Mounted terrorbird gnome - 5973
+Sweeper - 5974
+Flying Book - 5975
+Flying Book - 5976
+Pizzaz Hat - 5977
+Entrance Guardian - 5978
+Telekinetic Guardian - 5979
+Alchemy Guardian - 5980
+Enchantment Guardian - 5981
+Graveyard Guardian - 5982
+<col=ff9040>Pet rock</col> - 5983
+Rewards Guardian - 5984
+Charmed Warrior - 5985
+Charmed Warrior - 5986
+Charmed Warrior - 5987
+Charmed Warrior - 5988
+Secretary - 5989
+Purple Pewter Secretary - 5990
+Yellow Fortune Secretary - 5991
+Blue Opal Secretary - 5992
+Green Gemstone Secretary - 5993
+White Chisel Secretary - 5994
+Silver Cog Secretary - 5995
+Brown Engine Secretary - 5996
+Red Axe Secretary - 5997
+Purple Pewter Director - 5998
+Blue Opal Director - 5999
+Yellow Fortune Director - 6000
+Orlando Smith - 6001
+Natural historian - 6002
+Natural historian - 6003
+Natural historian - 6004
+Natural historian - 6005
+Natural historian - 6006
+Leech display - 6007
+Sea slugs display - 6008
+Snail display - 6009
+Monkey display - 6010
+Lizard display - 6011
+Penguin display - 6012
+Camel display - 6013
+Terrorbird display - 6014
+Dragon display - 6015
+Wyvern display - 6016
+Battle tortoise display - 6017
+Mole display - 6018
+Torrcs - 6019
+Marfet - 6020
+Green Gemstone Director - 6021
+White Chisel Director - 6022
+Silver Cog Director - 6023
+Brown Engine Director - 6024
+Red Axe Director - 6025
+Red Axe Cat - 6026
+Trader - 6027
+Trader - 6028
+Trader - 6029
+Trader - 6030
+Trader - 6031
+Trader - 6032
+Trader - 6033
+Trader - 6034
+Trader - 6035
+Trader - 6036
+Trader - 6037
+Trader - 6038
+Trader - 6039
+Trader - 6040
+Trader - 6041
+Trader - 6042
+Trade Referee - 6043
+Supreme Commander - 6044
+Commander Veldaban - 6045
+Black Guard - 6046
+Black Guard - 6047
+Black Guard - 6048
+Black Guard - 6049
+Black Guard Berserker - 6050
+Black Guard Berserker - 6051
+Black Guard Berserker - 6052
+Gnome emissary - 6053
+Gnome traveller - 6054
+Gnome traveller - 6055
+Guard - 6056
+Ranging Guild Doorman - 6057
+Leatherworker - 6058
+Armour salesman - 6059
+Bow and Arrow salesman - 6060
+Tower Advisor - 6061
+Tower Advisor - 6062
+Tower Advisor - 6063
+Tower Advisor - 6064
+Tower Archer - 6065
+Tower Archer - 6066
+Tower Archer - 6067
+Tower Archer - 6068
+Tribal Weapon Salesman - 6069
+Competition Judge - 6070
+Ticket Merchant - 6071
+Jimmy - 6072
+Ref - 6073
+Ref - 6074
+Tortoise - 6075
+Tortoise - 6076
+Gnome child - 6077
+Gnome child - 6078
+Gnome child - 6079
+Gnome trainer - 6080
+Gnome guard - 6081
+Gnome guard - 6082
+Gnome shop keeper - 6083
+Gnome banker - 6084
+Gnome baller - 6085
+Gnome woman - 6086
+Gnome woman - 6087
+Captain Errdo - 6088
+Captain Dalbur - 6089
+Captain Bleemadge - 6090
+Captain Errdo - 6091
+Captain Klemfoodle - 6092
+Nigel - 6093
+Gnome - 6094
+Gnome - 6095
+Gnome - 6096
+Gnome Archer - 6097
+Gnome Driver - 6098
+Gnome Mage - 6099
+Lieutenant Schepbur - 6100
+Trainer Nacklepen - 6101
+Bush snake - 6102
+Bush snake - 6103
+Elvarg (hard) - 6118
+The Inadequacy (hard) - 6119
+The Everlasting (hard) - 6120
+The Untouchable (hard) - 6121
+Scion - 6177
+ - 6178
+Jungle spider - 6267
+Jungle spider - 6271
+Large mosquito - 6272
+Mosquito swarm - 6273
+Tanglefoot (hard) - 6291
+Chronozon (hard) - 6292
+Bouncer (hard) - 6293
+Ice Troll King (hard) - 6294
+Black demon (hard) - 6295
+Bloodhound - 6296
+Glod (hard) - 6297
+Treus Dayth (hard) - 6298
+Black Knight Titan (hard) - 6299
+Dagannoth mother (hard) - 6300
+Dagannoth mother (hard) - 6301
+Dagannoth mother (hard) - 6302
+Dagannoth mother (hard) - 6303
+Dagannoth mother (hard) - 6304
+Dagannoth mother (hard) - 6305
+Evil Chicken (hard) - 6306
+Culinaromancer (hard) - 6307
+Agrith-Na-Na (hard) - 6308
+Flambeed (hard) - 6309
+Karamel (hard) - 6310
+Dessourt (hard) - 6311
+Gelatinnoth Mother (hard) - 6312
+Gelatinnoth Mother (hard) - 6313
+Gelatinnoth Mother (hard) - 6314
+Gelatinnoth Mother (hard) - 6315
+Gelatinnoth Mother (hard) - 6316
+Gelatinnoth Mother (hard) - 6317
+Nezikchened (hard) - 6318
+Tree spirit (hard) - 6319
+Me (hard) - 6320
+Jungle Demon (hard) - 6321
+The Kendal (hard) - 6322
+Giant Roc (hard) - 6323
+Slagilith (hard) - 6324
+Moss giant (hard) - 6325
+Skeleton Hellhound (hard) - 6326
+Agrith Naar (hard) - 6327
+King Roald (hard) - 6328
+Khazard warlord (hard) - 6329
+Dad (hard) - 6330
+Arrg (hard) - 6331
+Count Draynor (hard) - 6332
+Witch's experiment (hard) - 6333
+Witch's experiment (second form) (hard) - 6334
+Witch's experiment (third form) (hard) - 6335
+Witch's experiment (fourth form) (hard) - 6336
+Nazastarool (hard) - 6337
+Nazastarool (hard) - 6338
+Nazastarool (hard) - 6339
+Cow (hard) - 6340
+<col=ff9040>Zapper - 6341
+Barrelchest - 6342
+Giant scarab - 6343
+Dessous - 6344
+Kamil - 6345
+Damis - 6346
+Damis - 6347
+Fareed - 6348
+Elvarg - 6349
+The Inadequacy - 6350
+The Everlasting - 6351
+The Untouchable - 6352
+Tanglefoot - 6353
+Chronozon - 6354
+Bouncer - 6355
+Ice Troll King - 6356
+Black demon - 6357
+Glod - 6358
+Treus Dayth - 6359
+Black Knight Titan - 6360
+Dagannoth mother - 6361
+Dagannoth mother - 6362
+Dagannoth mother - 6363
+Dagannoth mother - 6364
+Dagannoth mother - 6365
+Dagannoth mother - 6366
+Evil Chicken - 6367
+Culinaromancer - 6368
+Agrith-Na-Na - 6369
+Flambeed - 6370
+Karamel - 6371
+Dessourt - 6372
+Gelatinnoth Mother - 6373
+Gelatinnoth Mother - 6374
+Gelatinnoth Mother - 6375
+Gelatinnoth Mother - 6376
+Gelatinnoth Mother - 6377
+Gelatinnoth Mother - 6378
+Nezikchened - 6379
+Tree spirit - 6380
+Me - 6381
+Jungle Demon - 6382
+The Kendal - 6383
+Giant Roc - 6384
+Slagilith - 6385
+Moss giant - 6386
+Skeleton Hellhound - 6387
+Agrith Naar - 6388
+King Roald - 6389
+Khazard warlord - 6390
+Dad - 6391
+Arrg - 6392
+Count Draynor - 6393
+Witch's experiment - 6394
+Witch's experiment (second form) - 6395
+Witch's experiment (third form) - 6396
+Witch's experiment (fourth form) - 6397
+Nazastarool - 6398
+Nazastarool - 6399
+Nazastarool - 6400
+Cow - 6401
+Mosquito swarm - 6402
+Tribesman - 6406
+Tribesman - 6407
+Broodoo victim - 6408
+Broodoo victim - 6409
+Broodoo victim - 6410
+Broodoo victim - 6411
+Broodoo victim - 6412
+Broodoo victim - 6413
+Sharimika - 6414
+Sharimika - 6415
+Mamma Bufetta - 6416
+Mamma Bufetta - 6417
+Layleen - 6418
+Layleen - 6419
+Karaday - 6420
+Karaday - 6421
+Safta Doc - 6422
+Safta Doc - 6423
+Gabooty - 6424
+Gabooty - 6425
+Fanellaman - 6426
+Fanellaman - 6427
+Jagbakoba - 6428
+Jagbakoba - 6429
+Murcaily - 6430
+Murcaily - 6431
+Rionasta - 6432
+Rionasta - 6433
+Cave goblin - 6434
+Cave goblin - 6435
+Cave goblin - 6436
+Cave goblin - 6437
+Animated steel armour - 6438
+Odovacar - 6439
+Giant skeleton - 6440
+Skeleton - 6441
+Skeleton - 6442
+Skeleton - 6443
+Skeleton - 6444
+Skeleton - 6445
+Skeleton - 6446
+Skeleton - 6447
+Skeleton - 6448
+Zombie - 6449
+Zombie - 6450
+Zombie - 6451
+Zombie - 6452
+Zombie - 6453
+Zombie - 6454
+Zombie - 6455
+Zombie - 6456
+Zombie - 6457
+Zombie - 6458
+Zombie - 6459
+Zombie - 6460
+Zombie - 6461
+Zombie - 6462
+Zombie - 6463
+Zombie - 6464
+Zombie - 6465
+Zombie - 6466
+Skeleton - 6467
+Skeleton - 6468
+Possessed pickaxe - 6469
+Animated spade - 6470
+Terror dog statue - 6471
+Terror dog statue - 6472
+Terror dog - 6473
+Terror dog - 6474
+Tarn - 6475
+Tarn - 6476
+Mutant tarn - 6477
+Rufus - 6478
+<col=00ffff>Eye</col> - 6479
+<col=00ffff>Eye</col> - 6480
+Mac - 6481
+Boulder - 6482
+Monkey - 6483
+Gelin - 6484
+Financial Seer - 6485
+Fishing spot - 6488
+ - 6490
+ - 6491
+Kree'arra - 6492
+Commander Zilyana - 6493
+General Graardor - 6494
+K'ril Tsutsaroth - 6495
+Dagannoth Supreme - 6496
+Dagannoth Prime - 6497
+Dagannoth Rex - 6498
+Giant Mole - 6499
+Kalphite Queen - 6500
+Kalphite Queen - 6501
+King Black Dragon - 6502
+Callisto - 6503
+Venenatis - 6504
+Chaos Elemental - 6505
+TzTok-Jad - 6506
+Squire - 6509
+Financial Wizard - 6510
+Magnus Gram - 6512
+Magnus Gram - 6513
+Financial Wizard - 6514
+Financial Wizard - 6515
+Financial Wizard - 6516
+Financial Wizard - 6517
+Financial Wizard - 6518
+Financial Wizard - 6519
+Barker - 6524
+Fidelio - 6525
+Sbott - 6526
+Roavar - 6527
+Vampire - 6529
+Abidor Crank - 6530
+Blurberry - 6531
+Barman - 6532
+Romily Weaklax - 6533
+Guard - 6561
+Prospector Percy - 6562
+<col=ff9040>Pay-dirt</col> - 6564
+Miner - 6565
+Runite Minor - 6566
+Miner - 6567
+Miner - 6568
+Miner - 6569
+Miner - 6570
+Miner - 6571
+Miner - 6572
+Gnome guard - 6574
+Guard - 6575
+Guard - 6576
+Guard - 6579
+Guard - 6580
+Guard - 6581
+Guard - 6582
+Guard - 6583
+Uri - 6584
+Sherlock - 6586
+Armadylian guard - 6587
+Bandosian guard - 6588
+Dr Ford - 6589
+Sister Scarophia - 6590
+ - 6591
+ - 6592
+Lava dragon - 6593
+Ent - 6594
+<col=00ffff>Ent trunk</col> - 6595
+Zombie - 6596
+Zombie - 6597
+Zombie - 6598
+Mandrith - 6599
+Runite Golem - 6600
+<col=00ffff>Rocks</col> - 6601
+<col=00ffff>Rocks</col> - 6602
+Rogue - 6603
+Mammoth - 6604
+Bandit - 6605
+Dark warrior - 6606
+Elder Chaos druid - 6607
+Ankou - 6608
+Callisto - 6609
+Venenatis - 6610
+Vet'ion - 6611
+Vet'ion Reborn - 6612
+Skeleton Hellhound - 6613
+Greater Skeleton Hellhound - 6614
+Scorpia - 6615
+Scorpia's offspring - 6616
+Scorpia's guardian - 6617
+Crazy archaeologist - 6618
+Chaos Fanatic - 6619
+Miniature chaotic clouds - 6620
+<col=00ffff>Boulder</col> - 6621
+Energy sprite - 6624
+Reacher - 6625
+Dagannoth Supreme Jr. - 6626
+Dagannoth Prime Jr. - 6627
+Dagannoth Supreme Jr. - 6628
+Dagannoth Prime Jr. - 6629
+Dagannoth Rex Jr. - 6630
+Kree'arra Jr. - 6631
+General Graardor Jr. - 6632
+Zilyana Jr. - 6633
+K'ril Tsutsaroth Jr. - 6634
+Baby Mole - 6635
+Prince Black Dragon - 6636
+Kalphite Princess - 6637
+Kalphite Princess - 6638
+Smoke Devil - 6639
+Kraken - 6640
+Dagannoth Rex Jr. - 6641
+Penance Pet - 6642
+Kree'arra Jr. - 6643
+General Graardor Jr. - 6644
+Miner - 6645
+Zilyana Jr. - 6646
+K'ril Tsutsaroth Jr. - 6647
+Lokar Searunner - 6648
+Captain Bentley - 6649
+Captain Bentley - 6650
+Baby Mole - 6651
+Prince Black Dragon - 6652
+Kalphite Princess - 6653
+Kalphite Princess - 6654
+Smoke Devil - 6655
+Kraken - 6656
+Pet rock - 6657
+Fishbowl - 6658
+Fishbowl - 6659
+Fishbowl - 6660
+Clockwork cat - 6661
+Cat - 6662
+Cat - 6663
+Cat - 6664
+Cat - 6665
+Cat - 6666
+Cat - 6667
+Hellcat - 6668
+John - 6669
+Reacher - 6670
+John - 6671
+John - 6672
+Reacher - 6673
+Penance Pet - 6674
+Waydar - 6675
+Overgrown cat - 6676
+Overgrown cat - 6677
+Overgrown cat - 6678
+Overgrown cat - 6679
+Overgrown cat - 6680
+Overgrown cat - 6681
+Overgrown hellcat - 6682
+Lazy cat - 6683
+Lazy cat - 6684
+Lazy cat - 6685
+Lazy cat - 6686
+Lazy cat - 6687
+Lazy cat - 6688
+Lazy hellcat - 6689
+Wily cat - 6690
+Wily cat - 6691
+Wily cat - 6692
+Wily cat - 6693
+Wily cat - 6694
+Wily cat - 6695
+Wily hellcat - 6696
+ - 6697
+Ghost guard - 6698
+Guard - 6699
+Guard - 6700
+Guard - 6701
+Guard - 6702
+Financial Wizard - 6703
+Heron - 6715
+Rock Golem - 6716
+Beaver - 6717
+Baby Chinchompa - 6718
+Baby Chinchompa - 6719
+Baby Chinchompa - 6720
+Baby Chinchompa - 6721
+Heron - 6722
+Rock Golem - 6723
+Beaver - 6724
+Rock Golem - 6725
+Rock Golem - 6726
+Rock Golem - 6727
+Rock Golem - 6728
+Rock Golem - 6729
+Rock Golem - 6730
+Fishing spot - 6731
+River troll - 6732
+River troll - 6733
+River troll - 6734
+River troll - 6735
+River troll - 6736
+River troll - 6737
+Postie Pete - 6738
+Evil Chicken - 6739
+Shade - 6740
+Zombie - 6741
+Mysterious Old Man - 6742
+Sergeant Damien - 6743
+Flippa - 6744
+Leo - 6745
+Leo - 6746
+Bee keeper - 6747
+Freaky Forester - 6748
+Dunce - 6749
+Mysterious Old Man - 6750
+Mysterious Old Man - 6751
+Mysterious Old Man - 6752
+Mysterious Old Man - 6753
+Evil Bob - 6754
+Quiz Master - 6755
+Baby Chinchompa - 6756
+Baby Chinchompa - 6757
+Baby Chinchompa - 6758
+Baby Chinchompa - 6759
+ - 6762
+Lizardman shaman - 6766
+Lizardman shaman - 6767
+Spawn - 6768
+Osten - 6769
+Arcis - 6770
+Hosa - 6771
+Lovada - 6772
+Doomsayer - 6773
+Doomsayer - 6774
+Gallow - 6775
+Man - 6776
+<col=ff9040>Maze Guardian</col> - 6777
+Maze Guardian - 6779
+Piliar - 6780
+Shayda - 6781
+ - 6792
+Hell-Rat Behemoth - 6793
+Monkey Archer - 6794
+Nieve - 6797
+Steve - 6798
+Steve - 6799
+ - 6800
+Pieve - 6801
+Combat Test - 6802
+Maniacal monkey - 6803
+Kruk - 6804
+Kruk - 6805
+Assistant Le Smith - 6806
+Monkey guard - 6811
+Awowogei - 6812
+Monkey Archer - 6813
+Lammy Langle - 6814
+Ghost - 6815
+Ghost - 6816
+Ghost - 6817
+Ghost - 6818
+Ghost - 6819
+Ghost - 6820
+Ghost - 6821
+Ghost - 6822
+Town crier - 6823
+Giant bat - 6824
+Fishing spot - 6825
+Wounded soldier - 6826
+Wounded soldier - 6827
+Wounded soldier - 6828
+Wounded soldier - 6829
+Wounded soldier - 6830
+Wounded soldier - 6831
+Wounded soldier - 6832
+Wounded soldier - 6833
+Wounded soldier - 6834
+Wounded soldier - 6835
+Wounded soldier - 6836
+Wounded soldier - 6837
+Wounded soldier - 6838
+Wounded soldier - 6839
+Wounded soldier - 6840
+Wounded soldier - 6841
+Wounded soldier - 6842
+Wounded soldier - 6843
+Wounded soldier - 6844
+Wounded soldier - 6845
+Wounded soldier - 6846
+Wounded soldier - 6847
+Wounded soldier - 6848
+Wounded soldier - 6849
+Wounded soldier - 6850
+Wounded soldier - 6851
+Wounded soldier - 6852
+Wounded soldier - 6853
+Wounded soldier - 6854
+Wounded soldier - 6855
+Wounded soldier - 6856
+Wounded soldier - 6857
+Look-out - 6858
+Banker - 6859
+Banker - 6860
+Banker - 6861
+Banker - 6862
+Banker - 6863
+Banker - 6864
+Captain Salara - 6865
+Captain Babacus - 6866
+Captain Kilian - 6867
+Soldier - 6868
+Soldier - 6869
+Soldier - 6870
+Soldier - 6871
+New recruit Tony - 6872
+Nurse Wooned - 6873
+Nurse Inn'Juree - 6874
+Nurse Boubou - 6875
+Captain Rachelle - 6876
+Soldier - 6877
+Soldier - 6878
+Soldier - 6879
+Soldier - 6880
+Soldier - 6881
+Drill instructor - 6882
+Soldier - 6883
+Soldier - 6884
+Soldier - 6885
+Soldier - 6886
+Soldier - 6887
+Soldier - 6888
+Soldier - 6889
+Soldier - 6890
+Soldier - 6891
+Soldier - 6892
+Soldier - 6893
+Soldier - 6894
+Captain Ginea - 6895
+Gangster - 6896
+Gangster - 6897
+Gangster - 6898
+Gangster - 6899
+Gang boss - 6900
+Gang boss - 6901
+Gang boss - 6902
+Gang boss - 6903
+Soldier (tier 1) - 6904
+Soldier (tier 1) - 6905
+Soldier (tier 2) - 6906
+Soldier (tier 2) - 6907
+Soldier (tier 3) - 6908
+Soldier (tier 3) - 6909
+Soldier (tier 4) - 6910
+Soldier (tier 4) - 6911
+Soldier (tier 5) - 6912
+Soldier (tier 5) - 6913
+Lizardman - 6914
+Lizardman - 6915
+Lizardman - 6916
+Lizardman - 6917
+Lizardman brute - 6918
+Lizardman brute - 6919
+Farmer Gricoller - 6920
+Marisi - 6921
+Konoo - 6922
+Clerk - 6923
+<col=00ffff>Plough</col> - 6924
+<col=00ffff>Plough</col> - 6925
+Ewesey - 6926
+Servery assistant - 6927
+Servery assistant - 6928
+Soldier - 6929
+Soldier - 6930
+Soldier - 6931
+Soldier - 6932
+Soldier - 6933
+Soldier - 6934
+Soldier - 6935
+Soldier - 6936
+Ramocean - 6937
+Talia - 6938
+Banker - 6939
+Banker - 6940
+Banker - 6941
+Banker - 6942
+Horace - 6943
+Vannah - 6944
+Logava - 6945
+Pandur Hosidius - 6946
+Farmer - 6947
+Farmer - 6948
+Farmer - 6949
+Farmer - 6950
+Farmer - 6951
+Farmer - 6952
+Golova - 6953
+Richard - 6954
+Father Jean - 6955
+Monk - 6956
+Chief Farmer - 6957
+Farmer's wife - 6958
+Farmer - 6959
+Farmer - 6960
+Farmer - 6961
+Farmer Hayfield - 6962
+Frankie - 6963
+Tynan - 6964
+Nicholas - 6965
+Dockmaster - 6966
+Dock worker - 6967
+Dock worker - 6968
+Banker - 6969
+Banker - 6970
+Captain Khaled - 6971
+Captain Khaled - 6972
+Patrolman - 6973
+Patrolman - 6974
+Patrolman - 6975
+Patrolwoman - 6976
+Patrolman - 6977
+Patrolwoman - 6978
+Patrolman - 6979
+Patrolman - 6980
+Fisherman - 6981
+Poor looking man - 6982
+Poor looking man - 6983
+Poor looking woman - 6984
+Poor looking woman - 6985
+Leenz - 6986
+Man - 6987
+Man - 6988
+Man - 6989
+Woman - 6990
+Woman - 6991
+Woman - 6992
+Pirate - 6993
+Pirate - 6994
+Pirate - 6995
+Mugger - 6996
+Dark wizard - 6997
+Pirate - 6998
+Port Official - 6999
+Captain Janaway - 7000
+Port worker - 7001
+Mark - 7002
+Cheryl - 7003
+Charles - 7004
+Sarah - 7005
+Darren - 7006
+Melvin - 7007
+Simon - 7008
+Andrea - 7009
+Elizabeth - 7010
+Lorraine - 7011
+Ross and Ben - 7012
+Dobwinkle - 7013
+Alexander - 7014
+Charlie Brown - 7015
+Kourend guard - 7016
+Kourend head guard - 7017
+Reanimated goblin - 7018
+Reanimated monkey - 7019
+Reanimated imp - 7020
+Reanimated minotaur - 7021
+Reanimated scorpion - 7022
+Reanimated bear - 7023
+Reanimated unicorn - 7024
+Reanimated dog - 7025
+Reanimated chaos druid - 7026
+Reanimated giant - 7027
+Reanimated ogre - 7028
+Reanimated elf - 7029
+Reanimated troll - 7030
+Reanimated horror - 7031
+Reanimated kalphite - 7032
+Reanimated dagannoth - 7033
+Reanimated bloodveld - 7034
+Reanimated TzHaar - 7035
+Reanimated demon - 7036
+Reanimated aviansie - 7037
+Reanimated abyssal - 7038
+Reanimated dragon - 7039
+Clerris - 7040
+Enoch - 7041
+Aretha - 7042
+Sister Soul Jar - 7043
+Logosia - 7044
+Biblia - 7045
+Horphis - 7046
+Villia - 7047
+Professor Gracklebone - 7048
+Sam - 7049
+Tyss - 7050
+Trossa - 7051
+Tower Mage - 7052
+Rassain - 7053
+Mofina - 7054
+Novice - 7055
+Regath - 7056
+Banker - 7057
+Banker - 7058
+Banker - 7059
+Banker - 7060
+Batt Mellamy - 7061
+Freald - 7062
+Cob - 7063
+Dark wizard - 7064
+Dark wizard - 7065
+Wizard - 7066
+Wizard - 7067
+Ouditor - 7068
+Smoggy - 7069
+Toothy - 7071
+Operator - 7072
+Operator - 7073
+<col=ff9040>Blasted ore</col> - 7074
+Mine supervisor - 7075
+Mine supervisor - 7076
+Banker - 7077
+Banker - 7078
+Banker - 7079
+Banker - 7080
+Banker - 7081
+Banker - 7082
+Armourer (tier 1) - 7083
+Armourer (tier 2) - 7084
+Armourer (tier 3) - 7085
+Armourer (tier 4) - 7086
+Armourer (tier 5) - 7087
+Munty - 7088
+Moggy - 7089
+Fuggy - 7090
+Miner - 7091
+Miner - 7092
+Miner - 7093
+Miner - 7094
+Tortured gorilla - 7095
+Tortured gorilla - 7096
+Tortured gorilla - 7097
+Stunted demonic gorilla - 7098
+Kruk - 7099
+Glough - 7100
+Glough - 7101
+Glough - 7102
+Glough - 7103
+Keef - 7104
+Keef - 7105
+Kob - 7106
+Kob - 7107
+Nieve - 7108
+Nieve - 7109
+Nieve - 7110
+Garkor - 7111
+Lumo - 7112
+Zooknock - 7113
+Carado - 7114
+Glough - 7115
+Looming shadow - 7116
+Kineer - 7117
+Maniacal monkey - 7118
+Maniacal Monkey Archer - 7119
+Oobapohk - 7120
+Jumaane - 7121
+Monkey guard - 7122
+Monkey guard - 7123
+Monkey guard - 7124
+Monkey guard - 7125
+Monkey guard - 7126
+Monkey guard - 7127
+Monkey guard - 7128
+Monkey guard - 7129
+Monkey guard - 7130
+Monkey guard - 7131
+Monkey guard - 7132
+Monkey guard - 7133
+Monkey guard - 7134
+Monkey guard - 7135
+Monkey guard - 7136
+Monkey guard - 7137
+Monkey guard - 7138
+Monkey guard - 7139
+Monkey guard - 7140
+Monkey guard - 7141
+Monkey guard - 7142
+Monkey guard - 7143
+Demonic gorilla - 7144
+Demonic gorilla - 7145
+Demonic gorilla - 7146
+Demonic gorilla - 7147
+Demonic gorilla - 7148
+Demonic gorilla - 7149
+Tortured gorilla - 7150
+Tortured gorilla - 7151
+Demonic gorilla - 7152
+Tortured gorilla - 7153
+Assistant Lori - 7154
+Fishing spot - 7155
+Anita - 7156
+Anita - 7157
+Garkor - 7158
+Garkor - 7159
+Lumo - 7160
+Lumo - 7161
+Bunkdo - 7162
+Bunkdo - 7163
+Carado - 7164
+Carado - 7165
+Bunkwicket - 7166
+Bunkwicket - 7167
+Waymottin - 7168
+Waymottin - 7169
+Zooknock - 7170
+Zooknock - 7171
+Karam - 7172
+Karam - 7173
+Karam - 7174
+Duke - 7176
+Captain Shoracks - 7178
+Fishing spot - 7199
+Fishing spot - 7200
+Quartermaster Briget - 7201
+Kenelme - 7202
+Thyria - 7203
+Filamina - 7204
+Jarvald - 7205
+Sand Crab - 7206
+Sandy rocks - 7207
+Thirus - 7208
+Guard dog - 7209
+Maniacal monkey - 7212
+Maniacal monkey - 7213
+Maniacal monkey - 7214
+Maniacal monkey - 7215
+Maniacal monkey - 7216
+Miriam - 7217
+Miriam - 7218
+Traxi - 7219
+Traxi - 7220
+Raeli - 7221
+Raeli - 7222
+Mogrim - 7223
+Mogrim - 7224
+Loinur - 7225
+Loinur - 7226
+Bloodhound - 7232
+Lucky impling - 7233
+Ent - 7234
+Berry - 7235
+Guildmaster Lars - 7236
+Murfet - 7237
+Forester - 7238
+Kai - 7239
+Perry - 7240
+Abyssal demon - 7241
+Black demon - 7242
+Black demon - 7243
+Greater demon - 7244
+Greater demon - 7245
+Greater demon - 7246
+Lesser demon - 7247
+Lesser demon - 7248
+Dust devil - 7249
+Dark beast - 7250
+Fire giant - 7251
+Fire giant - 7252
+Bronze dragon - 7253
+Iron dragon - 7254
+Steel dragon - 7255
+Hellhound - 7256
+Ankou - 7257
+Shade - 7258
+Dagannoth - 7259
+Dagannoth - 7260
+Hill Giant - 7261
+Moss giant - 7262
+Ghost - 7263
+Ghost - 7264
+Skeleton - 7265
+King Sand Crab - 7266
+Sandy Boulder - 7267
+Possessed pickaxe - 7268
+Magic axe - 7269
+Cyclops - 7270
+Cyclops - 7271
+Twisted Banshee - 7272
+Brutal blue dragon - 7273
+Brutal red dragon - 7274
+Brutal black dragon - 7275
+Mutated Bloodveld - 7276
+Warped Jelly - 7277
+Greater Nechryael - 7278
+Deviant spectre - 7279
+Kineer - 7280
+Man - 7281
+Pirate - 7282
+Lillia - 7283
+Hotpheex - 7284
+Druid - 7285
+Skotizo - 7286
+Reanimated demon spawn - 7287
+Awakened Altar - 7288
+Altar - 7289
+Awakened Altar - 7290
+Altar - 7291
+Awakened Altar - 7292
+Altar - 7293
+Awakened Altar - 7294
+Altar - 7295
+Dark Ankou - 7296
+Mistag - 7297
+Mistag - 7298
+Mistag - 7299
+Kazgar - 7300
+Kazgar - 7301
+Lucky impling - 7302
+Watson - 7303
+Watson - 7304
+Gruff McScruff - 7305
+Falo the Bard - 7306
+Ancient Wizard - 7307
+Ancient Wizard - 7308
+Ancient Wizard - 7309
+Brassican Mage - 7310
+Uri - 7311
+Double agent - 7312
+Lisa - 7316
+Lisa - 7317
+Bear - 7318
+Nesty - 7321
+Wild dog - 7322
+Al-Kharid warrior - 7323
+Hassan - 7324
+Carol - 7325
+Holly - 7326
+Rick - 7327
+Maid - 7328
+Cook - 7329
+Butler - 7330
+Demon butler - 7331
+Fairy Fixit - 7332
+Fairy Fixit - 7333
+Giant Squirrel - 7334
+Tangleroot - 7335
+Rocky - 7336
+Rift guardian - 7337
+Rift guardian - 7338
+Rift guardian - 7339
+Rift guardian - 7340
+Rift guardian - 7341
+Rift guardian - 7342
+Rift guardian - 7343
+Rift guardian - 7344
+Rift guardian - 7345
+Rift guardian - 7346
+Rift guardian - 7347
+Rift guardian - 7348
+Rift guardian - 7349
+Rift guardian - 7350
+Giant Squirrel - 7351
+Tangleroot - 7352
+Rocky - 7353
+Rift guardian - 7354
+Rift guardian - 7355
+Rift guardian - 7356
+Rift guardian - 7357
+Rift guardian - 7358
+Rift guardian - 7359
+Rift guardian - 7360
+Rift guardian - 7361
+Rift guardian - 7362
+Rift guardian - 7363
+Rift guardian - 7364
+Rift guardian - 7365
+Rift guardian - 7366
+Rift guardian - 7367
+Phoenix - 7368
+Wesley - 7369
+Phoenix - 7370
+Pyromancer - 7371
+Incapacitated Pyromancer - 7372
+Ignisia - 7374
+Undor - 7375
+Esther - 7376
+Captain Kalt - 7377
+Ish the Navigator - 7378
+Winter Soldier - 7379
+Cat - 7380
+Wintertoad - 7381
+Ed - 7382
+Snow - 7383
+Stumpy - 7384
+Pumpy - 7385
+Dumpy - 7386
+Dumpy - 7387
+Crushing hand - 7388
+Chasm Crawler - 7389
+Screaming banshee - 7390
+Screaming twisted banshee - 7391
+Giant rockslug - 7392
+Cockathrice - 7393
+Flaming pyrelord - 7394
+Monstrous basilisk - 7395
+Malevolent Mage - 7396
+Insatiable Bloodveld - 7397
+Insatiable mutated Bloodveld - 7398
+Vitreous Jelly - 7399
+Vitreous warped Jelly - 7400
+Cave abomination - 7401
+Abhorrent spectre - 7402
+Repugnant spectre - 7403
+Choke devil - 7404
+King kurask - 7405
+Nuclear smoke devil - 7406
+Marble gargoyle - 7407
+Marble gargoyle - 7408
+Night beast - 7409
+Greater abyssal demon - 7410
+Nechryarch - 7411
+Chaotic death spawn - 7412
+<col=00ffff>Undead Combat dummy</col> - 7413
+Count Check - 7414
+Bologa - 7415
+Obor - 7416
+Eniola - 7417
+Zamorak warrior - 7418
+Zamorak warrior - 7419
+Zamorak ranger - 7420
+Zamorak ranger - 7421
+Zamorak mage - 7422
+Zamorak mage - 7423
+Cave lizard - 7424
+Mage of Zamorak - 7425
+Zamorak crafter - 7426
+Zamorak crafter - 7427
+Abigale - 7428
+Hewey - 7429
+Sid - 7430
+Tayten - 7431
+Lacey - 7432
+Mandy - 7433
+Mandy - 7434
+Mandy - 7435
+Killer - 7436
+Abigale - 7437
+Abigale - 7439
+Killer - 7440
+Hewey - 7441
+Shady figure - 7442
+<col=00ffff>Mirror</col> - 7444
+<col=00ffff>Mirror</col> - 7445
+Sid - 7455
+Perdu - 7456
+Fishing spot - 7459
+Fishing spot - 7460
+Fishing spot - 7461
+Fishing spot - 7462
+Fishing spot - 7463
+Fishing spot - 7464
+Fishing spot - 7465
+Fishing spot - 7466
+Fishing spot - 7467
+Fishing spot - 7468
+Fishing spot - 7469
+Fishing spot - 7470
+Captain Magoro - 7471
+Archer - 7472
+Duck - 7473
+Reginald - 7474
+Roy jr. - 7475
+Robert Boss - 7476
+Knight of Varlamore - 7477
+Hugor - 7478
+Lan the Butcher - 7479
+Rakkar - 7480
+Hopleez - 7481
+Captain Sdiar - 7482
+Sandicrahb - 7483
+Sandicrahb - 7484
+Zombie - 7485
+Zombie - 7486
+Zombie - 7487
+Zombie - 7488
+ - 7490
+ - 7491
+Holly - 7492
+Holly - 7493
+Ivy - 7494
+Troll child - 7495
+Tom - 7496
+Dylan - 7497
+Sam - 7498
+Ulina - 7499
+Ulina - 7500
+Billam - 7501
+Tragacanth - 7502
+Cave goblin worker - 7503
+Palum - 7504
+Red Bouncy Ball - 7505
+Blue Bouncy Ball - 7506
+Green Bouncy Ball - 7507
+Red Marionette - 7508
+Blue marionette - 7509
+Green marionette - 7510
+Red partyhat - 7511
+Blue partyhat - 7512
+Green partyhat - 7513
+Frosty spider - 7514
+Frosty snakeling - 7515
+Jelly - 7518
+Olmlet - 7519
+Olmlet - 7520
+Soldier - 7521
+Soldier - 7522
+Soldier - 7523
+Soldier - 7524
+Vanguard - 7525
+Vanguard - 7526
+Vanguard - 7527
+Vanguard - 7528
+Vanguard - 7529
+Vespula - 7530
+Vespula - 7531
+Vespula - 7532
+<col=00ffff>Abyssal portal</col> - 7533
+Lux grub - 7534
+Lux grub - 7535
+Lux grub - 7536
+Lux grub - 7537
+Vespine soldier - 7538
+Vespine soldier - 7539
+Tekton - 7540
+Tekton - 7541
+Tekton - 7542
+Tekton (enraged) - 7543
+Tekton (enraged) - 7544
+Tekton - 7545
+Scavenger runt - 7546
+Scavenger runt - 7547
+Scavenger beast - 7548
+Scavenger beast - 7549
+Great olm (Right claw) - 7550
+Great olm - 7551
+Great olm (Left claw) - 7552
+Great olm (Right claw) - 7553
+Great olm - 7554
+Great olm (Left claw) - 7555
+<col=00ffff>Fire</col> - 7558
+Deathly ranger - 7559
+Deathly mage - 7560
+Muttadile - 7561
+Muttadile - 7562
+Muttadile - 7563
+<col=00ffff>Meat tree</col> - 7564
+<col=00ffff>Rocks</col> - 7565
+Vasa Nistirio - 7566
+Vasa Nistirio - 7567
+<col=00ffff>Glowing crystal</col> - 7568
+<col=00ffff>Guardian</col> - 7569
+<col=00ffff>Guardian</col> - 7570
+<col=00ffff>Guardian</col> - 7571
+<col=00ffff>Guardian</col> - 7572
+Lizardman shaman - 7573
+Lizardman shaman - 7574
+Spawn - 7575
+Jewelled Crab - 7576
+Jewelled Crab (red) - 7577
+Jewelled Crab (green) - 7578
+Jewelled Crab (blue) - 7579
+Energy focus (white) - 7580
+Energy focus (red) - 7581
+Energy focus (green) - 7582
+Energy focus (blue) - 7583
+Ice demon - 7584
+Ice demon - 7585
+Icefiend - 7586
+Guanic bat - 7587
+Prael bat - 7588
+Giral bat - 7589
+Phluxia bat - 7590
+Kryket bat - 7591
+Murng bat - 7592
+Psykk bat - 7593
+Cave snake - 7594
+Captain Rimor - 7595
+Gnosi - 7596
+Historian Duffy - 7597
+Natural Historian - 7598
+Mountain Guide - 7599
+Mountain Guide - 7600
+Swamp Priest - 7601
+Corrupted scavenger - 7602
+Corrupted scavenger - 7603
+Skeletal Mystic - 7604
+Skeletal Mystic - 7605
+Skeletal Mystic - 7606
+Imerominia - 7607
+Pagida - 7608
+Istoria - 7609
+Logios - 7610
+Meleti - 7611
+Krato - 7612
+Ektheme - 7613
+Archeio - 7614
+Stuliette - 7615
+Stuliette - 7616
+Temple guardian - 7620

@@ -1,0 +1,109 @@
+[
+    {
+        "id": 0,
+        "type": "NPC_STATEMENT",
+        "anim": "DEFAULT",
+        "lines": 3,
+        "line1": "Hello there, do you need anything?",
+		"line2": "If you find any emblems, make sure",
+		"line3": "to come to me. I'll buy them for PKP.",
+        "next": 1,
+        "npcId": 315
+    },
+    {
+        "id": 1,
+        "type": "OPTION",
+        "lines": 4,
+        "line1": "Open PKP Shop",
+        "line2": "Sell Emblems",
+        "line3": "Skull me",
+        "line4": "Cancel",
+        "next": -1,
+        "npcId": 315
+    },
+	{
+        "id": 2,
+        "type": "NPC_STATEMENT",
+        "anim": "DEFAULT",
+        "lines": 2,
+        "line1": "There we go.",
+		"line2": "Now, make sure not to die.",
+        "next": -1,
+        "npcId": 315
+    },
+	{
+        "id": 3,
+        "type": "NPC_STATEMENT",
+        "anim": "DEFAULT",
+        "lines": 1,
+        "line1": "You are already skulled..",
+        "next": -1,
+        "npcId": 315
+    },
+	{
+        "id": 4,
+        "type": "NPC_STATEMENT",
+        "anim": "DEFAULT",
+        "lines": 3,
+        "line1": "Thanks, adventurer..",
+		"line2": "You've received some PKP.",
+		"line3": "Use it wisely.",
+        "next": -1,
+        "npcId": 315
+    },
+	{
+        "id": 5,
+        "type": "NPC_STATEMENT",
+        "anim": "DEFAULT",
+        "lines": 2,
+        "line1": "You don't have any emblems",
+		"line2": "in your inventory...",
+        "next": -1,
+        "npcId": 315
+    },
+    {
+        "id": 6,
+        "type": "OPTION",
+        "lines": 3,
+        "line1": "Open Equipment Shop",
+        "line2": "Open Runes Shop",
+        "line3": "Cancel",
+        "next": -1,
+        "npcId": 3309
+    },
+    {
+        "id": 7,
+        "type": "OPTION",
+        "lines": 3,
+        "line1": "Open Equipment Shop",
+        "line2": "Open Ammunition Shop",
+        "line3": "Cancel",
+        "next": -1,
+        "npcId": 1576
+    },
+    {
+        "id": 8,
+        "type": "OPTION",
+        "lines": 3,
+        "line1": "Open Equipment Shop",
+        "line2": "Open Weapons Shop",
+        "line3": "Cancel",
+        "next": -1,
+        "npcId": 1158
+    },
+    {
+        "id": 9,
+        "type": "STATEMENT",
+        "lines": 1,
+        "line1": "You don't have a Clan Chat Channel. Create one?",
+        "next": 10
+    },
+    {
+        "id": 10,
+        "type": "OPTION",
+        "lines": 2,
+        "line1": "Yes",
+        "line2": "Cancel",
+        "next": -1
+    }
+]

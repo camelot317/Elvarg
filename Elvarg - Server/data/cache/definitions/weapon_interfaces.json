@@ -1,0 +1,2938 @@
+[
+  {
+    "hash": 3093,
+    "item-id": 3093,
+    "interface": "DART"
+  },
+  {
+    "hash": 3094,
+    "item-id": 3094,
+    "interface": "DART"
+  },
+  {
+    "hash": 3095,
+    "item-id": 3095,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3096,
+    "item-id": 3096,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3097,
+    "item-id": 3097,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3098,
+    "item-id": 3098,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3099,
+    "item-id": 3099,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3100,
+    "item-id": 3100,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 3101,
+    "item-id": 3101,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 13652,
+    "item-id": 13652,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 35,
+    "item-id": 35,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4151,
+    "item-id": 4151,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 12006,
+    "item-id": 12006,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 21371,
+    "item-id": 21371,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 4153,
+    "item-id": 4153,
+    "interface": "GRANITE_MAUL"
+  },
+  {
+    "hash": 4158,
+    "item-id": 4158,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 4170,
+    "item-id": 4170,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 4178,
+    "item-id": 4178,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 3170,
+    "item-id": 3170,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3171,
+    "item-id": 3171,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3172,
+    "item-id": 3172,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3173,
+    "item-id": 3173,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3174,
+    "item-id": 3174,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3175,
+    "item-id": 3175,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 3176,
+    "item-id": 3176,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4212,
+    "item-id": 4212,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3190,
+    "item-id": 3190,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4214,
+    "item-id": 4214,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4215,
+    "item-id": 4215,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3192,
+    "item-id": 3192,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4216,
+    "item-id": 4216,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4217,
+    "item-id": 4217,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3194,
+    "item-id": 3194,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4218,
+    "item-id": 4218,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4219,
+    "item-id": 4219,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3196,
+    "item-id": 3196,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4220,
+    "item-id": 4220,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4221,
+    "item-id": 4221,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3198,
+    "item-id": 3198,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4222,
+    "item-id": 4222,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4223,
+    "item-id": 4223,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 3200,
+    "item-id": 3200,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 3202,
+    "item-id": 3202,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 3204,
+    "item-id": 3204,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 4236,
+    "item-id": 4236,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1203,
+    "item-id": 1203,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1205,
+    "item-id": 1205,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1207,
+    "item-id": 1207,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1209,
+    "item-id": 1209,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1211,
+    "item-id": 1211,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1213,
+    "item-id": 1213,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1215,
+    "item-id": 1215,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1217,
+    "item-id": 1217,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1219,
+    "item-id": 1219,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1221,
+    "item-id": 1221,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1223,
+    "item-id": 1223,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1225,
+    "item-id": 1225,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1227,
+    "item-id": 1227,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1229,
+    "item-id": 1229,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1231,
+    "item-id": 1231,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1233,
+    "item-id": 1233,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1235,
+    "item-id": 1235,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 1237,
+    "item-id": 1237,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1239,
+    "item-id": 1239,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1241,
+    "item-id": 1241,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1243,
+    "item-id": 1243,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1245,
+    "item-id": 1245,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1247,
+    "item-id": 1247,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1249,
+    "item-id": 1249,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 1251,
+    "item-id": 1251,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1253,
+    "item-id": 1253,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1255,
+    "item-id": 1255,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1257,
+    "item-id": 1257,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1259,
+    "item-id": 1259,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1261,
+    "item-id": 1261,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1263,
+    "item-id": 1263,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1265,
+    "item-id": 1265,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1267,
+    "item-id": 1267,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1269,
+    "item-id": 1269,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1271,
+    "item-id": 1271,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1273,
+    "item-id": 1273,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1275,
+    "item-id": 1275,
+    "interface": "PICKAXE"
+  },
+  {
+    "hash": 1277,
+    "item-id": 1277,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1279,
+    "item-id": 1279,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1281,
+    "item-id": 1281,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1283,
+    "item-id": 1283,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1285,
+    "item-id": 1285,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1287,
+    "item-id": 1287,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1289,
+    "item-id": 1289,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1291,
+    "item-id": 1291,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1293,
+    "item-id": 1293,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1295,
+    "item-id": 1295,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1297,
+    "item-id": 1297,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1299,
+    "item-id": 1299,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1301,
+    "item-id": 1301,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1303,
+    "item-id": 1303,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 7447,
+    "item-id": 7447,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 1305,
+    "item-id": 1305,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 1307,
+    "item-id": 1307,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1309,
+    "item-id": 1309,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1311,
+    "item-id": 1311,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1313,
+    "item-id": 1313,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1315,
+    "item-id": 1315,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1317,
+    "item-id": 1317,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1319,
+    "item-id": 1319,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 1321,
+    "item-id": 1321,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1323,
+    "item-id": 1323,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1325,
+    "item-id": 1325,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1327,
+    "item-id": 1327,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1329,
+    "item-id": 1329,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1331,
+    "item-id": 1331,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1333,
+    "item-id": 1333,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 1335,
+    "item-id": 1335,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1337,
+    "item-id": 1337,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1339,
+    "item-id": 1339,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1341,
+    "item-id": 1341,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1343,
+    "item-id": 1343,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1345,
+    "item-id": 1345,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1347,
+    "item-id": 1347,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 1349,
+    "item-id": 1349,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1351,
+    "item-id": 1351,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1353,
+    "item-id": 1353,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1355,
+    "item-id": 1355,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1357,
+    "item-id": 1357,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1359,
+    "item-id": 1359,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1361,
+    "item-id": 1361,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1363,
+    "item-id": 1363,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1365,
+    "item-id": 1365,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1367,
+    "item-id": 1367,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1369,
+    "item-id": 1369,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1371,
+    "item-id": 1371,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1373,
+    "item-id": 1373,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1375,
+    "item-id": 1375,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 1377,
+    "item-id": 1377,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 2402,
+    "item-id": 2402,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1379,
+    "item-id": 1379,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1381,
+    "item-id": 1381,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1383,
+    "item-id": 1383,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1385,
+    "item-id": 1385,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1387,
+    "item-id": 1387,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1389,
+    "item-id": 1389,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1391,
+    "item-id": 1391,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 2415,
+    "item-id": 2415,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 2416,
+    "item-id": 2416,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1393,
+    "item-id": 1393,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 2417,
+    "item-id": 2417,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1395,
+    "item-id": 1395,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1397,
+    "item-id": 1397,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1399,
+    "item-id": 1399,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1401,
+    "item-id": 1401,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 2425,
+    "item-id": 2425,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 6522,
+    "item-id": 6522,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 1403,
+    "item-id": 1403,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 6523,
+    "item-id": 6523,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1405,
+    "item-id": 1405,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 6525,
+    "item-id": 6525,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6526,
+    "item-id": 6526,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 1407,
+    "item-id": 1407,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 6527,
+    "item-id": 6527,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6528,
+    "item-id": 6528,
+    "interface": "MAUL"
+  },
+  {
+    "hash": 1409,
+    "item-id": 1409,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 1419,
+    "item-id": 1419,
+    "interface": "SCYTHE"
+  },
+  {
+    "hash": 1420,
+    "item-id": 1420,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1422,
+    "item-id": 1422,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1424,
+    "item-id": 1424,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1426,
+    "item-id": 1426,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1428,
+    "item-id": 1428,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1430,
+    "item-id": 1430,
+    "interface": "MACE"
+  },
+  {
+    "hash": 4503,
+    "item-id": 4503,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 1432,
+    "item-id": 1432,
+    "interface": "MACE"
+  },
+  {
+    "hash": 1434,
+    "item-id": 1434,
+    "interface": "MACE"
+  },
+  {
+    "hash": 2460,
+    "item-id": 2460,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 4508,
+    "item-id": 4508,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2462,
+    "item-id": 2462,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2464,
+    "item-id": 2464,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2466,
+    "item-id": 2466,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 6562,
+    "item-id": 6562,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 6563,
+    "item-id": 6563,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 2468,
+    "item-id": 2468,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2470,
+    "item-id": 2470,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2472,
+    "item-id": 2472,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2474,
+    "item-id": 2474,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 2476,
+    "item-id": 2476,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 6587,
+    "item-id": 6587,
+    "interface": "CLAWS"
+  },
+  {
+    "hash": 6589,
+    "item-id": 6589,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 6591,
+    "item-id": 6591,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6593,
+    "item-id": 6593,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6595,
+    "item-id": 6595,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6597,
+    "item-id": 6597,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6599,
+    "item-id": 6599,
+    "interface": "HALBERD"
+  },
+  {
+    "hash": 6601,
+    "item-id": 6601,
+    "interface": "MACE"
+  },
+  {
+    "hash": 6603,
+    "item-id": 6603,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 6605,
+    "item-id": 6605,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 6607,
+    "item-id": 6607,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 6609,
+    "item-id": 6609,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 466,
+    "item-id": 466,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6611,
+    "item-id": 6611,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 6613,
+    "item-id": 6613,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 4580,
+    "item-id": 4580,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 4582,
+    "item-id": 4582,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4584,
+    "item-id": 4584,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4587,
+    "item-id": 4587,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 7668,
+    "item-id": 7668,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 7671,
+    "item-id": 7671,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 7673,
+    "item-id": 7673,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 7675,
+    "item-id": 7675,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 5628,
+    "item-id": 5628,
+    "interface": "DART"
+  },
+  {
+    "hash": 5629,
+    "item-id": 5629,
+    "interface": "DART"
+  },
+  {
+    "hash": 5630,
+    "item-id": 5630,
+    "interface": "DART"
+  },
+  {
+    "hash": 5631,
+    "item-id": 5631,
+    "interface": "DART"
+  },
+  {
+    "hash": 5632,
+    "item-id": 5632,
+    "interface": "DART"
+  },
+  {
+    "hash": 5633,
+    "item-id": 5633,
+    "interface": "DART"
+  },
+  {
+    "hash": 5634,
+    "item-id": 5634,
+    "interface": "DART"
+  },
+  {
+    "hash": 5635,
+    "item-id": 5635,
+    "interface": "DART"
+  },
+  {
+    "hash": 5636,
+    "item-id": 5636,
+    "interface": "DART"
+  },
+  {
+    "hash": 5637,
+    "item-id": 5637,
+    "interface": "DART"
+  },
+  {
+    "hash": 5638,
+    "item-id": 5638,
+    "interface": "DART"
+  },
+  {
+    "hash": 5639,
+    "item-id": 5639,
+    "interface": "DART"
+  },
+  {
+    "hash": 5640,
+    "item-id": 5640,
+    "interface": "DART"
+  },
+  {
+    "hash": 5641,
+    "item-id": 5641,
+    "interface": "DART"
+  },
+  {
+    "hash": 5642,
+    "item-id": 5642,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5643,
+    "item-id": 5643,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5644,
+    "item-id": 5644,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5645,
+    "item-id": 5645,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5646,
+    "item-id": 5646,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5647,
+    "item-id": 5647,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5648,
+    "item-id": 5648,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5649,
+    "item-id": 5649,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5650,
+    "item-id": 5650,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5651,
+    "item-id": 5651,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5652,
+    "item-id": 5652,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5653,
+    "item-id": 5653,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 5654,
+    "item-id": 5654,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5655,
+    "item-id": 5655,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5656,
+    "item-id": 5656,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5657,
+    "item-id": 5657,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5658,
+    "item-id": 5658,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5659,
+    "item-id": 5659,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5660,
+    "item-id": 5660,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5661,
+    "item-id": 5661,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5662,
+    "item-id": 5662,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5663,
+    "item-id": 5663,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5664,
+    "item-id": 5664,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5665,
+    "item-id": 5665,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5666,
+    "item-id": 5666,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5667,
+    "item-id": 5667,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 5668,
+    "item-id": 5668,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5670,
+    "item-id": 5670,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5672,
+    "item-id": 5672,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5674,
+    "item-id": 5674,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5676,
+    "item-id": 5676,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5678,
+    "item-id": 5678,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5680,
+    "item-id": 5680,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5682,
+    "item-id": 5682,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5684,
+    "item-id": 5684,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5686,
+    "item-id": 5686,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5688,
+    "item-id": 5688,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5690,
+    "item-id": 5690,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5692,
+    "item-id": 5692,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5694,
+    "item-id": 5694,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5696,
+    "item-id": 5696,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5698,
+    "item-id": 5698,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 4675,
+    "item-id": 4675,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 5700,
+    "item-id": 5700,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6724,
+    "item-id": 6724,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5702,
+    "item-id": 5702,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 5704,
+    "item-id": 5704,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5706,
+    "item-id": 5706,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5708,
+    "item-id": 5708,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5710,
+    "item-id": 5710,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5712,
+    "item-id": 5712,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5714,
+    "item-id": 5714,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6739,
+    "item-id": 6739,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 5716,
+    "item-id": 5716,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5718,
+    "item-id": 5718,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5720,
+    "item-id": 5720,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6745,
+    "item-id": 6745,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5722,
+    "item-id": 5722,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6746,
+    "item-id": 6746,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5724,
+    "item-id": 5724,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5726,
+    "item-id": 5726,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5728,
+    "item-id": 5728,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5730,
+    "item-id": 5730,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4710,
+    "item-id": 4710,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 5734,
+    "item-id": 5734,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5736,
+    "item-id": 5736,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6760,
+    "item-id": 6760,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6762,
+    "item-id": 6762,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6764,
+    "item-id": 6764,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4718,
+    "item-id": 4718,
+    "interface": "GREATAXE"
+  },
+  {
+    "hash": 4726,
+    "item-id": 4726,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 7804,
+    "item-id": 7804,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4734,
+    "item-id": 4734,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 7806,
+    "item-id": 7806,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 7807,
+    "item-id": 7807,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 7808,
+    "item-id": 7808,
+    "interface": "MACE"
+  },
+  {
+    "hash": 7809,
+    "item-id": 7809,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 4747,
+    "item-id": 4747,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 4755,
+    "item-id": 4755,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 667,
+    "item-id": 667,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 6818,
+    "item-id": 6818,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4827,
+    "item-id": 4827,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 746,
+    "item-id": 746,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 747,
+    "item-id": 747,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6897,
+    "item-id": 6897,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 6908,
+    "item-id": 6908,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4862,
+    "item-id": 4862,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6910,
+    "item-id": 6910,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 767,
+    "item-id": 767,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 4863,
+    "item-id": 4863,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4864,
+    "item-id": 4864,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6912,
+    "item-id": 6912,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4865,
+    "item-id": 4865,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 6914,
+    "item-id": 6914,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 772,
+    "item-id": 772,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 4886,
+    "item-id": 4886,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4887,
+    "item-id": 4887,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4888,
+    "item-id": 4888,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4889,
+    "item-id": 4889,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 800,
+    "item-id": 800,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 801,
+    "item-id": 801,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 802,
+    "item-id": 802,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 803,
+    "item-id": 803,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 804,
+    "item-id": 804,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 805,
+    "item-id": 805,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 806,
+    "item-id": 806,
+    "interface": "DART"
+  },
+  {
+    "hash": 807,
+    "item-id": 807,
+    "interface": "DART"
+  },
+  {
+    "hash": 808,
+    "item-id": 808,
+    "interface": "DART"
+  },
+  {
+    "hash": 809,
+    "item-id": 809,
+    "interface": "DART"
+  },
+  {
+    "hash": 810,
+    "item-id": 810,
+    "interface": "DART"
+  },
+  {
+    "hash": 811,
+    "item-id": 811,
+    "interface": "DART"
+  },
+  {
+    "hash": 812,
+    "item-id": 812,
+    "interface": "DART"
+  },
+  {
+    "hash": 813,
+    "item-id": 813,
+    "interface": "DART"
+  },
+  {
+    "hash": 814,
+    "item-id": 814,
+    "interface": "DART"
+  },
+  {
+    "hash": 4910,
+    "item-id": 4910,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 815,
+    "item-id": 815,
+    "interface": "DART"
+  },
+  {
+    "hash": 4911,
+    "item-id": 4911,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 816,
+    "item-id": 816,
+    "interface": "DART"
+  },
+  {
+    "hash": 4912,
+    "item-id": 4912,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 817,
+    "item-id": 817,
+    "interface": "DART"
+  },
+  {
+    "hash": 4913,
+    "item-id": 4913,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 818,
+    "item-id": 818,
+    "interface": "DART"
+  },
+  {
+    "hash": 825,
+    "item-id": 825,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 826,
+    "item-id": 826,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 827,
+    "item-id": 827,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 3899,
+    "item-id": 3899,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 828,
+    "item-id": 828,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 829,
+    "item-id": 829,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 830,
+    "item-id": 830,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 831,
+    "item-id": 831,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 832,
+    "item-id": 832,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 833,
+    "item-id": 833,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 834,
+    "item-id": 834,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 835,
+    "item-id": 835,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 2883,
+    "item-id": 2883,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 836,
+    "item-id": 836,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 837,
+    "item-id": 837,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 9185,
+    "item-id": 9185,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 11785,
+    "item-id": 11785,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 4934,
+    "item-id": 4934,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 839,
+    "item-id": 839,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4935,
+    "item-id": 4935,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4936,
+    "item-id": 4936,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 841,
+    "item-id": 841,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4937,
+    "item-id": 4937,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 843,
+    "item-id": 843,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 845,
+    "item-id": 845,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 847,
+    "item-id": 847,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 849,
+    "item-id": 849,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 851,
+    "item-id": 851,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 853,
+    "item-id": 853,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 855,
+    "item-id": 855,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 857,
+    "item-id": 857,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 859,
+    "item-id": 859,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 861,
+    "item-id": 861,
+    "interface": "SHORTBOW"
+  },
+    {
+    "hash": 12926,
+    "item-id": 12926,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 6724,
+    "item-id": 6724,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 4958,
+    "item-id": 4958,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 863,
+    "item-id": 863,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 4959,
+    "item-id": 4959,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 864,
+    "item-id": 864,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 4960,
+    "item-id": 4960,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 865,
+    "item-id": 865,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 4961,
+    "item-id": 4961,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 866,
+    "item-id": 866,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 867,
+    "item-id": 867,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 868,
+    "item-id": 868,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 869,
+    "item-id": 869,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 870,
+    "item-id": 870,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 871,
+    "item-id": 871,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 872,
+    "item-id": 872,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 873,
+    "item-id": 873,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 874,
+    "item-id": 874,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 875,
+    "item-id": 875,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 876,
+    "item-id": 876,
+    "interface": "KNIFE"
+  },
+  {
+    "hash": 4982,
+    "item-id": 4982,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4983,
+    "item-id": 4983,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4984,
+    "item-id": 4984,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4985,
+    "item-id": 4985,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 2952,
+    "item-id": 2952,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 2961,
+    "item-id": 2961,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 2963,
+    "item-id": 2963,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5016,
+    "item-id": 5016,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 2997,
+    "item-id": 2997,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5056,
+    "item-id": 5056,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 5057,
+    "item-id": 5057,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 5058,
+    "item-id": 5058,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 6082,
+    "item-id": 6082,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 5059,
+    "item-id": 5059,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 4037,
+    "item-id": 4037,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4039,
+    "item-id": 4039,
+    "interface": "UNARMED"
+  },
+  {
+    "hash": 4068,
+    "item-id": 4068,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 3053,
+    "item-id": 3053,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 3054,
+    "item-id": 3054,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 7158,
+    "item-id": 7158,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 11230,
+    "item-id": 11230,
+    "interface": "DART"
+  },
+  {
+    "hash": 11804,
+    "item-id": 11804,
+    "interface": "TWO_HANDED_SWORD"
+  }
+  ,
+  {
+    "hash": 11802,
+    "item-id": 11802,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 11806,
+    "item-id": 11806,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 11808,
+    "item-id": 11808,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 11730,
+    "item-id": 11730,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 11235,
+    "item-id": 11235,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 15701,
+    "item-id": 15701,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 15702,
+    "item-id": 15702,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 15703,
+    "item-id": 15703,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 15704,
+    "item-id": 15704,
+    "interface": "LONGBOW"
+  },
+  {
+    "hash": 13899,
+    "item-id": 13899,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 13902,
+    "item-id": 13902,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 15486,
+    "item-id": 15486,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 14004,
+    "item-id": 14004,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 14005,
+    "item-id": 14005,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 14006,
+    "item-id": 14006,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 14007,
+    "item-id": 14007,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 15441,
+    "item-id": 15441,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 15442,
+    "item-id": 15442,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 15443,
+    "item-id": 15443,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 15444,
+    "item-id": 15444,
+    "interface": "WHIP"
+  },
+  {
+    "hash": 20084,
+    "item-id": 20084,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 4566,
+    "item-id": 4566,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 18351,
+    "item-id": 18351,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 14023,
+    "item-id": 14023,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 18349,
+    "item-id": 18349,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 14024,
+    "item-id": 14024,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 18353,
+    "item-id": 18353,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 18355,
+    "item-id": 18355,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 18357,
+    "item-id": 18357,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 14017,
+    "item-id": 14017,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 19780,
+    "item-id": 19780,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 14018,
+    "item-id": 14018,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 20171,
+    "item-id": 20171,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 19143,
+    "item-id": 19143,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 19146,
+    "item-id": 19146,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 19149,
+    "item-id": 19149,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 15241,
+    "item-id": 15241,
+    "interface": "SHORTBOW"
+  },
+  {
+    "hash": 6914,
+    "item-id": 6914,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 10010,
+    "item-id": 10010,
+    "interface": "SCIMITAR"
+  },
+  {
+    "hash": 13879,
+    "item-id": 13879,
+    "interface": "JAVELIN"
+  },
+  {
+    "hash": 13883,
+    "item-id": 13883,
+    "interface": "THROWNAXE"
+  },
+  {
+    "hash": 13867,
+    "item-id": 13867,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 19308,
+    "item-id": 19308,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 3757,
+    "item-id": 3757,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 6523,
+    "item-id": 6523,
+    "interface": "DAGGER"
+  },
+  {
+    "hash": 6526,
+    "item-id": 6526,
+    "interface": "STAFF"
+  },
+  {
+    "hash": 15753,
+    "item-id": 15753,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16207,
+    "item-id": 16207,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16383,
+    "item-id": 16383,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16024,
+    "item-id": 16024,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16405,
+    "item-id": 16405,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16174,
+    "item-id": 16174,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16889,
+    "item-id": 16889,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16127,
+    "item-id": 16127,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16935,
+    "item-id": 16935,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16035,
+    "item-id": 16035,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 17019,
+    "item-id": 17019,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16116,
+    "item-id": 16116,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 15755,
+    "item-id": 15755,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16208,
+    "item-id": 16208,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16385,
+    "item-id": 16385,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16407,
+    "item-id": 16407,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16175,
+    "item-id": 16175,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16891,
+    "item-id": 16891,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 16128,
+    "item-id": 16128,
+    "interface": "TWO_HANDED_SWORD"
+  },
+  {
+    "hash": 16937,
+    "item-id": 16937,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16036,
+    "item-id": 16036,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 17021,
+    "item-id": 17021,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16117,
+    "item-id": 16117,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 15757,
+    "item-id": 15757,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15759,
+    "item-id": 15759,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15761,
+    "item-id": 15761,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15763,
+    "item-id": 15763,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15765,
+    "item-id": 15765,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15767,
+    "item-id": 15767,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15769,
+    "item-id": 15769,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15771,
+    "item-id": 15771,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 15773,
+    "item-id": 15773,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16209,
+    "item-id": 16209,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16210,
+    "item-id": 16210,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16211,
+    "item-id": 16211,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16212,
+    "item-id": 16213,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16214,
+    "item-id": 16214,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16215,
+    "item-id": 16215,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16216,
+    "item-id": 16216,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16217,
+    "item-id": 16217,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16387,
+    "item-id": 16387,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16389,
+    "item-id": 16389,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16391,
+    "item-id": 16391,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16393,
+    "item-id": 16393,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16395,
+    "item-id": 16395,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16397,
+    "item-id": 16397,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16399,
+    "item-id": 16399,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16401,
+    "item-id": 16401,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16403,
+    "item-id": 16403,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16409,
+    "item-id": 16409,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16411,
+    "item-id": 16411,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16413,
+    "item-id": 16413,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16415,
+    "item-id": 16415,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16417,
+    "item-id": 16417,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16419,
+    "item-id": 16419,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16421,
+    "item-id": 16421,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16423,
+    "item-id": 16423,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16425,
+    "item-id": 16425,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16027,
+    "item-id": 16027,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16028,
+    "item-id": 16028,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16029,
+    "item-id": 16029,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16030,
+    "item-id": 16030,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16031,
+    "item-id": 16031,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16032,
+    "item-id": 16032,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16033,
+    "item-id": 16033,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16034,
+    "item-id": 16034,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16026,
+    "item-id": 16026,
+    "interface": "LONGSWORD"
+  },
+  {
+    "hash": 16176,
+    "item-id": 16176,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16177,
+    "item-id": 16177,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16178,
+    "item-id": 16178,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16179,
+    "item-id": 16179,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16180,
+    "item-id": 16180,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16181,
+    "item-id": 16181,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16182,
+    "item-id": 16182,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16183,
+    "item-id": 16183,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16184,
+    "item-id": 16184,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16939,
+    "item-id": 16939,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16941,
+    "item-id": 16941,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16943,
+    "item-id": 16943,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16945,
+    "item-id": 16945,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16947,
+    "item-id": 16947,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16949,
+    "item-id": 16949,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16951,
+    "item-id": 16951,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16953,
+    "item-id": 16953,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16955,
+    "item-id": 16955,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16036,
+    "item-id": 16036,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16037,
+    "item-id": 16037,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16038,
+    "item-id": 16038,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16039,
+    "item-id": 16039,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16040,
+    "item-id": 16040,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16041,
+    "item-id": 16041,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16042,
+    "item-id": 16042,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16043,
+    "item-id": 16043,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16044,
+    "item-id": 16044,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 16045,
+    "item-id": 16045,
+    "interface": "SWORD"
+  },
+  {
+    "hash": 17023,
+    "item-id": 17023,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17025,
+    "item-id": 17025,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17027,
+    "item-id": 17027,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17029,
+    "item-id": 17029,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17031,
+    "item-id": 17031,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17033,
+    "item-id": 17033,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17035,
+    "item-id": 17035,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17037,
+    "item-id": 17037,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 17039,
+    "item-id": 17039,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16118,
+    "item-id": 16118,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16119,
+    "item-id": 16119,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16120,
+    "item-id": 16120,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16121,
+    "item-id": 16121,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16122,
+    "item-id": 16122,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16123,
+    "item-id": 16123,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16124,
+    "item-id": 16124,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 16125,
+    "item-id": 16125,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 10887,
+    "item-id": 10887,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 15403,
+    "item-id": 15403,
+    "interface": "BATTLEAXE"
+  },
+  {
+    "hash": 16126,
+    "item-id": 16126,
+    "interface": "WARHAMMER"
+  },
+  {
+    "hash": 11716,
+    "item-id": 11716,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 13905,
+    "item-id": 13905,
+    "interface": "SPEAR"
+  },
+  {
+    "hash": 19478,
+    "item-id": 19478,
+    "interface": "CROSSBOW"
+  },
+  {
+    "hash": 19481,
+    "item-id": 19481,
+    "interface": "CROSSBOW"
+  }
+]
