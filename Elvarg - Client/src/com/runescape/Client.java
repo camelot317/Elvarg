@@ -8685,7 +8685,7 @@ public class Client extends GameApplet {
 			mapDotClan = new Sprite(mediaArchive, "mapdots", 5);
 			scrollBar1 = new Sprite(mediaArchive, "scrollbar", 0);
 			scrollBar2 = new Sprite(mediaArchive, "scrollbar", 1);
-			for (int l4 = 0; l4 < 2; l4++)
+			for (int l4 = 0; l4 < 3; l4++)
 				modIcons[l4] = new Sprite(mediaArchive, "mod_icons", l4);
 			Sprite sprite = new Sprite(mediaArchive, "screenframe", 0);
 			leftFrame = new ProducingGraphicsBuffer(sprite.myWidth, sprite.myHeight);
@@ -14714,7 +14714,7 @@ public class Client extends GameApplet {
 		anInt1210 = 2;
 		anInt1211 = 78;
 		promptInput = "";
-		modIcons = new Sprite[2];
+		modIcons = new Sprite[3];
 		tabId = 3;
 		updateChatbox = false;
 		fadeMusic = true;

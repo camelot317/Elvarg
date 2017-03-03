@@ -286,7 +286,7 @@ public class Player extends Character {
 		getSession().setState(SessionState.LOGGED_IN);
 
 		//GRANT FULL PERMISSIONS WHILST SERVER BEING DEVELOPED
-		setRights(PlayerRights.ADMINISTRATOR);
+//		setRights(PlayerRights.ADMINISTRATOR);
 		
 		//Packets
 		getPacketSender().sendMapRegion();
