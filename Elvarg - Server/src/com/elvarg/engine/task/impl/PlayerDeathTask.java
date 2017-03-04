@@ -21,8 +21,8 @@ import com.elvarg.world.model.Skill;
 import com.elvarg.world.model.movement.MovementStatus;
 
 /**
- * Represents a player's death task, through which the process of dying is handled,
- * the animation, dropping items, etc.
+ * Represents a player's death task, through which the process of dying is
+ * handled, the animation, dropping items, etc.
  * 
  * @author relex lawl, redone by Gabbe.
  */
@@ -31,7 +31,9 @@ public class PlayerDeathTask extends Task {
 
 	/**
 	 * The PlayerDeathTask constructor.
-	 * @param player	The player setting off the task.
+	 * 
+	 * @param player
+	 *            The player setting off the task.
 	 */
 	public PlayerDeathTask(Player player) {
 		super(1, player, false);
@@ -47,7 +49,7 @@ public class PlayerDeathTask extends Task {
 
 	@Override
 	public void execute() {
-		if(player == null) {
+		if (player == null) {
 			stop();
 			return;
 		}
@@ -68,59 +70,62 @@ public class PlayerDeathTask extends Task {
 				DamageDealer damageDealer = player.getCombat().getTopDamageDealer(true, null);
 				Player killer = damageDealer == null ? null : damageDealer.getPlayer();
 
-				/*	if(player.getRights().equals(PlayerRights.OWNER) || player.getRights().equals(PlayerRights.DEVELOPER)) {
-					dropItems = false;
-				}
-				if(killer != null) {
-					if(killer.getRights().equals(PlayerRights.OWNER) || killer.getRights().equals(PlayerRights.DEVELOPER)) {
-						dropItems = false;
-					}
-				}*/
-				if(dropItems) {
-					
-					//Delete emblems from inventory
-					for(Emblem emblem : BountyHunter.Emblem.values()) {
-						if(player.getInventory().contains(emblem.id)) {
+				/*
+				 * if(player.getRights().equals(PlayerRights.OWNER) ||
+				 * player.getRights().equals(PlayerRights.DEVELOPER)) {
+				 * dropItems = false; } if(killer != null) {
+				 * if(killer.getRights().equals(PlayerRights.OWNER) ||
+				 * killer.getRights().equals(PlayerRights.DEVELOPER)) {
+				 * dropItems = false; } }
+				 */
+				if (dropItems) {
+
+					// Delete emblems from inventory
+					for (Emblem emblem : BountyHunter.Emblem.values()) {
+						if (player.getInventory().contains(emblem.id)) {
 							player.getInventory().delete(emblem.id, player.getInventory().getAmount(emblem.id));
 						}
 					}
-					
-					//Get items to keep
+
+					// Get items to keep
 					itemsToKeep = ItemsKeptOnDeath.getItemsToKeep(player);
-					
-					//Fetch player's items
+
+					// Fetch player's items
 					final CopyOnWriteArrayList<Item> playerItems = new CopyOnWriteArrayList<Item>();
 					playerItems.addAll(player.getInventory().getValidItems());
 					playerItems.addAll(player.getEquipment().getValidItems());
-					
-					//The position the items will be dropped at
+
+					// The position the items will be dropped at
 					final Position position = player.getPosition();
-					
-					//Go through player items, drop them to killer
+
+					// Go through player items, drop them to killer
 					for (Item item : playerItems) {
-						
-						//Keep tradeable items
-						if(!item.getDefinition().isTradeable() || itemsToKeep.contains(item)) {
-							if(!itemsToKeep.contains(item)) {
+
+						// Keep tradeable items
+						if (!item.getDefinition().isTradeable() || itemsToKeep.contains(item)) {
+							if (!itemsToKeep.contains(item)) {
 								itemsToKeep.add(item);
 							}
 							continue;
 						}
-						
-						//Drop items
-						if(item != null && item.getId() > 0 && item.getAmount() > 0) {
-							GroundItemManager.spawnGroundItem((killer != null ? killer : player), new GroundItem(item, position, killer != null ? killer.getUsername() : player.getUsername(), player.getHostAddress(), false, 150, true, 150));
+
+						// Drop items
+						if (item != null && item.getId() > 0 && item.getAmount() > 0) {
+							GroundItemManager.spawnGroundItem((killer != null ? killer : player),
+									new GroundItem(item, position,
+											killer != null ? killer.getUsername() : player.getUsername(),
+											player.getHostAddress(), false, 150, true, 150));
 						}
-						
+
 					}
-					
-					//Give killer rewards
-					if(killer != null) {
-						if(killer.getLocation() == Location.WILDERNESS) {
+
+					// Give killer rewards
+					if (killer != null) {
+						if (killer.getLocation() == Location.WILDERNESS) {
 							killer.getBountyHunter().killedPlayer(player);
 						}
 					}
-					
+
 					player.getInventory().resetItems().refreshItems();
 					player.getEquipment().resetItems().refreshItems();
 				}
@@ -130,9 +135,9 @@ public class PlayerDeathTask extends Task {
 				player.getSkillManager().stopSkilling();
 				break;
 			case 0:
-				if(dropItems) {
-					if(itemsToKeep != null) {
-						for(Item it : itemsToKeep) {
+				if (dropItems) {
+					if (itemsToKeep != null) {
+						for (Item it : itemsToKeep) {
 							player.getInventory().add(it.getId(), 1);
 						}
 						itemsToKeep.clear();
@@ -141,7 +146,7 @@ public class PlayerDeathTask extends Task {
 				player.restart();
 				player.getUpdateFlag().flag(Flag.APPEARANCE);
 				loc.onDeath(player);
-				if(player.getPosition().equals(oldPosition)) {
+				if (player.getPosition().equals(oldPosition)) {
 					player.moveTo(GameConstants.DEFAULT_POSITION.copy());
 				}
 				player = null;
@@ -150,13 +155,13 @@ public class PlayerDeathTask extends Task {
 				break;
 			}
 			ticks--;
-		} catch(Exception e) {
+		} catch (Exception e) {
 			setEventRunning(false);
 			e.printStackTrace();
-			if(player != null) {
+			if (player != null) {
 				player.moveTo(GameConstants.DEFAULT_POSITION.copy());
 				player.setHitpoints(player.getSkillManager().getMaxLevel(Skill.HITPOINTS));
-			}	
+			}
 		}
 	}
 }

@@ -20,8 +20,11 @@ public class GameObject extends Entity {
 
 	/**
 	 * GameObject constructor to call upon a new game object.
-	 * @param id		The new object's id.
-	 * @param position	The new object's position on the globe.
+	 * 
+	 * @param id
+	 *            The new object's id.
+	 * @param position
+	 *            The new object's position on the globe.
 	 */
 	public GameObject(int id, Position position) {
 		super(position);
@@ -30,9 +33,13 @@ public class GameObject extends Entity {
 
 	/**
 	 * GameObject constructor to call upon a new game object.
-	 * @param id		The new object's id.
-	 * @param globalSeconds		The new object's timer before being removed
-	 * @param position	The new object's position on the globe.
+	 * 
+	 * @param id
+	 *            The new object's id.
+	 * @param globalSeconds
+	 *            The new object's timer before being removed
+	 * @param position
+	 *            The new object's position on the globe.
 	 */
 	public GameObject(int id, int dissapear_seconds, Position position) {
 		super(position);
@@ -42,9 +49,13 @@ public class GameObject extends Entity {
 
 	/**
 	 * GameObject constructor to call upon a new game object.
-	 * @param id		The new object's id.
-	 * @param position	The new object's position on the globe.
-	 * @param type		The new object's type.
+	 * 
+	 * @param id
+	 *            The new object's id.
+	 * @param position
+	 *            The new object's position on the globe.
+	 * @param type
+	 *            The new object's type.
 	 */
 	public GameObject(int id, Position position, int type) {
 		super(position);
@@ -54,10 +65,15 @@ public class GameObject extends Entity {
 
 	/**
 	 * GameObject constructor to call upon a new game object.
-	 * @param id		The new object's id.
-	 * @param position	The new object's position on the globe.
-	 * @param type		The new object's type.
-	 * @param face		The new object's facing position.
+	 * 
+	 * @param id
+	 *            The new object's id.
+	 * @param position
+	 *            The new object's position on the globe.
+	 * @param type
+	 *            The new object's type.
+	 * @param face
+	 *            The new object's facing position.
 	 */
 	public GameObject(int id, Position position, int type, int face) {
 		super(position);
@@ -68,11 +84,17 @@ public class GameObject extends Entity {
 
 	/**
 	 * GameObject constructor to call upon a new game object.
-	 * @param id		The new object's id.
-	 * @param position	The new object's position on the globe.
-	 * @param type		The new object's type.
-	 * @param face		The new object's facing position.
-	 * @param face		The new object's seconds before dissapearing.
+	 * 
+	 * @param id
+	 *            The new object's id.
+	 * @param position
+	 *            The new object's position on the globe.
+	 * @param type
+	 *            The new object's type.
+	 * @param face
+	 *            The new object's facing position.
+	 * @param face
+	 *            The new object's seconds before dissapearing.
 	 */
 	public GameObject(int id, Position position, int type, int face, int seconds) {
 		super(position);
@@ -80,7 +102,7 @@ public class GameObject extends Entity {
 		this.type = type;
 		this.face = face;
 
-		if(seconds != -1) {
+		if (seconds != -1) {
 			this.timer = new SecondsTimer(seconds);
 		}
 	}
@@ -92,6 +114,7 @@ public class GameObject extends Entity {
 
 	/**
 	 * Gets the object's id.
+	 * 
 	 * @return id.
 	 */
 	public int getId() {
@@ -105,7 +128,8 @@ public class GameObject extends Entity {
 
 	/**
 	 * Gets the object's type.
-	 * @return	type.
+	 * 
+	 * @return type.
 	 */
 	public int getType() {
 		return type;
@@ -113,7 +137,9 @@ public class GameObject extends Entity {
 
 	/**
 	 * Sets the object's type.
-	 * @param type	New type value to assign.
+	 * 
+	 * @param type
+	 *            New type value to assign.
 	 */
 	public void setType(int type) {
 		this.type = type;
@@ -126,7 +152,8 @@ public class GameObject extends Entity {
 
 	/**
 	 * Gets the object's current face direction.
-	 * @return	face.
+	 * 
+	 * @return face.
 	 */
 	public int getFace() {
 		return face;
@@ -134,7 +161,9 @@ public class GameObject extends Entity {
 
 	/**
 	 * Sets the object's face direction.
-	 * @param face	Face value to which object will face.
+	 * 
+	 * @param face
+	 *            Face value to which object will face.
 	 */
 	public void setFace(int face) {
 		this.face = face;
@@ -149,7 +178,8 @@ public class GameObject extends Entity {
 
 	/**
 	 * Gets the object's definition.
-	 * @return	definition.
+	 * 
+	 * @return definition.
 	 */
 	public ObjectDefinition getDefinition() {
 		return ObjectDefinition.forId(id);
@@ -158,9 +188,9 @@ public class GameObject extends Entity {
 	@Override
 	public void performAnimation(Animation animation) {
 		for (Player player : World.getPlayers()) {
-			if(player == null)
+			if (player == null)
 				continue;
-			if(player.getPosition().isWithinDistance(getPosition()))
+			if (player.getPosition().isWithinDistance(getPosition()))
 				player.getPacketSender().sendObjectAnimation(this, animation);
 		}
 	}
@@ -168,7 +198,7 @@ public class GameObject extends Entity {
 	@Override
 	public void performGraphic(Graphic graphic) {
 		for (Player player : World.getPlayers()) {
-			if(player == null)
+			if (player == null)
 				continue;
 			if (player.getPosition().isWithinDistance(getPosition()))
 				player.getPacketSender().sendGraphic(graphic, getPosition());
@@ -178,10 +208,10 @@ public class GameObject extends Entity {
 	@Override
 	public int getSize() {
 		ObjectDefinition definition = getDefinition();
-		if(definition == null)
+		if (definition == null)
 			return 1;
 
-		switch(id) {
+		switch (id) {
 		case 38660:
 		case 410:
 		case 2320:
@@ -194,9 +224,9 @@ public class GameObject extends Entity {
 			return 3;
 		}
 
-		if(definition.getSizeX() == 1)
+		if (definition.getSizeX() == 1)
 			return definition.getSizeY();
-		else if(definition.getSizeX() > 1 && definition.getSizeY() == 1)
+		else if (definition.getSizeX() > 1 && definition.getSizeY() == 1)
 			return definition.getSizeX();
 		else
 			return definition.getSizeY() + definition.getSizeX();

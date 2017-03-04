@@ -1,4 +1,5 @@
 package com.elvarg.world.model.movement;
+
 import java.util.LinkedList;
 
 import com.elvarg.world.collision.region.RegionClipping;
@@ -7,8 +8,7 @@ import com.elvarg.world.model.Position;
 
 public class RS317PathFinder {
 
-	public static void findPath(Character gc, int destX, int destY, boolean moveNear,
-			int xLength, int yLength) {
+	public static void findPath(Character gc, int destX, int destY, boolean moveNear, int xLength, int yLength) {
 		try {
 			if (destX == gc.getPosition().getLocalX() && destY == gc.getPosition().getLocalY() && !moveNear) {
 				return;
@@ -53,41 +53,35 @@ public class RS317PathFinder {
 					return;
 				final int thisCost = cost[curX][curY] + 1;
 
-				if (curY > 0
-						&& via[curX][curY - 1] == 0
+				if (curY > 0 && via[curX][curY - 1] == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY - 1, height) & 0x1280102) == 0) {
 					tileQueueX.add(curX);
 					tileQueueY.add(curY - 1);
 					via[curX][curY - 1] = 1;
 					cost[curX][curY - 1] = thisCost;
 				}
-				if (curX > 0
-						&& via[curX - 1][curY] == 0
+				if (curX > 0 && via[curX - 1][curY] == 0
 						&& (RegionClipping.getClipping(curAbsX - 1, curAbsY, height) & 0x1280108) == 0) {
 					tileQueueX.add(curX - 1);
 					tileQueueY.add(curY);
 					via[curX - 1][curY] = 2;
 					cost[curX - 1][curY] = thisCost;
 				}
-				if (curY < 104 - 1
-						&& via[curX][curY + 1] == 0
+				if (curY < 104 - 1 && via[curX][curY + 1] == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY + 1, height) & 0x1280120) == 0) {
 					tileQueueX.add(curX);
 					tileQueueY.add(curY + 1);
 					via[curX][curY + 1] = 4;
 					cost[curX][curY + 1] = thisCost;
 				}
-				if (curX < 104 - 1
-						&& via[curX + 1][curY] == 0
+				if (curX < 104 - 1 && via[curX + 1][curY] == 0
 						&& (RegionClipping.getClipping(curAbsX + 1, curAbsY, height) & 0x1280180) == 0) {
 					tileQueueX.add(curX + 1);
 					tileQueueY.add(curY);
 					via[curX + 1][curY] = 8;
 					cost[curX + 1][curY] = thisCost;
 				}
-				if (curX > 0
-						&& curY > 0
-						&& via[curX - 1][curY - 1] == 0
+				if (curX > 0 && curY > 0 && via[curX - 1][curY - 1] == 0
 						&& (RegionClipping.getClipping(curAbsX - 1, curAbsY - 1, height) & 0x128010e) == 0
 						&& (RegionClipping.getClipping(curAbsX - 1, curAbsY, height) & 0x1280108) == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY - 1, height) & 0x1280102) == 0) {
@@ -96,9 +90,7 @@ public class RS317PathFinder {
 					via[curX - 1][curY - 1] = 3;
 					cost[curX - 1][curY - 1] = thisCost;
 				}
-				if (curX > 0
-						&& curY < 104 - 1
-						&& via[curX - 1][curY + 1] == 0
+				if (curX > 0 && curY < 104 - 1 && via[curX - 1][curY + 1] == 0
 						&& (RegionClipping.getClipping(curAbsX - 1, curAbsY + 1, height) & 0x1280138) == 0
 						&& (RegionClipping.getClipping(curAbsX - 1, curAbsY, height) & 0x1280108) == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY + 1, height) & 0x1280120) == 0) {
@@ -107,9 +99,7 @@ public class RS317PathFinder {
 					via[curX - 1][curY + 1] = 6;
 					cost[curX - 1][curY + 1] = thisCost;
 				}
-				if (curX < 104 - 1
-						&& curY > 0
-						&& via[curX + 1][curY - 1] == 0
+				if (curX < 104 - 1 && curY > 0 && via[curX + 1][curY - 1] == 0
 						&& (RegionClipping.getClipping(curAbsX + 1, curAbsY - 1, height) & 0x1280183) == 0
 						&& (RegionClipping.getClipping(curAbsX + 1, curAbsY, height) & 0x1280180) == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY - 1, height) & 0x1280102) == 0) {
@@ -118,9 +108,7 @@ public class RS317PathFinder {
 					via[curX + 1][curY - 1] = 9;
 					cost[curX + 1][curY - 1] = thisCost;
 				}
-				if (curX < 104 - 1
-						&& curY < 104 - 1
-						&& via[curX + 1][curY + 1] == 0
+				if (curX < 104 - 1 && curY < 104 - 1 && via[curX + 1][curY + 1] == 0
 						&& (RegionClipping.getClipping(curAbsX + 1, curAbsY + 1, height) & 0x12801e0) == 0
 						&& (RegionClipping.getClipping(curAbsX + 1, curAbsY, height) & 0x1280180) == 0
 						&& (RegionClipping.getClipping(curAbsX, curAbsY + 1, height) & 0x1280120) == 0) {
@@ -137,8 +125,7 @@ public class RS317PathFinder {
 					final int i_225_ = 10;
 					for (int x = destX - i_225_; x <= destX + i_225_; x++)
 						for (int y = destY - i_225_; y <= destY + i_225_; y++)
-							if (x >= 0 && y >= 0 && x < 104 && y < 104
-							&& cost[x][y] < 100) {
+							if (x >= 0 && y >= 0 && x < 104 && y < 104 && cost[x][y] < 100) {
 								int i_228_ = 0;
 								if (x < destX)
 									i_228_ = destX - x;
@@ -149,10 +136,8 @@ public class RS317PathFinder {
 									i_229_ = destY - y;
 								else if (y > destY + yLength - 1)
 									i_229_ = y - (destY + yLength - 1);
-								final int i_230_ = i_228_ * i_228_ + i_229_
-										* i_229_;
-								if (i_230_ < i_223_ || i_230_ == i_223_
-										&& cost[x][y] < thisCost) {
+								final int i_230_ = i_228_ * i_228_ + i_229_ * i_229_;
+								if (i_230_ < i_223_ || i_230_ == i_223_ && cost[x][y] < thisCost) {
 									i_223_ = i_230_;
 									thisCost = cost[x][y];
 									curX = x;
@@ -194,8 +179,8 @@ public class RS317PathFinder {
 				pathY = gc.getPosition().getRegionY() * 8 + tileQueueY.get(tail);
 				gc.getMovementQueue().addStep(new Position(pathX, pathY, gc.getPosition().getZ()));
 			}
-		} catch(Exception e) {
-			System.out.println("Error finding route, destx: "+destX+", destY: "+destY+". Reseted queue.");
+		} catch (Exception e) {
+			System.out.println("Error finding route, destx: " + destX + ", destY: " + destY + ". Reseted queue.");
 			gc.getMovementQueue().setFollowCharacter(null);
 			gc.getMovementQueue().reset();
 		}
@@ -211,15 +196,15 @@ public class RS317PathFinder {
 		int stepX = 0;
 		int stepY = 0;
 
-		if(aX > vX) {
+		if (aX > vX) {
 			stepX = 1;
-		} else if(vX > aX) {
+		} else if (vX > aX) {
 			stepX = -1;
-		} else if(aY > vY) {
+		} else if (aY > vY) {
 			stepY = 1;
-		} else if(vY > aY) {
+		} else if (vY > aY) {
 			stepY = -1;
-		} else if(aX == vX && aY == vY) {
+		} else if (aX == vX && aY == vY) {
 			stepY = -1;
 		}
 

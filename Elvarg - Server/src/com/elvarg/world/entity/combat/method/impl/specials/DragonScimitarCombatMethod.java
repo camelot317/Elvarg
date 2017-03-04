@@ -15,7 +15,7 @@ public class DragonScimitarCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1872, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(347, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -23,7 +23,7 @@ public class DragonScimitarCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -59,14 +59,15 @@ public class DragonScimitarCombatMethod implements CombatMethod {
 
 	@Override
 	public void handleAfterHitEffects(QueueableHit hit) {
-		
-		if(hit.getTarget().isNpc()) {
+
+		if (hit.getTarget().isNpc()) {
 			return;
 		}
-		
-		if(hit.isAccurate()) {
+
+		if (hit.isAccurate()) {
 			CombatFactory.disableProtectionPrayers(hit.getTarget().getAsPlayer());
-			hit.getAttacker().getAsPlayer().getPacketSender().sendMessage("Your target can no longer use protection prayers.");
+			hit.getAttacker().getAsPlayer().getPacketSender()
+					.sendMessage("Your target can no longer use protection prayers.");
 		}
 	}
 }

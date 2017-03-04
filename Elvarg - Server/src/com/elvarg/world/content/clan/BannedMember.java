@@ -6,7 +6,7 @@ public class BannedMember {
 
 	private SecondsTimer timer;
 	private String name;
-	
+
 	public BannedMember(String name, int seconds) {
 		this.setName(name);
 		this.setTimer(new SecondsTimer(seconds));

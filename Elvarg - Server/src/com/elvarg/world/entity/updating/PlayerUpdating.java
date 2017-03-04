@@ -33,8 +33,10 @@ public class PlayerUpdating {
 	private static final int MAX_NEW_PLAYERS_PER_CYCLE = 25;
 
 	/**
-	 * Loops through the associated player's {@code localPlayer} list and updates them.
-	 * @return	The PlayerUpdating instance.
+	 * Loops through the associated player's {@code localPlayer} list and
+	 * updates them.
+	 * 
+	 * @return The PlayerUpdating instance.
 	 */
 
 	public static void update(final Player player) {
@@ -46,7 +48,9 @@ public class PlayerUpdating {
 		packet.putBits(8, player.getLocalPlayers().size());
 		for (Iterator<Player> playerIterator = player.getLocalPlayers().iterator(); playerIterator.hasNext();) {
 			Player otherPlayer = playerIterator.next();
-			if (World.getPlayers().get(otherPlayer.getIndex()) != null && otherPlayer.getPosition().isWithinDistance(player.getPosition()) && !otherPlayer.isNeedsPlacement()) {
+			if (World.getPlayers().get(otherPlayer.getIndex()) != null
+					&& otherPlayer.getPosition().isWithinDistance(player.getPosition())
+					&& !otherPlayer.isNeedsPlacement()) {
 				updateOtherPlayerMovement(packet, otherPlayer);
 				if (otherPlayer.getUpdateFlag().isUpdateRequired()) {
 					appendUpdates(player, update, otherPlayer, false, false);
@@ -58,18 +62,19 @@ public class PlayerUpdating {
 			}
 		}
 		int playersAdded = 0;
-		
-		for(Player otherPlayer : World.getPlayers()) {
+
+		for (Player otherPlayer : World.getPlayers()) {
 			if (player.getLocalPlayers().size() >= 79 || playersAdded > MAX_NEW_PLAYERS_PER_CYCLE)
 				break;
-			if (otherPlayer == null || otherPlayer == player || player.getLocalPlayers().contains(otherPlayer) || !otherPlayer.getPosition().isWithinDistance(player.getPosition()))
+			if (otherPlayer == null || otherPlayer == player || player.getLocalPlayers().contains(otherPlayer)
+					|| !otherPlayer.getPosition().isWithinDistance(player.getPosition()))
 				continue;
 			player.getLocalPlayers().add(otherPlayer);
 			addPlayer(player, otherPlayer, packet);
 			appendUpdates(player, update, otherPlayer, true, false);
 			playersAdded++;
 		}
-		
+
 		if (update.buffer().writerIndex() > 0) {
 			packet.putBits(11, 2047);
 			packet.initializeAccess(AccessType.BYTE);
@@ -82,9 +87,12 @@ public class PlayerUpdating {
 
 	/**
 	 * Adds a new player to the associated player's client.
-	 * @param target	The player to add to the other player's client.
-	 * @param builder	The packet builder to write information on.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param target
+	 *            The player to add to the other player's client.
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void addPlayer(Player player, Player target, PacketBuilder builder) {
 		builder.putBits(11, target.getIndex());
@@ -98,8 +106,10 @@ public class PlayerUpdating {
 
 	/**
 	 * Updates the associated player's movement queue.
-	 * @param builder	The packet builder to write information on.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateMovement(Player player, PacketBuilder builder) {
 		/*
@@ -134,92 +144,93 @@ public class PlayerUpdating {
 			/*
 			 * These are the positions.
 			 */
-			builder.putBits(7,
-					player.getPosition().getLocalY(player.getLastKnownRegion()));
-			builder.putBits(7,
-					player.getPosition().getLocalX(player.getLastKnownRegion()));
+			builder.putBits(7, player.getPosition().getLocalY(player.getLastKnownRegion()));
+			builder.putBits(7, player.getPosition().getLocalX(player.getLastKnownRegion()));
 		} else
 		/*
 		 * Otherwise, check if the player moved.
 		 */
-			if (player.getPrimaryDirection().toInteger() == -1) {
-				/*
-				 * The player didn't move. Check if an update is required.
-				 */
-				if (player.getUpdateFlag().isUpdateRequired()) {
-					/*
-					 * Signifies an update is required.
-					 */
-					builder.putBits(1, 1);
-
-					/*
-					 * But signifies that we didn't move.
-					 */
-					builder.putBits(2, 0);
-				} else
-					/*
-					 * Signifies that nothing changed.
-					 */
-					builder.putBits(1, 0);
-			} else /*
-			 * Check if the player was running.
+		if (player.getPrimaryDirection().toInteger() == -1) {
+			/*
+			 * The player didn't move. Check if an update is required.
 			 */
-				if (player.getSecondaryDirection().toInteger() == -1) {
+			if (player.getUpdateFlag().isUpdateRequired()) {
+				/*
+				 * Signifies an update is required.
+				 */
+				builder.putBits(1, 1);
 
-					/*
-					 * The player walked, an update is required.
-					 */
-					builder.putBits(1, 1);
+				/*
+				 * But signifies that we didn't move.
+				 */
+				builder.putBits(2, 0);
+			} else
+				/*
+				 * Signifies that nothing changed.
+				 */
+				builder.putBits(1, 0);
+		} else /*
+				 * Check if the player was running.
+				 */
+		if (player.getSecondaryDirection().toInteger() == -1) {
 
-					/*
-					 * This indicates the player only walked.
-					 */
-					builder.putBits(2, 1);
+			/*
+			 * The player walked, an update is required.
+			 */
+			builder.putBits(1, 1);
 
-					/*
-					 * This is the player's walking direction.
-					 */
+			/*
+			 * This indicates the player only walked.
+			 */
+			builder.putBits(2, 1);
 
-					builder.putBits(3, player.getPrimaryDirection().toInteger());
+			/*
+			 * This is the player's walking direction.
+			 */
 
-					/*
-					 * This flag indicates an update block is appended.
-					 */
-					builder.putBits(1, player.getUpdateFlag().isUpdateRequired() ? 1 : 0);
-				} else {
+			builder.putBits(3, player.getPrimaryDirection().toInteger());
 
-					/*
-					 * The player ran, so an update is required.
-					 */
-					builder.putBits(1, 1);
+			/*
+			 * This flag indicates an update block is appended.
+			 */
+			builder.putBits(1, player.getUpdateFlag().isUpdateRequired() ? 1 : 0);
+		} else {
 
-					/*
-					 * This indicates the player ran.
-					 */
-					builder.putBits(2, 2);
+			/*
+			 * The player ran, so an update is required.
+			 */
+			builder.putBits(1, 1);
 
-					/*
-					 * This is the walking direction.
-					 */
-					builder.putBits(3, player.getPrimaryDirection().toInteger());
+			/*
+			 * This indicates the player ran.
+			 */
+			builder.putBits(2, 2);
 
-					/*
-					 * And this is the running direction.
-					 */
-					builder.putBits(3, player.getSecondaryDirection().toInteger());
+			/*
+			 * This is the walking direction.
+			 */
+			builder.putBits(3, player.getPrimaryDirection().toInteger());
 
-					/*
-					 * And this flag indicates an update block is appended.
-					 */
-					builder.putBits(1, player.getUpdateFlag().isUpdateRequired() ? 1 : 0);
-				}
+			/*
+			 * And this is the running direction.
+			 */
+			builder.putBits(3, player.getSecondaryDirection().toInteger());
+
+			/*
+			 * And this flag indicates an update block is appended.
+			 */
+			builder.putBits(1, player.getUpdateFlag().isUpdateRequired() ? 1 : 0);
+		}
 	}
 
 	/**
 	 * Updates another player's movement queue.
-	 * @param builder			The packet builder to write information on.
-	 * @param target			The player to update movement for.
-	 * @return					The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update movement for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateOtherPlayerMovement(PacketBuilder builder, Player target) {
 		/*
@@ -295,99 +306,112 @@ public class PlayerUpdating {
 
 	/**
 	 * Appends a player's update mask blocks.
-	 * @param builder				The packet builder to write information on.
-	 * @param target				The player to update masks for.
-	 * @param updateAppearance		Update the player's appearance without the flag being set?
-	 * @param noChat				Do not allow player to chat?
-	 * @return						The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update masks for.
+	 * @param updateAppearance
+	 *            Update the player's appearance without the flag being set?
+	 * @param noChat
+	 *            Do not allow player to chat?
+	 * @return The PlayerUpdating instance.
 	 */
-	private static void appendUpdates(Player player, PacketBuilder builder, Player target, boolean updateAppearance, boolean noChat) {
+	private static void appendUpdates(Player player, PacketBuilder builder, Player target, boolean updateAppearance,
+			boolean noChat) {
 		if (!target.getUpdateFlag().isUpdateRequired() && !updateAppearance)
 			return;
-	/*	if (player.getCachedUpdateBlock() != null && !player.equals(target) && !updateAppearance && !noChat) {
-			builder.putBytes(player.getCachedUpdateBlock());
-			return;
-		}*/
-	//	synchronized (target) {
-			final UpdateFlag flag = target.getUpdateFlag();
-			int mask = 0;
-			if (flag.flagged(Flag.GRAPHIC) && target.getGraphic() != null) {
-				mask |= 0x100;
-			}
-			if (flag.flagged(Flag.ANIMATION) && target.getAnimation() != null) {
-				mask |= 0x8;
-			}
-			if (flag.flagged(Flag.FORCED_CHAT) && target.getForcedChat().length() > 0) {
-				mask |= 0x4;
-			}
-			if (flag.flagged(Flag.CHAT) && !noChat && !player.getRelations().getIgnoreList().contains(target.getLongUsername())) {
-				mask |= 0x80;
-			}
-			if (flag.flagged(Flag.ENTITY_INTERACTION)) {
-				mask |= 0x1;
-			}
-			if (flag.flagged(Flag.APPEARANCE) || updateAppearance) {
-				mask |= 0x10;
-			}
-			if (flag.flagged(Flag.FACE_POSITION)) {
-				mask |= 0x2;
-			}
-			if (flag.flagged(Flag.SINGLE_HIT)) {
-				mask |= 0x20;
-			}
-			if (flag.flagged(Flag.DOUBLE_HIT)) {
-				mask |= 0x200;
-			}
-			if (flag.flagged(Flag.FORCED_MOVEMENT) && target.getForceMovement() != null) {
-				mask |= 0x400;
-			}
-			if (mask >= 0x100) {
-				mask |= 0x40;
-				builder.putShort(mask, ByteOrder.LITTLE);
-			} else {
-				builder.put(mask);
-			}
-			if (flag.flagged(Flag.FORCED_MOVEMENT) && target.getForceMovement() != null) {
-				updateForcedMovement(player, builder, target);
-			}
-			if (flag.flagged(Flag.GRAPHIC) && target.getGraphic() != null) {
-				updateGraphics(builder, target);
-			}
-			if (flag.flagged(Flag.ANIMATION) && target.getAnimation() != null) {
-				updateAnimation(builder, target);
-			}
-			if (flag.flagged(Flag.FORCED_CHAT) && target.getForcedChat().length() > 0) {
-				updateForcedChat(builder, target);
-			}
-			if (flag.flagged(Flag.CHAT) && !noChat && !player.getRelations().getIgnoreList().contains(target.getLongUsername())) {
-				updateChat(builder, target);
-			}
-			if (flag.flagged(Flag.ENTITY_INTERACTION)) {
-				updateEntityInteraction(builder, target);
-			}
-			if (flag.flagged(Flag.APPEARANCE) || updateAppearance) {
-				updateAppearance(player, builder, target);
-			}
-			if (flag.flagged(Flag.FACE_POSITION)) {
-				updateFacingPosition(builder, target);
-			}
-			if (flag.flagged(Flag.SINGLE_HIT)) {
-				updateSingleHit(builder, target);
-			}
-			if (flag.flagged(Flag.DOUBLE_HIT)) {
-				updateDoubleHit(builder, target);
-			}
-			/*if (!player.equals(target) && !updateAppearance && !noChat) {
-				player.setCachedUpdateBlock(cachedBuffer.buffer());
-			}*/
-	//	}
+		/*
+		 * if (player.getCachedUpdateBlock() != null && !player.equals(target)
+		 * && !updateAppearance && !noChat) {
+		 * builder.putBytes(player.getCachedUpdateBlock()); return; }
+		 */
+		// synchronized (target) {
+		final UpdateFlag flag = target.getUpdateFlag();
+		int mask = 0;
+		if (flag.flagged(Flag.GRAPHIC) && target.getGraphic() != null) {
+			mask |= 0x100;
+		}
+		if (flag.flagged(Flag.ANIMATION) && target.getAnimation() != null) {
+			mask |= 0x8;
+		}
+		if (flag.flagged(Flag.FORCED_CHAT) && target.getForcedChat().length() > 0) {
+			mask |= 0x4;
+		}
+		if (flag.flagged(Flag.CHAT) && !noChat
+				&& !player.getRelations().getIgnoreList().contains(target.getLongUsername())) {
+			mask |= 0x80;
+		}
+		if (flag.flagged(Flag.ENTITY_INTERACTION)) {
+			mask |= 0x1;
+		}
+		if (flag.flagged(Flag.APPEARANCE) || updateAppearance) {
+			mask |= 0x10;
+		}
+		if (flag.flagged(Flag.FACE_POSITION)) {
+			mask |= 0x2;
+		}
+		if (flag.flagged(Flag.SINGLE_HIT)) {
+			mask |= 0x20;
+		}
+		if (flag.flagged(Flag.DOUBLE_HIT)) {
+			mask |= 0x200;
+		}
+		if (flag.flagged(Flag.FORCED_MOVEMENT) && target.getForceMovement() != null) {
+			mask |= 0x400;
+		}
+		if (mask >= 0x100) {
+			mask |= 0x40;
+			builder.putShort(mask, ByteOrder.LITTLE);
+		} else {
+			builder.put(mask);
+		}
+		if (flag.flagged(Flag.FORCED_MOVEMENT) && target.getForceMovement() != null) {
+			updateForcedMovement(player, builder, target);
+		}
+		if (flag.flagged(Flag.GRAPHIC) && target.getGraphic() != null) {
+			updateGraphics(builder, target);
+		}
+		if (flag.flagged(Flag.ANIMATION) && target.getAnimation() != null) {
+			updateAnimation(builder, target);
+		}
+		if (flag.flagged(Flag.FORCED_CHAT) && target.getForcedChat().length() > 0) {
+			updateForcedChat(builder, target);
+		}
+		if (flag.flagged(Flag.CHAT) && !noChat
+				&& !player.getRelations().getIgnoreList().contains(target.getLongUsername())) {
+			updateChat(builder, target);
+		}
+		if (flag.flagged(Flag.ENTITY_INTERACTION)) {
+			updateEntityInteraction(builder, target);
+		}
+		if (flag.flagged(Flag.APPEARANCE) || updateAppearance) {
+			updateAppearance(player, builder, target);
+		}
+		if (flag.flagged(Flag.FACE_POSITION)) {
+			updateFacingPosition(builder, target);
+		}
+		if (flag.flagged(Flag.SINGLE_HIT)) {
+			updateSingleHit(builder, target);
+		}
+		if (flag.flagged(Flag.DOUBLE_HIT)) {
+			updateDoubleHit(builder, target);
+		}
+		/*
+		 * if (!player.equals(target) && !updateAppearance && !noChat) {
+		 * player.setCachedUpdateBlock(cachedBuffer.buffer()); }
+		 */
+		// }
 	}
 
 	/**
 	 * This update block is used to update player chat.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update chat for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update chat for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateChat(PacketBuilder builder, Player target) {
 		Message message = target.getChatMessages().get();
@@ -397,10 +421,13 @@ public class PlayerUpdating {
 	}
 
 	/**
-	 * This update block is used to update forced player chat. 
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update forced chat for.
-	 * @return			The PlayerUpdating instance.
+	 * This update block is used to update forced player chat.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update forced chat for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateForcedChat(PacketBuilder builder, Player target) {
 		builder.putString(target.getForcedChat());
@@ -408,16 +435,19 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update forced player movement.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update forced movement for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update forced movement for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateForcedMovement(Player player, PacketBuilder builder, Player target) {
 		int startX = target.getForceMovement().getStart().getLocalX(player.getLastKnownRegion());
 		int startY = target.getForceMovement().getStart().getLocalY(player.getLastKnownRegion());
 		int endX = target.getForceMovement().getEnd().getX();
 		int endY = target.getForceMovement().getEnd().getY();
-		
+
 		builder.put(startX, ValueType.S);
 		builder.put(startY, ValueType.S);
 		builder.put(startX + endX, ValueType.S);
@@ -430,9 +460,12 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update a player's animation.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update animations for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update animations for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateAnimation(PacketBuilder builder, Player target) {
 		builder.putShort(target.getAnimation().getId(), ByteOrder.LITTLE);
@@ -441,20 +474,27 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update a player's graphics.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update graphics for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update graphics for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateGraphics(PacketBuilder builder, Player target) {
 		builder.putShort(target.getGraphic().getId(), ByteOrder.LITTLE);
-		builder.putInt(((target.getGraphic().getHeight().ordinal() * 50) << 16) + (target.getGraphic().getDelay() & 0xffff));
+		builder.putInt(
+				((target.getGraphic().getHeight().ordinal() * 50) << 16) + (target.getGraphic().getDelay() & 0xffff));
 	}
 
 	/**
 	 * This update block is used to update a player's single hit.
-	 * @param builder	The packet builder used to write information on.
-	 * @param target	The player to update the single hit for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder used to write information on.
+	 * @param target
+	 *            The player to update the single hit for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateSingleHit(PacketBuilder builder, Player target) {
 		builder.putShort(target.getPrimaryHit().getDamage());
@@ -465,9 +505,12 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update a player's double hit.
-	 * @param builder	The packet builder used to write information on.
-	 * @param target	The player to update the double hit for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder used to write information on.
+	 * @param target
+	 *            The player to update the double hit for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateDoubleHit(PacketBuilder builder, Player target) {
 		builder.putShort(target.getSecondaryHit().getDamage());
@@ -478,13 +521,16 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update a player's face position.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update face position for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update face position for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateFacingPosition(PacketBuilder builder, Player target) {
 		final Position position = target.getPositionToFace();
-		int x = position == null ? 0 : position.getX(); 
+		int x = position == null ? 0 : position.getX();
 		int y = position == null ? 0 : position.getY();
 		builder.putShort(x * 2 + 1, ValueType.A, ByteOrder.LITTLE);
 		builder.putShort(y * 2 + 1, ByteOrder.LITTLE);
@@ -492,16 +538,19 @@ public class PlayerUpdating {
 
 	/**
 	 * This update block is used to update a player's entity interaction.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update entity interaction for.
-	 * @return			The PlayerUpdating instance.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update entity interaction for.
+	 * @return The PlayerUpdating instance.
 	 */
 	private static void updateEntityInteraction(PacketBuilder builder, Player target) {
 		Entity entity = target.getInteractingEntity();
 		if (entity != null) {
 			int index = entity.getIndex();
 			if (entity instanceof Player)
-				index += + 32768;
+				index += +32768;
 			builder.putShort(index, ByteOrder.LITTLE);
 		} else {
 			builder.putShort(-1, ByteOrder.LITTLE);
@@ -509,28 +558,32 @@ public class PlayerUpdating {
 	}
 
 	/**
-	 * This update block is used to update a player's appearance, this includes 
-	 * their equipment, clothing, combat level, gender, head icons, user name and animations.
-	 * @param builder	The packet builder to write information on.
-	 * @param target	The player to update appearance for.
-	 * @return			The PlayerUpdating instance.
+	 * This update block is used to update a player's appearance, this includes
+	 * their equipment, clothing, combat level, gender, head icons, user name
+	 * and animations.
+	 * 
+	 * @param builder
+	 *            The packet builder to write information on.
+	 * @param target
+	 *            The player to update appearance for.
+	 * @return The PlayerUpdating instance.
 	 */
-	private static void updateAppearance(Player player, PacketBuilder out, Player target) {	
+	private static void updateAppearance(Player player, PacketBuilder out, Player target) {
 		Appearance appearance = target.getAppearance();
 		Equipment equipment = target.getEquipment();
 		PacketBuilder properties = new PacketBuilder();
-		
+
 		properties.put(appearance.isMale() ? 0 : 1);
-		
-		//Head icon, prayers
+
+		// Head icon, prayers
 		properties.put(appearance.getHeadHint());
-		
-		//Skull icon
+
+		// Skull icon
 		properties.put(target.isSkulled() ? 0 : -1);
-		
-		//Some sort of headhint (arrow over head)
+
+		// Some sort of headhint (arrow over head)
 		properties.put(0);
-		
+
 		if (player.getNpcTransformationId() <= 0) {
 			int[] equip = new int[equipment.capacity()];
 			for (int i = 0; i < equipment.capacity(); i++) {
@@ -614,8 +667,8 @@ public class PlayerUpdating {
 		properties.put(appearance.getLook()[Appearance.SKIN_COLOUR]);
 
 		int skillAnim = target.getSkillAnimation();
-		if(skillAnim > 0) {
-			for(int i = 0; i < 7; i++)
+		if (skillAnim > 0) {
+			for (int i = 0; i < 7; i++)
 				properties.putShort(skillAnim);
 		} else {
 			ItemDefinition wep = target.getEquipment().getItems()[Equipment.WEAPON_SLOT].getDefinition();
@@ -637,9 +690,10 @@ public class PlayerUpdating {
 	}
 
 	/**
-	 * Resets the associated player's flags that will need to be removed
-	 * upon completion of a single update.
-	 * @return	The PlayerUpdating instance.
+	 * Resets the associated player's flags that will need to be removed upon
+	 * completion of a single update.
+	 * 
+	 * @return The PlayerUpdating instance.
 	 */
 	public static void resetFlags(Player player) {
 		player.getUpdateFlag().reset();

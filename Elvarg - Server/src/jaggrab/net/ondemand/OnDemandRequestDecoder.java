@@ -1,6 +1,5 @@
 package jaggrab.net.ondemand;
 
-
 import java.util.List;
 
 import io.netty.buffer.ByteBuf;
@@ -11,14 +10,14 @@ import jaggrab.net.ondemand.OnDemandRequest.Priority;
 
 /**
  * A {@link FrameDecoder} for the 'on-demand' protocol.
+ * 
  * @author Graham
  */
 public final class OnDemandRequestDecoder extends ByteToMessageDecoder {
 
 	@Override
-	protected void decode(ChannelHandlerContext ctx, ByteBuf buf, List<Object> out)
-			throws Exception {
-		
+	protected void decode(ChannelHandlerContext ctx, ByteBuf buf, List<Object> out) throws Exception {
+
 		if (buf.readableBytes() >= 6) {
 			int type = buf.readUnsignedByte() + 1;
 			int file = buf.readInt();

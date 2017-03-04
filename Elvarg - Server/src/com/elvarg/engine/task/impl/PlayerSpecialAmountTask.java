@@ -16,7 +16,8 @@ public class PlayerSpecialAmountTask extends Task {
 
 	@Override
 	public void execute() {
-		if (player == null || !player.isRegistered() || player.getSpecialPercentage() >= 100 || !player.isRecoveringSpecialAttack()) {
+		if (player == null || !player.isRegistered() || player.getSpecialPercentage() >= 100
+				|| !player.isRecoveringSpecialAttack()) {
 			player.setRecoveringSpecialAttack(false);
 			stop();
 			return;
@@ -29,8 +30,9 @@ public class PlayerSpecialAmountTask extends Task {
 		}
 		player.setSpecialPercentage(amount);
 		CombatSpecial.updateBar(player);
-		if(amount == 25 || amount == 50 || amount == 75 || amount == 100) {
-			player.getPacketSender().sendMessage("Your special attack energy is now " + player.getSpecialPercentage() + "%.");
+		if (amount == 25 || amount == 50 || amount == 75 || amount == 100) {
+			player.getPacketSender()
+					.sendMessage("Your special attack energy is now " + player.getSpecialPercentage() + "%.");
 		}
 	}
 }

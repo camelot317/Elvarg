@@ -16,12 +16,11 @@ public class PlayerUpdateSequence implements UpdateSequence<Player> {
 	 * Create a new {@link PlayerUpdateSequence}.
 	 *
 	 * @param synchronizer
-	 * used to block the game thread until updating is completed.
+	 *            used to block the game thread until updating is completed.
 	 * @param updateExecutor
-	 * the thread pool that will update players in parallel.
+	 *            the thread pool that will update players in parallel.
 	 */
-	public PlayerUpdateSequence(Phaser synchronizer,
-			ExecutorService updateExecutor) {
+	public PlayerUpdateSequence(Phaser synchronizer, ExecutorService updateExecutor) {
 		this.synchronizer = synchronizer;
 		this.updateExecutor = updateExecutor;
 	}

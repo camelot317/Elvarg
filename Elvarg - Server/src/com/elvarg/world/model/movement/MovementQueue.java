@@ -13,8 +13,7 @@ import com.elvarg.world.model.Position;
 /**
  * A queue of {@link Direction}s which a {@link Character} will follow.
  * 
- * @author Graham Edgecombe 
- * Edited by Gabbe
+ * @author Graham Edgecombe Edited by Gabbe
  */
 public final class MovementQueue {
 
@@ -35,8 +34,7 @@ public final class MovementQueue {
 
 		@Override
 		public String toString() {
-			return Point.class.getName() + " [direction=" + direction
-					+ ", position=" + position + "]";
+			return Point.class.getName() + " [direction=" + direction + ", position=" + position + "]";
 		}
 
 	}
@@ -175,8 +173,9 @@ public final class MovementQueue {
 	}
 
 	public boolean canWalk(int deltaX, int deltaY) {
-		final Position to = new Position(character.getPosition().getX()+deltaX, character.getPosition().getY()+deltaY, character.getPosition().getZ());
-		if(character.getPosition().getZ() == -1 && to.getZ() == -1)
+		final Position to = new Position(character.getPosition().getX() + deltaX,
+				character.getPosition().getY() + deltaY, character.getPosition().getZ());
+		if (character.getPosition().getZ() == -1 && to.getZ() == -1)
 			return true;
 		return canWalk(character.getPosition(), to, character.getSize());
 	}
@@ -184,7 +183,6 @@ public final class MovementQueue {
 	public static boolean canWalk(Position from, Position to, int size) {
 		return RegionClipping.canMove(from, to, size, size);
 	}
-
 
 	/*
 	 * public boolean checkBarricade(int x, int y) { Position position =
@@ -220,7 +218,7 @@ public final class MovementQueue {
 	 */
 	public void onTick() {
 
-		if(character.isNeedsPlacement()) {
+		if (character.isNeedsPlacement()) {
 			return;
 		}
 
@@ -228,24 +226,24 @@ public final class MovementQueue {
 
 		boolean movement = status != MovementStatus.DISABLED && !!character.getCombat().getFreezeTimer().finished();
 
-		if(movement) {
+		if (movement) {
 			Point walkPoint = null;
 			Point runPoint = null;
 
 			walkPoint = points.poll();
 
-			if(isRunToggled()) {
+			if (isRunToggled()) {
 				runPoint = points.poll();
 			}
 
-			if(walkPoint != null && walkPoint.direction != Direction.NONE) {
+			if (walkPoint != null && walkPoint.direction != Direction.NONE) {
 
 				if (followCharacter != null) {
 					if (walkPoint.equals(followCharacter.getPosition())) {
 						return;
 					} else {
-						if(!followCharacter.getMovementQueue().isRunToggled()) {
-							if(character.getPosition().isWithinDistance(followCharacter.getPosition(), 2)) {
+						if (!followCharacter.getMovementQueue().isRunToggled()) {
+							if (character.getPosition().isWithinDistance(followCharacter.getPosition(), 2)) {
 								runPoint = null;
 							}
 						}
@@ -257,7 +255,7 @@ public final class MovementQueue {
 				character.setLastDirection(walkPoint.direction);
 			}
 
-			if(runPoint != null && runPoint.direction != Direction.NONE) {
+			if (runPoint != null && runPoint.direction != Direction.NONE) {
 
 				if (followCharacter != null) {
 					if (walkPoint.equals(followCharacter.getPosition())) {
@@ -270,7 +268,7 @@ public final class MovementQueue {
 				character.setLastDirection(runPoint.direction);
 			}
 
-			if(isPlayer) {
+			if (isPlayer) {
 				handleRegionChange();
 			}
 		}
@@ -281,10 +279,8 @@ public final class MovementQueue {
 	}
 
 	public void handleRegionChange() {
-		final int diffX = character.getPosition().getX()
-				- character.getLastKnownRegion().getRegionX() * 8;
-		final int diffY = character.getPosition().getY()
-				- character.getLastKnownRegion().getRegionY() * 8;
+		final int diffX = character.getPosition().getX() - character.getLastKnownRegion().getRegionX() * 8;
+		final int diffY = character.getPosition().getY() - character.getLastKnownRegion().getRegionY() * 8;
 		boolean regionChanged = false;
 		if (diffX < 16)
 			regionChanged = true;
@@ -295,20 +291,20 @@ public final class MovementQueue {
 		else if (diffY >= 88)
 			regionChanged = true;
 		if (regionChanged) {
-			((Player)character).getPacketSender().sendMapRegion();
+			((Player) character).getPacketSender().sendMapRegion();
 		}
 	}
 
 	public void follow() {
 
-		if(followCharacter == null) {
+		if (followCharacter == null) {
 			return;
 		}
 
-
 		// Check if we can still follow the leader.
-		if (followCharacter.getHitpoints() <= 0 || !followCharacter.isRegistered() || character.getHitpoints() <= 0 || !character.isRegistered()) {
-			if(character.getInteractingEntity() != null) {
+		if (followCharacter.getHitpoints() <= 0 || !followCharacter.isRegistered() || character.getHitpoints() <= 0
+				|| !character.isRegistered()) {
+			if (character.getInteractingEntity() != null) {
 				character.setEntityInteraction(null);
 			}
 			setFollowCharacter(null);
@@ -324,23 +320,25 @@ public final class MovementQueue {
 		// away.
 		if (character.getPosition().equals(followCharacter.getPosition())) {
 			character.getMovementQueue().reset();
-			if(followCharacter.getMovementQueue().isMovementDone()) {
+			if (followCharacter.getMovementQueue().isMovementDone()) {
 				MovementQueue.stepAway(character);
 			}
 			return;
 		}
 
-		//If we are attacking someone and following them, make sure to stop when at proper distance.
+		// If we are attacking someone and following them, make sure to stop
+		// when at proper distance.
 		boolean combatFollow = CombatFactory.isAttacking(character);
-		if(combatFollow) {
-			if(character.getCombat().getMethod() != null) {
-				if(CombatFactory.canReach(character, character.getCombat().getMethod(), character.getCombat().getTarget())) {
+		if (combatFollow) {
+			if (character.getCombat().getMethod() != null) {
+				if (CombatFactory.canReach(character, character.getCombat().getMethod(),
+						character.getCombat().getTarget())) {
 					return;
 				}
 			}
 		}
 
-		if(character.getInteractingEntity() != followCharacter) {
+		if (character.getInteractingEntity() != followCharacter) {
 			character.setEntityInteraction(followCharacter);
 		}
 
@@ -359,25 +357,29 @@ public final class MovementQueue {
 		int y = character.getPosition().getY();
 		int x = character.getPosition().getX();
 
-		if(y > f_y) {
+		if (y > f_y) {
 
-			//If we have higher Y, we should move north of them
-			RS317PathFinder.findPath(character, followCharacter.getPosition().getX(), followCharacter.getPosition().getY() + 1, true, 0, 0);
+			// If we have higher Y, we should move north of them
+			RS317PathFinder.findPath(character, followCharacter.getPosition().getX(),
+					followCharacter.getPosition().getY() + 1, true, 0, 0);
 
-		} else if(f_y > y) {
+		} else if (f_y > y) {
 
-			//If foe has higher Y, we should move south of them
-			RS317PathFinder.findPath(character, followCharacter.getPosition().getX(), followCharacter.getPosition().getY() - 1, true, 0, 0);
+			// If foe has higher Y, we should move south of them
+			RS317PathFinder.findPath(character, followCharacter.getPosition().getX(),
+					followCharacter.getPosition().getY() - 1, true, 0, 0);
 
-		} else if(f_y == y) {
+		} else if (f_y == y) {
 
-			//We have same Y as foe.
-			//We shall move depending on our X coordinate.
+			// We have same Y as foe.
+			// We shall move depending on our X coordinate.
 
-			if(x > f_x) {
-				RS317PathFinder.findPath(character, followCharacter.getPosition().getX() + 1, followCharacter.getPosition().getY(), true, 0, 0);
-			} else if(f_x > x) {
-				RS317PathFinder.findPath(character, followCharacter.getPosition().getX() - 1, followCharacter.getPosition().getY(), true, 0, 0);
+			if (x > f_x) {
+				RS317PathFinder.findPath(character, followCharacter.getPosition().getX() + 1,
+						followCharacter.getPosition().getY(), true, 0, 0);
+			} else if (f_x > x) {
+				RS317PathFinder.findPath(character, followCharacter.getPosition().getX() - 1,
+						followCharacter.getPosition().getY(), true, 0, 0);
 			}
 
 		}
@@ -400,6 +402,7 @@ public final class MovementQueue {
 		points.clear();
 		return this;
 	}
+
 	/**
 	 * Gets the size of the queue.
 	 * 
@@ -411,20 +414,22 @@ public final class MovementQueue {
 
 	/**
 	 * Steps away from a Gamecharacter
-	 * @param character		The gamecharacter to step away from
+	 * 
+	 * @param character
+	 *            The gamecharacter to step away from
 	 */
 	public static void stepAway(Character character) {
-		if(character.getMovementQueue().canWalk(-1, 0))
+		if (character.getMovementQueue().canWalk(-1, 0))
 			character.getMovementQueue().walkStep(-1, 0);
-		else if(character.getMovementQueue().canWalk(1, 0))
+		else if (character.getMovementQueue().canWalk(1, 0))
 			character.getMovementQueue().walkStep(1, 0);
-		else if(character.getMovementQueue().canWalk(0, -1))
+		else if (character.getMovementQueue().canWalk(0, -1))
 			character.getMovementQueue().walkStep(0, -1);
-		else if(character.getMovementQueue().canWalk(0, 1))
+		else if (character.getMovementQueue().canWalk(0, 1))
 			character.getMovementQueue().walkStep(0, 1);
 	}
 
-	public static int getMove(int x, int p2, int size) { 
+	public static int getMove(int x, int p2, int size) {
 		if ((x - p2) == 0) {
 			return 0;
 		} else if ((x - p2) < 0) {
@@ -436,6 +441,7 @@ public final class MovementQueue {
 	}
 
 	public boolean isRunToggled() {
-		return character.isPlayer() && ((Player) character).isRunning(); //&& !((Player)character).isCrossingObstacle();
+		return character.isPlayer() && ((Player) character).isRunning(); // &&
+																			// !((Player)character).isCrossingObstacle();
 	}
 }

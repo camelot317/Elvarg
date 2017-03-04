@@ -9,8 +9,5 @@ package com.elvarg.net.packet;
  * @author blakeman8192
  */
 public enum ValueType {
-    STANDARD,
-    A,
-    C,
-    S
+	STANDARD, A, C, S
 }

@@ -12,8 +12,7 @@ public final class TaskManager {
 	private final static List<Task> activeTasks = new LinkedList<>();
 
 	private TaskManager() {
-		throw new UnsupportedOperationException(
-				"This class cannot be instantiated!");
+		throw new UnsupportedOperationException("This class cannot be instantiated!");
 	}
 
 	public static void sequence() {
@@ -32,13 +31,13 @@ public final class TaskManager {
 				if (!t.tick())
 					it.remove();
 			}
-		} catch(Throwable e) {
+		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 	}
 
 	public static void submit(Task task) {
-		if(!task.isRunning())
+		if (!task.isRunning())
 			return;
 		if (task.isImmediate()) {
 			task.execute();
@@ -50,7 +49,7 @@ public final class TaskManager {
 		try {
 			pendingTasks.stream().filter(t -> t.getKey().equals(key)).forEach(t -> t.stop());
 			activeTasks.stream().filter(t -> t.getKey().equals(key)).forEach(t -> t.stop());
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

@@ -17,16 +17,15 @@ import jaggrab.net.service.ServiceResponse;
 
 /**
  * An {@link IdleStateAwareChannelUpstreamHandler} for the {@link FileServer}.
+ * 
  * @author Graham
  */
 @Sharable
 public final class FileServerHandler extends SimpleChannelInboundHandler<Object> {
 
-
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable e) {
-		if (!NetworkConstants.IGNORED_NETWORK_EXCEPTIONS.stream()
-				.anyMatch($it -> Objects.equal($it, e.getMessage()))) {
+		if (!NetworkConstants.IGNORED_NETWORK_EXCEPTIONS.stream().anyMatch($it -> Objects.equal($it, e.getMessage()))) {
 			e.printStackTrace();
 		}
 
@@ -45,9 +44,8 @@ public final class FileServerHandler extends SimpleChannelInboundHandler<Object>
 
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		//System.out.println("Channel closed");
+		// System.out.println("Channel closed");
 	}
-
 
 	@Override
 	public void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {

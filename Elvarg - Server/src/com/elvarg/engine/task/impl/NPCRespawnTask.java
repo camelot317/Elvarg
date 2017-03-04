@@ -15,11 +15,11 @@ public class NPCRespawnTask extends Task {
 
 	@Override
 	public void execute() {
-		
+
 		NPC npc_ = new NPC(npc.getId(), npc.getSpawnPosition());
 		npc_.setHitpoints(npc.getDefinition().getHitpoints());
 		World.getNpcAddQueue().add(npc_);
-		
+
 		stop();
 	}
 

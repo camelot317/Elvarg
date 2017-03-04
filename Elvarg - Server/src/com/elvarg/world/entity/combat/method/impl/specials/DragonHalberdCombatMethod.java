@@ -14,7 +14,7 @@ public class DragonHalberdCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1203, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(282, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -22,7 +22,8 @@ public class DragonHalberdCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 1), new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 1),
+				new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class SaradominGodswordCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -63,12 +63,19 @@ public class SaradominGodswordCombatMethod implements CombatMethod {
 		int damage = hit.getTotalDamage();
 		int damageHeal = (int) (damage * 0.5);
 		int damagePrayerHeal = (int) (damage * 0.25);
-		if(player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) < player.getSkillManager().getMaxLevel(Skill.HITPOINTS)) {
-			int level = player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) + damageHeal > player.getSkillManager().getMaxLevel(Skill.HITPOINTS) ? player.getSkillManager().getMaxLevel(Skill.HITPOINTS) : player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) + damageHeal;
+		if (player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) < player.getSkillManager()
+				.getMaxLevel(Skill.HITPOINTS)) {
+			int level = player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) + damageHeal > player
+					.getSkillManager().getMaxLevel(Skill.HITPOINTS)
+							? player.getSkillManager().getMaxLevel(Skill.HITPOINTS)
+							: player.getSkillManager().getCurrentLevel(Skill.HITPOINTS) + damageHeal;
 			player.getSkillManager().setCurrentLevel(Skill.HITPOINTS, level);
 		}
-		if(player.getSkillManager().getCurrentLevel(Skill.PRAYER) < player.getSkillManager().getMaxLevel(Skill.PRAYER)) {
-			int level = player.getSkillManager().getCurrentLevel(Skill.PRAYER) + damagePrayerHeal > player.getSkillManager().getMaxLevel(Skill.PRAYER) ? player.getSkillManager().getMaxLevel(Skill.PRAYER) : player.getSkillManager().getCurrentLevel(Skill.PRAYER) + damagePrayerHeal;
+		if (player.getSkillManager().getCurrentLevel(Skill.PRAYER) < player.getSkillManager()
+				.getMaxLevel(Skill.PRAYER)) {
+			int level = player.getSkillManager().getCurrentLevel(Skill.PRAYER) + damagePrayerHeal > player
+					.getSkillManager().getMaxLevel(Skill.PRAYER) ? player.getSkillManager().getMaxLevel(Skill.PRAYER)
+							: player.getSkillManager().getCurrentLevel(Skill.PRAYER) + damagePrayerHeal;
 			player.getSkillManager().setCurrentLevel(Skill.PRAYER, level);
 		}
 	}

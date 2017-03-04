@@ -10,9 +10,9 @@ import com.elvarg.world.model.DamageDealer;
 import com.elvarg.world.model.movement.MovementStatus;
 
 /**
- * Represents an npc's death task, which handles everything
- * an npc does before and after their death animation (including it), 
- * such as dropping their drop table items.
+ * Represents an npc's death task, which handles everything an npc does before
+ * and after their death animation (including it), such as dropping their drop
+ * table items.
  * 
  * @author relex lawl
  */
@@ -21,7 +21,9 @@ public class NPCDeathTask extends Task {
 
 	/**
 	 * The NPCDeathTask constructor.
-	 * @param npc	The npc being killed.
+	 * 
+	 * @param npc
+	 *            The npc being killed.
 	 */
 	public NPCDeathTask(NPC npc) {
 		super(2);
@@ -59,23 +61,22 @@ public class NPCDeathTask extends Task {
 
 				npc.getCombat().reset();
 
-				if(npc.getInteractingEntity() != null) {
+				if (npc.getInteractingEntity() != null) {
 					npc.setEntityInteraction(null);
 				}
 
 				break;
 			case 0:
-				if(killer != null) {
-
+				if (killer != null) {
 
 					/** LOCATION KILLS **/
-					if(npc.getLocation().handleKilledNPC(killer, npc)) {
+					if (npc.getLocation().handleKilledNPC(killer, npc)) {
 						stop();
 						return;
 					}
 
 					/** PARSE DROPS **/
-					//	NPCDrops.dropItems(killer, npc);
+					// NPCDrops.dropItems(killer, npc);
 
 				}
 				stop();
@@ -83,7 +84,7 @@ public class NPCDeathTask extends Task {
 			}
 
 			ticks--;
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			stop();
 		}
@@ -95,8 +96,8 @@ public class NPCDeathTask extends Task {
 
 		npc.setDying(false);
 
-		//respawn
-		if(npc.getDefinition().getRespawn() > 0) {
+		// respawn
+		if (npc.getDefinition().getRespawn() > 0) {
 			TaskManager.submit(new NPCRespawnTask(npc, npc.getDefinition().getRespawn()));
 		}
 

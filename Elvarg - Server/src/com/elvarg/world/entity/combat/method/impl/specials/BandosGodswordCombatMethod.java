@@ -16,7 +16,7 @@ public class BandosGodswordCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(7060, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(1212, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -24,7 +24,7 @@ public class BandosGodswordCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -60,18 +60,23 @@ public class BandosGodswordCombatMethod implements CombatMethod {
 
 	@Override
 	public void handleAfterHitEffects(QueueableHit hit) {
-		if(hit.isAccurate() && hit.getTarget().isPlayer()) {
+		if (hit.isAccurate() && hit.getTarget().isPlayer()) {
 			int skillDrain = 1;
 			int damageDrain = (int) (hit.getTotalDamage() * 0.1);
-			if(damageDrain < 0)
+			if (damageDrain < 0)
 				return;
 			Player player = hit.getAttacker().getAsPlayer();
 			Player target = hit.getTarget().getAsPlayer();
-			target.getSkillManager().setCurrentLevel(Skill.forId(skillDrain), player.getSkillManager().getCurrentLevel(Skill.forId(skillDrain)) - damageDrain);
-			if(target.getSkillManager().getCurrentLevel(Skill.forId(skillDrain)) < 1)
+			target.getSkillManager().setCurrentLevel(Skill.forId(skillDrain),
+					player.getSkillManager().getCurrentLevel(Skill.forId(skillDrain)) - damageDrain);
+			if (target.getSkillManager().getCurrentLevel(Skill.forId(skillDrain)) < 1)
 				target.getSkillManager().setCurrentLevel(Skill.forId(skillDrain), 1);
-			player.getPacketSender().sendMessage("You've drained "+target.getUsername()+"'s "+Misc.formatText(Skill.forId(skillDrain).toString().toLowerCase())+" level by "+damageDrain+".");
-			target.getPacketSender().sendMessage("Your "+Misc.formatText(Skill.forId(skillDrain).toString().toLowerCase())+" level has been drained.");
+			player.getPacketSender()
+					.sendMessage("You've drained " + target.getUsername() + "'s "
+							+ Misc.formatText(Skill.forId(skillDrain).toString().toLowerCase()) + " level by "
+							+ damageDrain + ".");
+			target.getPacketSender().sendMessage("Your "
+					+ Misc.formatText(Skill.forId(skillDrain).toString().toLowerCase()) + " level has been drained.");
 		}
 	}
 }

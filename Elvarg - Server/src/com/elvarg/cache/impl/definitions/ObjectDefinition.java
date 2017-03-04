@@ -2,7 +2,6 @@ package com.elvarg.cache.impl.definitions;
 
 import com.elvarg.Elvarg;
 import com.elvarg.GameConstants;
-import com.elvarg.cache.CacheLoader;
 import com.elvarg.cache.impl.CacheArchive;
 import com.elvarg.cache.impl.CacheConstants;
 import com.elvarg.util.JsonLoader;
@@ -14,9 +13,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 public final class ObjectDefinition {
-	
+
 	public static JsonLoader parseObjects() {
-				
+
 		return new JsonLoader() {
 			@Override
 			public void load(JsonObject reader, Gson builder) {
@@ -24,23 +23,23 @@ public final class ObjectDefinition {
 				int x = reader.get("x").getAsInt();
 				int y = reader.get("y").getAsInt();
 				int z = 0;
-				
-				if(reader.has("z")) {
+
+				if (reader.has("z")) {
 					z = reader.get("z").getAsInt();
 				}
-				
+
 				int face = reader.get("face").getAsInt();
-				
+
 				int type = 10;
-				if(reader.has("type")) {
+				if (reader.has("type")) {
 					type = reader.get("type").getAsInt();
 				}
-				
+
 				int seconds = -1;
-				if(reader.has("seconds")) {
+				if (reader.has("seconds")) {
 					seconds = reader.get("seconds").getAsInt();
 				}
-				
+
 				GameObject object = new GameObject(id, new Position(x, y, z), type, face, seconds);
 				ObjectHandler.spawnGlobalObject(object);
 			}
@@ -97,7 +96,7 @@ public final class ObjectDefinition {
 	public ObjectDefinition() {
 		type = -1;
 	}
-	
+
 	private static ByteStreamExt stream;
 
 	public static ObjectDefinition forId(int id) {
@@ -112,27 +111,38 @@ public final class ObjectDefinition {
 		objectDef.type = id;
 		objectDef.reset();
 		objectDef.readValues(stream);
-		//	System.out.println("Object name: "+objectDef.name+", id: "+id);
-		boolean removeObject = id == 5244 || id == 2623 || id == 2956 || id == 463 || id == 462 || id == 10527 || id == 10529 || id == 40257 || id == 296 || id == 300 || id == 1747 || id == 7332 || id == 7326 || id == 7325 || id == 7385 || id == 7331 || id == 7385 || id == 7320 || id == 7317 || id == 7323 || id == 7354 || id == 1536 || id == 1537 || id == 5126 || id == 1551 || id == 1553 || id == 1516 || id == 1519 || id == 1557 || id == 1558 || id == 7126 || id == 733 || id == 14233 || id == 14235 || id == 1596 || id == 1597 || id == 14751 || id == 14752 || id == 14923 || id == 36844 || id == 30864 || id == 2514 || id == 1805 || id == 15536 || id == 2399 || id == 14749 || id == 29315 || id == 29316 || id == 29319 || id == 29320 || id == 29360 || id == 1528 || id == 36913 || id == 36915 || id == 15516 || id == 35549 || id == 35551 || id == 26808 || id == 26910 || id == 26913 || id == 24381 || id == 15514 || id == 25891 || id == 26082 || id == 26081 || id == 1530 || id == 16776 || id == 16778 || id == 28589 || id == 1533 || id == 17089 || id == 1600 || id == 1601 || id == 11707 || id == 24376 || id == 24378 || id == 40108 || id == 59 || id == 2069 || id == 36846;
-		if(objectDef.name != null) {
-			if(objectDef.name.toLowerCase().contains(("door")) || objectDef.name.toLowerCase().contains(("gate"))) {
+		// System.out.println("Object name: "+objectDef.name+", id: "+id);
+		boolean removeObject = id == 5244 || id == 2623 || id == 2956 || id == 463 || id == 462 || id == 10527
+				|| id == 10529 || id == 40257 || id == 296 || id == 300 || id == 1747 || id == 7332 || id == 7326
+				|| id == 7325 || id == 7385 || id == 7331 || id == 7385 || id == 7320 || id == 7317 || id == 7323
+				|| id == 7354 || id == 1536 || id == 1537 || id == 5126 || id == 1551 || id == 1553 || id == 1516
+				|| id == 1519 || id == 1557 || id == 1558 || id == 7126 || id == 733 || id == 14233 || id == 14235
+				|| id == 1596 || id == 1597 || id == 14751 || id == 14752 || id == 14923 || id == 36844 || id == 30864
+				|| id == 2514 || id == 1805 || id == 15536 || id == 2399 || id == 14749 || id == 29315 || id == 29316
+				|| id == 29319 || id == 29320 || id == 29360 || id == 1528 || id == 36913 || id == 36915 || id == 15516
+				|| id == 35549 || id == 35551 || id == 26808 || id == 26910 || id == 26913 || id == 24381 || id == 15514
+				|| id == 25891 || id == 26082 || id == 26081 || id == 1530 || id == 16776 || id == 16778 || id == 28589
+				|| id == 1533 || id == 17089 || id == 1600 || id == 1601 || id == 11707 || id == 24376 || id == 24378
+				|| id == 40108 || id == 59 || id == 2069 || id == 36846;
+		if (objectDef.name != null) {
+			if (objectDef.name.toLowerCase().contains(("door")) || objectDef.name.toLowerCase().contains(("gate"))) {
 				removeObject = true;
 			}
 		}
-		if(removeObject) {
+		if (removeObject) {
 			objectDef.modelIds = null;
 			objectDef.isInteractive = false;
 			objectDef.solid = false;
 			return objectDef;
 		}
 
-		if(id == 6552) {
+		if (id == 6552) {
 			objectDef.interactions = new String[5];
 			objectDef.interactions[0] = "Toggle-spells";
 			objectDef.name = "Ancient altar";
 		}
 
-		if(id == 14911) {
+		if (id == 14911) {
 			objectDef.interactions = new String[5];
 			objectDef.interactions[0] = "Toggle-spells";
 			objectDef.name = "Lunar altar";
@@ -188,9 +198,8 @@ public final class ObjectDefinition {
 			objectDef.interactions[0] = "Mine";
 			objectDef.name = "Rock";
 		}
-		if (id == 2452 || id == 2455 || id == 2456 || id == 2454 || id == 2453
-				|| id == 2461 || id == 2457 || id == 2461 || id == 2459
-				|| id == 2460) {
+		if (id == 2452 || id == 2455 || id == 2456 || id == 2454 || id == 2453 || id == 2461 || id == 2457 || id == 2461
+				|| id == 2459 || id == 2460) {
 			objectDef.isInteractive = true;
 			objectDef.name = "Mysterious Ruins";
 		}
@@ -199,8 +208,6 @@ public final class ObjectDefinition {
 			objectDef.isInteractive = true;
 			return objectDef;
 		}
-
-
 
 		return objectDef;
 	}
@@ -243,15 +250,15 @@ public final class ObjectDefinition {
 		varp = -1;
 		childrenIDs = null;
 	}
-	
+
 	public static void init() {
-		//long startup = System.currentTimeMillis();
-		//System.out.println("Loading cache game object definitions...");
-		
+		// long startup = System.currentTimeMillis();
+		// System.out.println("Loading cache game object definitions...");
+
 		CacheArchive objectDefs = Elvarg.getCache().getArchive(CacheConstants.CONFIG_ARCHIVE);
 		stream = new ByteStreamExt(objectDefs.getData("loc.dat").array());
 		ByteStreamExt idxBuffer525 = new ByteStreamExt(objectDefs.getData("loc.idx").array());
-				
+
 		int totalObjects525 = idxBuffer525.readUnsignedWord();
 		streamIndices = new int[totalObjects525];
 		int i = 2;
@@ -259,16 +266,18 @@ public final class ObjectDefinition {
 			streamIndices[j] = i;
 			i += idxBuffer525.readUnsignedWord();
 		}
-				
+
 		cache = new ObjectDefinition[20];
 		for (int k = 0; k < 20; k++) {
 			cache[k] = new ObjectDefinition();
 		}
-		
-	//	System.out.println("Loaded " + totalObjects525 + " cache object definitions #525 ");
-		//		+ totalObjects667 + " cache object definitions #667 in " + (System.currentTimeMillis() - startup) + "ms");
+
+		// System.out.println("Loaded " + totalObjects525 + " cache object
+		// definitions #525 ");
+		// + totalObjects667 + " cache object definitions #667 in " +
+		// (System.currentTimeMillis() - startup) + "ms");
 	}
-	
+
 	public void readValues(ByteStreamExt buffer) {
 		int interactive = -1;
 		do {
@@ -391,8 +400,7 @@ public final class ObjectDefinition {
 			}
 		} while (true);
 		if (interactive == -1 && name != "null" && name != null) {
-			isInteractive = modelIds != null
-					&& (modelTypes == null || modelTypes[0] == 10);
+			isInteractive = modelIds != null && (modelTypes == null || modelTypes[0] == 10);
 			if (interactions != null)
 				isInteractive = true;
 		}
@@ -403,19 +411,19 @@ public final class ObjectDefinition {
 		if (supportItems == -1)
 			supportItems = solid ? 1 : 0;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public int getSizeX() {
 		return objectSizeX;
 	}
-	
+
 	public int getSizeY() {
 		return objectSizeY;
 	}
-	
+
 	public boolean hasActions() {
 		return isInteractive;
 	}

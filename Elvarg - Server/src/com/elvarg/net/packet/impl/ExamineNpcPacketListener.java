@@ -10,12 +10,12 @@ public class ExamineNpcPacketListener implements PacketListener {
 	@Override
 	public void handleMessage(Player player, Packet packet) {
 		int npc = packet.readShort();
-		if(npc <= 0) {
+		if (npc <= 0) {
 			return;
 		}
-		System.out.println("NPC: "+npc);
+		System.out.println("NPC: " + npc);
 		NpcDefinition npcDef = NpcDefinition.forId(npc);
-		if(npcDef != null) {
+		if (npcDef != null) {
 			player.getPacketSender().sendMessage(npcDef.getExamine());
 		}
 	}

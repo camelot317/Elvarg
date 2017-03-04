@@ -70,8 +70,8 @@ public final class LoginDetailsMessage {
 	 * @param decryptor
 	 *            the decryptor for decrypting messages.
 	 */
-	public LoginDetailsMessage(ChannelHandlerContext context, String username, String password, String host, int clientVersion, int uid, 
-			IsaacRandom encryptor, IsaacRandom decryptor) {
+	public LoginDetailsMessage(ChannelHandlerContext context, String username, String password, String host,
+			int clientVersion, int uid, IsaacRandom encryptor, IsaacRandom decryptor) {
 		this.context = context;
 		this.username = username;
 		this.password = password;
@@ -79,9 +79,8 @@ public final class LoginDetailsMessage {
 		this.clientVersion = clientVersion;
 		this.uid = uid;
 		this.encryptor = encryptor;
-	    this.decryptor = decryptor;
+		this.decryptor = decryptor;
 	}
-
 
 	public ChannelHandlerContext getContext() {
 		return context;

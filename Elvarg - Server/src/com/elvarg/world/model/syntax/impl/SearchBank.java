@@ -5,7 +5,7 @@ import com.elvarg.world.model.container.impl.Bank;
 import com.elvarg.world.model.syntax.EnterSyntax;
 
 public class SearchBank implements EnterSyntax {
-	
+
 	@Override
 	public void handleSyntax(Player player, String input) {
 		Bank.search(player, input);
@@ -13,7 +13,7 @@ public class SearchBank implements EnterSyntax {
 
 	@Override
 	public void handleSyntax(Player player, int input) {
-		
+
 	}
 
 }

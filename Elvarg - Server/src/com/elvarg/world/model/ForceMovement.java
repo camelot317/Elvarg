@@ -8,13 +8,13 @@ public class ForceMovement {
 	private int reverseSpeed;
 	private int direction;
 	private int animation;
-	
+
 	public ForceMovement(Position start, Position end, int speed, int reverseSpeed, int direction, int animation) {
 		this.setStart(start);
 		this.setEnd(end);
-		this.setSpeed((short)speed);
-		this.setReverseSpeed((short)reverseSpeed);
-		this.setDirection((byte)direction);
+		this.setSpeed((short) speed);
+		this.setReverseSpeed((short) reverseSpeed);
+		this.setDirection((byte) direction);
 		this.setAnimation(animation);
 	}
 

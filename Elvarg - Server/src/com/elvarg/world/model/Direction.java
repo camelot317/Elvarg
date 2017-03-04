@@ -96,7 +96,7 @@ public enum Direction {
 			return Direction.WEST;
 		return Direction.NONE;
 	}
-	
+
 	/**
 	 * Checks if the direction represented by the two delta values can connect
 	 * two points together in a single direction.
@@ -108,8 +108,7 @@ public enum Direction {
 	 * @return {@code true} if so, {@code false} if not.
 	 */
 	public static boolean isConnectable(int deltaX, int deltaY) {
-		return Math.abs(deltaX) == Math.abs(deltaY) || deltaX == 0
-				|| deltaY == 0;
+		return Math.abs(deltaX) == Math.abs(deltaY) || deltaX == 0 || deltaY == 0;
 	}
 
 	/**

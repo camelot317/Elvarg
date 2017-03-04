@@ -37,22 +37,23 @@ public class PriceChecker extends ItemContainer {
 
 		List<Item> items_ = getValidItems();
 
-		if(items_.size() > 0) {
-			getPlayer().getPacketSender().sendString(18355, "")
-			.sendString(18351, ""+Misc.insertCommasToNumber(getTotalValue())); //TOTAL VALUE
+		if (items_.size() > 0) {
+			getPlayer().getPacketSender().sendString(18355, "").sendString(18351,
+					"" + Misc.insertCommasToNumber(getTotalValue())); // TOTAL
+																		// VALUE
 
-			//Send item prices
-			for(int i = 0; i < capacity(); i++) {
+			// Send item prices
+			for (int i = 0; i < capacity(); i++) {
 				String itemPrice = "";
 				String totalPrice = "";
 
-				if(getItems()[i].getId() > 0 && getItems()[i].getAmount() > 0) {
+				if (getItems()[i].getId() > 0 && getItems()[i].getAmount() > 0) {
 					int itemAmt = getItems()[i].getAmount();
 					int price = getItems()[i].getDefinition().getValue();
 					int total_price = itemAmt * price;
 
-					itemPrice = ""+Misc.insertCommasToNumber(""+price+"")+" x"+itemAmt;
-					totalPrice = " = "+Misc.insertCommasToNumber(""+total_price);
+					itemPrice = "" + Misc.insertCommasToNumber("" + price + "") + " x" + itemAmt;
+					totalPrice = " = " + Misc.insertCommasToNumber("" + total_price);
 				}
 
 				getPlayer().getPacketSender().sendString(TEXT_START_ROW_1 + i, itemPrice);
@@ -61,10 +62,10 @@ public class PriceChecker extends ItemContainer {
 
 		} else {
 			getPlayer().getPacketSender().sendString(18355, "Click an item in your inventory to check it's wealth.")
-			.sendString(18351, "0"); //TOTAL VALUE
+					.sendString(18351, "0"); // TOTAL VALUE
 
-			//Reset item prices
-			for(int i = 0; i < capacity(); i++) {
+			// Reset item prices
+			for (int i = 0; i < capacity(); i++) {
 				getPlayer().getPacketSender().sendString(TEXT_START_ROW_1 + i, "");
 				getPlayer().getPacketSender().sendString(TEXT_START_ROW_2 + i, "");
 			}
@@ -83,8 +84,8 @@ public class PriceChecker extends ItemContainer {
 	}
 
 	public void withdrawAll() {
-		if(getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
-			for(Item item: getValidItems()) {
+		if (getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
+			for (Item item : getValidItems()) {
 				switchItem(getPlayer().getInventory(), item.copy(), false, false);
 			}
 			refreshItems();
@@ -93,8 +94,8 @@ public class PriceChecker extends ItemContainer {
 	}
 
 	public void depositAll() {
-		if(getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
-			for(Item item: getPlayer().getInventory().getValidItems()) {
+		if (getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
+			for (Item item : getPlayer().getInventory().getValidItems()) {
 				getPlayer().getInventory().switchItem(this, item.copy(), false, false);
 			}
 			refreshItems();
@@ -103,14 +104,14 @@ public class PriceChecker extends ItemContainer {
 	}
 
 	public boolean deposit(int id, int amount, int slot) {
-		if(getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
+		if (getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
 
-			//Verify item
-			if(getPlayer().getInventory().getItems()[slot].getId() == id) {
-				
-				//Perform switch
-				final Item item = new Item(id, amount);				
-				if(item.getAmount() == 1) {
+			// Verify item
+			if (getPlayer().getInventory().getItems()[slot].getId() == id) {
+
+				// Perform switch
+				final Item item = new Item(id, amount);
+				if (item.getAmount() == 1) {
 					getPlayer().getInventory().switchItem(this, item, slot, false, true);
 				} else {
 					getPlayer().getInventory().switchItem(this, item, false, true);
@@ -122,18 +123,18 @@ public class PriceChecker extends ItemContainer {
 	}
 
 	public boolean withdraw(int id, int amount, int slot) {
-		if(getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
+		if (getPlayer().getStatus() == PlayerStatus.PRICE_CHECKING && getPlayer().getInterfaceId() == INTERFACE_ID) {
 
-			//Verify item
-			if(getItems()[slot].getId() == id) {
+			// Verify item
+			if (getItems()[slot].getId() == id) {
 
-				//Perform switch
+				// Perform switch
 				final Item item = new Item(id, amount);
-				if(item.getAmount() == 1) {
+				if (item.getAmount() == 1) {
 					switchItem(getPlayer().getInventory(), item, slot, false, true);
 				} else {
 					switchItem(getPlayer().getInventory(), item, false, true);
-				}				
+				}
 			}
 			return true;
 		}

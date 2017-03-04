@@ -7,9 +7,5 @@ package com.elvarg.net.packet;
  * @author blakeman8192
  */
 public enum ByteOrder {
-    LITTLE,
-    BIG,
-    MIDDLE,
-    INVERSE_MIDDLE,
-    TRIPLE_INT;
+	LITTLE, BIG, MIDDLE, INVERSE_MIDDLE, TRIPLE_INT;
 }

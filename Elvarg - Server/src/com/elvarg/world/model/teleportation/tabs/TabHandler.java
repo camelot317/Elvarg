@@ -28,15 +28,15 @@ public class TabHandler {
 		if (!tab.isPresent()) {
 			return;
 		}
-		
+
 		// If the player is dead, performs nothing
 		if (player == null) {
 			return;
 		}
 		// Teleport the player to the proper Teleport Tablet location
 		TeleportHandler.teleport(player, tab.get().location(), TeleportType.TELE_TAB);
-		
-		// Removes the Teleport Tablet item from inventory 
+
+		// Removes the Teleport Tablet item from inventory
 		player.getInventory().delete(new Item(tab.get().getTab()));
 	}
 }

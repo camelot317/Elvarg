@@ -72,20 +72,20 @@ public final class RegionClipping {
 
 	public static void init() {
 		try {
-				
+
 			CacheArchive archive = Elvarg.getCache().getArchive(CacheConstants.MANIFEST_ARCHIVE);
 			ByteStreamExt stream = new ByteStreamExt(archive.getData("map_index").array());
-			
+
 			int size = stream.readUnsignedWord() & 0xFFFF;
 			regionArray = new RegionClipping[size];
-			
+
 			for (int i = 0; i < size; i++) {
 				int regionId = stream.readUnsignedWord() & 0xFFFF;
 				int terrainFile = stream.readUnsignedWord() & 0xFFFF;
 				int objectFile = stream.readUnsignedWord() & 0xFFFF;
 				regionArray[i] = new RegionClipping(regionId, terrainFile, objectFile);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -93,7 +93,7 @@ public final class RegionClipping {
 
 	public static RegionClipping get(int regionId) {
 		for (RegionClipping r : regionArray) {
-			if(r.regionData == null) {
+			if (r.regionData == null) {
 				continue;
 			}
 			if (r.regionData.id == regionId) {
@@ -114,29 +114,28 @@ public final class RegionClipping {
 				return;
 			if (loadedRegions.contains(regionId))
 				return;
-			
-			byte[] objectData = Elvarg.getCache().getDecompressedFile(CacheConstants.MAP_INDEX, 
+
+			byte[] objectData = Elvarg.getCache().getDecompressedFile(CacheConstants.MAP_INDEX,
 					r.regionData.objectFile);
-			byte[] terrainData = Elvarg.getCache().getDecompressedFile(CacheConstants.MAP_INDEX, 
+			byte[] terrainData = Elvarg.getCache().getDecompressedFile(CacheConstants.MAP_INDEX,
 					r.regionData.terrainFile);
-			
+
 			if (objectData == null || terrainData == null) {
 				loadedRegions.add(regionId);
 				return;
 			}
-			
+
 			loadedRegions.add(regionId);
 			loadMaps(regionId, new ByteStreamExt(objectData), new ByteStreamExt(terrainData));
 		} catch (Exception e) {
-			
+
 			loadedRegions.add(regionId);
 			e.printStackTrace();
-		//	System.out.println("Error loading regionId: " + regionId);
+			// System.out.println("Error loading regionId: " + regionId);
 		}
 	}
 
-	private static void loadMaps(int regionId, ByteStreamExt objectStream,
-			ByteStreamExt terrainStream) {
+	private static void loadMaps(int regionId, ByteStreamExt objectStream, ByteStreamExt terrainStream) {
 		int absX = (regionId >> 8) * 64;
 		int absY = (regionId & 0xff) * 64;
 		byte[][][] heightMap = new byte[4][64][64];
@@ -148,11 +147,11 @@ public final class RegionClipping {
 						if (tileType == 0) {
 							break;
 						} else if (tileType == 1) {
-							//groundStream.getUByte();
+							// groundStream.getUByte();
 							terrainStream.skip(1);
 							break;
 						} else if (tileType <= 49) {
-							//groundStream.getUByte();
+							// groundStream.getUByte();
 							terrainStream.skip(1);
 						} else if (tileType <= 81) {
 							heightMap[z][tileX][tileY] = (byte) (tileType - 49);
@@ -197,8 +196,10 @@ public final class RegionClipping {
 					height--;
 				}
 				if (height >= 0 && height <= 3)
-					addObject(objectId, absX + localX, absY + localY, height,
-							type, direction); // Add object to clipping
+					addObject(objectId, absX + localX, absY + localY, height, type, direction); // Add
+																								// object
+																								// to
+																								// clipping
 			}
 		}
 	}
@@ -246,20 +247,14 @@ public final class RegionClipping {
 			if (height < 0 || height >= 4)
 				height = 0;
 			RegionClipping.loadRegion(x, y);
-			if (clipping.gameObjects == null
-					|| clipping.gameObjects[height] == null
+			if (clipping.gameObjects == null || clipping.gameObjects[height] == null
 					|| clipping.gameObjects[height][x - regionAbsX] == null
-					|| clipping.gameObjects[height][x - regionAbsX][y
-							- regionAbsY] == null) {
+					|| clipping.gameObjects[height][x - regionAbsX][y - regionAbsY] == null) {
 				return null;
 			}
-			return new int[] {
-					clipping.gameObjects[height][x - regionAbsX][y - regionAbsY]
-							.getFace(),
-					clipping.gameObjects[height][x - regionAbsX][y - regionAbsY]
-							.getType(),
-					clipping.gameObjects[height][x - regionAbsX][y - regionAbsY]
-							.getId(), };
+			return new int[] { clipping.gameObjects[height][x - regionAbsX][y - regionAbsY].getFace(),
+					clipping.gameObjects[height][x - regionAbsX][y - regionAbsY].getType(),
+					clipping.gameObjects[height][x - regionAbsX][y - regionAbsY].getId(), };
 		} else {
 			return null;
 		}
@@ -294,8 +289,7 @@ public final class RegionClipping {
 		}
 	}
 
-	private static void addClippingForVariableObject(int x, int y, int height,
-			int type, int direction, boolean flag) {
+	private static void addClippingForVariableObject(int x, int y, int height, int type, int direction, boolean flag) {
 		if (type == 0) {
 			if (direction == 0) {
 				addClipping(x, y, height, 128);
@@ -395,8 +389,7 @@ public final class RegionClipping {
 		}
 	}
 
-	private static void addClippingForSolidObject(int x, int y, int height,
-			int xLength, int yLength, boolean flag) {
+	private static void addClippingForSolidObject(int x, int y, int height, int xLength, int yLength, boolean flag) {
 		int clipping = 256;
 		if (flag) {
 			clipping += 0x20000;
@@ -419,14 +412,13 @@ public final class RegionClipping {
 		return new int[] { localX, localY };
 	}
 
-	public static void addObject(int objectId, int x, int y, int height,
-			int type, int direction) {
-		
+	public static void addObject(int objectId, int x, int y, int height, int type, int direction) {
+
 		if (objectId == -1) {
 			removeClipping(x, y, height, 0x000000);
 			return;
 		}
-		
+
 		ObjectDefinition def = ObjectDefinition.forId(objectId);
 		if (def == null) {
 			return;
@@ -444,8 +436,8 @@ public final class RegionClipping {
 				clipping.gameObjects[height % 4] = new GameObject[64][64];
 			}
 			int[] local = getLocalPosition(position);
-			clipping.gameObjects[height % 4][local[0]][local[1]] = new GameObject(
-					objectId, new Position(x, y, height), type, direction);
+			clipping.gameObjects[height % 4][local[0]][local[1]] = new GameObject(objectId, new Position(x, y, height),
+					type, direction);
 		}
 		int xLength;
 		int yLength;
@@ -462,28 +454,24 @@ public final class RegionClipping {
 			}
 		} else if (type >= 9) {
 			if (def.solid) {
-				addClippingForSolidObject(x, y, height, xLength, yLength,
-						def.impenetrable);
+				addClippingForSolidObject(x, y, height, xLength, yLength, def.impenetrable);
 			}
 		} else if (type >= 0 && type <= 3) {
 			if (def.solid) {
-				addClippingForVariableObject(x, y, height, type, direction,
-						def.impenetrable);
+				addClippingForVariableObject(x, y, height, type, direction, def.impenetrable);
 			}
 		}
 	}
 
 	public static void addObject(GameObject gameObject) {
 		if (gameObject.getId() != 65535)
-			addObject(gameObject.getId(), gameObject.getPosition().getX(),
-					gameObject.getPosition().getY(), gameObject.getPosition()
-							.getZ(), gameObject.getType(), gameObject.getFace());
+			addObject(gameObject.getId(), gameObject.getPosition().getX(), gameObject.getPosition().getY(),
+					gameObject.getPosition().getZ(), gameObject.getType(), gameObject.getFace());
 	}
 
 	public static void removeObject(GameObject gameObject) {
-		addObject(-1, gameObject.getPosition().getX(), gameObject.getPosition()
-				.getY(), gameObject.getPosition().getZ(), gameObject.getType(),
-				gameObject.getFace());
+		addObject(-1, gameObject.getPosition().getX(), gameObject.getPosition().getY(), gameObject.getPosition().getZ(),
+				gameObject.getType(), gameObject.getFace());
 	}
 
 	public static int getClipping(int x, int y, int height) {
@@ -513,8 +501,7 @@ public final class RegionClipping {
 		return clips[height][x - regionAbsX][y - regionAbsY];
 	}
 
-	public static boolean canMove(int startX, int startY, int endX, int endY,
-			int height, int xLength, int yLength) {
+	public static boolean canMove(int startX, int startY, int endX, int endY, int height, int xLength, int yLength) {
 		int diffX = endX - startX;
 		int diffY = endY - startY;
 		int max = Math.max(Math.abs(diffX), Math.abs(diffY));
@@ -524,53 +511,36 @@ public final class RegionClipping {
 			for (int i = 0; i < xLength; i++) {
 				for (int i2 = 0; i2 < yLength; i2++)
 					if (diffX < 0 && diffY < 0) {
-						if ((getClipping((currentX + i) - 1,
-								(currentY + i2) - 1, height) & 0x128010e) != 0
-								|| (getClipping((currentX + i) - 1, currentY
-										+ i2, height) & 0x1280108) != 0
-								|| (getClipping(currentX + i,
-										(currentY + i2) - 1, height) & 0x1280102) != 0)
+						if ((getClipping((currentX + i) - 1, (currentY + i2) - 1, height) & 0x128010e) != 0
+								|| (getClipping((currentX + i) - 1, currentY + i2, height) & 0x1280108) != 0
+								|| (getClipping(currentX + i, (currentY + i2) - 1, height) & 0x1280102) != 0)
 							return false;
 					} else if (diffX > 0 && diffY > 0) {
-						if ((getClipping(currentX + i + 1, currentY + i2 + 1,
-								height) & 0x12801e0) != 0
-								|| (getClipping(currentX + i + 1,
-										currentY + i2, height) & 0x1280180) != 0
-								|| (getClipping(currentX + i,
-										currentY + i2 + 1, height) & 0x1280120) != 0)
+						if ((getClipping(currentX + i + 1, currentY + i2 + 1, height) & 0x12801e0) != 0
+								|| (getClipping(currentX + i + 1, currentY + i2, height) & 0x1280180) != 0
+								|| (getClipping(currentX + i, currentY + i2 + 1, height) & 0x1280120) != 0)
 							return false;
 					} else if (diffX < 0 && diffY > 0) {
-						if ((getClipping((currentX + i) - 1, currentY + i2 + 1,
-								height) & 0x1280138) != 0
-								|| (getClipping((currentX + i) - 1, currentY
-										+ i2, height) & 0x1280108) != 0
-								|| (getClipping(currentX + i,
-										currentY + i2 + 1, height) & 0x1280120) != 0)
+						if ((getClipping((currentX + i) - 1, currentY + i2 + 1, height) & 0x1280138) != 0
+								|| (getClipping((currentX + i) - 1, currentY + i2, height) & 0x1280108) != 0
+								|| (getClipping(currentX + i, currentY + i2 + 1, height) & 0x1280120) != 0)
 							return false;
 					} else if (diffX > 0 && diffY < 0) {
-						if ((getClipping(currentX + i + 1, (currentY + i2) - 1,
-								height) & 0x1280183) != 0
-								|| (getClipping(currentX + i + 1,
-										currentY + i2, height) & 0x1280180) != 0
-								|| (getClipping(currentX + i,
-										(currentY + i2) - 1, height) & 0x1280102) != 0)
+						if ((getClipping(currentX + i + 1, (currentY + i2) - 1, height) & 0x1280183) != 0
+								|| (getClipping(currentX + i + 1, currentY + i2, height) & 0x1280180) != 0
+								|| (getClipping(currentX + i, (currentY + i2) - 1, height) & 0x1280102) != 0)
 							return false;
 					} else if (diffX > 0 && diffY == 0) {
-						if ((getClipping(currentX + i + 1, currentY + i2,
-								height) & 0x1280180) != 0)
+						if ((getClipping(currentX + i + 1, currentY + i2, height) & 0x1280180) != 0)
 							return false;
 					} else if (diffX < 0 && diffY == 0) {
-						if ((getClipping((currentX + i) - 1, currentY + i2,
-								height) & 0x1280108) != 0)
+						if ((getClipping((currentX + i) - 1, currentY + i2, height) & 0x1280108) != 0)
 							return false;
 					} else if (diffX == 0 && diffY > 0) {
-						if ((getClipping(currentX + i, currentY + i2 + 1,
-								height) & 0x1280120) != 0)
+						if ((getClipping(currentX + i, currentY + i2 + 1, height) & 0x1280120) != 0)
 							return false;
-					} else if (diffX == 0
-							&& diffY < 0
-							&& (getClipping(currentX + i, (currentY + i2) - 1,
-									height) & 0x1280102) != 0)
+					} else if (diffX == 0 && diffY < 0
+							&& (getClipping(currentX + i, (currentY + i2) - 1, height) & 0x1280102) != 0)
 						return false;
 
 			}
@@ -588,16 +558,14 @@ public final class RegionClipping {
 		return true;
 	}
 
-	public static boolean canMove(Position start, Position end, int xLength,
-			int yLength) {
-		return canMove(start.getX(), start.getY(), end.getX(), end.getY(),
-				start.getZ(), xLength, yLength);
+	public static boolean canMove(Position start, Position end, int xLength, int yLength) {
+		return canMove(start.getX(), start.getY(), end.getX(), end.getY(), start.getZ(), xLength, yLength);
 	}
 
 	public static boolean blockedProjectile(Position position) {
 		return (getClipping(position.getX(), position.getY(), position.getZ()) & 0x20000) == 0;
 	}
-	
+
 	public static boolean blocked(Position pos) {
 		return (getClipping(pos.getX(), pos.getY(), pos.getZ()) & 0x1280120) != 0;
 	}
@@ -637,18 +605,16 @@ public final class RegionClipping {
 	public static boolean canProjectileAttack(Character a, Character b) {
 		if (!a.isPlayer()) {
 			if (b.isPlayer()) {
-				return canProjectileMove(b.getPosition().getX(), b
-						.getPosition().getY(), a.getPosition().getX(), a
-						.getPosition().getY(), a.getPosition().getZ(), 1, 1);
+				return canProjectileMove(b.getPosition().getX(), b.getPosition().getY(), a.getPosition().getX(),
+						a.getPosition().getY(), a.getPosition().getZ(), 1, 1);
 			}
 		}
-		return canProjectileMove(a.getPosition().getX(),
-				a.getPosition().getY(), b.getPosition().getX(), b.getPosition()
-						.getY(), a.getPosition().getZ(), 1, 1);
+		return canProjectileMove(a.getPosition().getX(), a.getPosition().getY(), b.getPosition().getX(),
+				b.getPosition().getY(), a.getPosition().getZ(), 1, 1);
 	}
 
-	public static boolean canProjectileMove(int startX, int startY, int endX,
-			int endY, int height, int xLength, int yLength) {
+	public static boolean canProjectileMove(int startX, int startY, int endX, int endY, int height, int xLength,
+			int yLength) {
 		int diffX = endX - startX;
 		int diffY = endY - startY;
 		// height %= 4;
@@ -659,107 +625,77 @@ public final class RegionClipping {
 			for (int i = 0; i < xLength; i++) {
 				for (int i2 = 0; i2 < yLength; i2++) {
 					if (diffX < 0 && diffY < 0) {
-						if ((RegionClipping.getClipping(currentX + i - 1,
-								currentY + i2 - 1, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED
-								| PROJECTILE_EAST_BLOCKED
+						if ((RegionClipping.getClipping(currentX + i - 1, currentY + i2 - 1, height) & (UNLOADED_TILE
+								| /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_EAST_BLOCKED
 								| PROJECTILE_NORTH_EAST_BLOCKED | PROJECTILE_NORTH_BLOCKED)) != 0
-								|| (RegionClipping
-										.getClipping(currentX + i - 1, currentY
-												+ i2, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_EAST_BLOCKED)) != 0
-								|| (RegionClipping.getClipping(currentX + i,
-										currentY + i2 - 1, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_NORTH_BLOCKED)) != 0) {
+								|| (RegionClipping.getClipping(currentX + i - 1, currentY + i2, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_EAST_BLOCKED)) != 0
+								|| (RegionClipping.getClipping(currentX + i, currentY + i2 - 1, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_NORTH_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX > 0 && diffY > 0) {
-						if ((RegionClipping.getClipping(currentX + i + 1,
-								currentY + i2 + 1, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED
-								| PROJECTILE_WEST_BLOCKED
+						if ((RegionClipping.getClipping(currentX + i + 1, currentY + i2 + 1, height) & (UNLOADED_TILE
+								| /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_WEST_BLOCKED
 								| PROJECTILE_SOUTH_WEST_BLOCKED | PROJECTILE_SOUTH_BLOCKED)) != 0
-								|| (RegionClipping
-										.getClipping(currentX + i + 1, currentY
-												+ i2, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_WEST_BLOCKED)) != 0
-								|| (RegionClipping.getClipping(currentX + i,
-										currentY + i2 + 1, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_SOUTH_BLOCKED)) != 0) {
+								|| (RegionClipping.getClipping(currentX + i + 1, currentY + i2, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_WEST_BLOCKED)) != 0
+								|| (RegionClipping.getClipping(currentX + i, currentY + i2 + 1, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_SOUTH_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX < 0 && diffY > 0) {
-						if ((RegionClipping.getClipping(currentX + i - 1,
-								currentY + i2 + 1, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED
-								| PROJECTILE_SOUTH_BLOCKED
+						if ((RegionClipping.getClipping(currentX + i - 1, currentY + i2 + 1, height) & (UNLOADED_TILE
+								| /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_SOUTH_BLOCKED
 								| PROJECTILE_SOUTH_EAST_BLOCKED | PROJECTILE_EAST_BLOCKED)) != 0
-								|| (RegionClipping
-										.getClipping(currentX + i - 1, currentY
-												+ i2, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_EAST_BLOCKED)) != 0
-								|| (RegionClipping.getClipping(currentX + i,
-										currentY + i2 + 1, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_SOUTH_BLOCKED)) != 0) {
+								|| (RegionClipping.getClipping(currentX + i - 1, currentY + i2, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_EAST_BLOCKED)) != 0
+								|| (RegionClipping.getClipping(currentX + i, currentY + i2 + 1, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_SOUTH_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX > 0 && diffY < 0) {
-						if ((RegionClipping.getClipping(currentX + i + 1,
-								currentY + i2 - 1, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED
-								| PROJECTILE_WEST_BLOCKED
+						if ((RegionClipping.getClipping(currentX + i + 1, currentY + i2 - 1, height) & (UNLOADED_TILE
+								| /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_WEST_BLOCKED
 								| PROJECTILE_NORTH_BLOCKED | PROJECTILE_NORTH_WEST_BLOCKED)) != 0
-								|| (RegionClipping
-										.getClipping(currentX + i + 1, currentY
-												+ i2, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_WEST_BLOCKED)) != 0
-								|| (RegionClipping.getClipping(currentX + i,
-										currentY + i2 - 1, height) & (UNLOADED_TILE
-										| /* BLOCKED_TILE | */UNKNOWN
-										| PROJECTILE_TILE_BLOCKED | PROJECTILE_NORTH_BLOCKED)) != 0) {
+								|| (RegionClipping.getClipping(currentX + i + 1, currentY + i2, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_WEST_BLOCKED)) != 0
+								|| (RegionClipping.getClipping(currentX + i, currentY + i2 - 1, height)
+										& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+												| PROJECTILE_NORTH_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX > 0 && diffY == 0) {
-						if ((RegionClipping.getClipping(currentX + i + 1,
-								currentY + i2, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED | PROJECTILE_WEST_BLOCKED)) != 0) {
+						if ((RegionClipping.getClipping(currentX + i + 1, currentY + i2, height)
+								& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+										| PROJECTILE_WEST_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX < 0 && diffY == 0) {
-						if ((RegionClipping.getClipping(currentX + i - 1,
-								currentY + i2, height) & (UNLOADED_TILE
-								| /* BLOCKED_TILE | */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED | PROJECTILE_EAST_BLOCKED)) != 0) {
+						if ((RegionClipping.getClipping(currentX + i - 1, currentY + i2, height)
+								& (UNLOADED_TILE | /* BLOCKED_TILE | */UNKNOWN | PROJECTILE_TILE_BLOCKED
+										| PROJECTILE_EAST_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX == 0 && diffY > 0) {
-						if ((RegionClipping.getClipping(currentX + i, currentY
-								+ i2 + 1, height) & (UNLOADED_TILE | /*
-																	 * BLOCKED_TILE
-																	 * |
-																	 */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED | PROJECTILE_SOUTH_BLOCKED)) != 0) {
+						if ((RegionClipping.getClipping(currentX + i, currentY + i2 + 1, height) & (UNLOADED_TILE
+								| /*
+									 * BLOCKED_TILE |
+									 */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_SOUTH_BLOCKED)) != 0) {
 							return false;
 						}
 					} else if (diffX == 0 && diffY < 0) {
-						if ((RegionClipping.getClipping(currentX + i, currentY
-								+ i2 - 1, height) & (UNLOADED_TILE | /*
-																	 * BLOCKED_TILE
-																	 * |
-																	 */UNKNOWN
-								| PROJECTILE_TILE_BLOCKED | PROJECTILE_NORTH_BLOCKED)) != 0) {
+						if ((RegionClipping.getClipping(currentX + i, currentY + i2 - 1, height) & (UNLOADED_TILE
+								| /*
+									 * BLOCKED_TILE |
+									 */UNKNOWN | PROJECTILE_TILE_BLOCKED | PROJECTILE_NORTH_BLOCKED)) != 0) {
 							return false;
 						}
 					}
@@ -780,30 +716,18 @@ public final class RegionClipping {
 	}
 
 	public final static boolean isInDiagonalBlock(Character attacker, Character attacked) {
-		return attacked.getPosition().getX() - 1 == attacker.getPosition()
-				.getX()
-				&& attacked.getPosition().getY() + 1 == attacker.getPosition()
-						.getY()
-				|| attacker.getPosition().getX() - 1 == attacked.getPosition()
-						.getX()
-				&& attacker.getPosition().getY() + 1 == attacked.getPosition()
-						.getY()
-				|| attacked.getPosition().getX() + 1 == attacker.getPosition()
-						.getX()
-				&& attacked.getPosition().getY() - 1 == attacker.getPosition()
-						.getY()
-				|| attacker.getPosition().getX() + 1 == attacked.getPosition()
-						.getX()
-				&& attacker.getPosition().getY() - 1 == attacked.getPosition()
-						.getY()
-				|| attacked.getPosition().getX() + 1 == attacker.getPosition()
-						.getX()
-				&& attacked.getPosition().getY() + 1 == attacker.getPosition()
-						.getY()
-				|| attacker.getPosition().getX() + 1 == attacked.getPosition()
-						.getX()
-				&& attacker.getPosition().getY() + 1 == attacked.getPosition()
-						.getY();
+		return attacked.getPosition().getX() - 1 == attacker.getPosition().getX()
+				&& attacked.getPosition().getY() + 1 == attacker.getPosition().getY()
+				|| attacker.getPosition().getX() - 1 == attacked.getPosition().getX()
+						&& attacker.getPosition().getY() + 1 == attacked.getPosition().getY()
+				|| attacked.getPosition().getX() + 1 == attacker.getPosition().getX()
+						&& attacked.getPosition().getY() - 1 == attacker.getPosition().getY()
+				|| attacker.getPosition().getX() + 1 == attacked.getPosition().getX()
+						&& attacker.getPosition().getY() - 1 == attacked.getPosition().getY()
+				|| attacked.getPosition().getX() + 1 == attacker.getPosition().getX()
+						&& attacked.getPosition().getY() + 1 == attacker.getPosition().getY()
+				|| attacker.getPosition().getX() + 1 == attacked.getPosition().getX()
+						&& attacker.getPosition().getY() + 1 == attacked.getPosition().getY();
 	}
 
 	public static final int PROJECTILE_NORTH_WEST_BLOCKED = 0x200;

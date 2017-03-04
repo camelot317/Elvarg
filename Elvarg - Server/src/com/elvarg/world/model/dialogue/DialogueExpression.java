@@ -159,23 +159,26 @@ public enum DialogueExpression {
 	 * Value for an angry mood.
 	 */
 	ANGRY_4(617);
-	
+
 	/**
 	 * The DialogueExpression constructor.
-	 * @param animationId	The id of the animation for said expression.
+	 * 
+	 * @param animationId
+	 *            The id of the animation for said expression.
 	 */
 	private DialogueExpression(int animationId) {
 		animation = new Animation(animationId);
 	}
-	
+
 	/**
 	 * The animation the dialogue head model will perform.
 	 */
 	private final Animation animation;
-	
+
 	/**
 	 * Gets the animation for dialogue head model to perform.
-	 * @return	animation.
+	 * 
+	 * @return animation.
 	 */
 	public Animation getAnimation() {
 		return animation;

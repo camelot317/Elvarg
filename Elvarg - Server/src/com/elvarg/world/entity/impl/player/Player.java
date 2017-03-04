@@ -3,7 +3,6 @@ package com.elvarg.world.entity.impl.player;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 import com.elvarg.GameConstants;
 import com.elvarg.cache.impl.definitions.ItemDefinition;
@@ -60,7 +59,6 @@ import com.elvarg.world.model.equipment.BonusManager;
 import com.elvarg.world.model.movement.MovementStatus;
 import com.elvarg.world.model.syntax.EnterSyntax;
 
-
 public class Player extends Character {
 
 	public Player(PlayerSession playerIO) {
@@ -68,10 +66,9 @@ public class Player extends Character {
 		this.session = playerIO;
 	}
 
-
 	@Override
 	public void appendDeath() {
-		if(!isDying) {
+		if (!isDying) {
 			isDying = true;
 			TaskManager.submit(new PlayerDeathTask(this));
 		}
@@ -88,7 +85,6 @@ public class Player extends Character {
 		return anim;
 	}
 
-
 	@Override
 	public int getBlockAnim() {
 		ItemDefinition def = getEquipment().getItems()[Equipment.WEAPON_SLOT].getDefinition();
@@ -98,13 +94,13 @@ public class Player extends Character {
 
 	@Override
 	public Character setHitpoints(int hitpoints) {
-		if(isDying) {
+		if (isDying) {
 			return this;
 		}
 
 		skillManager.setCurrentLevel(Skill.HITPOINTS, hitpoints);
 		packetSender.sendSkill(Skill.HITPOINTS);
-		if(getHitpoints() <= 0 && !isDying)
+		if (getHitpoints() <= 0 && !isDying)
 			appendDeath();
 		return this;
 	}
@@ -138,13 +134,13 @@ public class Player extends Character {
 	@Override
 	public int getBaseAttackSpeed() {
 
-		//Gets attack speed for player's weapon
-		//If player is using magic, attack speed is
-		//Calculated in the MagicCombatMethod class.
+		// Gets attack speed for player's weapon
+		// If player is using magic, attack speed is
+		// Calculated in the MagicCombatMethod class.
 
 		int speed = getCombat().getWeapon().getSpeed();
-		//if(getCombat().getFightType().getStyle() == FightStyle.AGGRESSIVE) {
-		if(getCombat().getFightType().getStyle().toString().toLowerCase().contains("rapid")) {
+		// if(getCombat().getFightType().getStyle() == FightStyle.AGGRESSIVE) {
+		if (getCombat().getFightType().getStyle().toString().toLowerCase().contains("rapid")) {
 			speed--;
 		}
 
@@ -173,38 +169,38 @@ public class Player extends Character {
 
 	public void onTick() {
 
-		//Process incoming packets...
+		// Process incoming packets...
 		getSession().handleQueuedPackets(false);
 
-		//Process combat
+		// Process combat
 		getCombat().onTick();
 		getBountyHunter().onTick();
 		NpcAggression.target(this);
 
-		//Process walking queue..
+		// Process walking queue..
 		getMovementQueue().onTick();
 
-		//Process walk to task..
-		if(walkToTask != null) {
+		// Process walk to task..
+		if (walkToTask != null) {
 			walkToTask.onTick();
 		}
 
-		//Process locations
+		// Process locations
 		Locations.process(this);
 
-		//Kill feed
-		if(getWalkableInterfaceId() == -1) {
+		// Kill feed
+		if (getWalkableInterfaceId() == -1) {
 			getPacketSender().sendWalkableInterface(ServerFeed.INTERFACE_ID);
 		}
 
-		//More timers...
-		if(getAndDecrementSkullTimer() == 0) {
+		// More timers...
+		if (getAndDecrementSkullTimer() == 0) {
 			getUpdateFlag().flag(Flag.APPEARANCE);
 		}
 
-		//Updates inventory if an update
-		//has been requested
-		if(isUpdateInventory()) {
+		// Updates inventory if an update
+		// has been requested
+		if (isUpdateInventory()) {
 			getInventory().refreshItems();
 			setUpdateInventory(false);
 		}
@@ -218,14 +214,15 @@ public class Player extends Character {
 
 	/**
 	 * Can the player logout?
-	 * @return	Yes if they can logout, false otherwise.
+	 * 
+	 * @return Yes if they can logout, false otherwise.
 	 */
 	public boolean canLogout() {
 		if (CombatFactory.isBeingAttacked(this)) {
 			getPacketSender().sendMessage("You must wait a few seconds after being out of combat before doing this.");
 			return false;
 		}
-		if(busy()) {
+		if (busy()) {
 			getPacketSender().sendMessage("You cannot log out at the moment.");
 			return false;
 		}
@@ -233,9 +230,8 @@ public class Player extends Character {
 	}
 
 	/**
-	 * Sends the logout packet to the client.
-	 * This results in the ChannelEventHandler
-	 * adding the player to the logout queue.
+	 * Sends the logout packet to the client. This results in the
+	 * ChannelEventHandler adding the player to the logout queue.
 	 */
 	public void logout() {
 		getSession().setState(SessionState.REQUESTED_LOG_OUT);
@@ -247,13 +243,14 @@ public class Player extends Character {
 	 */
 	public void onLogout() {
 
-		//Notify us
-		System.out.println("[World] Deregistering player - [username, host] : [" + getUsername() + ", " + getHostAddress() + "]");
+		// Notify us
+		System.out.println(
+				"[World] Deregistering player - [username, host] : [" + getUsername() + ", " + getHostAddress() + "]");
 
-		//Update session state
+		// Update session state
 		getSession().setState(SessionState.LOGGING_OUT);
 
-		//Do server stuff...
+		// Do server stuff...
 		getPacketSender().sendLogout();
 		getPacketSender().sendInterfaceRemoval();
 		ClanChatManager.leave(this, false);
@@ -261,10 +258,10 @@ public class Player extends Character {
 		TaskManager.cancelTasks(this);
 		save();
 
-		//Send and queue the logout. Also close channel!
+		// Send and queue the logout. Also close channel!
 		getPacketSender().sendLogout();
 		session.setState(SessionState.LOGGED_OUT);
-		if(getSession().getChannel().isOpen()) {
+		if (getSession().getChannel().isOpen()) {
 			getSession().getChannel().close();
 		}
 		World.getPlayerRemoveQueue().add(this);
@@ -274,136 +271,133 @@ public class Player extends Character {
 	 * Called by the world's login queue!
 	 */
 	public void onLogin() {
-		//Attempt to register the player..
-		System.out.println("[World] Registering player - [username, host] : [" + getUsername() + ", " + getHostAddress() + "]");
+		// Attempt to register the player..
+		System.out.println(
+				"[World] Registering player - [username, host] : [" + getUsername() + ", " + getHostAddress() + "]");
 
-		//Check if the player is already logged in.. If so, disconnect!!
+		// Check if the player is already logged in.. If so, disconnect!!
 		Player copy_ = World.getPlayerByName(getUsername());
-		if(copy_ != null) {
+		if (copy_ != null) {
 			copy_.logout();
 		}
 
-		//Update session state
+		// Update session state
 		getSession().setState(SessionState.LOGGED_IN);
 
-		//GRANT FULL PERMISSIONS WHILST SERVER BEING DEVELOPED
-//		setRights(PlayerRights.ADMINISTRATOR);
-		
-		//Packets
+		// GRANT FULL PERMISSIONS WHILST SERVER BEING DEVELOPED
+		// setRights(PlayerRights.ADMINISTRATOR);
+
+		// Packets
 		getPacketSender().sendMapRegion();
 		getPacketSender().sendTabs();
 
-		//Skills
+		// Skills
 		for (Skill skill : Skill.values()) {
-			//getSkillManager().setCurrentLevel(skill, 95).setMaxLevel(skill, 95).setExperience(skill, SkillManager.getExperienceForLevel(95));
+			// getSkillManager().setCurrentLevel(skill, 95).setMaxLevel(skill,
+			// 95).setExperience(skill, SkillManager.getExperienceForLevel(95));
 			getSkillManager().updateSkill(skill);
 		}
 
-		//Send friends and ignored players lists...
+		// Send friends and ignored players lists...
 		getRelations().setPrivateMessageId(1).onLogin(this).updateLists(true);
 
-		//Reset prayer configs...
+		// Reset prayer configs...
 		PrayerHandler.resetAll(this);
 		getPacketSender().sendConfig(709, isPreserveUnlocked() ? 1 : 0);
 		getPacketSender().sendConfig(711, isRigourUnlocked() ? 1 : 0);
 		getPacketSender().sendConfig(713, isAuguryUnlocked() ? 1 : 0);
 
-
-		//Refresh item containers..
+		// Refresh item containers..
 		getInventory().refreshItems();
 		getEquipment().refreshItems();
 
-		//Interaction options on right click...
+		// Interaction options on right click...
 		getPacketSender().sendInteractionOption("Attack", 2, true);
 		getPacketSender().sendInteractionOption("Follow", 3, false);
 		getPacketSender().sendInteractionOption("Trade With", 4, false);
 
-		//Sending run energy attributes...
+		// Sending run energy attributes...
 		getPacketSender().sendRunStatus();
 		getPacketSender().sendRunEnergy(getRunEnergy());
-		
-		//Sending player's rights..
+
+		// Sending player's rights..
 		getPacketSender().sendRights();
-		
-		//Close all interfaces, just in case...
+
+		// Close all interfaces, just in case...
 		getPacketSender().sendInterfaceRemoval();
 
-		//Update weapon data and interfaces..
+		// Update weapon data and interfaces..
 		WeaponInterfaces.assign(this);
 
-		//Update weapon interface configs
+		// Update weapon interface configs
 		getPacketSender().sendConfig(getCombat().getFightType().getParentId(), getCombat().getFightType().getChildId())
-		.sendConfig(172, getCombat().autoRetaliate() ? 1 : 0).updateSpecialAttackOrb();
+				.sendConfig(172, getCombat().autoRetaliate() ? 1 : 0).updateSpecialAttackOrb();
 
-		//Reset autocasting
+		// Reset autocasting
 		Autocasting.setAutocast(this, null);
 
-		//Update combat data..
+		// Update combat data..
 		RangedData.updateDataFor(this);
 
-		//Update locations..
+		// Update locations..
 		Locations.login(this);
 
-		//Update killfeed
+		// Update killfeed
 		ServerFeed.updateInterface(this);
 
-		//Join clanchat
+		// Join clanchat
 		ClanChatManager.onLogin(this);
 
-		//Handle timers and run tasks
-		if(isPoisoned()) {
+		// Handle timers and run tasks
+		if (isPoisoned()) {
 			TaskManager.submit(new CombatPoisonEffect(this));
 		}
-		if(getSpecialPercentage() < 100) {
+		if (getSpecialPercentage() < 100) {
 			TaskManager.submit(new PlayerSpecialAmountTask(this));
 		}
 
-		if(!getCombat().getFreezeTimer().finished()) {
-			getPacketSender().sendEffectTimer(getCombat().getFreezeTimer().secondsRemaining(), 
-					EffectTimer.FREEZE);
+		if (!getCombat().getFreezeTimer().finished()) {
+			getPacketSender().sendEffectTimer(getCombat().getFreezeTimer().secondsRemaining(), EffectTimer.FREEZE);
 		}
-		if(!getVengeanceTimer().finished()) {
-			getPacketSender().sendEffectTimer(getVengeanceTimer().secondsRemaining(), 
-					EffectTimer.VENGEANCE);
+		if (!getVengeanceTimer().finished()) {
+			getPacketSender().sendEffectTimer(getVengeanceTimer().secondsRemaining(), EffectTimer.VENGEANCE);
 		}
-		if(!getOverloadTimer().finished()) {
+		if (!getOverloadTimer().finished()) {
 			TaskManager.submit(new OverloadPotionTask(this));
-			getPacketSender().sendEffectTimer(getOverloadTimer().secondsRemaining(), 
-					EffectTimer.OVERLOAD);
+			getPacketSender().sendEffectTimer(getOverloadTimer().secondsRemaining(), EffectTimer.OVERLOAD);
 		}
-		if(!getCombat().getFireImmunityTimer().finished()) {
-			getPacketSender().sendEffectTimer(getCombat().getFireImmunityTimer().secondsRemaining(), 
+		if (!getCombat().getFireImmunityTimer().finished()) {
+			getPacketSender().sendEffectTimer(getCombat().getFireImmunityTimer().secondsRemaining(),
 					EffectTimer.ANTIFIRE);
 		}
-		if(!getCombat().getTeleBlockTimer().finished()) {
-			getPacketSender().sendEffectTimer(getCombat().getTeleBlockTimer().secondsRemaining(), 
+		if (!getCombat().getTeleBlockTimer().finished()) {
+			getPacketSender().sendEffectTimer(getCombat().getTeleBlockTimer().secondsRemaining(),
 					EffectTimer.TELE_BLOCK);
 		}
 
 		getUpdateFlag().flag(Flag.APPEARANCE);
 
-		
-		//Add items if new plr
-		if(isNewPlayer()) {
+		// Add items if new plr
+		if (isNewPlayer()) {
 			for (int[] item : GameConstants.startKit) {
 				getInventory().add((item[0]), item[1]);
 			}
-			getPacketSender().sendMessage("Available commands:  ")
-			.sendMessage("").sendMessage("::item id amount").sendMessage("::setlevel skillId level").sendMessage("::master").sendMessage("::runes");
+			getPacketSender().sendMessage("Available commands:  ").sendMessage("").sendMessage("::item id amount")
+					.sendMessage("::setlevel skillId level").sendMessage("::master").sendMessage("::runes");
 
 		}
 
-		//Add the player to register queue
+		// Add the player to register queue
 		World.getPlayerAddQueue().add(this);
 	}
-	
+
 	/**
 	 * Called upon being registered to the world.
 	 */
 	@Override
 	public void onRegister() {
-		
-		//Sends details about the player, such as their player index.
+
+		// Sends details about the player, such as their player index.
 		getPacketSender().sendDetails();
 	}
 
@@ -435,7 +429,8 @@ public class Player extends Character {
 	}
 
 	public boolean busy() {
-		return interfaceId > 0 || isDying || getHitpoints() <= 0 || isNeedsPlacement() || getStatus() != PlayerStatus.NONE;
+		return interfaceId > 0 || isDying || getHitpoints() <= 0 || isNeedsPlacement()
+				|| getStatus() != PlayerStatus.NONE;
 	}
 
 	/*
@@ -485,11 +480,11 @@ public class Player extends Character {
 	private MagicSpellbook spellbook = MagicSpellbook.NORMAL;
 	private final Stopwatch foodTimer = new Stopwatch();
 	private final Stopwatch potionTimer = new Stopwatch();
-	private int destroyItem = -1;	
-	private boolean updateInventory; //Updates inventory on next tick
+	private int destroyItem = -1;
+	private boolean updateInventory; // Updates inventory on next tick
 	private boolean newPlayer;
 
-	//Combat
+	// Combat
 	private final Stopwatch tolerance = new Stopwatch();
 	private CombatSpecial combatSpecial;
 	private int specialPercentage = 100;
@@ -507,13 +502,14 @@ public class Player extends Character {
 	private boolean rigourUnlocked;
 	private boolean auguryUnlocked;
 
-	//Banking
+	// Banking
 	private int currentBankTab;
-	private Bank[] banks = new Bank[Bank.TOTAL_BANK_TABS]; // last index is for bank searches
+	private Bank[] banks = new Bank[Bank.TOTAL_BANK_TABS]; // last index is for
+															// bank searches
 	private boolean noteWithdrawal, insertMode, searchingBank;
 	private String searchSyntax = "";
-	
-	//Trading
+
+	// Trading
 	private Trading trading = new Trading(this);
 
 	/*
@@ -550,7 +546,6 @@ public class Player extends Character {
 		this.password = password;
 		return this;
 	}
-
 
 	public String getHostAddress() {
 		return hostAddress;
@@ -615,7 +610,6 @@ public class Player extends Character {
 		this.experienceLocked = experienceLocked;
 	}
 
-
 	public PlayerRelations getRelations() {
 		return relations;
 	}
@@ -662,7 +656,7 @@ public class Player extends Character {
 	}
 
 	public void setWalkableInterfaceId(int interfaceId2) {
-		this.walkableInterfaceId = interfaceId2;		
+		this.walkableInterfaceId = interfaceId2;
 	}
 
 	public Player setRunning(boolean isRunning) {
@@ -854,7 +848,6 @@ public class Player extends Character {
 		return wildernessLevel;
 	}
 
-
 	public void setWildernessLevel(int wildernessLevel) {
 		this.wildernessLevel = wildernessLevel;
 	}
@@ -903,11 +896,9 @@ public class Player extends Character {
 		this.pkp += pkp;
 	}
 
-
 	public boolean isUpdateInventory() {
 		return updateInventory;
 	}
-
 
 	public void setUpdateInventory(boolean updateInventory) {
 		this.updateInventory = updateInventory;
@@ -917,17 +908,14 @@ public class Player extends Character {
 		return clickDelay;
 	}
 
-
 	public Shop getShop() {
 		return shop;
 	}
-
 
 	public Player setShop(Shop shop) {
 		this.shop = shop;
 		return this;
 	}
-
 
 	public PlayerStatus getStatus() {
 		return status;
@@ -938,16 +926,13 @@ public class Player extends Character {
 		return this;
 	}
 
-
 	public EnterSyntax getEnterSyntax() {
 		return enterSyntax;
 	}
 
-
 	public void setEnterSyntax(EnterSyntax enterSyntax) {
 		this.enterSyntax = enterSyntax;
 	}
-
 
 	public int getCurrentBankTab() {
 		return currentBankTab;
@@ -957,7 +942,7 @@ public class Player extends Character {
 		this.currentBankTab = tab;
 		return this;
 	}
-	
+
 	public void setNoteWithdrawal(boolean noteWithdrawal) {
 		this.noteWithdrawal = noteWithdrawal;
 	}
@@ -979,7 +964,7 @@ public class Player extends Character {
 	}
 
 	public Bank getBank(int index) {
-		if(banks[index] == null) {
+		if (banks[index] == null) {
 			banks[index] = new Bank(this);
 		}
 		return banks[index];
@@ -990,61 +975,49 @@ public class Player extends Character {
 		return this;
 	}
 
-
 	public boolean isNewPlayer() {
 		return newPlayer;
 	}
-
 
 	public void setNewPlayer(boolean newPlayer) {
 		this.newPlayer = newPlayer;
 	}
 
-
 	public boolean isSearchingBank() {
 		return searchingBank;
 	}
-
 
 	public void setSearchingBank(boolean searchingBank) {
 		this.searchingBank = searchingBank;
 	}
 
-
 	public String getSearchSyntax() {
 		return searchSyntax;
 	}
-
 
 	public void setSearchSyntax(String searchSyntax) {
 		this.searchSyntax = searchSyntax;
 	}
 
-
 	public boolean isPreserveUnlocked() {
 		return preserveUnlocked;
 	}
-
 
 	public void setPreserveUnlocked(boolean preserveUnlocked) {
 		this.preserveUnlocked = preserveUnlocked;
 	}
 
-
 	public boolean isRigourUnlocked() {
 		return rigourUnlocked;
 	}
-
 
 	public void setRigourUnlocked(boolean rigourUnlocked) {
 		this.rigourUnlocked = rigourUnlocked;
 	}
 
-
 	public boolean isAuguryUnlocked() {
 		return auguryUnlocked;
 	}
-
 
 	public void setAuguryUnlocked(boolean auguryUnlocked) {
 		this.auguryUnlocked = auguryUnlocked;
@@ -1054,26 +1027,21 @@ public class Player extends Character {
 		return priceChecker;
 	}
 
-
 	public ClanChat getCurrentClanChat() {
 		return currentClanChat;
 	}
-
 
 	public void setCurrentClanChat(ClanChat currentClanChat) {
 		this.currentClanChat = currentClanChat;
 	}
 
-
 	public String getClanChatName() {
 		return clanChatName;
 	}
 
-
 	public void setClanChatName(String clanChatName) {
 		this.clanChatName = clanChatName;
 	}
-
 
 	public Trading getTrading() {
 		return trading;

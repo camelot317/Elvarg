@@ -3,10 +3,8 @@ package com.elvarg.world.entity.impl.npc.combat.impl;
 import com.elvarg.world.entity.impl.npc.NPC;
 import com.elvarg.world.entity.impl.npc.combat.MobCombatHandler;
 import com.elvarg.world.entity.impl.npc.combat.SpecialMob;
-import com.elvarg.world.entity.impl.player.Player;
 
-public class Goblin implements SpecialMob
-{
+public class Goblin implements SpecialMob {
 
 	@Override
 	public int getAttackAnimation() {
@@ -36,7 +34,7 @@ public class Goblin implements SpecialMob
 	public MobCombatHandler executeCombat(NPC mob) {
 		return null;
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

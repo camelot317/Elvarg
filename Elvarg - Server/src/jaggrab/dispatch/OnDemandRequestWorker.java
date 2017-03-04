@@ -13,10 +13,11 @@ import jaggrab.net.ondemand.OnDemandResponse;
 
 /**
  * A worker which services 'on-demand' requests.
+ * 
  * @author Graham
  */
 public final class OnDemandRequestWorker extends RequestWorker<OnDemandRequest> {
-	
+
 	/**
 	 * The maximum length of a chunk, in bytes.
 	 */
@@ -30,20 +31,20 @@ public final class OnDemandRequestWorker extends RequestWorker<OnDemandRequest> 
 	@Override
 	protected void service(Channel channel, OnDemandRequest request) throws IOException {
 		FileDescriptor desc = request.getFileDescriptor();
-				
+
 		ByteBuf buf = Elvarg.getCache().getFile(desc);
 		int length = buf.readableBytes();
-		
+
 		for (int chunk = 0; buf.readableBytes() > 0; chunk++) {
 			int chunkSize = buf.readableBytes();
 			if (chunkSize > CHUNK_LENGTH) {
 				chunkSize = CHUNK_LENGTH;
 			}
-			
+
 			byte[] tmp = new byte[chunkSize];
 			buf.readBytes(tmp, 0, tmp.length);
 			ByteBuf chunkData = Unpooled.wrappedBuffer(tmp, 0, chunkSize);
-			
+
 			OnDemandResponse response = new OnDemandResponse(desc, length, chunk, chunkData);
 			channel.writeAndFlush(response);
 		}

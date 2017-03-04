@@ -32,16 +32,16 @@ public abstract class Spell {
 
 		// We first check the level required.
 		if (player.getSkillManager().getCurrentLevel(Skill.MAGIC) < levelRequired()) {
-			player.getPacketSender().sendMessage(
-					"You need a Magic level of " + levelRequired() + " to cast this spell.");
+			player.getPacketSender()
+					.sendMessage("You need a Magic level of " + levelRequired() + " to cast this spell.");
 			player.getCombat().reset();
 			return false;
 		}
-		
+
 		// Secondly we check if they have proper magic spellbook
 		// If not, reset all magic attributes such as current spell
 		// Aswell as autocast spell
-		if(!player.getSpellbook().equals(getSpellbook())) {
+		if (!player.getSpellbook().equals(getSpellbook())) {
 			Autocasting.setAutocast(player, null);
 			player.getCombat().setCastSpell(null);
 			player.getCombat().reset();
@@ -53,27 +53,22 @@ public abstract class Spell {
 
 			// Suppress the runes based on the staff, we then use the new array
 			// of items that don't include suppressed runes.
-			Item[] items = PlayerMagicStaff.suppressRunes(player,
-					itemsRequired(player).get());
+			Item[] items = PlayerMagicStaff.suppressRunes(player, itemsRequired(player).get());
 
 			// Now check if we have all of the runes.
 			if (!player.getInventory().containsAll(items)) {
 
 				// We don't, so we can't cast.
-				player.getPacketSender().sendMessage(
-						"You do not have the required items to cast this spell.");
+				player.getPacketSender().sendMessage("You do not have the required items to cast this spell.");
 				player.getCombat().setCastSpell(null);
 				player.getCombat().reset();
 				return false;
 			}
 
-
 			// Finally, we check the equipment required.
 			if (equipmentRequired(player).isPresent()) {
-				if (!player.getEquipment().containsAll(
-						equipmentRequired(player).get())) {
-					player.getPacketSender().sendMessage(
-							"You do not have the required equipment to cast this spell.");
+				if (!player.getEquipment().containsAll(equipmentRequired(player).get())) {
+					player.getPacketSender().sendMessage("You do not have the required equipment to cast this spell.");
 					player.getCombat().setCastSpell(null);
 					player.getCombat().reset();
 					return false;
@@ -82,9 +77,9 @@ public abstract class Spell {
 
 			// We've made it through the checks, so we have the items and can
 			// remove them now.
-			if(delete) {
-				for(Item it : Arrays.asList(items)) {
-					if(it != null)
+			if (delete) {
+				for (Item it : Arrays.asList(items)) {
+					if (it != null)
 						player.getInventory().delete(it);
 				}
 			}
@@ -142,6 +137,7 @@ public abstract class Spell {
 
 	/**
 	 * Returns the spellbook in which this spell is.
+	 * 
 	 * @return
 	 */
 	public MagicSpellbook getSpellbook() {

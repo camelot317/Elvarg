@@ -23,21 +23,21 @@ public class ArmadylCrossbowCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 2)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 2) };
 	}
 
 	@Override
 	public boolean canAttack(Character character, Character target) {
 		Player player = character.getAsPlayer();
 
-		//Check if current player's ranged weapon data is armadyl crossbow
-		if(!(player.getCombat().getRangedWeaponData() != null 
+		// Check if current player's ranged weapon data is armadyl crossbow
+		if (!(player.getCombat().getRangedWeaponData() != null
 				&& player.getCombat().getRangedWeaponData() == RangedWeaponData.ARMADYL_CROSSBOW)) {
 			return false;
 		}
 
-		//Check if player has enough ammunition to fire.
-		if(!RangedData.checkAmmo(player)) {
+		// Check if player has enough ammunition to fire.
+		if (!RangedData.checkAmmo(player)) {
 			return false;
 		}
 
@@ -47,11 +47,11 @@ public class ArmadylCrossbowCombatMethod implements CombatMethod {
 	@Override
 	public void onQueueAdd(Character character, Character target) {
 		final Player player = character.getAsPlayer();
-		
+
 		CombatSpecial.drain(player, CombatSpecial.ARMADYL_CROSSBOW.getDrainAmount());
-		
+
 		new Projectile(player, target, 301, 70, 30, 43, 31, 0).sendProjectile();
-		
+
 		RangedData.decrementAmmo(player, target.getPosition());
 	}
 

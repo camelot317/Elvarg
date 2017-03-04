@@ -8,7 +8,8 @@ package com.elvarg.world.model.container;
 
 public enum StackType {
 	/*
-	 * Default type, items that will not stack, such as inventory items (excluding noted/stackable items).
+	 * Default type, items that will not stack, such as inventory items
+	 * (excluding noted/stackable items).
 	 */
 	DEFAULT,
 	/*

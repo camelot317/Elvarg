@@ -22,7 +22,7 @@ public class TradeX implements EnterSyntax {
 
 	@Override
 	public void handleSyntax(Player player, int input) {
-		if(item_id < 0 || slot_id < 0 || input <= 0) {
+		if (item_id < 0 || slot_id < 0 || input <= 0) {
 			return;
 		}
 

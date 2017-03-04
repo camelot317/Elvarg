@@ -11,9 +11,9 @@ import io.netty.buffer.ByteBuf;
 public class ResourceRequester {
 
 	public static ByteBuf request(String path) throws IOException {
-		
+
 		final CacheLoader cache = Elvarg.getCache();
-		
+
 		if (path.startsWith("/crc")) {
 			return cache.getCrcTable();
 		} else if (path.startsWith("/title")) {
@@ -41,13 +41,13 @@ public class ResourceRequester {
 		 */
 		if (path.startsWith("/preload")) {
 			String file = path.substring(path.lastIndexOf("/") + 1);
-			for(int i = 0; i < CacheConstants.PRELOAD_FILES.length; i++) {
-				if(CacheConstants.PRELOAD_FILES[i].equals(file)) {
+			for (int i = 0; i < CacheConstants.PRELOAD_FILES.length; i++) {
+				if (CacheConstants.PRELOAD_FILES[i].equals(file)) {
 					return cache.getPreloadFile(i);
 				}
 			}
 		}
-		
+
 		return null;
 	}
 }

@@ -18,6 +18,7 @@ import io.netty.handler.timeout.IdleStateEvent;
 /**
  * An implementation of netty's {@link SimpleChannelInboundHandler} to handle
  * all of netty's incoming events..
+ * 
  * @author Swiffy
  */
 @Sharable
@@ -33,17 +34,16 @@ public final class ChannelEventHandler extends SimpleChannelInboundHandler<Objec
 				throw new IllegalStateException("session == null");
 			}
 
-			if(msg instanceof LoginDetailsMessage) {
-				session.finalizeLogin((LoginDetailsMessage)msg);
-			} else if(msg instanceof Packet) {
-				session.queuePacket((Packet)msg);
+			if (msg instanceof LoginDetailsMessage) {
+				session.finalizeLogin((LoginDetailsMessage) msg);
+			} else if (msg instanceof Packet) {
+				session.queuePacket((Packet) msg);
 			}
 
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
@@ -56,22 +56,22 @@ public final class ChannelEventHandler extends SimpleChannelInboundHandler<Objec
 
 		Player player = session.getPlayer();
 
-		if(player == null) {
+		if (player == null) {
 			return;
 		}
 
-		//Queue the player for logout
-		if(player.getSession().getState() == SessionState.LOGGED_IN
+		// Queue the player for logout
+		if (player.getSession().getState() == SessionState.LOGGED_IN
 				|| player.getSession().getState() == SessionState.REQUESTED_LOG_OUT) {
 
-			if(!World.getLogoutQueue().contains(player)) {
-				
-				//After 90 seconds of logout attempts, it will force it.
+			if (!World.getLogoutQueue().contains(player)) {
+
+				// After 90 seconds of logout attempts, it will force it.
 				player.getLogoutTimer().reset();
-				
+
 				World.getLogoutQueue().add(player);
 			}
-			
+
 		}
 	}
 
@@ -87,8 +87,7 @@ public final class ChannelEventHandler extends SimpleChannelInboundHandler<Objec
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable e) {
-		if (!NetworkConstants.IGNORED_NETWORK_EXCEPTIONS.stream()
-				.anyMatch($it -> Objects.equal($it, e.getMessage()))) {
+		if (!NetworkConstants.IGNORED_NETWORK_EXCEPTIONS.stream().anyMatch($it -> Objects.equal($it, e.getMessage()))) {
 			e.printStackTrace();
 		}
 

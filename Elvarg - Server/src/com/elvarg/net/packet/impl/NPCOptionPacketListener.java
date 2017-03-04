@@ -20,22 +20,20 @@ import com.elvarg.world.model.dialogue.DialogueOptions;
 
 public class NPCOptionPacketListener implements PacketListener {
 
-
 	private static void firstClick(Player player, Packet packet) {
 		int index = packet.readLEShort();
-		if(index < 0 || index > World.getNpcs().capacity())
+		if (index < 0 || index > World.getNpcs().capacity())
 			return;
 		final NPC npc = World.getNpcs().get(index);
 		if (npc == null)
 			return;
 		player.setEntityInteraction(npc);
-		if(player.getRights() == PlayerRights.ADMINISTRATOR)
-			player.getPacketSender().sendMessage("First click npc id: "+npc.getId());
+		if (player.getRights() == PlayerRights.ADMINISTRATOR)
+			player.getPacketSender().sendMessage("First click npc id: " + npc.getId());
 		player.setWalkToTask(new WalkToTask(player, npc.getPosition(), npc.getSize(), new FinalizedMovementTask() {
 			@Override
 			public void execute() {
-				switch(npc.getId()) {
-
+				switch (npc.getId()) {
 
 				case SHOP_KEEPER:
 					Shop.open(player, 0);
@@ -54,7 +52,6 @@ public class NPCOptionPacketListener implements PacketListener {
 					Shop.open(player, 8);
 					break;
 
-
 				case PKER:
 					Shop.open(player, 9);
 					break;
@@ -65,10 +62,12 @@ public class NPCOptionPacketListener implements PacketListener {
 						public void handleOption1(Player player) {
 							Shop.open(player, 5);
 						}
+
 						@Override
 						public void handleOption2(Player player) {
 							Shop.open(player, 6);
 						}
+
 						@Override
 						public void handleOption3(Player player) {
 							player.getPacketSender().sendInterfaceRemoval();
@@ -83,10 +82,12 @@ public class NPCOptionPacketListener implements PacketListener {
 						public void handleOption1(Player player) {
 							Shop.open(player, 2);
 						}
+
 						@Override
 						public void handleOption2(Player player) {
 							Shop.open(player, 1);
 						}
+
 						@Override
 						public void handleOption3(Player player) {
 							player.getPacketSender().sendInterfaceRemoval();
@@ -101,10 +102,12 @@ public class NPCOptionPacketListener implements PacketListener {
 						public void handleOption1(Player player) {
 							Shop.open(player, 4);
 						}
+
 						@Override
 						public void handleOption2(Player player) {
 							Shop.open(player, 3);
 						}
+
 						@Override
 						public void handleOption3(Player player) {
 							player.getPacketSender().sendInterfaceRemoval();
@@ -115,25 +118,27 @@ public class NPCOptionPacketListener implements PacketListener {
 
 				case EMBLEM_TRADER:
 
-					//Set dialogue options
+					// Set dialogue options
 					player.setDialogueOptions(new DialogueOptions() {
 						@Override
 						public void handleOption1(Player player) {
-							//Open pkp shop
+							// Open pkp shop
 						}
+
 						@Override
 						public void handleOption2(Player player) {
-							//Sell emblems option
-							if(!BountyHunter.exchangeEmblems(player)) {
+							// Sell emblems option
+							if (!BountyHunter.exchangeEmblems(player)) {
 								DialogueManager.start(player, 5);
 							} else {
 								DialogueManager.start(player, 4);
 							}
 						}
+
 						@Override
 						public void handleOption3(Player player) {
-							//Skull me option
-							if(player.getSkullTimer() > 0) {
+							// Skull me option
+							if (player.getSkullTimer() > 0) {
 								DialogueManager.start(player, 3);
 							} else {
 								DialogueManager.start(player, 2);
@@ -142,17 +147,17 @@ public class NPCOptionPacketListener implements PacketListener {
 								player.getUpdateFlag().flag(Flag.APPEARANCE);
 							}
 						}
+
 						@Override
 						public void handleOption4(Player player) {
 							player.getPacketSender().sendInterfaceRemoval();
 						}
 					});
 
-					//And then start dialogue
+					// And then start dialogue
 					DialogueManager.start(player, 0);
 
 					break;
-
 
 				}
 				npc.setPositionToFace(player.getPosition());
@@ -163,19 +168,19 @@ public class NPCOptionPacketListener implements PacketListener {
 
 	public void handleSecondClick(Player player, Packet packet) {
 		int index = packet.readLEShortA();
-		if(index < 0 || index > World.getNpcs().capacity())
+		if (index < 0 || index > World.getNpcs().capacity())
 			return;
 		final NPC npc = World.getNpcs().get(index);
-		if(npc == null)
+		if (npc == null)
 			return;
 		player.setEntityInteraction(npc);
 		final int npcId = npc.getId();
-		if(player.getRights() == PlayerRights.DEVELOPER)
-			player.getPacketSender().sendMessage("Second click npc id: "+npcId);
+		if (player.getRights() == PlayerRights.DEVELOPER)
+			player.getPacketSender().sendMessage("Second click npc id: " + npcId);
 		player.setWalkToTask(new WalkToTask(player, npc.getPosition(), npc.getSize(), new FinalizedMovementTask() {
 			@Override
 			public void execute() {
-				switch(npc.getId()) {
+				switch (npc.getId()) {
 
 				case MAGE:
 					Shop.open(player, 2);
@@ -190,7 +195,8 @@ public class NPCOptionPacketListener implements PacketListener {
 					break;
 
 				case SURGEON_GENERAL_TIFANI:
-					player.getSkillManager().setCurrentLevel(Skill.HITPOINTS, player.getSkillManager().getMaxLevel(Skill.HITPOINTS));
+					player.getSkillManager().setCurrentLevel(Skill.HITPOINTS,
+							player.getSkillManager().getMaxLevel(Skill.HITPOINTS));
 					player.getPacketSender().sendMessage("You've been healed by the surgeon.");
 					player.getPacketSender().sendInterfaceRemoval();
 					break;
@@ -208,19 +214,19 @@ public class NPCOptionPacketListener implements PacketListener {
 
 	public void handleThirdClick(Player player, Packet packet) {
 		int index = packet.readShort();
-		if(index < 0 || index > World.getNpcs().capacity())
+		if (index < 0 || index > World.getNpcs().capacity())
 			return;
 		final NPC npc = World.getNpcs().get(index);
 		if (npc == null)
 			return;
 		player.setEntityInteraction(npc).setPositionToFace(npc.getPosition().copy());
 		npc.setPositionToFace(player.getPosition());
-		if(player.getRights() == PlayerRights.DEVELOPER)
-			player.getPacketSender().sendMessage("Third click npc id: "+npc.getId());
+		if (player.getRights() == PlayerRights.DEVELOPER)
+			player.getPacketSender().sendMessage("Third click npc id: " + npc.getId());
 		player.setWalkToTask(new WalkToTask(player, npc.getPosition(), npc.getSize(), new FinalizedMovementTask() {
 			@Override
 			public void execute() {
-				switch(npc.getId()) {
+				switch (npc.getId()) {
 
 				case MAGE:
 					Shop.open(player, 1);
@@ -235,7 +241,7 @@ public class NPCOptionPacketListener implements PacketListener {
 					break;
 
 				case EMBLEM_TRADER:
-					if(!BountyHunter.exchangeEmblems(player)) {
+					if (!BountyHunter.exchangeEmblems(player)) {
 						DialogueManager.start(player, 5);
 					} else {
 						DialogueManager.start(player, 4);
@@ -251,20 +257,20 @@ public class NPCOptionPacketListener implements PacketListener {
 
 	public void handleFourthClick(Player player, Packet packet) {
 		int index = packet.readLEShort();
-		if(index < 0 || index > World.getNpcs().capacity())
+		if (index < 0 || index > World.getNpcs().capacity())
 			return;
 		final NPC npc = World.getNpcs().get(index);
 		if (npc == null)
 			return;
 		player.setEntityInteraction(npc);
-		if(player.getRights() == PlayerRights.DEVELOPER)
-			player.getPacketSender().sendMessage("Fourth click npc id: "+npc.getId());
+		if (player.getRights() == PlayerRights.DEVELOPER)
+			player.getPacketSender().sendMessage("Fourth click npc id: " + npc.getId());
 		player.setWalkToTask(new WalkToTask(player, npc.getPosition(), npc.getSize(), new FinalizedMovementTask() {
 			@Override
 			public void execute() {
-				switch(npc.getId()) {
+				switch (npc.getId()) {
 				case EMBLEM_TRADER:
-					if(player.getSkullTimer() > 0) {
+					if (player.getSkullTimer() > 0) {
 						DialogueManager.start(player, 3);
 					} else {
 						DialogueManager.start(player, 2);
@@ -282,7 +288,7 @@ public class NPCOptionPacketListener implements PacketListener {
 
 	private static void attackNPC(Player player, Packet packet) {
 		int index = packet.readShortA();
-		if(index < 0 || index > World.getNpcs().capacity())
+		if (index < 0 || index > World.getNpcs().capacity())
 			return;
 		final NPC interact = World.getNpcs().get(index);
 
@@ -294,7 +300,7 @@ public class NPCOptionPacketListener implements PacketListener {
 			return;
 		}
 
-		if(interact == null || interact.getHitpoints() <= 0) {
+		if (interact == null || interact.getHitpoints() <= 0) {
 			player.getMovementQueue().reset();
 			return;
 		}
@@ -309,7 +315,7 @@ public class NPCOptionPacketListener implements PacketListener {
 		if (npcIndex < 0 || spellId < 0 || npcIndex > World.getNpcs().capacity()) {
 			return;
 		}
-		
+
 		final NPC interact = World.getNpcs().get(npcIndex);
 
 		if (interact == null || interact.getDefinition() == null) {
@@ -320,18 +326,18 @@ public class NPCOptionPacketListener implements PacketListener {
 			return;
 		}
 
-		if(interact == null || interact.getHitpoints() <= 0) {
+		if (interact == null || interact.getHitpoints() <= 0) {
 			player.getMovementQueue().reset();
 			return;
 		}
-		
+
 		CombatSpell spell = CombatSpells.getCombatSpell(spellId);
 
-		if(spell == null) {
+		if (spell == null) {
 			player.getMovementQueue().reset();
 			return;
 		}
-		
+
 		player.setPositionToFace(interact.getPosition());
 		player.getCombat().setCastSpell(spell);
 
@@ -340,7 +346,7 @@ public class NPCOptionPacketListener implements PacketListener {
 
 	@Override
 	public void handleMessage(Player player, Packet packet) {
-		if(player.busy()) {
+		if (player.busy()) {
 			return;
 		}
 		switch (packet.getOpcode()) {

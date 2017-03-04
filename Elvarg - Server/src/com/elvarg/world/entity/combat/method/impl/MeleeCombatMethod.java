@@ -6,8 +6,10 @@ import com.elvarg.world.entity.combat.hit.QueueableHit;
 import com.elvarg.world.entity.combat.method.CombatMethod;
 import com.elvarg.world.entity.impl.Character;
 import com.elvarg.world.model.Animation;
+
 /**
  * The melee combat method.
+ * 
  * @author Gabriel Hannason
  */
 public class MeleeCombatMethod implements CombatMethod {
@@ -19,7 +21,7 @@ public class MeleeCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -39,8 +41,8 @@ public class MeleeCombatMethod implements CombatMethod {
 
 	@Override
 	public int getAttackDistance(Character character) {
-		if(character.isPlayer()) {
-			if(character.getAsPlayer().getCombat().getWeapon() == WeaponInterface.HALBERD) {
+		if (character.isPlayer()) {
+			if (character.getAsPlayer().getCombat().getWeapon() == WeaponInterface.HALBERD) {
 				return 2;
 			}
 		}
@@ -50,8 +52,8 @@ public class MeleeCombatMethod implements CombatMethod {
 	@Override
 	public void startAnimation(Character character) {
 		int animation = character.getAttackAnim();
-		
-		if(animation != -1) {
+
+		if (animation != -1) {
 			character.performAnimation(new Animation(animation));
 		}
 	}

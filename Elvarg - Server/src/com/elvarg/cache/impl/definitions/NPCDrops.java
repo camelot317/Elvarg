@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import com.elvarg.util.JsonLoader;
 import com.elvarg.util.Misc;
 import com.elvarg.world.entity.impl.npc.NPC;
@@ -37,10 +38,8 @@ public class NPCDrops {
 
 			@Override
 			public void load(JsonObject reader, Gson builder) {
-				int[] npcIds = builder.fromJson(reader.get("npcIds"),
-						int[].class);
-				NpcDropItem[] drops = builder.fromJson(reader.get("drops"),
-						NpcDropItem[].class);
+				int[] npcIds = builder.fromJson(reader.get("npcIds"), int[].class);
+				NpcDropItem[] drops = builder.fromJson(reader.get("drops"), NpcDropItem[].class);
 
 				NPCDrops d = new NPCDrops();
 				d.npcIds = npcIds;
@@ -204,10 +203,10 @@ public class NPCDrops {
 	}
 
 	public enum DropChance {
-		ALWAYS(0), ALMOST_ALWAYS(2), VERY_COMMON(5), COMMON(15), UNCOMMON(40), NOTTHATRARE(
-				100), RARE(155), LEGENDARY(320), LEGENDARY_2(410), LEGENDARY_3(485), LEGENDARY_4(680), LEGENDARY_5(810), LEGENDARY_6(950), LEGENDARY_7(1100);
-		
-		
+		ALWAYS(0), ALMOST_ALWAYS(2), VERY_COMMON(5), COMMON(15), UNCOMMON(40), NOTTHATRARE(100), RARE(155), LEGENDARY(
+				320), LEGENDARY_2(
+						410), LEGENDARY_3(485), LEGENDARY_4(680), LEGENDARY_5(810), LEGENDARY_6(950), LEGENDARY_7(1100);
+
 		DropChance(int randomModifier) {
 			this.random = randomModifier;
 		}
@@ -228,10 +227,10 @@ public class NPCDrops {
 	 * @param npc
 	 *            NPC to receive drop FROM.
 	 */
-	public static void dropItems(Player p, NPC npc) {}
+	public static void dropItems(Player p, NPC npc) {
+	}
 
-	public static boolean shouldDrop(boolean[] b, DropChance chance,
-			boolean ringOfWealth) {
+	public static boolean shouldDrop(boolean[] b, DropChance chance, boolean ringOfWealth) {
 		int random = chance.getRandom();
 		if (ringOfWealth && random >= 60) {
 			random -= (random / 10);
@@ -239,13 +238,14 @@ public class NPCDrops {
 		return !b[chance.ordinal()] && Misc.getRandom(random) == 1;
 	}
 
-	public static void drop(Player player, Item item, NPC npc, Position pos,
-			boolean goGlobal) {}
+	public static void drop(Player player, Item item, NPC npc, Position pos, boolean goGlobal) {
+	}
 
 	public static void casketDrop(Player player, int combat, Position pos) {
-		int chance = (int) (1 + combat);
+		int chance = 1 + combat;
 		if (Misc.getRandom(combat <= 50 ? 1300 : 1000) < chance) {
-			GroundItemManager.spawnGroundItem(player, new GroundItem(new Item(7956), pos, player.getUsername(), false, 150, true, 200));
+			GroundItemManager.spawnGroundItem(player,
+					new GroundItem(new Item(7956), pos, player.getUsername(), false, 150, true, 200));
 		}
 	}
 
@@ -253,19 +253,14 @@ public class NPCDrops {
 
 		private static List<Integer> ITEM_LIST;
 
-		private static final int[] TO_ANNOUNCE = new int[] { 14484, 4224,
-			11702, 11704, 11706, 11708, 11704, 11724, 11726, 11728, 11718,
-			11720, 11722, 11730, 11716, 14876, 11286, 13427, 6731, 6737,
-			6735, 4151, 2513, 15259, 13902, 13890, 13884, 13861, 13858,
-			13864, 13905, 13887, 13893, 13899, 13873, 13879, 13876, 13870,
-			6571, 14008, 14009, 14010, 14011, 14012, 14013, 14014, 14015,
-			14016, 13750, 13748, 13746, 13752, 11335, 15486, 13870, 13873,
-			13876, 13884, 13890, 13896, 13902, 13858, 13861, 13864, 13867,
-			11995, 11996, 11997, 11978, 12001, 12002, 12003, 12004, 12005,
-			12006, 11990, 11991, 11992, 11993, 11994, 11989, 11988, 11987,
-			11986, 11985, 11984, 11983, 11982, 11981, 11979, 13659, 11235,
-			20000, 20001, 20002, 15103,
-			15104, 15105, 15106, 12603, 12601, 12605, 19908};
+		private static final int[] TO_ANNOUNCE = new int[] { 14484, 4224, 11702, 11704, 11706, 11708, 11704, 11724,
+				11726, 11728, 11718, 11720, 11722, 11730, 11716, 14876, 11286, 13427, 6731, 6737, 6735, 4151, 2513,
+				15259, 13902, 13890, 13884, 13861, 13858, 13864, 13905, 13887, 13893, 13899, 13873, 13879, 13876, 13870,
+				6571, 14008, 14009, 14010, 14011, 14012, 14013, 14014, 14015, 14016, 13750, 13748, 13746, 13752, 11335,
+				15486, 13870, 13873, 13876, 13884, 13890, 13896, 13902, 13858, 13861, 13864, 13867, 11995, 11996, 11997,
+				11978, 12001, 12002, 12003, 12004, 12005, 12006, 11990, 11991, 11992, 11993, 11994, 11989, 11988, 11987,
+				11986, 11985, 11984, 11983, 11982, 11981, 11979, 13659, 11235, 20000, 20001, 20002, 15103, 15104, 15105,
+				15106, 12603, 12601, 12605, 19908 };
 
 		private static void init() {
 			ITEM_LIST = new ArrayList<Integer>();

@@ -6,8 +6,10 @@ import io.netty.channel.Channel;
 
 /**
  * The base class for request workers.
+ * 
  * @author Graham
- * @param <T> The type of request.
+ * @param <T>
+ *            The type of request.
  */
 public abstract class RequestWorker<T> implements Runnable {
 
@@ -60,17 +62,24 @@ public abstract class RequestWorker<T> implements Runnable {
 
 	/**
 	 * Gets the next request.
+	 * 
 	 * @return The next request.
-	 * @throws InterruptedException if the thread is interrupted.
+	 * @throws InterruptedException
+	 *             if the thread is interrupted.
 	 */
 	protected abstract ChannelRequest<T> nextRequest() throws InterruptedException;
 
 	/**
 	 * Services a request.
-	 * @param fs The file system.
-	 * @param channel The channel.
-	 * @param request The request to service.
-	 * @throws IOException if an I/O error occurs.
+	 * 
+	 * @param fs
+	 *            The file system.
+	 * @param channel
+	 *            The channel.
+	 * @param request
+	 *            The request to service.
+	 * @throws IOException
+	 *             if an I/O error occurs.
 	 */
 	protected abstract void service(Channel channel, T request) throws IOException;
 

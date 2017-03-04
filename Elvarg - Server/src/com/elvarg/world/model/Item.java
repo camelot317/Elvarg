@@ -2,7 +2,6 @@ package com.elvarg.world.model;
 
 import com.elvarg.cache.impl.definitions.ItemDefinition;
 
-
 /**
  * Represents an item which is owned by a player.
  * 
@@ -13,8 +12,11 @@ public class Item {
 
 	/**
 	 * An Item object constructor.
-	 * @param id		Item id.
-	 * @param amount	Item amount.
+	 * 
+	 * @param id
+	 *            Item id.
+	 * @param amount
+	 *            Item amount.
 	 */
 	public Item(int id, int amount) {
 		this.id = id;
@@ -23,7 +25,9 @@ public class Item {
 
 	/**
 	 * An Item object constructor.
-	 * @param id		Item id.
+	 * 
+	 * @param id
+	 *            Item id.
 	 */
 	public Item(int id) {
 		this(id, 1);
@@ -43,7 +47,9 @@ public class Item {
 
 	/**
 	 * Sets the item's id.
-	 * @param id	New item id.
+	 * 
+	 * @param id
+	 *            New item id.
 	 */
 	public Item setId(int id) {
 		this.id = id;
@@ -61,13 +67,13 @@ public class Item {
 	public int getAmount() {
 		return amount;
 	}
-	
+
 	private int slot;
-	
+
 	public int getSlot() {
 		return this.slot;
 	}
-	
+
 	public void setSlot(int slot) {
 		this.slot = slot;
 	}
@@ -87,37 +93,36 @@ public class Item {
 		return ItemDefinition.forId(id);
 	}
 
-	
 	public static Item getNoted(int id, int amount) {
-		int notedItem = id+1;
-		if(ItemDefinition.forId(notedItem).getName().equals(ItemDefinition.forId(id).getName())) {
+		int notedItem = id + 1;
+		if (ItemDefinition.forId(notedItem).getName().equals(ItemDefinition.forId(id).getName())) {
 			return new Item(notedItem, amount);
 		}
 		return new Item(id, amount);
 	}
-	
+
 	public static int getNoted(int id) {
 		int noted = id + 1;
-		if(id == 11283 || id == 11284) {
+		if (id == 11283 || id == 11284) {
 			noted = 11285;
 		}
-		if(ItemDefinition.forId(noted).getName().equals(ItemDefinition.forId(id).getName())) {
+		if (ItemDefinition.forId(noted).getName().equals(ItemDefinition.forId(id).getName())) {
 			return noted;
 		}
 		return id;
 	}
-	
+
 	public static int getUnNoted(int id) {
 		int unNoted = id - 1;
-		if(id == 11284 || id == 11285) {
+		if (id == 11284 || id == 11285) {
 			unNoted = 11283;
 		}
-		if(ItemDefinition.forId(unNoted).getName().equals(ItemDefinition.forId(id).getName())) {
+		if (ItemDefinition.forId(unNoted).getName().equals(ItemDefinition.forId(id).getName())) {
 			return unNoted;
 		}
 		return id;
 	}
-	
+
 	/**
 	 * Copying the item by making a new item with same values.
 	 */
@@ -166,7 +171,7 @@ public class Item {
 			this.amount -= amount;
 		}
 	}
-	
+
 	/** ITEM RARITY **/
 	public ItemRarity rarity;
 

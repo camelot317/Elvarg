@@ -9,10 +9,10 @@ import io.netty.handler.codec.MessageToMessageEncoder;
 
 /**
  * A {@link OneToOneEncoder} which encodes {@link ServiceResponse} messages.
+ * 
  * @author Graham
  */
 public final class ServiceResponseEncoder extends MessageToMessageEncoder<Object> {
-
 
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception {

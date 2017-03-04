@@ -10,6 +10,7 @@ import com.elvarg.world.entity.impl.player.Player;
 
 /**
  * An instance of a clanchat channel, holding all fields.
+ * 
  * @author Gabriel Hannason
  */
 public class ClanChat {
@@ -84,11 +85,11 @@ public class ClanChat {
 	}
 
 	public ClanChat removeMember(String name) {
-		for(int i = 0; i < members.size(); i++) {
+		for (int i = 0; i < members.size(); i++) {
 			Player member = members.get(i);
-			if(member == null)
+			if (member == null)
 				continue;
-			if(member.getUsername().equals(name)) {
+			if (member.getUsername().equals(name)) {
 				members.remove(i);
 				break;
 			}
@@ -118,16 +119,15 @@ public class ClanChat {
 	}
 
 	public void addBannedName(String name) {
-		bannedMembers.add(new BannedMember(name, 1800)); //30 mins
+		bannedMembers.add(new BannedMember(name, 1800)); // 30 mins
 	}
 
 	public boolean isBanned(String name) {
-		for(BannedMember b : bannedMembers) {
-			if(b == null) {
+		for (BannedMember b : bannedMembers) {
+			if (b == null) {
 				continue;
 			}
-			if(b.getName().equals(name) && 
-					!b.getTimer().finished()) {
+			if (b.getName().equals(name) && !b.getTimer().finished()) {
 				return true;
 			}
 		}

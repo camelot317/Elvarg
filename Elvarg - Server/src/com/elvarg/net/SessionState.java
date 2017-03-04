@@ -7,28 +7,28 @@ package com.elvarg.net;
  */
 public enum SessionState {
 
-    /**
-     * The client is currently decoding the login protocol.
-     */
-    LOGGING_IN,
+	/**
+	 * The client is currently decoding the login protocol.
+	 */
+	LOGGING_IN,
 
-    /**
-     * The client is now a player, and is logged in.
-     */
-    LOGGED_IN,
-    
-    /**
-     * The player requested a logout using the logout button.
-     */
-    REQUESTED_LOG_OUT,
-    
-    /**
-     * A request has been sent to disconnect the client.
-     */
-    LOGGING_OUT,
+	/**
+	 * The client is now a player, and is logged in.
+	 */
+	LOGGED_IN,
 
-    /**
-     * The client has disconnected from the server.
-     */
-    LOGGED_OUT
+	/**
+	 * The player requested a logout using the logout button.
+	 */
+	REQUESTED_LOG_OUT,
+
+	/**
+	 * A request has been sent to disconnect the client.
+	 */
+	LOGGING_OUT,
+
+	/**
+	 * The client has disconnected from the server.
+	 */
+	LOGGED_OUT
 }

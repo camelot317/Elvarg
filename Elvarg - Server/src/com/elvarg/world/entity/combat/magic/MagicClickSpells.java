@@ -2,6 +2,7 @@ package com.elvarg.world.entity.combat.magic;
 
 import java.util.Optional;
 
+import com.elvarg.world.entity.impl.Character;
 import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.Animation;
 import com.elvarg.world.model.EffectTimer;
@@ -9,7 +10,6 @@ import com.elvarg.world.model.Graphic;
 import com.elvarg.world.model.GraphicHeight;
 import com.elvarg.world.model.Item;
 import com.elvarg.world.model.MagicSpellbook;
-import com.elvarg.world.entity.impl.Character;
 
 public class MagicClickSpells {
 
@@ -34,7 +34,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(561), new Item(555, 2), new Item(557, 2)});
+				return Optional.of(new Item[] { new Item(561), new Item(555, 2), new Item(557, 2) });
 			}
 
 			@Override
@@ -45,11 +45,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		LOW_ALCHEMY(new Spell() {
+		}), LOW_ALCHEMY(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -68,7 +66,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(554, 3), new Item(561)});
+				return Optional.of(new Item[] { new Item(554, 3), new Item(561) });
 			}
 
 			@Override
@@ -79,11 +77,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		TELEKINETIC_GRAB(new Spell() {
+		}), TELEKINETIC_GRAB(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -102,7 +98,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(563), new Item(556)});
+				return Optional.of(new Item[] { new Item(563), new Item(556) });
 			}
 
 			@Override
@@ -113,11 +109,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		SUPERHEAT_ITEM(new Spell() {
+		}), SUPERHEAT_ITEM(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -136,7 +130,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(554, 4), new Item(561)});
+				return Optional.of(new Item[] { new Item(554, 4), new Item(561) });
 			}
 
 			@Override
@@ -147,11 +141,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		HIGH_ALCHEMY(new Spell() {
+		}), HIGH_ALCHEMY(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -170,7 +162,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(554, 5), new Item(561)});
+				return Optional.of(new Item[] { new Item(554, 5), new Item(561) });
 			}
 
 			@Override
@@ -181,11 +173,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		BONES_TO_PEACHES(new Spell() {
+		}), BONES_TO_PEACHES(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -204,7 +194,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(561, 2), new Item(555, 4), new Item(557, 4)});
+				return Optional.of(new Item[] { new Item(561, 2), new Item(555, 4), new Item(557, 4) });
 			}
 
 			@Override
@@ -215,11 +205,9 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
 
-		}),
-		BAKE_PIE(new Spell() {
+		}), BAKE_PIE(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -238,7 +226,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(9075, 1), new Item(554, 5), new Item(555, 4)});
+				return Optional.of(new Item[] { new Item(9075, 1), new Item(554, 5), new Item(555, 4) });
 			}
 
 			@Override
@@ -250,15 +238,13 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
-			
+
 			@Override
 			public MagicSpellbook getSpellbook() {
 				return MagicSpellbook.LUNAR;
 			}
-		}),
-		VENGEANCE_OTHER(new Spell() {
+		}), VENGEANCE_OTHER(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -277,7 +263,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[] {new Item(9075, 3), new Item(557, 10), new Item(560, 2)});
+				return Optional.of(new Item[] { new Item(9075, 3), new Item(557, 10), new Item(560, 2) });
 			}
 
 			@Override
@@ -288,15 +274,13 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
-			
+
 			@Override
 			public MagicSpellbook getSpellbook() {
 				return MagicSpellbook.LUNAR;
 			}
-		}),
-		VENGEANCE(new Spell() {
+		}), VENGEANCE(new Spell() {
 
 			@Override
 			public int spellId() {
@@ -315,7 +299,7 @@ public class MagicClickSpells {
 
 			@Override
 			public Optional<Item[]> itemsRequired(Player player) {
-				return Optional.of(new Item[]{new Item(9075, 4), new Item(557, 10), new Item(560, 2)});
+				return Optional.of(new Item[] { new Item(9075, 4), new Item(557, 10), new Item(560, 2) });
 			}
 
 			@Override
@@ -326,9 +310,8 @@ public class MagicClickSpells {
 			@Override
 			public void startCast(Character cast, Character castOn) {
 
-
 			}
-			
+
 			@Override
 			public MagicSpellbook getSpellbook() {
 				return MagicSpellbook.LUNAR;
@@ -345,35 +328,37 @@ public class MagicClickSpells {
 			return spell;
 		}
 	}
-	
+
 	public static boolean handleSpell(Player player, int button) {
-		switch(button) {
+		switch (button) {
 		case VENGEANCE_SPELL_BUTTON:
-			/*if(!player.getLocation().isAidingAllowed() || player.getLocation() == Location.DUEL_ARENA) {
-				player.getPacketSender().sendMessage("This spell cannot be cast here.");
-				return true;
-			}*/
-			if(!MagicSpells.VENGEANCE.getSpell().canCast(player, false)) {
-				return true;
-			}
-			/*if(player.hasVengeance()) {
-				player.getPacketSender().sendMessage("You already have Vengeance's effect.");
+			/*
+			 * if(!player.getLocation().isAidingAllowed() ||
+			 * player.getLocation() == Location.DUEL_ARENA) {
+			 * player.getPacketSender().
+			 * sendMessage("This spell cannot be cast here."); return true; }
+			 */
+			if (!MagicSpells.VENGEANCE.getSpell().canCast(player, false)) {
 				return true;
 			}
-			*/
-			
-			if(!player.getVengeanceTimer().finished()) {
+			/*
+			 * if(player.hasVengeance()) { player.getPacketSender().
+			 * sendMessage("You already have Vengeance's effect."); return true;
+			 * }
+			 */
+
+			if (!player.getVengeanceTimer().finished()) {
 				player.getPacketSender().sendMessage("This spell can only be cast once every 30 seconds.");
 				return true;
 			}
-			
-			//Send message and effect timer to client
-			
+
+			// Send message and effect timer to client
+
 			player.setHasVengeance(true);
 			player.getVengeanceTimer().start(30);
 			player.getPacketSender().sendEffectTimer(30, EffectTimer.VENGEANCE)
-			.sendMessage("<shad=330099>You now have Vengeance's effect.");
-			
+					.sendMessage("<shad=330099>You now have Vengeance's effect.");
+
 			player.getInventory().deleteItemSet(MagicSpells.VENGEANCE.getSpell().itemsRequired(player));
 			player.performAnimation(new Animation(4410));
 			player.performGraphic(new Graphic(726, GraphicHeight.HIGH));

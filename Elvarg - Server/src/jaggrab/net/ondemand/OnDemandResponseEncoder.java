@@ -1,6 +1,5 @@
 package jaggrab.net.ondemand;
 
-
 import java.util.List;
 
 import io.netty.buffer.ByteBuf;
@@ -11,21 +10,21 @@ import jaggrab.net.FileDescriptor;
 
 /**
  * A {@link OneToOneEncoder} for the 'on-demand' protocol.
+ * 
  * @author Graham
  */
 public final class OnDemandResponseEncoder extends MessageToMessageEncoder<Object> {
 
-
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception {
-		
+
 		if (msg instanceof OnDemandResponse) {
 			OnDemandResponse resp = (OnDemandResponse) msg;
 
 			FileDescriptor fileDescriptor = resp.getFileDescriptor();
 			int fileSize = resp.getFileSize();
 			int chunkId = resp.getChunkId();
-			
+
 			ByteBuf chunkData = resp.getChunkData();
 
 			ByteBuf buf = Unpooled.buffer(6 + chunkData.readableBytes());
@@ -35,11 +34,11 @@ public final class OnDemandResponseEncoder extends MessageToMessageEncoder<Objec
 			buf.writeShort(chunkId);
 			buf.writeBytes(chunkData);
 
-			//We must retain the buffer before sending it.
-			//Cannot send a raw bytebuffer!
+			// We must retain the buffer before sending it.
+			// Cannot send a raw bytebuffer!
 			out.add(buf.retain());
-			
-		} else {			
+
+		} else {
 			out.add(msg);
 		}
 	}

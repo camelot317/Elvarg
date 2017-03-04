@@ -8,15 +8,13 @@ package com.elvarg.world.model;
 
 public enum PlayerInteractingOption {
 
-	NONE,
-	CHALLENGE,
-	ATTACK;
+	NONE, CHALLENGE, ATTACK;
 
 	public static PlayerInteractingOption forName(String name) {
-		if(name.toLowerCase().contains("null"))
+		if (name.toLowerCase().contains("null"))
 			return NONE;
-		for(PlayerInteractingOption option : PlayerInteractingOption.values()) {
-			if(option.toString().equalsIgnoreCase(name)) {
+		for (PlayerInteractingOption option : PlayerInteractingOption.values()) {
+			if (option.toString().equalsIgnoreCase(name)) {
 				return option;
 			}
 		}

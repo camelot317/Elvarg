@@ -7,21 +7,20 @@ import com.elvarg.world.content.Consumables;
 import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.teleportation.tabs.TabHandler;
 
-
 public class ItemActionPacketListener implements PacketListener {
 
 	private static void firstAction(final Player player, Packet packet) {
 		int interfaceId = packet.readUnsignedShort();
 		int itemId = packet.readShort();
 		int slot = packet.readShort();
-		if(slot < 0 || slot > player.getInventory().capacity())
+		if (slot < 0 || slot > player.getInventory().capacity())
 			return;
-		if(player.getInventory().getItems()[slot].getId() != itemId)
+		if (player.getInventory().getItems()[slot].getId() != itemId)
 			return;
-	
+
 		if (Consumables.isFood(player, itemId, slot)) {
 			return;
-		}	
+		}
 		TabHandler.onClick(player, itemId);
 	}
 
@@ -29,12 +28,12 @@ public class ItemActionPacketListener implements PacketListener {
 		int interfaceId = packet.readLEShortA();
 		int slot = packet.readLEShort();
 		int itemId = packet.readShortA();
-		if(slot < 0 || slot > player.getInventory().capacity())
+		if (slot < 0 || slot > player.getInventory().capacity())
 			return;
-		if(player.getInventory().getItems()[slot].getId() != itemId)
+		if (player.getInventory().getItems()[slot].getId() != itemId)
 			return;
-		switch(itemId) {
-		
+		switch (itemId) {
+
 		}
 	}
 
@@ -42,13 +41,13 @@ public class ItemActionPacketListener implements PacketListener {
 		int itemId = packet.readShortA();
 		int slot = packet.readLEShortA();
 		int interfaceId = packet.readLEShortA();
-		if(slot < 0 || slot > player.getInventory().capacity())
+		if (slot < 0 || slot > player.getInventory().capacity())
 			return;
-		if(player.getInventory().getItems()[slot].getId() != itemId)
+		if (player.getInventory().getItems()[slot].getId() != itemId)
 			return;
-		
-		switch(itemId) {
-		
+
+		switch (itemId) {
+
 		}
 	}
 

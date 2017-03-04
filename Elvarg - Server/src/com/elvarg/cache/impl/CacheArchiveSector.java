@@ -10,6 +10,7 @@ import io.netty.buffer.ByteBuf;
  * A archive sector contains a hashed name and compressed data, this data
  * represents files and information within the {@link CacheLoader}.
  * </p>
+ * 
  * @author Ryley Kimmel <ryley.kimmel@live.com>
  */
 public final class CacheArchiveSector {
@@ -25,10 +26,13 @@ public final class CacheArchiveSector {
 	private final int hash;
 
 	/**
-	 * Constructs a new {@link CacheArchiveSector} with the specified data and hashed
-	 * name.
-	 * @param data The data within this sector.
-	 * @param hash The hashed name of this sector.
+	 * Constructs a new {@link CacheArchiveSector} with the specified data and
+	 * hashed name.
+	 * 
+	 * @param data
+	 *            The data within this sector.
+	 * @param hash
+	 *            The hashed name of this sector.
 	 */
 	protected CacheArchiveSector(ByteBuf data, int hash) {
 		this.data = data;

@@ -11,7 +11,7 @@ import com.elvarg.world.entity.impl.npc.NPC;
  * @author lare96
  */
 public class NpcUpdateSequence implements UpdateSequence<NPC> {
-	
+
 	@Override
 	public void executePreUpdate(NPC t) {
 		try {
@@ -21,12 +21,12 @@ public class NpcUpdateSequence implements UpdateSequence<NPC> {
 			World.getNpcRemoveQueue().add(t);
 		}
 	}
+
 	@Override
 	public void executeUpdate(NPC t) {
-		throw new UnsupportedOperationException(
-				"NPCs cannot be updated for NPCs!");
+		throw new UnsupportedOperationException("NPCs cannot be updated for NPCs!");
 	}
-	
+
 	@Override
 	public void executePostUpdate(NPC t) {
 		try {

@@ -17,7 +17,9 @@ public class Inventory extends ItemContainer {
 
 	/**
 	 * The Inventory constructor.
-	 * @param player	The player who's inventory is being represented.
+	 * 
+	 * @param player
+	 *            The player who's inventory is being represented.
 	 */
 	public Inventory(Player player) {
 		super(player);
@@ -49,8 +51,9 @@ public class Inventory extends ItemContainer {
 	 * Adds a set of items into the inventory.
 	 *
 	 * @param item
-	 * the set of items to add.
+	 *            the set of items to add.
 	 */
+	@Override
 	public void addItemSet(Item[] item) {
 		for (Item addItem : item) {
 			if (addItem == null) {
@@ -64,10 +67,10 @@ public class Inventory extends ItemContainer {
 	 * Deletes a set of items from the inventory.
 	 *
 	 * @param optional
-	 * the set of items to delete.
+	 *            the set of items to delete.
 	 */
 	public void deleteItemSet(Optional<Item[]> optional) {
-		if(optional.isPresent()) {
+		if (optional.isPresent()) {
 			for (Item deleteItem : optional.get()) {
 				if (deleteItem == null) {
 					continue;

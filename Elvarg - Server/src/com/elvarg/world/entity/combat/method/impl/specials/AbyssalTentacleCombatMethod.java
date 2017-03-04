@@ -17,7 +17,7 @@ public class AbyssalTentacleCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1658, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(181, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -25,7 +25,7 @@ public class AbyssalTentacleCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -55,19 +55,19 @@ public class AbyssalTentacleCombatMethod implements CombatMethod {
 
 	@Override
 	public void finished(Character character) {
-		
+
 	}
 
 	@Override
 	public void handleAfterHitEffects(QueueableHit hit) {
 		Character target = hit.getTarget();
-		
-		if(target.getHitpoints() <= 0) {
+
+		if (target.getHitpoints() <= 0) {
 			return;
 		}
 		target.performGraphic(GRAPHIC);
 		CombatFactory.freeze(target, 10);
-		if(Misc.getRandom(100) < 50) {
+		if (Misc.getRandom(100) < 50) {
 			CombatFactory.poisonEntity(target, PoisonType.EXTRA);
 		}
 	}

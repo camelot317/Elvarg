@@ -10,8 +10,8 @@ import com.elvarg.world.model.Graphic;
 import com.elvarg.world.model.Skill;
 
 /**
- * Represents a player's skills in the game, also manages
- * calculations such as combat level and total level.
+ * Represents a player's skills in the game, also manages calculations such as
+ * combat level and total level.
  * 
  * @author relex lawl
  * @editor Swiffy
@@ -21,7 +21,9 @@ public class SkillManager {
 
 	/**
 	 * The skillmanager's constructor
-	 * @param player	The player's who skill set is being represented.
+	 * 
+	 * @param player
+	 *            The player's who skill set is being represented.
 	 */
 	public SkillManager(Player player) {
 		this.player = player;
@@ -29,8 +31,8 @@ public class SkillManager {
 	}
 
 	/**
-	 * Creates a new skillmanager for the player
-	 * Sets current and max appropriate levels.
+	 * Creates a new skillmanager for the player Sets current and max
+	 * appropriate levels.
 	 */
 	public void newSkillManager() {
 		this.skills = new Skills();
@@ -44,23 +46,27 @@ public class SkillManager {
 
 	/**
 	 * Adds experience to {@code skill} by the {@code experience} amount.
-	 * @param skill			The skill to add experience to.
-	 * @param experience	The amount of experience to add to the skill.
-	 * @return				The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to add experience to.
+	 * @param experience
+	 *            The amount of experience to add to the skill.
+	 * @return The Skills instance.
 	 */
 	public SkillManager addExperience(Skill skill, int experience) {
-		if(player.experienceLocked())
+		if (player.experienceLocked())
 			return this;
 		/*
-		 * If the experience in the skill is already greater or equal to
-		 * {@code MAX_EXPERIENCE} then stop.
+		 * If the experience in the skill is already greater or equal to {@code
+		 * MAX_EXPERIENCE} then stop.
 		 */
 		if (this.skills.experience[skill.ordinal()] >= MAX_EXPERIENCE)
 			return this;
 
 		experience *= player.getRights().getExperienceGainModifier();
 
-		//		experience = BrawlingGloves.getExperienceIncrease(player, skill.ordinal(), experience);
+		// experience = BrawlingGloves.getExperienceIncrease(player,
+		// skill.ordinal(), experience);
 
 		/*
 		 * The skill's level before adding experience.
@@ -69,9 +75,11 @@ public class SkillManager {
 		/*
 		 * Adds the experience to the skill's experience.
 		 */
-		this.skills.experience[skill.ordinal()] = this.skills.experience[skill.ordinal()] + experience > MAX_EXPERIENCE ? MAX_EXPERIENCE : this.skills.experience[skill.ordinal()] + experience;
-		if(this.skills.experience[skill.ordinal()] >= MAX_EXPERIENCE) {
-			//Achievements.finishAchievement(player, AchievementData.REACH_MAX_EXP_IN_A_SKILL);
+		this.skills.experience[skill.ordinal()] = this.skills.experience[skill.ordinal()] + experience > MAX_EXPERIENCE
+				? MAX_EXPERIENCE : this.skills.experience[skill.ordinal()] + experience;
+		if (this.skills.experience[skill.ordinal()] >= MAX_EXPERIENCE) {
+			// Achievements.finishAchievement(player,
+			// AchievementData.REACH_MAX_EXP_IN_A_SKILL);
 		}
 		/*
 		 * The skill's level after adding the experience.
@@ -85,12 +93,12 @@ public class SkillManager {
 			String skillName = Misc.formatText(skill.toString().toLowerCase());
 			skills.maxLevel[skill.ordinal()] += level;
 			/*
-			 * If the skill is not constitution, prayer or summoning, then set the current level
-			 * to the max level.
+			 * If the skill is not constitution, prayer or summoning, then set
+			 * the current level to the max level.
 			 */
-				
+
 			setCurrentLevel(skill, skills.maxLevel[skill.ordinal()]);
-			//player.getPacketSender().sendFlashingSidebar(Constants.SKILLS_TAB);
+			// player.getPacketSender().sendFlashingSidebar(Constants.SKILLS_TAB);
 
 			player.setDialogue(null);
 			player.getPacketSender().sendString(4268, "Congratulations! You have achieved a " + skillName + " level!");
@@ -98,18 +106,23 @@ public class SkillManager {
 			player.getPacketSender().sendString(358, "Click here to continue.");
 			player.getPacketSender().sendChatboxInterface(skill.getChatboxInterface());
 			player.performGraphic(new Graphic(312));
-			player.getPacketSender().sendMessage("You've just advanced " + skillName + " level! You have reached level " + newLevel);
+			player.getPacketSender()
+					.sendMessage("You've just advanced " + skillName + " level! You have reached level " + newLevel);
 			if (skills.maxLevel[skill.ordinal()] == getMaxAchievingLevel(skill)) {
-				player.getPacketSender().sendMessage("Well done! You've achieved the highest possible level in this skill!");
+				player.getPacketSender()
+						.sendMessage("Well done! You've achieved the highest possible level in this skill!");
 
-				if(maxed(player)) {
-					World.sendMessage("<shad=15536940>News: "+player.getUsername()+" has just achieved the highest possible level in all skills!");
+				if (maxed(player)) {
+					World.sendMessage("<shad=15536940>News: " + player.getUsername()
+							+ " has just achieved the highest possible level in all skills!");
 				} else {
-					World.sendMessage("<shad=15536940>News: "+player.getUsername()+" has just achieved the highest possible level in "+skillName+"!");
+					World.sendMessage("<shad=15536940>News: " + player.getUsername()
+							+ " has just achieved the highest possible level in " + skillName + "!");
 				}
 
 				TaskManager.submit(new Task(2, player, true) {
 					int localGFX = 1634;
+
 					@Override
 					public void execute() {
 						player.performGraphic(new Graphic(localGFX));
@@ -138,10 +151,10 @@ public class SkillManager {
 	}
 
 	public static boolean maxed(Player p) {
-		for(int i = 0; i < Skill.values().length; i++) {
-			if(i == 21)
+		for (int i = 0; i < Skill.values().length; i++) {
+			if (i == 21)
 				continue;
-			if(p.getSkillManager().getMaxLevel(i) < (i == 3 || i == 5 ? 990 : 99)) {
+			if (p.getSkillManager().getMaxLevel(i) < (i == 3 || i == 5 ? 990 : 99)) {
 				return false;
 			}
 		}
@@ -149,24 +162,25 @@ public class SkillManager {
 	}
 
 	public SkillManager stopSkilling() {
-	/*	if(player.getCurrentTask() != null) {
-			player.getCurrentTask().stop();
-			player.setCurrentTask(null);
-		}
-		player.setInputHandling(null);*/
+		/*
+		 * if(player.getCurrentTask() != null) { player.getCurrentTask().stop();
+		 * player.setCurrentTask(null); } player.setInputHandling(null);
+		 */
 		return this;
 	}
 
 	/**
 	 * Updates the skill strings, for skill tab and orb updating.
-	 * @param skill	The skill who's strings to update.
-	 * @return		The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill who's strings to update.
+	 * @return The Skills instance.
 	 */
 	public SkillManager updateSkill(Skill skill) {
 		int maxLevel = getMaxLevel(skill), currentLevel = getCurrentLevel(skill);
 		if (skill == Skill.PRAYER)
 			player.getPacketSender().sendString(687, currentLevel + "/" + maxLevel);
-		player.getPacketSender().sendString(31200, ""+getTotalLevel());
+		player.getPacketSender().sendString(31200, "" + getTotalLevel());
 		player.getPacketSender().sendString(19000, "Combat level: " + getCombatLevel());
 		player.getPacketSender().sendSkill(skill);
 		return this;
@@ -174,11 +188,13 @@ public class SkillManager {
 
 	/**
 	 * Gets the minimum experience in said level.
-	 * @param level		The level to get minimum experience for.
-	 * @return			The least amount of experience needed to achieve said level.
+	 * 
+	 * @param level
+	 *            The level to get minimum experience for.
+	 * @return The least amount of experience needed to achieve said level.
 	 */
 	public static int getExperienceForLevel(int level) {
-		if(level <= 99) {
+		if (level <= 99) {
 			return EXP_ARRAY[--level > 98 ? 98 : level];
 		} else {
 			int points = 0;
@@ -188,7 +204,7 @@ public class SkillManager {
 				if (lvl >= level) {
 					return output;
 				}
-				output = (int)Math.floor(points / 4);
+				output = (int) Math.floor(points / 4);
 			}
 		}
 		return 0;
@@ -196,14 +212,16 @@ public class SkillManager {
 
 	/**
 	 * Gets the level from said experience.
-	 * @param experience	The experience to get level for.
-	 * @return				The level you obtain when you have specified experience.
+	 * 
+	 * @param experience
+	 *            The experience to get level for.
+	 * @return The level you obtain when you have specified experience.
 	 */
 	public static int getLevelForExperience(int experience) {
-		if(experience <= EXPERIENCE_FOR_99) {
-			for(int j = 98; j >= 0; j--) {
-				if(EXP_ARRAY[j] <= experience) {
-					return j+1;
+		if (experience <= EXPERIENCE_FOR_99) {
+			for (int j = 98; j >= 0; j--) {
+				if (EXP_ARRAY[j] <= experience) {
+					return j + 1;
 				}
 			}
 		} else {
@@ -221,14 +239,15 @@ public class SkillManager {
 
 	/**
 	 * Calculates the player's combat level.
-	 * @return	The average of the player's combat skills.
+	 * 
+	 * @return The average of the player's combat skills.
 	 */
 	public int getCombatLevel() {
 		final int attack = skills.maxLevel[Skill.ATTACK.ordinal()];
 		final int defence = skills.maxLevel[Skill.DEFENCE.ordinal()];
 		final int strength = skills.maxLevel[Skill.STRENGTH.ordinal()];
-		final int hp = (int) (skills.maxLevel[Skill.HITPOINTS.ordinal()]);
-		final int prayer = (int) (skills.maxLevel[Skill.PRAYER.ordinal()]);
+		final int hp = (skills.maxLevel[Skill.HITPOINTS.ordinal()]);
+		final int prayer = (skills.maxLevel[Skill.PRAYER.ordinal()]);
 		final int ranged = skills.maxLevel[Skill.RANGED.ordinal()];
 		final int magic = skills.maxLevel[Skill.MAGIC.ordinal()];
 		int combatLevel = 3;
@@ -254,7 +273,8 @@ public class SkillManager {
 
 	/**
 	 * Gets the player's total level.
-	 * @return	The value of every skill summed up.
+	 * 
+	 * @return The value of every skill summed up.
 	 */
 	public int getTotalLevel() {
 		int total = 0;
@@ -266,7 +286,8 @@ public class SkillManager {
 
 	/**
 	 * Gets the player's total experience.
-	 * @return	The experience value from the player's every skill summed up.
+	 * 
+	 * @return The experience value from the player's every skill summed up.
 	 */
 	public long getTotalExp() {
 		long xp = 0;
@@ -275,11 +296,12 @@ public class SkillManager {
 		return xp;
 	}
 
-	
 	/**
 	 * Gets the max level for <code>skill</code>
-	 * @param skill		The skill to get max level for.
-	 * @return			The max level that can be achieved in said skill.
+	 * 
+	 * @param skill
+	 *            The skill to get max level for.
+	 * @return The max level that can be achieved in said skill.
 	 */
 	public static int getMaxAchievingLevel(Skill skill) {
 		return 99;
@@ -287,8 +309,10 @@ public class SkillManager {
 
 	/**
 	 * Gets the current level for said skill.
-	 * @param skill		The skill to get current/temporary level for.
-	 * @return			The skill's level.
+	 * 
+	 * @param skill
+	 *            The skill to get current/temporary level for.
+	 * @return The skill's level.
 	 */
 	public int getCurrentLevel(Skill skill) {
 		return skills.level[skill.ordinal()];
@@ -296,8 +320,10 @@ public class SkillManager {
 
 	/**
 	 * Gets the max level for said skill.
-	 * @param skill		The skill to get max level for.
-	 * @return			The skill's maximum level.
+	 * 
+	 * @param skill
+	 *            The skill to get max level for.
+	 * @return The skill's maximum level.
 	 */
 	public int getMaxLevel(Skill skill) {
 		return skills.maxLevel[skill.ordinal()];
@@ -305,8 +331,10 @@ public class SkillManager {
 
 	/**
 	 * Gets the max level for said skill.
-	 * @param skill		The skill to get max level for.
-	 * @return			The skill's maximum level.
+	 * 
+	 * @param skill
+	 *            The skill to get max level for.
+	 * @return The skill's maximum level.
 	 */
 	public int getMaxLevel(int skill) {
 		return skills.maxLevel[skill];
@@ -314,8 +342,10 @@ public class SkillManager {
 
 	/**
 	 * Gets the experience for said skill.
-	 * @param skill		The skill to get experience for.
-	 * @return			The experience in said skill.
+	 * 
+	 * @param skill
+	 *            The skill to get experience for.
+	 * @return The experience in said skill.
 	 */
 	public int getExperience(Skill skill) {
 		return skills.experience[skill.ordinal()];
@@ -323,10 +353,14 @@ public class SkillManager {
 
 	/**
 	 * Sets the current level of said skill.
-	 * @param skill		The skill to set current/temporary level for.
-	 * @param level		The level to set the skill to.
-	 * @param refresh	If <code>true</code>, the skill's strings will be updated.
-	 * @return			The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set current/temporary level for.
+	 * @param level
+	 *            The level to set the skill to.
+	 * @param refresh
+	 *            If <code>true</code>, the skill's strings will be updated.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setCurrentLevel(Skill skill, int level, boolean refresh) {
 		this.skills.level[skill.ordinal()] = level < 0 ? 0 : level;
@@ -337,10 +371,14 @@ public class SkillManager {
 
 	/**
 	 * Sets the maximum level of said skill.
-	 * @param skill		The skill to set maximum level for.
-	 * @param level		The level to set skill to.
-	 * @param refresh	If <code>true</code>, the skill's strings will be updated.
-	 * @return			The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set maximum level for.
+	 * @param level
+	 *            The level to set skill to.
+	 * @param refresh
+	 *            If <code>true</code>, the skill's strings will be updated.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setMaxLevel(Skill skill, int level, boolean refresh) {
 		skills.maxLevel[skill.ordinal()] = level;
@@ -351,10 +389,14 @@ public class SkillManager {
 
 	/**
 	 * Sets the experience of said skill.
-	 * @param skill			The skill to set experience for.
-	 * @param experience	The amount of experience to set said skill to.
-	 * @param refresh		If <code>true</code>, the skill's strings will be updated.
-	 * @return				The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set experience for.
+	 * @param experience
+	 *            The amount of experience to set said skill to.
+	 * @param refresh
+	 *            If <code>true</code>, the skill's strings will be updated.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setExperience(Skill skill, int experience, boolean refresh) {
 		this.skills.experience[skill.ordinal()] = experience < 0 ? 0 : experience;
@@ -365,9 +407,12 @@ public class SkillManager {
 
 	/**
 	 * Sets the current level of said skill.
-	 * @param skill		The skill to set current/temporary level for.
-	 * @param level		The level to set the skill to.
-	 * @return			The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set current/temporary level for.
+	 * @param level
+	 *            The level to set the skill to.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setCurrentLevel(Skill skill, int level) {
 		setCurrentLevel(skill, level, true);
@@ -376,9 +421,12 @@ public class SkillManager {
 
 	/**
 	 * Sets the maximum level of said skill.
-	 * @param skill		The skill to set maximum level for.
-	 * @param level		The level to set skill to.
-	 * @return			The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set maximum level for.
+	 * @param level
+	 *            The level to set skill to.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setMaxLevel(Skill skill, int level) {
 		setMaxLevel(skill, level, true);
@@ -387,9 +435,12 @@ public class SkillManager {
 
 	/**
 	 * Sets the experience of said skill.
-	 * @param skill			The skill to set experience for.
-	 * @param experience	The amount of experience to set said skill to.
-	 * @return				The Skills instance.
+	 * 
+	 * @param skill
+	 *            The skill to set experience for.
+	 * @param experience
+	 *            The amount of experience to set said skill to.
+	 * @return The Skills instance.
 	 */
 	public SkillManager setExperience(Skill skill, int experience) {
 		setExperience(skill, experience, true);
@@ -437,22 +488,19 @@ public class SkillManager {
 	public static final int AMOUNT_OF_SKILLS = Skill.values().length;
 
 	/**
-	 * The maximum amount of experience you can
-	 * achieve in a skill.
+	 * The maximum amount of experience you can achieve in a skill.
 	 */
 	private static final int MAX_EXPERIENCE = 1000000000;
 
 	private static final int EXPERIENCE_FOR_99 = 13034431;
 
-	private static final int EXP_ARRAY[] = {
-			0,83,174,276,388,512,650,801,969,1154,1358,1584,1833,2107,2411,2746,3115,3523,
-			3973,4470,5018,5624,6291,7028,7842,8740,9730,10824,12031,13363,14833,16456,18247,
-			20224,22406,24815,27473,30408,33648,37224,41171,45529,50339,55649,61512,67983,75127,
-			83014,91721,101333,111945,123660,136594,150872,166636,184040,203254,224466,247886,
-			273742,302288,333804,368599,407015,449428,496254,547953,605032,668051,737627,814445,
-			899257,992895,1096278,1210421,1336443,1475581,1629200,1798808,1986068,2192818,2421087,
-			2673114,2951373,3258594,3597792,3972294,4385776,4842295,5346332,5902831,6517253,7195629,
-			7944614,8771558,9684577,10692629,11805606,13034431	
-	};
+	private static final int EXP_ARRAY[] = { 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107,
+			2411, 2746, 3115, 3523, 3973, 4470, 5018, 5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833,
+			16456, 18247, 20224, 22406, 24815, 27473, 30408, 33648, 37224, 41171, 45529, 50339, 55649, 61512, 67983,
+			75127, 83014, 91721, 101333, 111945, 123660, 136594, 150872, 166636, 184040, 203254, 224466, 247886, 273742,
+			302288, 333804, 368599, 407015, 449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895,
+			1096278, 1210421, 1336443, 1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114, 2951373, 3258594,
+			3597792, 3972294, 4385776, 4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629,
+			11805606, 13034431 };
 
 }

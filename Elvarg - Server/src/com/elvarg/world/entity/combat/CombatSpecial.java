@@ -26,6 +26,7 @@ import com.elvarg.world.entity.combat.method.impl.specials.ZamorakGodswordCombat
 import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.container.impl.Equipment;
 import com.elvarg.world.model.equipment.BonusManager;
+
 /**
  * Holds constants that hold data for all of the special attacks that can be
  * used.
@@ -34,30 +35,38 @@ import com.elvarg.world.model.equipment.BonusManager;
  */
 public enum CombatSpecial {
 
-	//Melee
-	ABYSSAL_WHIP(new int[] { 4151, 21371, 15441, 15442, 15443, 15444 }, 50, 1.04, 1, new AbyssalWhipCombatMethod(), WeaponInterface.WHIP),
-	ABYSSAL_TENTACLE(new int[] { 12006 }, 50, 1.04, 1, new AbyssalTentacleCombatMethod(), WeaponInterface.WHIP),
-	
-	BARRELSCHEST_ANCHOR(new int[] { 10887 }, 50, 1.22, 1.35, new BarrelchestAnchorCombatMethod(), WeaponInterface.WARHAMMER),
-	DRAGON_SCIMITAR(new int[] { 4587 }, 55, 1.08, 1.1, new DragonScimitarCombatMethod(), WeaponInterface.SCIMITAR),
-	DRAGON_LONGSWORD(new int[] { 1305 }, 25, 1.31, 1.33, new DragonLongswordCombatMethod(), WeaponInterface.LONGSWORD),
-	DRAGON_MACE(new int[] { 1434 }, 25, 1.61, 1.25, new DragonMaceCombatMethod(), WeaponInterface.MACE),
-	
-	ARMADYL_GODSWORD(new int[] { 11802 }, 50, 1.57, 1.63, new ArmadylGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD),
-	SARADOMIN_GODSWORD(new int[] { 11806 }, 50, 1.27, 1.5, new SaradominGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD),
-	BANDOS_GODSWORD(new int[] { 11804 }, 100, 1.22, 1.4, new BandosGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD),
-	ZAMORAK_GODSWORD(new int[] { 11808 }, 50, 1.15, 1.4, new ZamorakGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD),
-	
-	//Multiple hits 
-	DRAGON_HALBERD(new int[] { 3204 }, 30, 1, 1.19, new DragonHalberdCombatMethod(), WeaponInterface.HALBERD),
-	DRAGON_DAGGER(new int[] { 1215, 1231, 5680, 5698 }, 25, 1.35, 1.25, new DragonDaggerCombatMethod(), WeaponInterface.DAGGER),
-	GRANITE_MAUL(new int[] { 4153 }, 50, 1.12, 1.18, new GraniteMaulCombatMethod(), WeaponInterface.GRANITE_MAUL),
-	DRAGON_CLAWS(new int[] { 13652 }, 50, 1.18, 1.5, new DragonClawCombatMethod(), WeaponInterface.CLAWS),
-	
-	//Ranged
-	MAGIC_SHORTBOW(new int[] { 861 }, 55, 1.03, 1.2, new MagicShortbowCombatMethod(), WeaponInterface.SHORTBOW),
-	DARK_BOW(new int[] { 11235 }, 55, 1.29, 1.22, new DarkBowCombatMethod(), WeaponInterface.LONGBOW),
-	ARMADYL_CROSSBOW(new int[]{11785}, 40, 1.30, 2.0, new ArmadylCrossbowCombatMethod(), WeaponInterface.CROSSBOW),
+	// Melee
+	ABYSSAL_WHIP(new int[] { 4151, 21371, 15441, 15442, 15443, 15444 }, 50, 1.04, 1, new AbyssalWhipCombatMethod(),
+			WeaponInterface.WHIP), ABYSSAL_TENTACLE(new int[] { 12006 }, 50, 1.04, 1, new AbyssalTentacleCombatMethod(),
+					WeaponInterface.WHIP),
+
+	BARRELSCHEST_ANCHOR(new int[] { 10887 }, 50, 1.22, 1.35, new BarrelchestAnchorCombatMethod(),
+			WeaponInterface.WARHAMMER), DRAGON_SCIMITAR(new int[] { 4587 }, 55, 1.08, 1.1,
+					new DragonScimitarCombatMethod(), WeaponInterface.SCIMITAR), DRAGON_LONGSWORD(new int[] { 1305 },
+							25, 1.31, 1.33, new DragonLongswordCombatMethod(),
+							WeaponInterface.LONGSWORD), DRAGON_MACE(new int[] { 1434 }, 25, 1.61, 1.25,
+									new DragonMaceCombatMethod(), WeaponInterface.MACE),
+
+	ARMADYL_GODSWORD(new int[] { 11802 }, 50, 1.57, 1.63, new ArmadylGodswordCombatMethod(),
+			WeaponInterface.TWO_HANDED_SWORD), SARADOMIN_GODSWORD(new int[] { 11806 }, 50, 1.27, 1.5,
+					new SaradominGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD), BANDOS_GODSWORD(
+							new int[] { 11804 }, 100, 1.22, 1.4, new BandosGodswordCombatMethod(),
+							WeaponInterface.TWO_HANDED_SWORD), ZAMORAK_GODSWORD(new int[] { 11808 }, 50, 1.15, 1.4,
+									new ZamorakGodswordCombatMethod(), WeaponInterface.TWO_HANDED_SWORD),
+
+	// Multiple hits
+	DRAGON_HALBERD(new int[] { 3204 }, 30, 1, 1.19, new DragonHalberdCombatMethod(),
+			WeaponInterface.HALBERD), DRAGON_DAGGER(new int[] { 1215, 1231, 5680, 5698 }, 25, 1.35, 1.25,
+					new DragonDaggerCombatMethod(), WeaponInterface.DAGGER), GRANITE_MAUL(new int[] { 4153 }, 50, 1.12,
+							1.18, new GraniteMaulCombatMethod(),
+							WeaponInterface.GRANITE_MAUL), DRAGON_CLAWS(new int[] { 13652 }, 50, 1.18, 1.5,
+									new DragonClawCombatMethod(), WeaponInterface.CLAWS),
+
+	// Ranged
+	MAGIC_SHORTBOW(new int[] { 861 }, 55, 1.03, 1.2, new MagicShortbowCombatMethod(),
+			WeaponInterface.SHORTBOW), DARK_BOW(new int[] { 11235 }, 55, 1.29, 1.22, new DarkBowCombatMethod(),
+					WeaponInterface.LONGBOW), ARMADYL_CROSSBOW(new int[] { 11785 }, 40, 1.30, 2.0,
+							new ArmadylCrossbowCombatMethod(), WeaponInterface.CROSSBOW),
 
 	;
 
@@ -95,9 +104,8 @@ public enum CombatSpecial {
 	 * @param weaponType
 	 *            the weapon interface used by the identifiers.
 	 */
-	private CombatSpecial(int[] identifiers, int drainAmount,
-			double strengthBonus, double accuracyBonus, CombatMethod combatMethod,
-			WeaponInterface weaponType) {
+	private CombatSpecial(int[] identifiers, int drainAmount, double strengthBonus, double accuracyBonus,
+			CombatMethod combatMethod, WeaponInterface weaponType) {
 		this.identifiers = identifiers;
 		this.drainAmount = drainAmount;
 		this.strengthBonus = strengthBonus;
@@ -108,14 +116,13 @@ public enum CombatSpecial {
 
 	/**
 	 * Checks if a player has the reqs to perform the special attack
+	 * 
 	 * @param player
 	 * @param special
 	 * @return
 	 */
 	public static boolean checkSpecial(Player player, CombatSpecial special) {
-		return (player.getCombatSpecial() != null 
-				&& player.getCombatSpecial() == special 
-				&& player.isSpecialActivated() 
+		return (player.getCombatSpecial() != null && player.getCombatSpecial() == special && player.isSpecialActivated()
 				&& player.getSpecialPercentage() >= special.getDrainAmount());
 	}
 
@@ -131,7 +138,7 @@ public enum CombatSpecial {
 		player.decrementSpecialPercentage(amount);
 		player.setSpecialActivated(false);
 		CombatSpecial.updateBar(player);
-		if(!player.isRecoveringSpecialAttack()) {
+		if (!player.isRecoveringSpecialAttack()) {
 			TaskManager.submit(new PlayerSpecialAmountTask(player));
 		}
 	}
@@ -144,7 +151,8 @@ public enum CombatSpecial {
 	 *            the player who's special bar will be updated.
 	 */
 	public static void updateBar(Player player) {
-		if (player.getCombat().getWeapon().getSpecialBar() == -1 || player.getCombat().getWeapon().getSpecialMeter() == -1) {
+		if (player.getCombat().getWeapon().getSpecialBar() == -1
+				|| player.getCombat().getWeapon().getSpecialMeter() == -1) {
 			return;
 		}
 		int specialCheck = 10;
@@ -152,10 +160,13 @@ public enum CombatSpecial {
 		int specialAmount = player.getSpecialPercentage() / 10;
 
 		for (int i = 0; i < 10; i++) {
-			player.getPacketSender().sendInterfaceComponentMoval(specialAmount >= specialCheck ? 500 : 0, 0, --specialBar);
+			player.getPacketSender().sendInterfaceComponentMoval(specialAmount >= specialCheck ? 500 : 0, 0,
+					--specialBar);
 			specialCheck--;
 		}
-		player.getPacketSender().updateSpecialAttackOrb().sendString(player.getCombat().getWeapon().getSpecialMeter(), player.isSpecialActivated() ? ("@yel@ Special Attack (" + player.getSpecialPercentage() + "%)") : ("@bla@ Special Attack (" +player.getSpecialPercentage()+ "%"));
+		player.getPacketSender().updateSpecialAttackOrb().sendString(player.getCombat().getWeapon().getSpecialMeter(),
+				player.isSpecialActivated() ? ("@yel@ Special Attack (" + player.getSpecialPercentage() + "%)")
+						: ("@bla@ Special Attack (" + player.getSpecialPercentage() + "%"));
 
 	}
 
@@ -175,9 +186,10 @@ public enum CombatSpecial {
 
 		for (CombatSpecial c : CombatSpecial.values()) {
 			if (player.getCombat().getWeapon() == c.getWeaponType()) {
-				if (Arrays.stream(c.getIdentifiers()).anyMatch(
-						id -> player.getEquipment().get(Equipment.WEAPON_SLOT).getId() == id)) {
-					player.getPacketSender().sendInterfaceDisplayState(player.getCombat().getWeapon().getSpecialBar(), false);
+				if (Arrays.stream(c.getIdentifiers())
+						.anyMatch(id -> player.getEquipment().get(Equipment.WEAPON_SLOT).getId() == id)) {
+					player.getPacketSender().sendInterfaceDisplayState(player.getCombat().getWeapon().getSpecialBar(),
+							false);
 					player.setCombatSpecial(c);
 					return;
 				}
@@ -190,10 +202,12 @@ public enum CombatSpecial {
 	}
 
 	public static void activate(Player player) {
-		/*if(Dueling.checkRule(player, DuelRule.NO_SPECIAL_ATTACKS)) {
-			player.getPacketSender().sendMessage("Special Attacks have been turned off in this duel.");
-			return;
-		}*/
+		/*
+		 * if(Dueling.checkRule(player, DuelRule.NO_SPECIAL_ATTACKS)) {
+		 * player.getPacketSender().
+		 * sendMessage("Special Attacks have been turned off in this duel.");
+		 * return; }
+		 */
 
 		if (player.getCombatSpecial() == null) {
 			return;
@@ -207,38 +221,41 @@ public enum CombatSpecial {
 			final CombatSpecial spec = player.getCombatSpecial();
 
 			player.setSpecialActivated(true);
-			
-			//Handle instant special attacks here.
-			//Example: Granite Maul, Dragon battleaxe...
-			if(spec == CombatSpecial.GRANITE_MAUL) {
-				
+
+			// Handle instant special attacks here.
+			// Example: Granite Maul, Dragon battleaxe...
+			if (spec == CombatSpecial.GRANITE_MAUL) {
+
 				if (player.getSpecialPercentage() < player.getCombatSpecial().getDrainAmount()) {
-					player.getPacketSender().sendMessage(
-							"You do not have enough special attack energy left!");
+					player.getPacketSender().sendMessage("You do not have enough special attack energy left!");
 					player.setSpecialActivated(false);
 					CombatSpecial.updateBar(player);
 					return;
 				}
-				
-				if(CombatFactory.isAttacking(player)) {
 
-					//Handle an immediate attack by indicating
-					//that we should disregard delay...
+				if (CombatFactory.isAttacking(player)) {
+
+					// Handle an immediate attack by indicating
+					// that we should disregard delay...
 					player.getCombat().setDisregardDelay(true);
 					player.getCombat().doCombat();
-					
+
 					return;
-					
+
 				} else {
 
-					//Uninformed player using gmaul without being in combat..
-					//Teach them a lesson!
-					player.getPacketSender().sendMessage("Although not required, the Granite maul special attack should be used during").sendMessage("combat for maximum effect.");
+					// Uninformed player using gmaul without being in combat..
+					// Teach them a lesson!
+					player.getPacketSender()
+							.sendMessage("Although not required, the Granite maul special attack should be used during")
+							.sendMessage("combat for maximum effect.");
 
-				}			
-			} /* else if(spec == CombatSpecial.DRAGON_BATTLEAXE) {
-
-			}*/ 
+				}
+			} /*
+				 * else if(spec == CombatSpecial.DRAGON_BATTLEAXE) {
+				 * 
+				 * }
+				 */
 			CombatSpecial.updateBar(player);
 		}
 		BonusManager.update(player);

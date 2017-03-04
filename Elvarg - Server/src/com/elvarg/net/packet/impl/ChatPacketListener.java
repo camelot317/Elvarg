@@ -4,8 +4,8 @@ import com.elvarg.net.packet.Packet;
 import com.elvarg.net.packet.PacketListener;
 import com.elvarg.util.Misc;
 import com.elvarg.world.entity.impl.player.Player;
-import com.elvarg.world.model.Flag;
 import com.elvarg.world.model.ChatMessage.Message;
+import com.elvarg.world.model.Flag;
 import com.elvarg.world.model.dialogue.DialogueManager;
 
 /**
@@ -21,14 +21,16 @@ public class ChatPacketListener implements PacketListener {
 		int color = packet.readByte();
 		int effect = packet.readByte();
 		String text = packet.readString();
-		if(text.length() <= 0) {
+		if (text.length() <= 0) {
 			return;
 		}
-	/*	if(PlayerPunishment.muted(player.getUsername()) || PlayerPunishment.IPMuted(player.getHostAddress())) {
-			player.getPacketSender().sendMessage("You are muted and cannot chat.");
-			return;
-		}*/
-		if(Misc.blockedWord(text)) {
+		/*
+		 * if(PlayerPunishment.muted(player.getUsername()) ||
+		 * PlayerPunishment.IPMuted(player.getHostAddress())) {
+		 * player.getPacketSender().sendMessage("You are muted and cannot chat."
+		 * ); return; }
+		 */
+		if (Misc.blockedWord(text)) {
 			DialogueManager.sendStatement(player, "A word was blocked in your sentence. Please do not repeat it!");
 			return;
 		}
