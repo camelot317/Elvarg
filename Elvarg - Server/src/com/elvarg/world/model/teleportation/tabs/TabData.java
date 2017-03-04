@@ -17,23 +17,33 @@ import com.elvarg.world.model.Position;
  *
  */
 public enum TabData {
-	HOME(1, new Position(3222, 3222, 0)), LUMBRIDGE(8008, new Position(3222, 3218, 0)), FALADOR(8009,
-			new Position(2965, 3379, 0)), CAMELOT(8010, new Position(2757, 3477, 0)), ARDY(8011,
-					new Position(2661, 3305, 0)), WATCH(8012,
-							new Position(2549, 3112, 0)), VARROCK(8007, new Position(3213, 3424, 0));
+
+	HOME(new Item(1), new Position(3222, 3222, 0)),
+
+	LUMBRIDGE(new Item(8008), new Position(3222, 3218, 0)),
+
+	FALADOR(new Item(8009), new Position(2965, 3379, 0)),
+
+	CAMELOT(new Item(8010), new Position(2757, 3477, 0)),
+
+	ARDY(new Item(8011), new Position(2661, 3305, 0)),
+
+	WATCH(new Item(8012), new Position(2549, 3112, 0)),
+
+	VARROCK(new Item(8007), new Position(3213, 3424, 0));
 
 	/**
-	 * The {@link Item} id of the teleport tablet.
+	 * The {@link Item} of the teleport tablet.
 	 */
-	private final int tabId;
+	private final Item tablet;
 
 	/**
-	 * Gets the {@link #tabId} and returns as its initial value.
+	 * Gets the {@link #tablet} and returns as its initial value.
 	 * 
 	 * @return tabId
 	 */
-	public int getTab() {
-		return tabId;
+	public Item getTab() {
+		return tablet;
 	}
 
 	/**
@@ -43,7 +53,7 @@ public enum TabData {
 	private final Position location;
 
 	/**
-	 * Gets the {@link #tabId} and returns as its initial value.
+	 * Gets the {@link #Position} and returns as its initial value.
 	 * 
 	 * @return location
 	 */
@@ -54,11 +64,11 @@ public enum TabData {
 	/**
 	 * TabData constructor
 	 * 
-	 * @param tabId
+	 * @param tablet
 	 * @param location
 	 */
-	private TabData(int tabId, Position location) {
-		this.tabId = tabId;
+	private TabData(final Item tablet, final Position location) {
+		this.tablet = tablet;
 		this.location = location;
 	}
 
@@ -70,10 +80,11 @@ public enum TabData {
 	/**
 	 * Gets the teleport tablet from the {@value #tab_set} stream.
 	 * 
-	 * @param tabId
-	 * @return tabId
+	 * @param tablet
+	 * @return tablet
 	 */
-	public static Optional<TabData> getTab(int tabId) {
-		return tab_set.stream().filter(Objects::nonNull).filter(tabs -> tabs.getTab() == tabId).findAny();
+	public static Optional<TabData> getTab(Item tablet) {
+		return tab_set.stream().filter(Objects::nonNull).filter(tabs -> tabs.getTab().getId() == tablet.getId())
+				.findAny();
 	}
 }
