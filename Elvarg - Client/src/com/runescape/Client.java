@@ -215,7 +215,65 @@ public class Client extends GameApplet {
 		}
 		return str1 + ":" + str2;
 	}
-
+	
+	/**
+	 * Draws information about our current target
+	 * during combat.
+	 */
+	public static void drawCombatBox(Mob mob) {
+		//Get health..
+		int currentHp = mob.currentHealth;
+		int maxHp = mob.maxHealth;
+		
+		//Make sure the mob isn't dead!
+		if(currentHp == 0) {
+			return;
+		}
+		
+		//Get name..
+		String name = null;
+		if(mob instanceof Player) {
+			name = ((Player)mob).name;
+		} else if(mob instanceof Npc) {
+			if(((Npc)mob).desc != null) {
+				name = ((Npc)mob).desc.name;
+			}
+		}
+		
+		//Make sure the mob has a name!
+		if(name == null) {
+			return;
+		}
+		
+		//Positioning..
+		int height = 50;
+		int width = 125;
+		int xPos = 7;
+		int yPos = 20;
+		
+		//Draw box ..
+		Rasterizer2D.drawTransparentBox(xPos, yPos, width, height, 000000, 50);
+		
+		//Draw name..
+		if(name != null) {
+			Client.instance.newSmallFont.drawCenteredString(name, xPos+(width/2), yPos + 12, 16777215, 0);
+		}
+		
+		//Draw health..
+		Client.instance.newBoldFont.drawCenteredString(currentHp + "/" + maxHp, xPos+(width/2), yPos + 30, 16777215, 0);
+		
+		//Draw red and green pixels..
+		
+		//Draw missing health
+		Rasterizer2D.drawBox(xPos + 2, yPos + 38, width - 4, 10, 11740160);
+		
+		//Draw existing health
+		int pixelsLength = (int) (((double) currentHp / (double) maxHp) * (width - 4));
+		if(pixelsLength > (width - 4)) {
+			pixelsLength = (width - 4);
+		}
+		Rasterizer2D.drawBox(xPos + 2, yPos + 38, pixelsLength, 10, 31744);
+	}
 
 	public static ScreenMode frameMode = ScreenMode.FIXED;
 	public static int frameWidth = 765;
@@ -2486,6 +2544,45 @@ public class Client extends GameApplet {
 							}
 						}
 					} catch (Exception e) {
+					}
+				}
+				//Drawing combat overlay..
+				if(obj instanceof Npc) {
+					Npc npc = ((Npc)obj);
+					if(localPlayer.interactingEntity == -1) {
+						
+						//Is the npc interacting with us?
+						//If we aren't interacting with others,
+						//show combat box.
+						if((npc.interactingEntity - 32768) == localPlayerIndex) {
+							drawCombatBox(npc);
+						}
+						
+					} else {
+						
+						//Are we interacting with the npc?
+						//Show combat box.
+						if(npc.index == localPlayer.interactingEntity) {
+							drawCombatBox(npc);
+						}
+					}
+				} else if(obj instanceof Player) {
+					Player player = ((Player)obj);
+					if(localPlayer.interactingEntity == -1) {
+						
+						//Is the player interacting with us?
+						//If we aren't interacting with others,
+						//show combat box.
+						if((player.interactingEntity - 32768) == localPlayerIndex) {
+							drawCombatBox(player);
+						}
+						
+					} else {
+						//Are we interacting with the player?
+						//Show combat box.
+						if(player.index == localPlayer.interactingEntity - 32768) {
+							drawCombatBox(player);
+						}
 					}
 				}
 				if (!Configuration.hitmarks554) {
