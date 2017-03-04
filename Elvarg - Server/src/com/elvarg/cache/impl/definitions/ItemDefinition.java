@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import com.elvarg.GameConstants;
-import com.elvarg.world.content.SkillManager;
+import com.elvarg.world.content.skills.SkillManager;
 import com.elvarg.world.model.container.impl.Equipment;
 
 /**

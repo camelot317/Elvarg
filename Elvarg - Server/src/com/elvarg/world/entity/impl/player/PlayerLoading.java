@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.elvarg.net.login.LoginResponses;
-import com.elvarg.world.content.SkillManager.Skills;
+import com.elvarg.world.content.skills.SkillManager.Skills;
 import com.elvarg.world.model.Item;
 import com.elvarg.world.model.MagicSpellbook;
 import com.elvarg.world.model.PlayerRights;

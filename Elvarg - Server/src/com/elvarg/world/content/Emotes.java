@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.elvarg.util.Misc;
+import com.elvarg.world.content.skills.SkillManager;
 import com.elvarg.world.entity.combat.CombatFactory;
 import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.Animation;

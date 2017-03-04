@@ -1,4 +1,4 @@
-package com.elvarg.world.content;
+package com.elvarg.world.content.skills;
 
 import com.elvarg.engine.task.Task;
 import com.elvarg.engine.task.TaskManager;
