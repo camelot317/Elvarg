@@ -20,6 +20,7 @@ import com.elvarg.world.model.teleportation.TeleportType;
 
 /**
  * This packet listener manages a button that the player has clicked upon.
+ * 
  * @author Gabriel Hannason
  */
 
@@ -29,29 +30,27 @@ public class ButtonClickPacketListener implements PacketListener {
 	public void handleMessage(Player player, Packet packet) {
 		int button = packet.readInt();
 
-		if(player.getRights().isStaff()) {
-			player.getPacketSender().sendConsoleMessage("Button: "+button);
+		if (player.getRights().isStaff()) {
+			player.getPacketSender().sendConsoleMessage("Button: " + button);
 		}
-		
-		if(handlers(player, button)) {
+
+		if (handlers(player, button)) {
 			return;
 		}
 
-		switch(button) {
-
+		switch (button) {
 
 		case LOGOUT:
-			if(player.canLogout()) {
+			if (player.canLogout()) {
 				player.logout();
 			} else {
 				player.getPacketSender().sendMessage("You cannot log out at the moment.");
 			}
 			break;
 
-
 		case TOGGLE_RUN_ENERGY_ORB:
 		case TOGGLE_RUN_ENERGY_SETTINGS:
-			if(player.getRunEnergy() > 0 && !player.busy()) {
+			if (player.getRunEnergy() > 0 && !player.busy()) {
 				player.setRunning(!player.isRunning());
 				player.getPacketSender().sendRunStatus();
 			} else {
@@ -60,7 +59,7 @@ public class ButtonClickPacketListener implements PacketListener {
 			break;
 
 		case OPEN_EQUIPMENT_SCREEN:
-			if(!player.busy()) {
+			if (!player.busy()) {
 				BonusManager.open(player);
 			} else {
 				player.getPacketSender().sendMessage("You cannot do that right now.");
@@ -68,32 +67,32 @@ public class ButtonClickPacketListener implements PacketListener {
 			break;
 
 		case OPEN_PRICE_CHECKER:
-			if(!player.busy()) {
+			if (!player.busy()) {
 				player.getPriceChecker().open();
 			} else {
 				player.getPacketSender().sendMessage("You cannot do that right now.");
 			}
 			break;
-			
+
 		case 17018:
 			player.getPacketSender().sendInterfaceRemoval();
 			break;
 		case PRICE_CHECKER_WITHDRAW_ALL:
 			player.getPriceChecker().withdrawAll();
 			break;
-			
+
 		case PRICE_CHECKER_DEPOSIT_ALL:
 			player.getPriceChecker().depositAll();
 			break;
-			
+
 		case OPEN_ITEMS_KEPT_ON_DEATH_SCREEN:
-			if(!player.busy()) {
+			if (!player.busy()) {
 				ItemsKeptOnDeath.open(player);
 			} else {
 				player.getPacketSender().sendMessage("You cannot do that right now.");
 			}
 			break;
-			
+
 		case TRADE_ACCEPT_BUTTON_1:
 		case TRADE_ACCEPT_BUTTON_2:
 			player.getTrading().acceptTrade();
@@ -106,8 +105,9 @@ public class ButtonClickPacketListener implements PacketListener {
 			break;
 
 		case DESTROY_ITEM:
-			if(player.getDestroyItem() != -1 && player.getInterfaceId() == 55) {
-				player.getInventory().delete(player.getDestroyItem(), player.getInventory().getAmount(player.getDestroyItem()));
+			if (player.getDestroyItem() != -1 && player.getInterfaceId() == 55) {
+				player.getInventory().delete(player.getDestroyItem(),
+						player.getInventory().getAmount(player.getDestroyItem()));
 			}
 			player.getPacketSender().sendInterfaceRemoval();
 			break;
@@ -117,23 +117,27 @@ public class ButtonClickPacketListener implements PacketListener {
 			break;
 
 		case HOME_TELEPORT_BUTTON:
-			TeleportHandler.teleport(player, GameConstants.DEFAULT_POSITION.copy().add(Misc.getRandom(4), Misc.getRandom(2)), TeleportType.NORMAL);
+			TeleportHandler.teleport(player,
+					GameConstants.DEFAULT_POSITION.copy().add(Misc.getRandom(4), Misc.getRandom(2)),
+					TeleportType.NORMAL);
 			break;
-			
+
 		case AUTOCAST_BUTTON_1:
 		case AUTOCAST_BUTTON_2:
-			player.getPacketSender().sendMessage("A spell can be autocast by simply right-clicking on it in your Magic spellbook and ").sendMessage("selecting the \"Autocast\" option.");
+			player.getPacketSender()
+					.sendMessage("A spell can be autocast by simply right-clicking on it in your Magic spellbook and ")
+					.sendMessage("selecting the \"Autocast\" option.");
 			break;
-			
+
 		case CLOSE_BUTTON_1:
 			player.getPacketSender().sendInterfaceRemoval();
 			break;
-			
+
 		case FIRST_DIALOGUE_OPTION_OF_FIVE:
 		case FIRST_DIALOGUE_OPTION_OF_FOUR:
 		case FIRST_DIALOGUE_OPTION_OF_THREE:
 		case FIRST_DIALOGUE_OPTION_OF_TWO:
-			if(player.getDialogueOptions() != null) {
+			if (player.getDialogueOptions() != null) {
 				player.getDialogueOptions().handleOption1(player);
 			}
 			break;
@@ -142,7 +146,7 @@ public class ButtonClickPacketListener implements PacketListener {
 		case SECOND_DIALOGUE_OPTION_OF_FOUR:
 		case SECOND_DIALOGUE_OPTION_OF_THREE:
 		case SECOND_DIALOGUE_OPTION_OF_TWO:
-			if(player.getDialogueOptions() != null) {
+			if (player.getDialogueOptions() != null) {
 				player.getDialogueOptions().handleOption2(player);
 			}
 			break;
@@ -150,53 +154,54 @@ public class ButtonClickPacketListener implements PacketListener {
 		case THIRD_DIALOGUE_OPTION_OF_FIVE:
 		case THIRD_DIALOGUE_OPTION_OF_FOUR:
 		case THIRD_DIALOGUE_OPTION_OF_THREE:
-			if(player.getDialogueOptions() != null) {
+			if (player.getDialogueOptions() != null) {
 				player.getDialogueOptions().handleOption3(player);
 			}
 			break;
 
 		case FOURTH_DIALOGUE_OPTION_OF_FIVE:
 		case FOURTH_DIALOGUE_OPTION_OF_FOUR:
-			if(player.getDialogueOptions() != null) {
+			if (player.getDialogueOptions() != null) {
 				player.getDialogueOptions().handleOption4(player);
 			}
 			break;
 
 		case FIFTH_DIALOGUE_OPTION_OF_FIVE:
-			if(player.getDialogueOptions() != null) {
+			if (player.getDialogueOptions() != null) {
 				player.getDialogueOptions().handleOption5(player);
 			}
 			break;
 		default:
-			//	player.getPacketSender().sendMessage("Player "+player.getUsername()+", click button: "+button);
+			// player.getPacketSender().sendMessage("Player
+			// "+player.getUsername()+", click button: "+button);
 			break;
 		}
 	}
 
 	public static boolean handlers(Player player, int button) {
-		if(PrayerHandler.togglePrayer(player, button)) {
+		if (PrayerHandler.togglePrayer(player, button)) {
 			return true;
 		}
-		if(Autocasting.toggleAutocast(player, button)) {
+		if (Autocasting.toggleAutocast(player, button)) {
 			return true;
 		}
-		if(WeaponInterfaces.changeCombatSettings(player, button)) {
+		if (WeaponInterfaces.changeCombatSettings(player, button)) {
 			BonusManager.update(player);
 			return true;
 		}
-		if(MagicClickSpells.handleSpell(player, button)) {
+		if (MagicClickSpells.handleSpell(player, button)) {
 			return true;
 		}
-		if(Bank.handleButton(player, button, 0)) {
+		if (Bank.handleButton(player, button, 0)) {
 			return true;
 		}
-		if(TeleportsInterface.handleButton(player, button)) {
+		if (TeleportsInterface.handleButton(player, button)) {
 			return true;
 		}
-		if(Emotes.doEmote(player, button)) {
+		if (Emotes.doEmote(player, button)) {
 			return true;
 		}
-		if(ClanChatManager.handleButton(player, button, 0)) {
+		if (ClanChatManager.handleButton(player, button, 0)) {
 			return true;
 		}
 		return false;
@@ -215,22 +220,22 @@ public class ButtonClickPacketListener implements PacketListener {
 	private static final int CANCEL_DESTROY_ITEM = 14176;
 	private static final int PRICE_CHECKER_WITHDRAW_ALL = 18255;
 	private static final int PRICE_CHECKER_DEPOSIT_ALL = 18252;
-	
-	//Magic spell buttons
+
+	// Magic spell buttons
 	private static final int HOME_TELEPORT_BUTTON = 39101;
 
-	//Autocast buttons
+	// Autocast buttons
 	private static final int AUTOCAST_BUTTON_1 = 349;
 	private static final int AUTOCAST_BUTTON_2 = 24111;
-	
-	//Trade buttons
+
+	// Trade buttons
 	private static final int TRADE_ACCEPT_BUTTON_1 = 3420;
 	private static final int TRADE_ACCEPT_BUTTON_2 = 3546;
-	
-	//Close buttons
+
+	// Close buttons
 	private static final int CLOSE_BUTTON_1 = 18247;
 
-	//Dialogues
+	// Dialogues
 	public static final int FIRST_DIALOGUE_OPTION_OF_FIVE = 2494;
 	public static final int SECOND_DIALOGUE_OPTION_OF_FIVE = 2495;
 	public static final int THIRD_DIALOGUE_OPTION_OF_FIVE = 2496;

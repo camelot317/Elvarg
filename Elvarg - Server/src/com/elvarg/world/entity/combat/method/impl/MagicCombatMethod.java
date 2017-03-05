@@ -7,8 +7,10 @@ import com.elvarg.world.entity.combat.method.CombatMethod;
 import com.elvarg.world.entity.impl.Character;
 import com.elvarg.world.model.Graphic;
 import com.elvarg.world.model.GraphicHeight;
+
 /**
  * The magic combat method.
+ * 
  * @author Gabriel Hannason
  */
 public class MagicCombatMethod implements CombatMethod {
@@ -22,22 +24,22 @@ public class MagicCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 3)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 3) };
 	}
 
 	@Override
 	public boolean canAttack(Character character, Character target) {
 
-		if(character.isNpc()) {
+		if (character.isNpc()) {
 			return true;
 		}
 
 		// Set the current spell to the autocast spell if it's null.
-		if(character.getCombat().getCastSpell() == null) {
+		if (character.getCombat().getCastSpell() == null) {
 			character.getCombat().setCastSpell(character.getCombat().getAutocastSpell());
 		}
 
-		//Character didn't have autocast spell either.
+		// Character didn't have autocast spell either.
 		if (character.getCombat().getCastSpell() == null) {
 			return false;
 		}
@@ -50,7 +52,7 @@ public class MagicCombatMethod implements CombatMethod {
 
 		CombatSpell spell = character.getCombat().getCastSpell();
 
-		if(spell != null) {
+		if (spell != null) {
 			spell.startCast(character, target);
 		}
 
@@ -59,7 +61,7 @@ public class MagicCombatMethod implements CombatMethod {
 	@Override
 	public int getAttackSpeed(Character character) {
 
-		if(character.getCombat().getPreviousCast() != null) {
+		if (character.getCombat().getPreviousCast() != null) {
 			return character.getCombat().getPreviousCast().getAttackSpeed();
 		}
 
@@ -68,7 +70,7 @@ public class MagicCombatMethod implements CombatMethod {
 
 	@Override
 	public int getAttackDistance(Character character) {
-		return 8;	
+		return 8;
 	}
 
 	@Override
@@ -78,14 +80,14 @@ public class MagicCombatMethod implements CombatMethod {
 	@Override
 	public void finished(Character character) {
 
-		//Reset the castSpell to autocastSpell
-		//Update previousCastSpell so effects can be handled.
+		// Reset the castSpell to autocastSpell
+		// Update previousCastSpell so effects can be handled.
 
 		final CombatSpell current = character.getCombat().getCastSpell();
 
 		character.getCombat().setCastSpell(null);
 
-		if(character.getCombat().getAutocastSpell() == null) {
+		if (character.getCombat().getAutocastSpell() == null) {
 			character.getCombat().reset();
 		}
 
@@ -99,22 +101,23 @@ public class MagicCombatMethod implements CombatMethod {
 		boolean accurate = hit.isAccurate();
 		int damage = hit.getTotalDamage();
 
-		if(attacker.getHitpoints() <= 0 || target.getHitpoints() <= 0) {
+		if (attacker.getHitpoints() <= 0 || target.getHitpoints() <= 0) {
 			return;
 		}
 
 		CombatSpell previousSpell = attacker.getCombat().getPreviousCast();
 
-		if(previousSpell != null) {
+		if (previousSpell != null) {
 
-			if(accurate) {
+			if (accurate) {
 
-				//Send proper end graphics for the spell because it was accurate
+				// Send proper end graphics for the spell because it was
+				// accurate
 				previousSpell.endGraphic().ifPresent(target::performGraphic);
 
 			} else {
 
-				//Send splash graphics for the spell because it wasn't accurate
+				// Send splash graphics for the spell because it wasn't accurate
 				target.performGraphic(SPLASH_GRAPHIC);
 			}
 

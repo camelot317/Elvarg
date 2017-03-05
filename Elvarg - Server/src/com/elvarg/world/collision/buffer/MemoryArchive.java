@@ -1,22 +1,19 @@
 package com.elvarg.world.collision.buffer;
 
-
 public class MemoryArchive {
 
 	private ByteStream cache;
 	private ByteStream index;
 	private static final int INDEX_DATA_CHUNK_SIZE = 12;
 
-	public MemoryArchive(ByteStream cache, ByteStream index)
-	{
+	public MemoryArchive(ByteStream cache, ByteStream index) {
 		this.cache = cache;
 		this.index = index;
 	}
 
-	public byte[] get(int dataIndex)
-	{
+	public byte[] get(int dataIndex) {
 		try {
-			if(index.length() < (dataIndex * INDEX_DATA_CHUNK_SIZE))
+			if (index.length() < (dataIndex * INDEX_DATA_CHUNK_SIZE))
 				return null;
 			index.setOffset(dataIndex * INDEX_DATA_CHUNK_SIZE);
 			long fileOffset = index.getLong();
@@ -24,19 +21,14 @@ public class MemoryArchive {
 			cache.setOffset(fileOffset);
 			byte[] buffer = cache.read(fileSize);
 			return buffer;
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}
 	}
 
-	public int contentSize()
-	{
+	public int contentSize() {
 		return index.length() / 12;
 	}
 
 }
-
-
-
-

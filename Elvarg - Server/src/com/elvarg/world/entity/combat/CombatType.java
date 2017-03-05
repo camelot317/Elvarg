@@ -7,10 +7,6 @@ package com.elvarg.world.entity.combat;
  * @author lare96
  */
 public enum CombatType {
-	
-    MELEE,
-    RANGED,
-    MAGIC,
-    DRAGON_FIRE,
-    MIXED;
+
+	MELEE, RANGED, MAGIC, DRAGON_FIRE, MIXED;
 }

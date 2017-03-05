@@ -23,8 +23,7 @@ import com.elvarg.world.model.PlayerRights;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 /**
- * @author Swiffy96
- * Thanks to lare96 for help with parallel updating system
+ * @author Swiffy96 Thanks to lare96 for help with parallel updating system
  */
 public class World {
 
@@ -38,31 +37,34 @@ public class World {
 	private static Phaser synchronizer = new Phaser(1);
 
 	/** A thread pool that will update players in parallel. */
-	private static ExecutorService updateExecutor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new ThreadFactoryBuilder().setNameFormat("UpdateThread").setPriority(Thread.MAX_PRIORITY).build());
+	private static ExecutorService updateExecutor = Executors.newFixedThreadPool(
+			Runtime.getRuntime().availableProcessors(),
+			new ThreadFactoryBuilder().setNameFormat("UpdateThread").setPriority(Thread.MAX_PRIORITY).build());
 
 	/** The queue of {@link Player}s waiting to be logged in. **/
 	private static Queue<Player> logins = new ConcurrentLinkedQueue<>();
 
-	/**The queue of {@link Player}s waiting to be logged out. **/
+	/** The queue of {@link Player}s waiting to be logged out. **/
 	private static Queue<Player> logouts = new ConcurrentLinkedQueue<>();
 
-	/**The queue of {@link Player}s waiting to be added to the game. **/
+	/** The queue of {@link Player}s waiting to be added to the game. **/
 	private static Queue<Player> playerAddQueue = new ConcurrentLinkedQueue<>();
 
-	/**The queue of {@link Player}s waiting to be removed from the game. **/
+	/** The queue of {@link Player}s waiting to be removed from the game. **/
 	private static Queue<Player> playerRemoveQueue = new ConcurrentLinkedQueue<>();
 
-	/**The queue of {@link NPC}s waiting to be added to the game. **/
+	/** The queue of {@link NPC}s waiting to be added to the game. **/
 	private static Queue<NPC> npcAddQueue = new ConcurrentLinkedQueue<>();
 
-	/**The queue of {@link NPC}s waiting to be removed from the game. **/
+	/** The queue of {@link NPC}s waiting to be removed from the game. **/
 	private static Queue<NPC> npcRemoveQueue = new ConcurrentLinkedQueue<>();
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/**
 	 * The world's players.
-	 * @return	All players this world holds.
+	 * 
+	 * @return All players this world holds.
 	 */
 	public static CharacterList<Player> getPlayers() {
 		return players;
@@ -70,7 +72,8 @@ public class World {
 
 	/**
 	 * The world's npcs.
-	 * @return	All npcs this world holds.
+	 * 
+	 * @return All npcs this world holds.
 	 */
 	public static CharacterList<NPC> getNpcs() {
 		return npcs;
@@ -102,7 +105,6 @@ public class World {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 	public static Player getPlayerByName(String username) {
 		Optional<Player> op = players.search(p -> p != null && p.getUsername().equals(Misc.formatText(username)));
 		return op.isPresent() ? op.get() : null;
@@ -118,11 +120,16 @@ public class World {
 	}
 
 	public static void sendStaffMessage(String message) {
-		players.stream().filter(p -> p != null && (p.getRights() == PlayerRights.OWNER || p.getRights() == PlayerRights.DEVELOPER || p.getRights() == PlayerRights.ADMINISTRATOR || p.getRights() == PlayerRights.MODERATOR || p.getRights() == PlayerRights.SUPPORT)).forEach(p -> p.getPacketSender().sendMessage(message));
+		players.stream()
+				.filter(p -> p != null && (p.getRights() == PlayerRights.OWNER
+						|| p.getRights() == PlayerRights.DEVELOPER || p.getRights() == PlayerRights.ADMINISTRATOR
+						|| p.getRights() == PlayerRights.MODERATOR || p.getRights() == PlayerRights.SUPPORT))
+				.forEach(p -> p.getPacketSender().sendMessage(message));
 	}
 
 	public static void updateServerTime() {
-		players.forEach(p -> p.getPacketSender().sendString(39161, "@or2@Server time: @or2@[ @yel@"+Misc.getCurrentServerTime()+"@or2@ ]"));
+		players.forEach(p -> p.getPacketSender().sendString(39161,
+				"@or2@Server time: @or2@[ @yel@" + Misc.getCurrentServerTime() + "@or2@ ]"));
 	}
 
 	public static void savePlayers() {
@@ -147,26 +154,26 @@ public class World {
 			if (player == null || amount >= GameConstants.QUEUED_LOOP_THRESHOLD) {
 				break;
 			}
-			
-			boolean force_logout = Elvarg.isUpdating() || 
-					World.getLogoutQueue().contains(player) && player.getLogoutTimer().elapsed(90000);
-			
-			if(player.canLogout() || force_logout) {
+
+			boolean force_logout = Elvarg.isUpdating()
+					|| World.getLogoutQueue().contains(player) && player.getLogoutTimer().elapsed(90000);
+
+			if (player.canLogout() || force_logout) {
 				player.onLogout();
 				$it.remove();
 				amount++;
 			}
 		}
 
-		//Register queued players
+		// Register queued players
 		for (amount = 0; amount < GameConstants.QUEUED_LOOP_THRESHOLD; amount++) {
 			Player player = playerAddQueue.poll();
 			if (player == null)
 				break;
 			getPlayers().add(player);
 		}
-		
-		//Deregister queued players
+
+		// Deregister queued players
 		for (amount = 0; amount < GameConstants.QUEUED_LOOP_THRESHOLD; amount++) {
 			Player player = playerRemoveQueue.poll();
 			if (player == null)
@@ -174,7 +181,7 @@ public class World {
 			getPlayers().remove(player);
 		}
 
-		//Register queued npcs
+		// Register queued npcs
 		for (amount = 0; amount < GameConstants.QUEUED_LOOP_THRESHOLD; amount++) {
 			NPC npc = npcAddQueue.poll();
 			if (npc == null)
@@ -182,7 +189,7 @@ public class World {
 			getNpcs().add(npc);
 		}
 
-		//Deregister queued npcs
+		// Deregister queued npcs
 		for (amount = 0; amount < GameConstants.QUEUED_LOOP_THRESHOLD; amount++) {
 			NPC npc = npcRemoveQueue.poll();
 			if (npc == null)
@@ -190,14 +197,13 @@ public class World {
 			getNpcs().remove(npc);
 		}
 
-		//Shuffle them
+		// Shuffle them
 		players.shuffle();
 		npcs.shuffle();
-		
-		
-		//Update them
-		//.....
-		
+
+		// Update them
+		// .....
+
 		// First we construct the update sequences.
 		UpdateSequence<Player> playerUpdate = new PlayerUpdateSequence(synchronizer, updateExecutor);
 		UpdateSequence<NPC> npcUpdate = new NpcUpdateSequence();
@@ -214,12 +220,11 @@ public class World {
 		// Then we execute post-updating code.
 		players.forEach(playerUpdate::executePostUpdate);
 		npcs.forEach(npcUpdate::executePostUpdate);
-		
-		
-		//Objects updating
+
+		// Objects updating
 		ObjectHandler.process();
 
-		//Misc updating
+		// Misc updating
 		ServerFeed.updateEntries();
 	}
 }

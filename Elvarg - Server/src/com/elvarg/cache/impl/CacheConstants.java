@@ -89,21 +89,17 @@ public class CacheConstants {
 	 * Represents the prefix of this {@link CacheLoader}s index files.
 	 */
 	public static final String INDEX_PREFIX = "main_file_cache.idx";
-	
+
 	/**
 	 * Represents the file directory path to the cache.
 	 */
 	public static final String CACHE_BASE_DIR = "./data/cache/";
-	
+
 	/**
 	 * The preload files.
 	 * 
-	 * Client will download these after
-	 * downloading crcs.
+	 * Client will download these after downloading crcs.
 	 */
-	public static final String[] PRELOAD_FILES = {
-			"sprites.idx", "sprites.dat", 
-			"obj.idx", "obj.dat"
-	};
-	
+	public static final String[] PRELOAD_FILES = { "sprites.idx", "sprites.dat", "obj.idx", "obj.dat" };
+
 }

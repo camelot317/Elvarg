@@ -6,33 +6,33 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
 /**
  * A class which manages the pool of request workers.
+ * 
  * @author Graham
  */
 public final class RequestWorkerPool {
-	
+
 	/**
 	 * The number of threads per request type.
 	 */
 	private static final int THREADS_PER_REQUEST_TYPE = Runtime.getRuntime().availableProcessors();
-	
+
 	/**
 	 * The number of request types.
 	 */
 	private static final int REQUEST_TYPES = 3;
-	
+
 	/**
 	 * The executor service.
 	 */
 	private final ExecutorService service;
-	
+
 	/**
 	 * A list of request workers.
 	 */
 	private final List<RequestWorker<?>> workers = new ArrayList<RequestWorker<?>>();
-	
+
 	/**
 	 * The request worker pool.
 	 */
@@ -43,7 +43,9 @@ public final class RequestWorkerPool {
 
 	/**
 	 * Starts the threads in the pool.
-	 * @throws Exception if the file system cannot be created.
+	 * 
+	 * @throws Exception
+	 *             if the file system cannot be created.
 	 */
 	public void start() throws Exception {
 		File base = new File("./cache/");
@@ -52,12 +54,12 @@ public final class RequestWorkerPool {
 			workers.add(new OnDemandRequestWorker());
 			workers.add(new HttpRequestWorker());
 		}
-		
+
 		for (RequestWorker<?> worker : workers) {
 			service.submit(worker);
-		} 
+		}
 	}
-	
+
 	/**
 	 * Stops the threads in the pool.
 	 */
@@ -65,7 +67,7 @@ public final class RequestWorkerPool {
 		for (RequestWorker<?> worker : workers) {
 			worker.stop();
 		}
-		
+
 		service.shutdownNow();
 	}
 

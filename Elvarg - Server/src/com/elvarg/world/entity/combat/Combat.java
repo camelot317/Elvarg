@@ -20,8 +20,8 @@ import com.elvarg.world.model.DamageDealer;
 import com.elvarg.world.model.SecondsTimer;
 
 /**
- * My entity-based combat system.
- * The main class of the system.
+ * My entity-based combat system. The main class of the system.
+ * 
  * @author Swiffy
  */
 
@@ -33,89 +33,95 @@ public class Combat {
 	}
 
 	public void attack(Character target) {
-		//Set new target
-		setTarget(target); 
+		// Set new target
+		setTarget(target);
 
-		//Set facing
-		if(character.getInteractingEntity() != target) {
+		// Set facing
+		if (character.getInteractingEntity() != target) {
 			character.setEntityInteraction(target);
 		}
 
-		//Set following
+		// Set following
 		character.getMovementQueue().setFollowCharacter(target);
 	}
 
 	public void onTick() {
 
-		//Process the hit queue
+		// Process the hit queue
 		hitQueue.process();
 
-		//Decrease attack timer
-		if(attackTimer > 0) {
+		// Decrease attack timer
+		if (attackTimer > 0) {
 			attackTimer--;
 		}
 
-		//Handle attacking
+		// Handle attacking
 		doCombat();
 
-		//Reset attacker if we haven't been attacked in 5 seconds (when the hp bar goes away).
-		if(lastAttack.elapsed(5000)) {
+		// Reset attacker if we haven't been attacked in 5 seconds (when the hp
+		// bar goes away).
+		if (lastAttack.elapsed(5000)) {
 			setUnderAttack(null);
 		}
 	}
 
 	/**
-	 * Actually handles the combat.
-	 * Attacking and following the target.
+	 * Actually handles the combat. Attacking and following the target.
 	 */
 	public void doCombat() {
 
-		if(target != null) {
+		if (target != null) {
 
-			//Fetch the combat method the character will be attacking with
+			// Fetch the combat method the character will be attacking with
 			method = CombatFactory.getMethod(character);
 
-			//Follow target
+			// Follow target
 			character.getMovementQueue().setFollowCharacter(target);
 
-			//Check if the character can reach the target before attempting attack
-			if(CombatFactory.canReach(character, method, target)) {
+			// Check if the character can reach the target before attempting
+			// attack
+			if (CombatFactory.canReach(character, method, target)) {
 
-				//Make sure attack timer is <= 0
-				if(attackTimer <= 0 || disregardDelay) {
+				// Make sure attack timer is <= 0
+				if (attackTimer <= 0 || disregardDelay) {
 
-					//Check if the character can perform the attack
-					if(CombatFactory.canAttack(character, method, target)) {
+					// Check if the character can perform the attack
+					if (CombatFactory.canAttack(character, method, target)) {
 
-						//Face target
-						if(character.getInteractingEntity() != target) {
+						// Face target
+						if (character.getInteractingEntity() != target) {
 							character.setEntityInteraction(target);
 						}
 
-						//Do animation
+						// Do animation
 						method.startAnimation(character);
 
-						//Create a new {QueueableHit} using the player's combat type (melee/range/magic)
+						// Create a new {QueueableHit} using the player's combat
+						// type (melee/range/magic)
 						QueueableHit[] hits = method.fetchDamage(character, target);
-						if(hits == null)
+						if (hits == null)
 							return;
 
-						//Perform the abstract method "onQueueAdd" before adding the hit for the target
+						// Perform the abstract method "onQueueAdd" before
+						// adding the hit for the target
 						method.onQueueAdd(character, target);
 
-						//Put all of the {QueueableHit} in the target's HitQueue
-						//And also do other things, such as reward attacker experience
-						//If they're a player.
-						for(QueueableHit hit : hits) {
+						// Put all of the {QueueableHit} in the target's
+						// HitQueue
+						// And also do other things, such as reward attacker
+						// experience
+						// If they're a player.
+						for (QueueableHit hit : hits) {
 							CombatFactory.queueHit(hit);
 						}
 
-						//Let the method know we finished the attack
-						//And perform final actions.
-						//Example: After attack for magic, reset spell if player is not autocasting.
+						// Let the method know we finished the attack
+						// And perform final actions.
+						// Example: After attack for magic, reset spell if
+						// player is not autocasting.
 						method.finished(character);
 
-						//Reset attack timer
+						// Reset attack timer
 						attackTimer = method.getAttackSpeed(character);
 						disregardDelay = false;
 					}
@@ -124,16 +130,15 @@ public class Combat {
 		}
 	}
 
-
 	public void reset() {
 
-		if(target != null) {
+		if (target != null) {
 
-			if(character.getInteractingEntity() == target) {
+			if (character.getInteractingEntity() == target) {
 				character.setEntityInteraction(null);
 			}
 
-			if(character.getMovementQueue().getFollowCharacter() == target) {
+			if (character.getMovementQueue().getFollowCharacter() == target) {
 				character.getMovementQueue().setFollowCharacter(null);
 			}
 
@@ -156,8 +161,8 @@ public class Combat {
 			return;
 		}
 
-		if(this.character.isNpc()) {
-			//((NPC)character).setFetchNewDamageMap(true);
+		if (this.character.isNpc()) {
+			// ((NPC)character).setFetchNewDamageMap(true);
 		}
 
 		Player player = (Player) entity;
@@ -211,7 +216,7 @@ public class Combat {
 				continue;
 			}
 
-			if(ignores != null && ignores.contains(player.getUsername())) {
+			if (ignores != null && ignores.contains(player.getUsername())) {
 				continue;
 			}
 
@@ -235,59 +240,59 @@ public class Combat {
 		return damageMap.containsKey(player);
 	}
 
-	//The user's attack timer
+	// The user's attack timer
 	private int attackTimer;
 
-	//Should we disregard attack timers?
+	// Should we disregard attack timers?
 	private boolean disregardDelay;
 
-	//The user's HitQueue
+	// The user's HitQueue
 	private HitQueue hitQueue;
 
-	//The user's damage map
+	// The user's damage map
 	private Map<Player, HitDamageCache> damageMap = new HashMap<>();
 
-	//The character
+	// The character
 	private Character character;
 
-	//The character's current target
+	// The character's current target
 	private Character target;
 
-	//The last person who attacked the character this instance belongs to.
+	// The last person who attacked the character this instance belongs to.
 	private Character attacker;
 
-	//The timer of the last attack which occured
+	// The timer of the last attack which occured
 	private Stopwatch lastAttack = new Stopwatch();
 
-	//The last combat method used
+	// The last combat method used
 	private CombatMethod method;
 
-	//Fight type
+	// Fight type
 	private FightType fightType = FightType.UNARMED_PUNCH;
 
-	//WeaponInterface
+	// WeaponInterface
 	private WeaponInterface weapon;
 
-	//Autoretaliate
+	// Autoretaliate
 	private boolean autoRetaliate;
 
-	//Ranged data
+	// Ranged data
 	public RangedWeaponData rangeWeaponData;
 	public AmmunitionData rangeAmmoData;
 
-	//Magic data
+	// Magic data
 	private CombatSpell castSpell;
 	private CombatSpell autoCastSpell;
 	private CombatSpell previousCast;
 
-	//Timers
+	// Timers
 	private SecondsTimer poisonImmunityTimer = new SecondsTimer();
 	private SecondsTimer fireImmunityTimer = new SecondsTimer();
 	private SecondsTimer teleblockTimer = new SecondsTimer();
 	private SecondsTimer prayerBlockTimer = new SecondsTimer();
 	private SecondsTimer freezeTimer = new SecondsTimer();
 
-	//private int freezeTimer;
+	// private int freezeTimer;
 
 	/** Getters and setters **/
 
@@ -332,7 +337,6 @@ public class Combat {
 		return castSpell;
 	}
 
-
 	public void setCastSpell(CombatSpell castSpell) {
 		this.castSpell = castSpell;
 	}
@@ -340,7 +344,6 @@ public class Combat {
 	public CombatSpell getAutocastSpell() {
 		return autoCastSpell;
 	}
-
 
 	public void setAutocastSpell(CombatSpell autoCastSpell) {
 		this.autoCastSpell = autoCastSpell;
@@ -401,7 +404,7 @@ public class Combat {
 	public SecondsTimer getFireImmunityTimer() {
 		return fireImmunityTimer;
 	}
-	
+
 	public SecondsTimer getTeleBlockTimer() {
 		return teleblockTimer;
 	}

@@ -19,6 +19,7 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 
 /**
  * A worker which services HTTP requests.
+ * 
  * @author Graham
  */
 public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
@@ -27,7 +28,7 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 	 * The value of the server header.
 	 */
 	private static final String SERVER_IDENTIFIER = "JAGeX/3.1";
-	
+
 	/**
 	 * The directory with web files.
 	 */
@@ -38,7 +39,6 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 	 */
 	private static final Charset CHARACTER_SET = Charset.forName("ISO-8859-1");
 
-
 	@Override
 	protected ChannelRequest<HttpRequest> nextRequest() throws InterruptedException {
 		return RequestDispatcher.nextHttpRequest();
@@ -48,12 +48,12 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 	protected void service(Channel channel, HttpRequest request) throws IOException {
 		String path = request.uri();
 		ByteBuf buf = ResourceRequester.request(path);
-				
+
 		ByteBuf wrappedBuf;
 		HttpResponseStatus status = HttpResponseStatus.OK;
-		
+
 		String mimeType = "application/octet-stream";
-		
+
 		if (buf == null) {
 			File f = new File(WWW_DIRECTORY, path);
 			URI target = f.toURI().normalize();
@@ -88,30 +88,33 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 		} else {
 			wrappedBuf = Unpooled.wrappedBuffer(buf);
 		}
-		
+
 		HttpResponse resp = new DefaultHttpResponse(request.protocolVersion(), status);
-		
+
 		/*
-		resp.headers().setHeader("Date", new Date());
-		resp.headers().setHeader("Server", SERVER_IDENTIFIER);
-		resp.headers().setHeader("Content-type", mimeType + ", charset=" + CHARACTER_SET.name());
-		resp.headers().setHeader("Cache-control", "no-cache");
-		resp.headers().setHeader("Pragma", "no-cache");
-		resp.headers().setHeader("Expires", new Date(0));
-		resp.headers().setHeader("Connection", "close");
-		resp.headers().setHeader("Content-length", wrappedBuf.readableBytes());
-		resp.headers().setChunked(false);
-		resp.headers().setContent(wrappedBuf);
-		*/
-		
+		 * resp.headers().setHeader("Date", new Date());
+		 * resp.headers().setHeader("Server", SERVER_IDENTIFIER);
+		 * resp.headers().setHeader("Content-type", mimeType + ", charset=" +
+		 * CHARACTER_SET.name()); resp.headers().setHeader("Cache-control",
+		 * "no-cache"); resp.headers().setHeader("Pragma", "no-cache");
+		 * resp.headers().setHeader("Expires", new Date(0));
+		 * resp.headers().setHeader("Connection", "close");
+		 * resp.headers().setHeader("Content-length",
+		 * wrappedBuf.readableBytes()); resp.headers().setChunked(false);
+		 * resp.headers().setContent(wrappedBuf);
+		 */
+
 		channel.writeAndFlush(resp).addListener(ChannelFutureListener.CLOSE);
 	}
 
 	/**
 	 * Reads a file.
-	 * @param f The file.
+	 * 
+	 * @param f
+	 *            The file.
 	 * @return The channel buffer.
-	 * @throws IOException if an I/O error occurs.
+	 * @throws IOException
+	 *             if an I/O error occurs.
 	 */
 	private ByteBuf readFile(File f) throws IOException {
 		RandomAccessFile raf = new RandomAccessFile(f, "r");
@@ -126,7 +129,9 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 
 	/**
 	 * Gets the MIME type of a file by its name.
-	 * @param name The file name.
+	 * 
+	 * @param name
+	 *            The file name.
 	 * @return The MIME type.
 	 */
 	private String getMimeType(String name) {
@@ -150,15 +155,18 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 
 	/**
 	 * Creates an error page.
-	 * @param status The HTTP status.
-	 * @param description The error description.
+	 * 
+	 * @param status
+	 *            The HTTP status.
+	 * @param description
+	 *            The error description.
 	 * @return The error page as a buffer.
 	 */
 	private ByteBuf createErrorPage(HttpResponseStatus status, String description) {
 		String title = status.code() + " " + status.reasonPhrase();
-		
+
 		StringBuilder bldr = new StringBuilder();
-		
+
 		bldr.append("<!DOCTYPE html><html><head><title>");
 		bldr.append(title);
 		bldr.append("</title></head><body><h1>");
@@ -168,7 +176,7 @@ public final class HttpRequestWorker extends RequestWorker<HttpRequest> {
 		bldr.append("</p><hr /><address>");
 		bldr.append(SERVER_IDENTIFIER);
 		bldr.append(" Server</address></body></html>");
-		
+
 		return Unpooled.copiedBuffer(bldr.toString(), Charset.defaultCharset());
 	}
 

@@ -22,22 +22,23 @@ public abstract class CombatSpell extends Spell {
 
 		int castAnimation = -1;
 
-		NPC npc = cast.isNpc() ? ((NPC)cast) : null;
-		/*if(npc != null) {
-			if(npc.getId() == 3496 || npc.getId() == 6278 || npc.getId() == 2000 || npc.getId() == 109 || npc.getId() == 3580 || npc.getId() == 2007) {
-				castAnimation = npc.getDefinition().getAttackAnim();
-			}
-		}*/
+		NPC npc = cast.isNpc() ? ((NPC) cast) : null;
+		/*
+		 * if(npc != null) { if(npc.getId() == 3496 || npc.getId() == 6278 ||
+		 * npc.getId() == 2000 || npc.getId() == 109 || npc.getId() == 3580 ||
+		 * npc.getId() == 2007) { castAnimation =
+		 * npc.getDefinition().getAttackAnim(); } }
+		 */
 
-		if(castAnimation().isPresent() && castAnimation == -1) {
+		if (castAnimation().isPresent() && castAnimation == -1) {
 			castAnimation().ifPresent(cast::performAnimation);
 		} else {
 			cast.performAnimation(new Animation(castAnimation));
 		}
 
 		// Then send the starting graphic.
-		if(npc != null) {
-			if(npc.getId() != 2000 && npc.getId() != 109 && npc.getId() != 3580 && npc.getId() != 2007) {
+		if (npc != null) {
+			if (npc.getId() != 2000 && npc.getId() != 109 && npc.getId() != 3580 && npc.getId() != 2007) {
 				startGraphic().ifPresent(cast::performGraphic);
 			}
 		} else {
@@ -46,7 +47,7 @@ public abstract class CombatSpell extends Spell {
 
 		// Finally send the projectile after two ticks.
 		castProjectile(cast, castOn).ifPresent(g -> {
-			//g.sendProjectile();
+			// g.sendProjectile();
 			TaskManager.submit(new Task(2, cast, false) {
 				@Override
 				public void execute() {
@@ -56,19 +57,19 @@ public abstract class CombatSpell extends Spell {
 			});
 		});
 	}
-	
+
 	public int getAttackSpeed() {
 		int speed = 5;
 		final CombatSpell spell = this;
-		if(spell instanceof CombatAncientSpell) {
-						
-			if(spell == CombatSpells.SMOKE_RUSH.getSpell() || spell == CombatSpells.SHADOW_RUSH.getSpell()
+		if (spell instanceof CombatAncientSpell) {
+
+			if (spell == CombatSpells.SMOKE_RUSH.getSpell() || spell == CombatSpells.SHADOW_RUSH.getSpell()
 					|| spell == CombatSpells.BLOOD_RUSH.getSpell() || spell == CombatSpells.ICE_RUSH.getSpell()
 					|| spell == CombatSpells.SMOKE_BLITZ.getSpell() || spell == CombatSpells.SHADOW_BLITZ.getSpell()
 					|| spell == CombatSpells.BLOOD_BLITZ.getSpell() || spell == CombatSpells.ICE_BLITZ.getSpell()) {
 				speed = 4;
 			}
-			
+
 		}
 		return speed;
 	}
@@ -79,6 +80,7 @@ public abstract class CombatSpell extends Spell {
 	 * @return the ID of the spell, or <tt>-1</tt> if there is no ID for this
 	 *         spell.
 	 */
+	@Override
 	public abstract int spellId();
 
 	/**
@@ -112,8 +114,7 @@ public abstract class CombatSpell extends Spell {
 	 * 
 	 * @return the projectile played when this spell is cast.
 	 */
-	public abstract Optional<Projectile> castProjectile(Character cast,
-			Character castOn);
+	public abstract Optional<Projectile> castProjectile(Character cast, Character castOn);
 
 	/**
 	 * The ending graphic played when the spell hits the victim.
@@ -134,6 +135,5 @@ public abstract class CombatSpell extends Spell {
 	 * @param damage
 	 *            the amount of damage inflicted by this spell.
 	 */
-	public abstract void finishCast(Character cast, Character castOn,
-			boolean accurate, int damage);
+	public abstract void finishCast(Character cast, Character castOn, boolean accurate, int damage);
 }

@@ -26,11 +26,11 @@ public class Stopwatch {
 	public boolean elapsed(long time) {
 		return elapsed() >= time;
 	}
-	
+
 	public long getTime() {
 		return time;
 	}
-	
+
 	public Stopwatch() {
 		time = 0;
 	}

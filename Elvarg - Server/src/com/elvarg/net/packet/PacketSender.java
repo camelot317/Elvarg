@@ -19,8 +19,8 @@ import com.elvarg.world.model.container.ItemContainer;
 import com.elvarg.world.model.container.impl.Bank;
 
 /**
- * This class manages making the packets that will be sent (when called upon) onto
- * the associated player's client.
+ * This class manages making the packets that will be sent (when called upon)
+ * onto the associated player's client.
  * 
  * @author relex lawl & Gabbe
  */
@@ -29,6 +29,7 @@ public class PacketSender {
 
 	/**
 	 * Sends information about the player to the client.
+	 * 
 	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendDetails() {
@@ -40,10 +41,10 @@ public class PacketSender {
 	}
 
 	/**
-	 * Sends the map region a player is located in and also
-	 * sets the player's first step position of said region as their
-	 * {@code lastKnownRegion}.
-	 * @return	The PacketSender instance.
+	 * Sends the map region a player is located in and also sets the player's
+	 * first step position of said region as their {@code lastKnownRegion}.
+	 * 
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendMapRegion() {
 		player.setRegionChange(true).setAllowRegionChangePacket(true);
@@ -57,7 +58,8 @@ public class PacketSender {
 
 	/**
 	 * Sends the logout packet for the player.
-	 * @return	The PacketSender instance.
+	 * 
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendLogout() {
 		PacketBuilder out = new PacketBuilder(109);
@@ -73,10 +75,14 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
+
 	/**
-	 * Sets the world's system update time, once timer is 0, everyone will be disconnected.
-	 * @param time	The amount of seconds in which world will be updated in.
-	 * @return		The PacketSender instance.
+	 * Sets the world's system update time, once timer is 0, everyone will be
+	 * disconnected.
+	 * 
+	 * @param time
+	 *            The amount of seconds in which world will be updated in.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendSystemUpdate(int time) {
 		PacketBuilder out = new PacketBuilder(114);
@@ -108,8 +114,10 @@ public class PacketSender {
 
 	/**
 	 * Sends a game message to a player in the server.
-	 * @param message	The message they will receive in chat box.
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param message
+	 *            The message they will receive in chat box.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendMessage(String message) {
 		PacketBuilder out = new PacketBuilder(253);
@@ -117,11 +125,13 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	/**
 	 * Sends a clan message to a player in the server.
-	 * @param message	The message they will receive in chat box.
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param message
+	 *            The message they will receive in chat box.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendClanMessage(String message) {
 		PacketBuilder out = new PacketBuilder(252);
@@ -130,14 +140,15 @@ public class PacketSender {
 		return this;
 	}
 
-
 	/**
 	 * Sends skill information onto the client, to calculate things such as
 	 * constitution, prayer and summoning orb and other configurations.
-	 * @param skill		The skill being sent.
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param skill
+	 *            The skill being sent.
+	 * @return The PacketSender instance.
 	 */
-	public PacketSender sendSkill(Skill skill) {		
+	public PacketSender sendSkill(Skill skill) {
 		PacketBuilder out = new PacketBuilder(134);
 		out.put(skill.ordinal());
 		out.putInt(player.getSkillManager().getCurrentLevel(skill));
@@ -149,9 +160,12 @@ public class PacketSender {
 
 	/**
 	 * Sends a configuration button's state.
-	 * @param configId	The id of the configuration button.
-	 * @param state		The state to set it to.
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param configId
+	 *            The id of the configuration button.
+	 * @param state
+	 *            The state to set it to.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendConfig(int id, int state) {
 		PacketBuilder out = new PacketBuilder(36);
@@ -162,10 +176,13 @@ public class PacketSender {
 	}
 
 	/**
-	 * Sends a interface child's toggle. 
-	 * @param id		The id of the child.
-	 * @param state		The state to set it to.
-	 * @return			The PacketSender instance.
+	 * Sends a interface child's toggle.
+	 * 
+	 * @param id
+	 *            The id of the child.
+	 * @param state
+	 *            The state to set it to.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendToggle(int id, int state) {
 		PacketBuilder out = new PacketBuilder(87);
@@ -176,11 +193,16 @@ public class PacketSender {
 	}
 
 	/**
-	 * Sends the state in which the player has their chat options, such as public, private, friends only.
-	 * @param publicChat	The state of their public chat.
-	 * @param privateChat	The state of their private chat.
-	 * @param tradeChat		The state of their trade chat.
-	 * @return				The PacketSender instance.
+	 * Sends the state in which the player has their chat options, such as
+	 * public, private, friends only.
+	 * 
+	 * @param publicChat
+	 *            The state of their public chat.
+	 * @param privateChat
+	 *            The state of their private chat.
+	 * @param tradeChat
+	 *            The state of their trade chat.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendChatOptions(int publicChat, int privateChat, int tradeChat) {
 		PacketBuilder out = new PacketBuilder(206);
@@ -224,7 +246,7 @@ public class PacketSender {
 
 	public PacketSender sendShowClanChatOptions(boolean show) {
 		PacketBuilder out = new PacketBuilder(115);
-		out.put(show ? 1 : 0); //0 = no right click options
+		out.put(show ? 1 : 0); // 0 = no right click options
 		player.getSession().write(out);
 		return this;
 	}
@@ -318,21 +340,19 @@ public class PacketSender {
 		return this;
 	}
 
-	/*public PacketSender sendBlinkingHint(String title, String information, int x, int y, int speed, int pause, int type, final int time) {
-		player.getSession().queueMessage(new PacketBuilder(179).putString(title).putString(information).putShort(x).putShort(y).put(speed).put(pause).put(type));
-		if(type > 0) {
-			TaskManager.submit(new Task(time, player, false) {
-				@Override
-				public void execute() {
-					player.getPacketSender().sendBlinkingHint("", "", 0, 0, 0, 0, -1, 0);
-					stop();
-				}
-			});
-		}
-		return this;
-	}
+	/*
+	 * public PacketSender sendBlinkingHint(String title, String information,
+	 * int x, int y, int speed, int pause, int type, final int time) {
+	 * player.getSession().queueMessage(new
+	 * PacketBuilder(179).putString(title).putString(information).putShort(x).
+	 * putShort(y).put(speed).put(pause).put(type)); if(type > 0) {
+	 * TaskManager.submit(new Task(time, player, false) {
+	 * 
+	 * @Override public void execute() {
+	 * player.getPacketSender().sendBlinkingHint("", "", 0, 0, 0, 0, -1, 0);
+	 * stop(); } }); } return this; }
 	 */
-	public PacketSender sendInterfaceAnimation(int interfaceId,  Animation animation) {
+	public PacketSender sendInterfaceAnimation(int interfaceId, Animation animation) {
 		PacketBuilder out = new PacketBuilder(200);
 		out.putShort(interfaceId);
 		out.putShort(animation.getId());
@@ -357,11 +377,11 @@ public class PacketSender {
 	}
 
 	public PacketSender sendTabs() {
-		for(int i = 0; i < GameConstants.TAB_INTERFACES.length; i++) {
+		for (int i = 0; i < GameConstants.TAB_INTERFACES.length; i++) {
 			int tab = GameConstants.TAB_INTERFACES[i][0];
 			int interface_ = GameConstants.TAB_INTERFACES[i][1];
-			
-			if(tab == 6) {
+
+			if (tab == 6) {
 				interface_ = player.getSpellbook().getInterfaceId();
 			}
 			sendTabInterface(tab, interface_);
@@ -384,7 +404,7 @@ public class PacketSender {
 	}
 
 	public PacketSender sendChatboxInterface(int id) {
-		if(player.getInterfaceId() <= 0) {
+		if (player.getInterfaceId() <= 0) {
 			player.setInterfaceId(55);
 		}
 		PacketBuilder out = new PacketBuilder(164);
@@ -411,7 +431,8 @@ public class PacketSender {
 		return this;
 	}
 
-	public PacketSender sendCameraShake(int verticalAmount, int verticalSpeed, int horizontalAmount, int horizontalSpeed) {
+	public PacketSender sendCameraShake(int verticalAmount, int verticalSpeed, int horizontalAmount,
+			int horizontalSpeed) {
 		PacketBuilder out = new PacketBuilder(35);
 		out.put(verticalAmount);
 		out.put(verticalSpeed);
@@ -446,17 +467,17 @@ public class PacketSender {
 	}
 
 	public PacketSender sendInterfaceRemoval() {
-		
-		if(player.getStatus() == PlayerStatus.BANKING) {
-			if(player.isSearchingBank()) {
+
+		if (player.getStatus() == PlayerStatus.BANKING) {
+			if (player.isSearchingBank()) {
 				Bank.exitSearch(player, false);
 			}
-		} else if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+		} else if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
 			player.getPriceChecker().withdrawAll();
-		} else if(player.getStatus() == PlayerStatus.TRADING) {
+		} else if (player.getStatus() == PlayerStatus.TRADING) {
 			player.getTrading().closeTrade();
-		}		
-		
+		}
+
 		player.setStatus(PlayerStatus.NONE);
 		player.setEnterSyntax(null);
 		player.setDestroyItem(-1);
@@ -473,7 +494,7 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendInterfaceSet(int interfaceId, int sidebarInterfaceId) {
 		PacketBuilder out = new PacketBuilder(248);
 		out.putShort(interfaceId, ValueType.A);
@@ -484,50 +505,49 @@ public class PacketSender {
 	}
 
 	public PacketSender sendItemContainer(ItemContainer container, int interfaceId) {
-	
+
 		PacketBuilder out = new PacketBuilder(53);
-		
+
 		out.putInt(interfaceId);
 		out.putShort(container.capacity());
-		
-		for (Item item: container.getItems()) {
-			if(item == null || item.getAmount() <= 0) {
+
+		for (Item item : container.getItems()) {
+			if (item == null || item.getAmount() <= 0) {
 				out.putInt(0);
 				continue;
 			}
 			out.putInt(item.getAmount());
 			out.putShort(item.getId() + 1);
 		}
-		
+
 		player.getSession().write(out);
 		return this;
 	}
 
-	
 	public PacketSender sendCurrentBankTab(int current_tab) {
 		PacketBuilder out = new PacketBuilder(55);
 		out.put(current_tab);
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendEffectTimer(int delay, EffectTimer e) {
-		
+
 		PacketBuilder out = new PacketBuilder(54);
-		
+
 		out.putShort(delay);
 		out.putShort(e.getClientSprite());
-		
+
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendInterfaceItems(int interfaceId, List<Item> items) {
 		PacketBuilder out = new PacketBuilder(53);
 		out.putInt(interfaceId);
 		out.putShort(items.size());
-		for (Item item: items) {
-			if(item == null) {
+		for (Item item : items) {
+			if (item == null) {
 				out.putInt(0);
 				out.putShort(-1);
 				continue;
@@ -538,7 +558,7 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendItemOnInterface(int interfaceId, int item, int amount) {
 		PacketBuilder out = new PacketBuilder(53);
 		out.putShort(interfaceId);
@@ -558,7 +578,7 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender clearItemOnInterface(int frame) {
 		PacketBuilder out = new PacketBuilder(72);
 		out.putShort(frame);
@@ -571,7 +591,7 @@ public class PacketSender {
 			PacketBuilder out = new PacketBuilder(34);
 			out.putShort(13824);
 			out.put(i);
-			out.putShort(player.getEquipment().getItems()[i].getId()+1);
+			out.putShort(player.getEquipment().getItems()[i].getId() + 1);
 			out.put(255);
 			out.putInt(player.getEquipment().getItems()[i].getAmount());
 			player.getSession().write(out);
@@ -584,24 +604,20 @@ public class PacketSender {
 		out.putShort(column);
 		out.put(4);
 		out.putInt(slot);
-		out.putShort(id+1);
+		out.putShort(id + 1);
 		out.put(amount);
 		player.getSession().write(out);
 		return this;
 	}
 
-	/*public PacketSender sendConstructionInterfaceItems(ArrayList<Furniture> items) {
-		PacketBuilder builder = new PacketBuilder(53);
-		builder.writeShort(38274);
-		builder.writeShort(items.size());
-		for (int i = 0; i < items.size(); i++) {
-			builder.writeByte(1);
-			builder.writeLEShortA(items.get(i).getItemId() + 1);
-		}
-		player.write(builder.toPacket());
-		return this;
-	}*/
-
+	/*
+	 * public PacketSender sendConstructionInterfaceItems(ArrayList<Furniture>
+	 * items) { PacketBuilder builder = new PacketBuilder(53);
+	 * builder.writeShort(38274); builder.writeShort(items.size()); for (int i =
+	 * 0; i < items.size(); i++) { builder.writeByte(1);
+	 * builder.writeLEShortA(items.get(i).getItemId() + 1); }
+	 * player.write(builder.toPacket()); return this; }
+	 */
 
 	public PacketSender sendInteractionOption(String option, int slot, boolean top) {
 		PacketBuilder out = new PacketBuilder(104);
@@ -610,13 +626,13 @@ public class PacketSender {
 		out.putString(option);
 		player.getSession().write(out);
 		PlayerInteractingOption interactingOption = PlayerInteractingOption.forName(option);
-		if(option != null)
+		if (option != null)
 			player.setPlayerInteractingOption(interactingOption);
 		return this;
 	}
 
 	public PacketSender sendString(int id, String string) {
-		if(!player.getFrameUpdater().shouldUpdate(string, id)) {
+		if (!player.getFrameUpdater().shouldUpdate(string, id)) {
 			return this;
 		}
 		PacketBuilder out = new PacketBuilder(126);
@@ -627,13 +643,14 @@ public class PacketSender {
 	}
 
 	public PacketSender sendClientRightClickRemoval() {
-		//sendString(0, "[CLOSEMENU]");
+		// sendString(0, "[CLOSEMENU]");
 		return this;
 	}
 
 	/**
 	 * Sends the players rights ordinal to the client.
-	 * @return	The packetsender instance.
+	 * 
+	 * @return The packetsender instance.
 	 */
 	public PacketSender sendRights() {
 		PacketBuilder out = new PacketBuilder(127);
@@ -644,9 +661,13 @@ public class PacketSender {
 
 	/**
 	 * Sends a hint to specified position.
-	 * @param position			The position to create the hint.
-	 * @param tilePosition		The position on the square (middle = 2; west = 3; east = 4; south = 5; north = 6)
-	 * @return					The Packet Sender instance.
+	 * 
+	 * @param position
+	 *            The position to create the hint.
+	 * @param tilePosition
+	 *            The position on the square (middle = 2; west = 3; east = 4;
+	 *            south = 5; north = 6)
+	 * @return The Packet Sender instance.
 	 */
 	public PacketSender sendPositionalHint(Position position, int tilePosition) {
 		PacketBuilder out = new PacketBuilder(254);
@@ -660,8 +681,10 @@ public class PacketSender {
 
 	/**
 	 * Sends a hint above an entity's head.
-	 * @param entity	The target entity to draw hint for.
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param entity
+	 *            The target entity to draw hint for.
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendEntityHint(Entity entity) {
 		int type = entity instanceof Player ? 10 : 1;
@@ -675,8 +698,10 @@ public class PacketSender {
 
 	/**
 	 * Sends a hint removal above an entity's head.
-	 * @param playerHintRemoval	Remove hint from a player or an NPC?
-	 * @return			The PacketSender instance.
+	 * 
+	 * @param playerHintRemoval
+	 *            Remove hint from a player or an NPC?
+	 * @return The PacketSender instance.
 	 */
 	public PacketSender sendEntityHintRemoval(boolean playerHintRemoval) {
 		int type = playerHintRemoval ? 10 : 1;
@@ -720,28 +745,28 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendDeleteFriend(long name) {
 		PacketBuilder out = new PacketBuilder(51);
 		out.putLong(name);
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendAddIgnore(long name) {
 		PacketBuilder out = new PacketBuilder(214);
 		out.putLong(name);
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendDeleteIgnore(long name) {
 		PacketBuilder out = new PacketBuilder(215);
 		out.putLong(name);
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender sendTotalXp(long xp) {
 		PacketBuilder out = new PacketBuilder(45);
 		out.putLong(xp);
@@ -768,8 +793,8 @@ public class PacketSender {
 
 	public PacketSender sendGlobalGraphic(Graphic graphic, Position position) {
 		sendGraphic(graphic, position);
-		for(Player p : player.getLocalPlayers()) {
-			if(p.getPosition().distanceToPoint(player.getPosition().getX(), player.getPosition().getY()) > 20)
+		for (Player p : player.getLocalPlayers()) {
+			if (p.getPosition().distanceToPoint(player.getPosition().getX(), player.getPosition().getY()) > 20)
 				continue;
 			p.getPacketSender().sendGraphic(graphic, position);
 		}
@@ -822,7 +847,7 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
-	
+
 	public PacketSender createGroundItem(int itemID, Position position, int itemAmount) {
 		sendPosition(position);
 		PacketBuilder out = new PacketBuilder(44);
@@ -831,6 +856,7 @@ public class PacketSender {
 		player.getSession().write(out);
 		return this;
 	}
+
 	public PacketSender removeGroundItem(int itemID, int itemX, int itemY, int Amount) {
 		sendPosition(new Position(itemX, itemY));
 		PacketBuilder out = new PacketBuilder(156);
@@ -841,7 +867,7 @@ public class PacketSender {
 	}
 
 	public PacketSender sendPosition(final Position position) {
-		final Position other = player.getLastKnownRegion();		
+		final Position other = player.getLastKnownRegion();
 		PacketBuilder out = new PacketBuilder(85);
 		out.put(position.getY() - 8 * other.getRegionY(), ValueType.C);
 		out.put(position.getX() - 8 * other.getRegionX(), ValueType.C);
@@ -857,7 +883,9 @@ public class PacketSender {
 	}
 
 	public PacketSender sendInterfaceSpriteChange(int childId, int firstSprite, int secondSprite) {
-		//	player.write(new PacketBuilder(140).writeShort(childId).writeByte((firstSprite << 0) + (secondSprite & 0x0)).toPacket());
+		// player.write(new
+		// PacketBuilder(140).writeShort(childId).writeByte((firstSprite << 0) +
+		// (secondSprite & 0x0)).toPacket());
 		return this;
 	}
 
@@ -874,9 +902,8 @@ public class PacketSender {
 
 	private Player player;
 
-	public PacketSender sendProjectile(Position position, Position offset,
-			int angle, int speed, int gfxMoving, int startHeight, int endHeight,
-			int lockon, int time) {
+	public PacketSender sendProjectile(Position position, Position offset, int angle, int speed, int gfxMoving,
+			int startHeight, int endHeight, int lockon, int time) {
 		sendPosition(position);
 		PacketBuilder out = new PacketBuilder(117);
 		out.put(angle);
@@ -894,33 +921,22 @@ public class PacketSender {
 		return this;
 	}
 
-/*	public PacketSender sendCombatBoxData(Character character) {
-		PacketBuilder out = new PacketBuilder(125);
-		out.putShort(character.getIndex());
-		out.put(character.isPlayer() ? 0 : 1);
-		if(character.isPlayer()) {
-			player.getSession().queueMessage(out);
-		} else {
-			NPC npc = (NPC) character;
-			boolean sendList = npc.getDefaultConstitution() >= 2500 && Location.inMulti(npc);
-			out.put(sendList ? 1 : 0);
-			if(sendList) {
-				List<DamageDealer> list = npc.fetchNewDamageMap() ? npc.getCombatBuilder().getTopKillers(npc) : npc.getDamageDealerMap();
-				if(npc.fetchNewDamageMap()) {
-					npc.setDamageDealerMap(list);
-					npc.setFetchNewDamageMap(false);
-				}
-				out.put(list.size());
-				for(int i = 0; i < list.size(); i++) {
-					DamageDealer dd = list.get(i);
-					out.putString(dd.getPlayer().getUsername());
-					out.putShort(dd.getDamage());
-				}
-			}
-			player.getSession().queueMessage(out);
-		}
-		return this;
-	}*/
+	/*
+	 * public PacketSender sendCombatBoxData(Character character) {
+	 * PacketBuilder out = new PacketBuilder(125);
+	 * out.putShort(character.getIndex()); out.put(character.isPlayer() ? 0 :
+	 * 1); if(character.isPlayer()) { player.getSession().queueMessage(out); }
+	 * else { NPC npc = (NPC) character; boolean sendList =
+	 * npc.getDefaultConstitution() >= 2500 && Location.inMulti(npc);
+	 * out.put(sendList ? 1 : 0); if(sendList) { List<DamageDealer> list =
+	 * npc.fetchNewDamageMap() ? npc.getCombatBuilder().getTopKillers(npc) :
+	 * npc.getDamageDealerMap(); if(npc.fetchNewDamageMap()) {
+	 * npc.setDamageDealerMap(list); npc.setFetchNewDamageMap(false); }
+	 * out.put(list.size()); for(int i = 0; i < list.size(); i++) { DamageDealer
+	 * dd = list.get(i); out.putString(dd.getPlayer().getUsername());
+	 * out.putShort(dd.getDamage()); } } player.getSession().queueMessage(out);
+	 * } return this; }
+	 */
 
 	public PacketSender sendHideCombatBox() {
 		player.getSession().write(new PacketBuilder(128));
@@ -931,76 +947,49 @@ public class PacketSender {
 		sendPosition(new Position(objectX, objectY));
 		PacketBuilder bldr = new PacketBuilder(152);
 		if (objectId != -1) // removing
-			player.getSession().write(bldr.put(0, ValueType.S).putShort(objectId, ByteOrder.LITTLE).put((objectType << 2) + (face & 3), ValueType.S).put(height));
+			player.getSession().write(bldr.put(0, ValueType.S).putShort(objectId, ByteOrder.LITTLE)
+					.put((objectType << 2) + (face & 3), ValueType.S).put(height));
 		if (objectId == -1 || objectId == 0 || objectId == 6951) {
-			//CustomObjects.spawnObject(player, new GameObject(objectId, new Position(objectX, objectY, height)));
+			// CustomObjects.spawnObject(player, new GameObject(objectId, new
+			// Position(objectX, objectY, height)));
 		}
 	}
 
-	/*public PacketSender constructMapRegion(Palette palette) {
-		PacketBuilder bldr = new PacketBuilder(241);
-		if(palette != null) {
-			bldr.putString("palette"); //Inits map construction sequence
-			bldr.putString(""+(player.getPosition().getRegionY() + 6)+"");
-			bldr.putString(""+(player.getPosition().getRegionX() + 6)+"");
-			for (int z = 0; z < 4; z++) {
-				for (int x = 0; x < 13; x++) {
-					for (int y = 0; y < 13; y++) {
-						PaletteTile tile = palette.getTile(x, y, z);
-						boolean b = false;
-						if (x < 2 || x > 10 || y < 2 || y > 10)
-							b = true;
-						int toWrite = !b && tile != null ? 5 : 0;
-						bldr.putString(""+toWrite+"");
-						if(toWrite == 5) {
-							int val = tile.getX() << 14 | tile.getY() << 3 | tile.getZ() << 24 | tile.getRotation() << 1;
-							bldr.putString(""+val+"");
-						}
-					}
-				}
-			}
-		} else {
-			bldr.putString("null"); //Resets map construction sequence
-		}
-		player.getSession().queueMessage(bldr);
-		return this;
-	}
-	 
-	public PacketSender constructMapRegion(Palette palette) {
-		PacketBuilder bldr = new PacketBuilder(241);
-		bldr.putShort(player.getPosition().getRegionY() + 6, ValueType.A);
-		for (int z = 0; z < 4; z++) {
-			for (int x = 0; x < 13; x++) {
-				for (int y = 0; y < 13; y++) {
-					PaletteTile tile = palette.getTile(x, y, z);
-					boolean b = false;
-					if (x < 2 || x > 10 || y < 2 || y > 10)
-						b = true;
-					int toWrite = !b && tile != null ? 5 : 0;
-					bldr.put(toWrite);
-					if(toWrite == 5) {
-						int val = tile.getX() << 14 | tile.getY() << 3 | tile.getZ() << 24 | tile.getRotation() << 1;
-						bldr.putString(""+val+"");
-					}
-				}
-			}
-		}
-		bldr.putShort(player.getPosition().getRegionX() + 6);
-		player.getSession().queueMessage(bldr);
-		return this;
-	}
-
-	public PacketSender sendConstructionInterfaceItems(ArrayList<Furniture> items) {
-		PacketBuilder builder = new PacketBuilder(53);
-		builder.putShort(38274);
-		builder.putShort(items.size());
-		for (int i = 0; i < items.size(); i++) {
-			builder.put(1);
-			builder.putShort(items.get(i).getItemId() + 1, ValueType.A, ByteOrder.LITTLE);
-		}
-		player.getSession().queueMessage(builder);
-		return this;
-	}*/
+	/*
+	 * public PacketSender constructMapRegion(Palette palette) { PacketBuilder
+	 * bldr = new PacketBuilder(241); if(palette != null) {
+	 * bldr.putString("palette"); //Inits map construction sequence
+	 * bldr.putString(""+(player.getPosition().getRegionY() + 6)+"");
+	 * bldr.putString(""+(player.getPosition().getRegionX() + 6)+""); for (int z
+	 * = 0; z < 4; z++) { for (int x = 0; x < 13; x++) { for (int y = 0; y < 13;
+	 * y++) { PaletteTile tile = palette.getTile(x, y, z); boolean b = false; if
+	 * (x < 2 || x > 10 || y < 2 || y > 10) b = true; int toWrite = !b && tile
+	 * != null ? 5 : 0; bldr.putString(""+toWrite+""); if(toWrite == 5) { int
+	 * val = tile.getX() << 14 | tile.getY() << 3 | tile.getZ() << 24 |
+	 * tile.getRotation() << 1; bldr.putString(""+val+""); } } } } } else {
+	 * bldr.putString("null"); //Resets map construction sequence }
+	 * player.getSession().queueMessage(bldr); return this; }
+	 * 
+	 * public PacketSender constructMapRegion(Palette palette) { PacketBuilder
+	 * bldr = new PacketBuilder(241);
+	 * bldr.putShort(player.getPosition().getRegionY() + 6, ValueType.A); for
+	 * (int z = 0; z < 4; z++) { for (int x = 0; x < 13; x++) { for (int y = 0;
+	 * y < 13; y++) { PaletteTile tile = palette.getTile(x, y, z); boolean b =
+	 * false; if (x < 2 || x > 10 || y < 2 || y > 10) b = true; int toWrite = !b
+	 * && tile != null ? 5 : 0; bldr.put(toWrite); if(toWrite == 5) { int val =
+	 * tile.getX() << 14 | tile.getY() << 3 | tile.getZ() << 24 |
+	 * tile.getRotation() << 1; bldr.putString(""+val+""); } } } }
+	 * bldr.putShort(player.getPosition().getRegionX() + 6);
+	 * player.getSession().queueMessage(bldr); return this; }
+	 * 
+	 * public PacketSender sendConstructionInterfaceItems(ArrayList<Furniture>
+	 * items) { PacketBuilder builder = new PacketBuilder(53);
+	 * builder.putShort(38274); builder.putShort(items.size()); for (int i = 0;
+	 * i < items.size(); i++) { builder.put(1);
+	 * builder.putShort(items.get(i).getItemId() + 1, ValueType.A,
+	 * ByteOrder.LITTLE); } player.getSession().queueMessage(builder); return
+	 * this; }
+	 */
 
 	public PacketSender sendObjectsRemoval(int chunkX, int chunkY, int height) {
 		player.getSession().write(new PacketBuilder(153).put(chunkX).put(chunkY).put(height));

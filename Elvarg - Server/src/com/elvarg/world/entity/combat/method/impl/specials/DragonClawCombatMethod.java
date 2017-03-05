@@ -24,19 +24,19 @@ public class DragonClawCombatMethod implements CombatMethod {
 		QueueableHit qHit = new QueueableHit(character, target, this, true, 4, 1);
 
 		/* DRAGON CLAWS SPECIAL FORMULA */
-		
+
 		int first = qHit.getHits()[0].getDamage();
-		int second = first <= 0 ? qHit.getHits()[1].getDamage() : (first/2);
-		int third = second <= 0 ? second : (second/2);
-		int fourth = second <= 0 ? second : (second/2);
+		int second = first <= 0 ? qHit.getHits()[1].getDamage() : (first / 2);
+		int third = second <= 0 ? second : (second / 2);
+		int fourth = second <= 0 ? second : (second / 2);
 
 		qHit.getHits()[0].setDamage(first);
 		qHit.getHits()[1].setDamage(second);
 		qHit.getHits()[2].setDamage(third);
 		qHit.getHits()[3].setDamage(fourth);
 		qHit.updateTotalDamage();
-		
-		return new QueueableHit[]{qHit};
+
+		return new QueueableHit[] { qHit };
 	}
 
 	@Override

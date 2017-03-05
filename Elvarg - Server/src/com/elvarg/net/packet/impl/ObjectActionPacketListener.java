@@ -21,8 +21,7 @@ import com.elvarg.world.model.Skill;
 import com.elvarg.world.regions.AreaHandler;
 
 /**
- * This packet listener is called when a player clicked
- * on a game object.
+ * This packet listener is called when a player clicked on a game object.
  * 
  * @author relex lawl
  */
@@ -35,8 +34,9 @@ public class ObjectActionPacketListener implements PacketListener {
 		final int y = packet.readUnsignedShortA();
 		final Position position = new Position(x, y, player.getPosition().getZ());
 		final GameObject gameObject = new GameObject(id, position);
-		if(id > 0 && id != 6 && !RegionClipping.objectExists(gameObject)) {
-			player.getPacketSender().sendMessage("An error occured. Error code: "+id).sendMessage("Please report the error to a staff member.");
+		if (id > 0 && id != 6 && !RegionClipping.objectExists(gameObject)) {
+			player.getPacketSender().sendMessage("An error occured. Error code: " + id)
+					.sendMessage("Please report the error to a staff member.");
 			return;
 		}
 		int distanceX = (player.getPosition().getX() - position.getX());
@@ -45,23 +45,27 @@ public class ObjectActionPacketListener implements PacketListener {
 			distanceX = -(distanceX);
 		if (distanceY < 0)
 			distanceY = -(distanceY);
-		int size = distanceX > distanceY ? ObjectDefinition.forId(id).getSizeX() : ObjectDefinition.forId(id).getSizeY();
+		int size = distanceX > distanceY ? ObjectDefinition.forId(id).getSizeX()
+				: ObjectDefinition.forId(id).getSizeY();
 		if (size <= 0)
 			size = 1;
 		gameObject.setSize(size);
-		if(player.getRights() == PlayerRights.DEVELOPER)
-			player.getPacketSender().sendMessage("First click object id; [id, position] : [" + id + ", " + position.toString() + "]");
+		if (player.getRights() == PlayerRights.DEVELOPER)
+			player.getPacketSender()
+					.sendMessage("First click object id; [id, position] : [" + id + ", " + position.toString() + "]");
 		player.setWalkToTask(new WalkToTask(player, position, gameObject.getSize(), new FinalizedMovementTask() {
 			@Override
 			public void execute() {
 				AreaHandler.firstClickObject(player, id);
-				switch(id) {
-				
+				switch (id) {
+
 				case WILDERNESS_DITCH:
 					player.getMovementQueue().reset();
-					if(player.getForceMovement() == null) {
+					if (player.getForceMovement() == null) {
 						final Position crossDitch = new Position(0, player.getPosition().getY() < 3522 ? 3 : -3);
-						TaskManager.submit(new ForceMovementTask(player, 3, new ForceMovement(player.getPosition().copy(), crossDitch, 0, 70, crossDitch.getY() == 3 ? 0 : 2, 6132)));
+						TaskManager
+								.submit(new ForceMovementTask(player, 3, new ForceMovement(player.getPosition().copy(),
+										crossDitch, 0, 70, crossDitch.getY() == 3 ? 0 : 2, 6132)));
 					}
 					break;
 
@@ -69,28 +73,31 @@ public class ObjectActionPacketListener implements PacketListener {
 				case ANCIENT_ALTAR:
 
 					MagicSpellbook toChange = MagicSpellbook.ANCIENT;
-					if(id == LUNAR_ALTAR) {
+					if (id == LUNAR_ALTAR) {
 						toChange = MagicSpellbook.LUNAR;
 					}
 
-					if(player.getSpellbook() == toChange) {
+					if (player.getSpellbook() == toChange) {
 						player.setSpellbook(MagicSpellbook.NORMAL);
 					} else {
 						player.setSpellbook(toChange);
 					}
 
 					Autocasting.setAutocast(player, null);
-					player.getPacketSender().sendMessage("You have changed your magic spellbook.").
-					sendTabInterface(6, player.getSpellbook().getInterfaceId());
+					player.getPacketSender().sendMessage("You have changed your magic spellbook.").sendTabInterface(6,
+							player.getSpellbook().getInterfaceId());
 					break;
-					
+
 				case PRAYER_ALTAR:
-					if(player.getSkillManager().getCurrentLevel(Skill.PRAYER) < player.getSkillManager().getMaxLevel(Skill.PRAYER)) {
+					if (player.getSkillManager().getCurrentLevel(Skill.PRAYER) < player.getSkillManager()
+							.getMaxLevel(Skill.PRAYER)) {
 						player.performAnimation(new Animation(645));
 						player.getPacketSender().sendMessage("You recharge your Prayer points.");
-						player.getSkillManager().setCurrentLevel(Skill.PRAYER, player.getSkillManager().getMaxLevel(Skill.PRAYER), true);
+						player.getSkillManager().setCurrentLevel(Skill.PRAYER,
+								player.getSkillManager().getMaxLevel(Skill.PRAYER), true);
 					} else {
-						player.getPacketSender().sendMessage("You don't need to recharge your Prayer points right now.");
+						player.getPacketSender()
+								.sendMessage("You don't need to recharge your Prayer points right now.");
 					}
 					break;
 
@@ -105,8 +112,10 @@ public class ObjectActionPacketListener implements PacketListener {
 		final int x = packet.readUnsignedShortA();
 		final Position position = new Position(x, y, player.getPosition().getZ());
 		final GameObject gameObject = new GameObject(id, position);
-		if(id > 0 && id != 6 && !RegionClipping.objectExists(gameObject)) {
-			//player.getPacketSender().sendMessage("An error occured. Error code: "+id).sendMessage("Please report the error to a staff member.");
+		if (id > 0 && id != 6 && !RegionClipping.objectExists(gameObject)) {
+			// player.getPacketSender().sendMessage("An error occured. Error
+			// code: "+id).sendMessage("Please report the error to a staff
+			// member.");
 			return;
 		}
 		player.setPositionToFace(gameObject.getPosition());
@@ -118,11 +127,13 @@ public class ObjectActionPacketListener implements PacketListener {
 			distanceY = -(distanceY);
 		int size = distanceX > distanceY ? distanceX : distanceY;
 		gameObject.setSize(size);
-		if(player.getRights() == PlayerRights.DEVELOPER)
-			player.getPacketSender().sendMessage("First click object id; [id, position] : [" + id + ", " + position.toString() + "]");
+		if (player.getRights() == PlayerRights.DEVELOPER)
+			player.getPacketSender()
+					.sendMessage("First click object id; [id, position] : [" + id + ", " + position.toString() + "]");
 		player.setWalkToTask(new WalkToTask(player, position, gameObject.getSize(), new FinalizedMovementTask() {
+			@Override
 			public void execute() {
-				switch(id) {
+				switch (id) {
 				case EDGEVILLE_BANK:
 					player.getBank(player.getCurrentBankTab()).open();
 					break;
@@ -145,7 +156,7 @@ public class ObjectActionPacketListener implements PacketListener {
 
 	@Override
 	public void handleMessage(Player player, Packet packet) {
-		if(player.busy()) {
+		if (player.busy()) {
 			return;
 		}
 		switch (packet.getOpcode()) {

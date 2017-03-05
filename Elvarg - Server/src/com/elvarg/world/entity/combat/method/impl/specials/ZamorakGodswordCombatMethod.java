@@ -14,7 +14,7 @@ public class ZamorakGodswordCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(7057, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(1210, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -22,7 +22,7 @@ public class ZamorakGodswordCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class ZamorakGodswordCombatMethod implements CombatMethod {
 
 	@Override
 	public void handleAfterHitEffects(QueueableHit hit) {
-		if(hit.isAccurate()) {
+		if (hit.isAccurate()) {
 			hit.getTarget().performGraphic(GRAPHIC);
 			CombatFactory.freeze(hit.getTarget(), 15);
 		}

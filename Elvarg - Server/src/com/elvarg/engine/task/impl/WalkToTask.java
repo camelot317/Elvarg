@@ -6,6 +6,7 @@ import com.elvarg.world.model.movement.MovementStatus;
 
 /**
  * Represents a movement action for a game character.
+ * 
  * @author Gabriel Hannason
  */
 
@@ -17,9 +18,13 @@ public class WalkToTask {
 
 	/**
 	 * The WalkToTask constructor.
-	 * @param entity			The associated game character.
-	 * @param destination		The destination the game character will move to.
-	 * @param finalizedTask		The task a player must execute upon reaching said destination.
+	 * 
+	 * @param entity
+	 *            The associated game character.
+	 * @param destination
+	 *            The destination the game character will move to.
+	 * @param finalizedTask
+	 *            The task a player must execute upon reaching said destination.
 	 */
 	public WalkToTask(Player entity, Position destination, int distance, FinalizedMovementTask finalizedTask) {
 		this.player = entity;
@@ -49,19 +54,20 @@ public class WalkToTask {
 	 * Executes the action if distance is correct
 	 */
 	public void onTick() {
-		if(player == null)
+		if (player == null)
 			return;
-		if(!player.isRegistered()) {
+		if (!player.isRegistered()) {
 			player.setWalkToTask(null);
 			return;
 		}
-		if(player.busy() || destination == null || player.getMovementQueue().getMovementStatus() == MovementStatus.DISABLED) {
+		if (player.busy() || destination == null
+				|| player.getMovementQueue().getMovementStatus() == MovementStatus.DISABLED) {
 			player.setWalkToTask(null);
 			return;
 		}
-		if(player.getPosition().getDistance(destination) <= distance) {
+		if (player.getPosition().getDistance(destination) <= distance) {
 			finalizedTask.execute();
-			if(player.getInteractingEntity() != null) {
+			if (player.getInteractingEntity() != null) {
 				player.setEntityInteraction(null);
 			}
 			player.setWalkToTask(null);

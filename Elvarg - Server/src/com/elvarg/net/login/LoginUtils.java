@@ -22,9 +22,11 @@ public final class LoginUtils {
 	/**
 	 * Sends a response code to the client to notify the user logging in.
 	 * 
-	 * @param ctx The context of the channel handler.
+	 * @param ctx
+	 *            The context of the channel handler.
 	 * 
-	 * @param response The response code to send.
+	 * @param response
+	 *            The response code to send.
 	 */
 	public static void sendResponseCode(ChannelHandlerContext ctx, int response) {
 		ByteBuf buffer = Unpooled.buffer(1);

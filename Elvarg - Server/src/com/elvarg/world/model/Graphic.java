@@ -7,10 +7,12 @@ package com.elvarg.world.model;
  */
 
 public class Graphic {
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id	The graphic's id.
+	 * 
+	 * @param id
+	 *            The graphic's id.
 	 */
 	public Graphic(int id) {
 		this.id = id;
@@ -18,11 +20,14 @@ public class Graphic {
 		this.height = GraphicHeight.LOW;
 		this.priority = Priority.LOW;
 	}
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id		The graphic's id.
-	 * @param delay		The delay to wait until performing the graphic.
+	 * 
+	 * @param id
+	 *            The graphic's id.
+	 * @param delay
+	 *            The delay to wait until performing the graphic.
 	 */
 	public Graphic(int id, int delay) {
 		this.id = id;
@@ -30,11 +35,14 @@ public class Graphic {
 		this.height = GraphicHeight.LOW;
 		this.priority = Priority.LOW;
 	}
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id		The graphic's id.
-	 * @param height	The graphic's height.
+	 * 
+	 * @param id
+	 *            The graphic's id.
+	 * @param height
+	 *            The graphic's height.
 	 */
 	public Graphic(int id, GraphicHeight height) {
 		this.id = id;
@@ -42,12 +50,16 @@ public class Graphic {
 		this.height = height;
 		this.priority = Priority.LOW;
 	}
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id		The graphic's id.
-	 * @param delay		The delay to wait until performing the graphic.
-	 * @param height	The graphic's height.
+	 * 
+	 * @param id
+	 *            The graphic's id.
+	 * @param delay
+	 *            The delay to wait until performing the graphic.
+	 * @param height
+	 *            The graphic's height.
 	 */
 	public Graphic(int id, int delay, GraphicHeight height) {
 		this.id = id;
@@ -55,11 +67,14 @@ public class Graphic {
 		this.height = height;
 		this.priority = Priority.LOW;
 	}
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id		The graphic's id.
-	 * @param priority	The graphic's priority.
+	 * 
+	 * @param id
+	 *            The graphic's id.
+	 * @param priority
+	 *            The graphic's priority.
 	 */
 	public Graphic(int id, Priority priority) {
 		this.id = id;
@@ -67,12 +82,16 @@ public class Graphic {
 		this.priority = priority;
 		this.height = GraphicHeight.LOW;
 	}
-	
+
 	/**
 	 * The graphic constructor for a character to perform.
-	 * @param id		The graphic's id.
-	 * @param height	The graphic's height.
-	 * @param priority	The graphic's priority.
+	 * 
+	 * @param id
+	 *            The graphic's id.
+	 * @param height
+	 *            The graphic's height.
+	 * @param priority
+	 *            The graphic's priority.
 	 */
 	public Graphic(int id, GraphicHeight height, Priority priority) {
 		this.id = id;
@@ -80,38 +99,40 @@ public class Graphic {
 		this.priority = priority;
 		this.height = height;
 	}
-	
+
 	/**
 	 * The graphic's id.
 	 */
 	private final int id;
-	
+
 	/**
 	 * The delay which the graphic must wait before being performed.
 	 */
 	private final int delay;
-	
+
 	/**
 	 * The graphic's height level to display in.
 	 */
 	private final GraphicHeight height;
-	
+
 	/**
 	 * The priority of the graphic.
 	 */
 	private final Priority priority;
-	
+
 	/**
 	 * Gets the graphic's id.
-	 * @return	id.
+	 * 
+	 * @return id.
 	 */
 	public int getId() {
 		return id;
 	}
-	
+
 	/**
 	 * Gets the graphic's wait delay.
-	 * @return	delay.
+	 * 
+	 * @return delay.
 	 */
 	public int getDelay() {
 		return delay;
@@ -119,7 +140,8 @@ public class Graphic {
 
 	/**
 	 * Gets the graphic's height level to be displayed in.
-	 * @return	The height level.
+	 * 
+	 * @return The height level.
 	 */
 	public GraphicHeight getHeight() {
 		return height;
@@ -127,7 +149,8 @@ public class Graphic {
 
 	/**
 	 * Gets the priority of this graphic.
-	 * @return	the priority.
+	 * 
+	 * @return the priority.
 	 */
 	public Priority getPriority() {
 		return priority;

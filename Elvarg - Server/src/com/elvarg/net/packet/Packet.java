@@ -9,12 +9,17 @@ import io.netty.buffer.ByteBuf;
  */
 
 public class Packet {
-	
+
 	/**
 	 * The Packet constructor.
-	 * @param opcode	The packet id.
-	 * @param packetType		The packetType of packet being read.
-	 * @param buffer	The buffer used to receive information from the netty's channel.
+	 * 
+	 * @param opcode
+	 *            The packet id.
+	 * @param packetType
+	 *            The packetType of packet being read.
+	 * @param buffer
+	 *            The buffer used to receive information from the netty's
+	 *            channel.
 	 */
 	public Packet(int opcode, ByteBuf buffer) {
 		this.opcode = opcode;
@@ -28,7 +33,8 @@ public class Packet {
 
 	/**
 	 * Gets the packet id.
-	 * @return	The packet id being sent.
+	 * 
+	 * @return The packet id being sent.
 	 */
 	public int getOpcode() {
 		return opcode;
@@ -41,7 +47,8 @@ public class Packet {
 
 	/**
 	 * Gets the buffer used to receive the packet information.
-	 * @return	The ChannelBuffer instance.
+	 * 
+	 * @return The ChannelBuffer instance.
 	 */
 	public ByteBuf getBuffer() {
 		return buffer;
@@ -49,25 +56,27 @@ public class Packet {
 
 	/**
 	 * Gets the size of the packet being read.
-	 * @return	The size of the packet.
+	 * 
+	 * @return The size of the packet.
 	 */
 	public int getSize() {
 		return buffer.readableBytes();
 	}
-	
+
 	public int getLength() {
 		return buffer.capacity();
 	}
 
 	/**
 	 * Reads an unsigned byte from the packet.
-	 * @return	The unsigned byte.
+	 * 
+	 * @return The unsigned byte.
 	 */
 	public byte readByte() {
 		byte b = 0;
 		try {
 			b = buffer.readByte();
-		} catch(Exception e) {
+		} catch (Exception e) {
 
 		}
 		return b;
@@ -75,6 +84,7 @@ public class Packet {
 
 	/**
 	 * Reads a packetType-A byte from the packet.
+	 * 
 	 * @return The unsigned byte - 128.
 	 */
 	public byte readByteA() {
@@ -83,6 +93,7 @@ public class Packet {
 
 	/**
 	 * Reads an inverse (negative) unsigned byte from the packet.
+	 * 
 	 * @return readByte()
 	 */
 	public byte readByteC() {
@@ -91,7 +102,8 @@ public class Packet {
 
 	/**
 	 * Reads a packetType-S byte from the packet.
-	 * @return	128 - the unsigned byte value. 
+	 * 
+	 * @return 128 - the unsigned byte value.
 	 */
 	public byte readByteS() {
 		return (byte) (128 - readByte());
@@ -99,7 +111,8 @@ public class Packet {
 
 	/**
 	 * Reads an unsigned packetType-S byte from the packet.
-	 * @return	The unsigned readByteS value.
+	 * 
+	 * @return The unsigned readByteS value.
 	 */
 	public int readUnsignedByteS() {
 		return readByteS() & 0xff;
@@ -114,9 +127,11 @@ public class Packet {
 	}
 
 	/**
-	 * Reads said amount of bytes from the packet.	
-	 * @param amount	The amount of bytes to read.
-	 * @return			The bytes array values.
+	 * Reads said amount of bytes from the packet.
+	 * 
+	 * @param amount
+	 *            The amount of bytes to read.
+	 * @return The bytes array values.
 	 */
 	public byte[] readBytes(int amount) {
 		byte[] bytes = new byte[amount];
@@ -128,8 +143,10 @@ public class Packet {
 
 	/**
 	 * Reads the amount of bytes packetType-A.
-	 * @param amount	The amount of bytes packetType-A to read.
-	 * @return 			The bytes array values.
+	 * 
+	 * @param amount
+	 *            The amount of bytes packetType-A to read.
+	 * @return The bytes array values.
 	 */
 	public byte[] readBytesA(int amount) {
 		if (amount < 0)
@@ -142,9 +159,11 @@ public class Packet {
 	}
 
 	/**
-	 * Reads said amount of reversed-bytes from the packet.	
-	 * @param amount	The amount of bytes to read.
-	 * @return			The bytes array values.
+	 * Reads said amount of reversed-bytes from the packet.
+	 * 
+	 * @param amount
+	 *            The amount of bytes to read.
+	 * @return The bytes array values.
 	 */
 	public byte[] readReversedBytesA(int amount) {
 		byte[] bytes = new byte[amount];
@@ -157,7 +176,8 @@ public class Packet {
 
 	/**
 	 * Reads an unsigned byte.
-	 * @return	The unsigned byte value read from the packet.
+	 * 
+	 * @return The unsigned byte value read from the packet.
 	 */
 	public int readUnsignedByte() {
 		return buffer.readUnsignedByte();
@@ -165,7 +185,8 @@ public class Packet {
 
 	/**
 	 * Reads a short value.
-	 * @return	The short value read from the packet.
+	 * 
+	 * @return The short value read from the packet.
 	 */
 	public short readShort() {
 		return buffer.readShort();
@@ -173,7 +194,8 @@ public class Packet {
 
 	/**
 	 * Reads a short packetType-A from the packet.
-	 * @return	The short packetType-A value.
+	 * 
+	 * @return The short packetType-A value.
 	 */
 	public short readShortA() {
 		int value = ((readByte() & 0xFF) << 8) | (readByte() - 128 & 0xFF);
@@ -182,7 +204,8 @@ public class Packet {
 
 	/**
 	 * Reads a little-endian short from the packet.
-	 * @return	The little-endian short value.
+	 * 
+	 * @return The little-endian short value.
 	 */
 	public short readLEShort() {
 		int value = (readByte() & 0xFF) | (readByte() & 0xFF) << 8;
@@ -191,7 +214,8 @@ public class Packet {
 
 	/**
 	 * Reads a little-endian packetType-A short from the packet.
-	 * @return	The little-endian packetType-A short value.
+	 * 
+	 * @return The little-endian packetType-A short value.
 	 */
 	public short readLEShortA() {
 		int value = (readByte() - 128 & 0xFF) | (readByte() & 0xFF) << 8;
@@ -200,7 +224,8 @@ public class Packet {
 
 	/**
 	 * Reads the unsigned short value from the packet.
-	 * @return	The unsigned short value.
+	 * 
+	 * @return The unsigned short value.
 	 */
 	public int readUnsignedShort() {
 		return buffer.readUnsignedShort();
@@ -208,7 +233,8 @@ public class Packet {
 
 	/**
 	 * Reads the unsigned short value packetType-A from the packet.
-	 * @return	The unsigned short packetType-A value.
+	 * 
+	 * @return The unsigned short packetType-A value.
 	 */
 	public int readUnsignedShortA() {
 		int value = 0;
@@ -219,7 +245,8 @@ public class Packet {
 
 	/**
 	 * Reads an int value from the packet.
-	 * @return	The int value.
+	 * 
+	 * @return The int value.
 	 */
 	public int readInt() {
 		return buffer.readInt();
@@ -227,25 +254,31 @@ public class Packet {
 
 	/**
 	 * Reads a single int value from the packet.
-	 * @return	The single int value.
+	 * 
+	 * @return The single int value.
 	 */
 	public int readSingleInt() {
 		byte firstByte = readByte(), secondByte = readByte(), thirdByte = readByte(), fourthByte = readByte();
-		return ((thirdByte << 24) & 0xFF) | ((fourthByte << 16) & 0xFF) | ((firstByte << 8) & 0xFF) | (secondByte & 0xFF);
+		return ((thirdByte << 24) & 0xFF) | ((fourthByte << 16) & 0xFF) | ((firstByte << 8) & 0xFF)
+				| (secondByte & 0xFF);
 	}
 
 	/**
 	 * Reads a double int value from the packet.
-	 * @return	The double int value.
+	 * 
+	 * @return The double int value.
 	 */
 	public int readDoubleInt() {
-		int firstByte = readByte() & 0xFF, secondByte = readByte() & 0xFF, thirdByte = readByte() & 0xFF, fourthByte = readByte() & 0xFF;
-		return ((secondByte << 24) & 0xFF) | ((firstByte << 16) & 0xFF) | ((fourthByte << 8) & 0xFF) | (thirdByte & 0xFF);
+		int firstByte = readByte() & 0xFF, secondByte = readByte() & 0xFF, thirdByte = readByte() & 0xFF,
+				fourthByte = readByte() & 0xFF;
+		return ((secondByte << 24) & 0xFF) | ((firstByte << 16) & 0xFF) | ((fourthByte << 8) & 0xFF)
+				| (thirdByte & 0xFF);
 	}
 
 	/**
 	 * Reads a triple int value from the packet.
-	 * @return	The triple int value.
+	 * 
+	 * @return The triple int value.
 	 */
 	public int readTripleInt() {
 		return ((readByte() << 16) & 0xFF) | ((readByte() << 8) & 0xFF) | (readByte() & 0xFF);
@@ -253,7 +286,8 @@ public class Packet {
 
 	/**
 	 * Reads the long value from the packet.
-	 * @return	The long value.
+	 * 
+	 * @return The long value.
 	 */
 	public long readLong() {
 		return buffer.readLong();
@@ -281,10 +315,11 @@ public class Packet {
 		}
 		return data;
 	}
-	
+
 	/**
 	 * Reads the string value from the packet.
-	 * @return	The string value.
+	 * 
+	 * @return The string value.
 	 */
 	public String readString() {
 		StringBuilder builder = new StringBuilder();
@@ -297,7 +332,8 @@ public class Packet {
 
 	/**
 	 * Reads a smart value from the packet.
-	 * @return	The smart value.
+	 * 
+	 * @return The smart value.
 	 */
 	public int readSmart() {
 		return buffer.getByte(buffer.readerIndex()) < 128 ? readByte() & 0xFF : (readShort() & 0xFFFF) - 32768;
@@ -305,7 +341,8 @@ public class Packet {
 
 	/**
 	 * Reads a signed smart value from the packet.
-	 * @return	The signed smart value.
+	 * 
+	 * @return The signed smart value.
 	 */
 	public int readSignedSmart() {
 		return buffer.getByte(buffer.readerIndex()) < 128 ? (readByte() & 0xFF) - 64 : (readShort() & 0xFFFF) - 49152;

@@ -56,26 +56,24 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		int slot = packet.readShortA();
 		int id = packet.readShortA();
 
-		//Bank withdrawal..
-		if(interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
+		// Bank withdrawal..
+		if (interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
 			Bank.withdraw(player, id, slot, 1, interfaceId - Bank.CONTAINER_START);
 			return;
 		}
 
-		switch(interfaceId) {
+		switch (interfaceId) {
 
-		case Trading.INVENTORY_CONTAINER_INTERFACE: //Duel/Trade inventory
-			if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
-				player.getPriceChecker().deposit(id, 1, slot);	
-			} else if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 1, slot, player.getInventory(), 
-						player.getTrading().getContainer());
+		case Trading.INVENTORY_CONTAINER_INTERFACE: // Duel/Trade inventory
+			if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+				player.getPriceChecker().deposit(id, 1, slot);
+			} else if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 1, slot, player.getInventory(), player.getTrading().getContainer());
 			}
 			break;
 		case Trading.CONTAINER_INTERFACE_ID:
-			if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 1, slot, player.getTrading().getContainer(), 
-						player.getInventory());
+			if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 1, slot, player.getTrading().getContainer(), player.getInventory());
 			}
 			break;
 		case PriceChecker.CONTAINER_ID:
@@ -90,33 +88,34 @@ public class ItemContainerActionPacketListener implements PacketListener {
 			Shop.checkValue(player, interfaceId, slot, id, interfaceId == Shop.INVENTORY_INTERFACE_ID);
 			break;
 
-		case Equipment.INVENTORY_INTERFACE_ID: //Unequip
+		case Equipment.INVENTORY_INTERFACE_ID: // Unequip
 			Item item = player.getEquipment().getItems()[slot];
-			if(item == null || item.getId() != id)
+			if (item == null || item.getId() != id)
 				return;
-			/*	if(player.getLocation() == Location.DUEL_ARENA) {
-				if(player.getDueling().selectedDuelRules[DuelRule.LOCK_WEAPON.ordinal()]) {
-					if(item.getDefinition().getEquipmentSlot() == Equipment.WEAPON_SLOT || item.getDefinition().isTwoHanded()) {
-						player.getPacketSender().sendMessage("Weapons have been locked during this duel!");
-						return;
-					}
-				}
-			}*/
+			/*
+			 * if(player.getLocation() == Location.DUEL_ARENA) {
+			 * if(player.getDueling().selectedDuelRules[DuelRule.LOCK_WEAPON.
+			 * ordinal()]) { if(item.getDefinition().getEquipmentSlot() ==
+			 * Equipment.WEAPON_SLOT || item.getDefinition().isTwoHanded()) {
+			 * player.getPacketSender().
+			 * sendMessage("Weapons have been locked during this duel!");
+			 * return; } } }
+			 */
 			boolean stackItem = item.getDefinition().isStackable() && player.getInventory().getAmount(item.getId()) > 0;
 			int inventorySlot = player.getInventory().getEmptySlot();
 			if (inventorySlot != -1) {
 
 				player.getEquipment().setItem(slot, new Item(-1, 0));
 
-				if(stackItem) {
+				if (stackItem) {
 					player.getInventory().add(item.getId(), item.getAmount());
 				} else {
 					player.getInventory().setItem(inventorySlot, item);
 				}
 
-				//Check if ranged update is needed!
-				if(item.getDefinition().getEquipmentSlot() == Equipment.AMMUNITION_SLOT || 
-						item.getDefinition().getEquipmentSlot() == Equipment.WEAPON_SLOT) {
+				// Check if ranged update is needed!
+				if (item.getDefinition().getEquipmentSlot() == Equipment.AMMUNITION_SLOT
+						|| item.getDefinition().getEquipmentSlot() == Equipment.WEAPON_SLOT) {
 					RangedData.updateDataFor(player);
 				}
 
@@ -125,7 +124,7 @@ public class ItemContainerActionPacketListener implements PacketListener {
 					WeaponInterfaces.assign(player);
 					player.setSpecialActivated(false);
 					CombatSpecial.updateBar(player);
-					if(player.getCombat().getAutocastSpell() != null) {
+					if (player.getCombat().getAutocastSpell() != null) {
 						Autocasting.setAutocast(player, null);
 						player.getPacketSender().sendMessage("Autocast spell cleared.");
 					}
@@ -145,13 +144,13 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		int id = packet.readLEShortA();
 		int slot = packet.readLEShort();
 
-		//Bank withdrawal..
-		if(interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
+		// Bank withdrawal..
+		if (interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
 			Bank.withdraw(player, id, slot, 5, interfaceId - Bank.CONTAINER_START);
 			return;
 		}
 
-		switch(interfaceId) {
+		switch (interfaceId) {
 		case Shop.ITEM_CHILD_ID:
 			Shop.buyItem(player, interfaceId, id, slot, 1);
 			break;
@@ -161,18 +160,16 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		case Bank.INVENTORY_INTERFACE_ID:
 			Bank.deposit(player, id, slot, 5);
 			break;
-		case Trading.INVENTORY_CONTAINER_INTERFACE: //Duel/Trade inventory
-			if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+		case Trading.INVENTORY_CONTAINER_INTERFACE: // Duel/Trade inventory
+			if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
 				player.getPriceChecker().deposit(id, 5, slot);
-			} else if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 5, slot, player.getInventory(), 
-						player.getTrading().getContainer());
+			} else if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 5, slot, player.getInventory(), player.getTrading().getContainer());
 			}
 			break;
 		case Trading.CONTAINER_INTERFACE_ID:
-			if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 5, slot, player.getTrading().getContainer(), 
-						player.getInventory());
+			if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 5, slot, player.getTrading().getContainer(), player.getInventory());
 			}
 			break;
 		case 1688: 
@@ -189,13 +186,13 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		int id = packet.readShortA();
 		int slot = packet.readShortA();
 
-		//Bank withdrawal..
-		if(interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
+		// Bank withdrawal..
+		if (interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
 			Bank.withdraw(player, id, slot, 10, interfaceId - Bank.CONTAINER_START);
 			return;
 		}
 
-		switch(interfaceId) {
+		switch (interfaceId) {
 		case Shop.ITEM_CHILD_ID:
 			Shop.buyItem(player, interfaceId, id, slot, 5);
 			break;
@@ -205,18 +202,16 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		case Bank.INVENTORY_INTERFACE_ID:
 			Bank.deposit(player, id, slot, 10);
 			break;
-		case Trading.INVENTORY_CONTAINER_INTERFACE: //Duel/Trade inventory
-			if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+		case Trading.INVENTORY_CONTAINER_INTERFACE: // Duel/Trade inventory
+			if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
 				player.getPriceChecker().deposit(id, 10, slot);
-			} else if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 10, slot, player.getInventory(), 
-						player.getTrading().getContainer());
+			} else if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 10, slot, player.getInventory(), player.getTrading().getContainer());
 			}
 			break;
 		case Trading.CONTAINER_INTERFACE_ID:
-			if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, 10, slot, player.getTrading().getContainer(), 
-						player.getInventory());
+			if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, 10, slot, player.getTrading().getContainer(), player.getInventory());
 			}
 			break;
 		case PriceChecker.CONTAINER_ID:
@@ -230,13 +225,13 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		int interfaceId = packet.readInt();
 		int id = packet.readShortA();
 
-		//Bank withdrawal..
-		if(interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
+		// Bank withdrawal..
+		if (interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
 			Bank.withdraw(player, id, slot, -1, interfaceId - Bank.CONTAINER_START);
 			return;
 		}
 
-		switch(interfaceId) {
+		switch (interfaceId) {
 		case Shop.ITEM_CHILD_ID:
 			Shop.buyItem(player, interfaceId, id, slot, 10);
 			break;
@@ -246,20 +241,18 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		case Bank.INVENTORY_INTERFACE_ID:
 			Bank.deposit(player, id, slot, -1);
 			break;
-		case Trading.INVENTORY_CONTAINER_INTERFACE: //Duel/Trade inventory
-			if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+		case Trading.INVENTORY_CONTAINER_INTERFACE: // Duel/Trade inventory
+			if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
 				player.getPriceChecker().deposit(id, player.getInventory().getAmount(id), slot);
-			} else if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, player.getInventory().getAmount(id), 
-						slot, player.getInventory(), 
+			} else if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, player.getInventory().getAmount(id), slot, player.getInventory(),
 						player.getTrading().getContainer());
 			}
 			break;
 		case Trading.CONTAINER_INTERFACE_ID:
-			if(player.getStatus() == PlayerStatus.TRADING) {
-				player.getTrading().handleItem(id, player.getTrading().getContainer().getAmount(id), 
-						slot, player.getTrading().getContainer(), 
-						player.getInventory());
+			if (player.getStatus() == PlayerStatus.TRADING) {
+				player.getTrading().handleItem(id, player.getTrading().getContainer().getAmount(id), slot,
+						player.getTrading().getContainer(), player.getInventory());
 			}
 			break;
 		case PriceChecker.CONTAINER_ID:
@@ -272,9 +265,9 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		int interfaceId = packet.readInt();
 		int slot = packet.readLEShort();
 		int id = packet.readLEShort();
-		
-		//Bank withdrawal..
-		if(interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
+
+		// Bank withdrawal..
+		if (interfaceId >= Bank.CONTAINER_START && interfaceId < Bank.CONTAINER_START + Bank.TOTAL_BANK_TABS) {
 			player.setEnterSyntax(new WithdrawBankX(id, slot, interfaceId - Bank.CONTAINER_START));
 			player.getPacketSender().sendEnterAmountPrompt("How many would you like to withdraw?");
 			return;
@@ -294,17 +287,17 @@ public class ItemContainerActionPacketListener implements PacketListener {
 			player.setEnterSyntax(new BankX(id, slot));
 			player.getPacketSender().sendEnterAmountPrompt("How many would you like to bank?");
 			break;
-		case Trading.INVENTORY_CONTAINER_INTERFACE: //Duel/Trade inventory
-			if(player.getStatus() == PlayerStatus.PRICE_CHECKING) {
+		case Trading.INVENTORY_CONTAINER_INTERFACE: // Duel/Trade inventory
+			if (player.getStatus() == PlayerStatus.PRICE_CHECKING) {
 				player.setEnterSyntax(new PriceCheckX(id, slot, true));
 				player.getPacketSender().sendEnterAmountPrompt("How many would you like to deposit?");
-			} else if(player.getStatus() == PlayerStatus.TRADING) {
+			} else if (player.getStatus() == PlayerStatus.TRADING) {
 				player.setEnterSyntax(new TradeX(id, slot, true));
 				player.getPacketSender().sendEnterAmountPrompt("How many would you like to offer?");
 			}
 			break;
 		case Trading.CONTAINER_INTERFACE_ID:
-			if(player.getStatus() == PlayerStatus.TRADING) {
+			if (player.getStatus() == PlayerStatus.TRADING) {
 				player.setEnterSyntax(new TradeX(id, slot, false));
 				player.getPacketSender().sendEnterAmountPrompt("How many would you like to remove?");
 			}

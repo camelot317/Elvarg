@@ -3,7 +3,7 @@ package com.elvarg.world.entity.combat.hit;
 import com.elvarg.util.Stopwatch;
 
 public class HitDamageCache {
-	
+
 	/** The amount of cached damage. */
 	private int damage;
 
@@ -49,5 +49,5 @@ public class HitDamageCache {
 	public Stopwatch getStopwatch() {
 		return stopwatch;
 	}
-	
+
 }

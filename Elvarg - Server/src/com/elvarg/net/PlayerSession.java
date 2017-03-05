@@ -30,7 +30,8 @@ import io.netty.channel.socket.SocketChannel;
 public class PlayerSession {
 
 	/**
-	 * The queue which contains PRIORITIZED packets that will be handled on the next sequence.
+	 * The queue which contains PRIORITIZED packets that will be handled on the
+	 * next sequence.
 	 */
 	private final Queue<Packet> prioritizedPacketsQueue = new ConcurrentLinkedQueue<>();
 
@@ -69,42 +70,40 @@ public class PlayerSession {
 
 	/**
 	 * Attempts to finalize a player's login.
-	 * @param msg	The player's login information.
+	 * 
+	 * @param msg
+	 *            The player's login information.
 	 */
 	public void finalizeLogin(LoginDetailsMessage msg) {
 		SocketChannel channel = (SocketChannel) msg.getContext().channel();
 
-		//Update the player
-		player
-		.setUsername(msg.getUsername())
-		.setLongUsername(Misc.stringToLong(msg.getUsername()))
-		.setPassword(msg.getPassword())
-		.setHostAddress(msg.getHost());
+		// Update the player
+		player.setUsername(msg.getUsername()).setLongUsername(Misc.stringToLong(msg.getUsername()))
+				.setPassword(msg.getPassword()).setHostAddress(msg.getHost());
 
-		//Get the response code
+		// Get the response code
 		int response = LoginResponses.evaulate(player, msg);
 
-		//Write the response and flush the channel
+		// Write the response and flush the channel
 		ChannelFuture future = channel.writeAndFlush(new LoginResponsePacket(response, player.getRights()));
 
-		//Close the channel after sending the response if it wasn't a successful login
-		if(response != LoginResponses.LOGIN_SUCCESSFUL) {
+		// Close the channel after sending the response if it wasn't a
+		// successful login
+		if (response != LoginResponses.LOGIN_SUCCESSFUL) {
 			future.addListener(ChannelFutureListener.CLOSE);
 			return;
 		}
 
-		//Wait...
+		// Wait...
 		future.awaitUninterruptibly();
 
-		//Replace decoder/encoder to packets
-		channel.pipeline().replace("encoder", "encoder",
-				new PacketEncoder(msg.getEncryptor()));
+		// Replace decoder/encoder to packets
+		channel.pipeline().replace("encoder", "encoder", new PacketEncoder(msg.getEncryptor()));
 
-		channel.pipeline().replace("decoder", "decoder",
-				new PacketDecoder(msg.getDecryptor()));
+		channel.pipeline().replace("decoder", "decoder", new PacketDecoder(msg.getDecryptor()));
 
-		//Queue the login
-		if(!World.getLoginQueue().contains(player)) {
+		// Queue the login
+		if (!World.getLoginQueue().contains(player)) {
 			World.getLoginQueue().add(player);
 		}
 	}
@@ -112,22 +111,23 @@ public class PlayerSession {
 	/**
 	 * Queues a recently decoded packet received from the channel.
 	 * 
-	 * @param msg 	The packet that should be queued.
+	 * @param msg
+	 *            The packet that should be queued.
 	 */
 	public void queuePacket(Packet msg) {
-		
-		//Are our queues already full?
-		//A player may be packet flooding.
-		//Simply don't add more packets to the queues.
+
+		// Are our queues already full?
+		// A player may be packet flooding.
+		// Simply don't add more packets to the queues.
 		int total_size = (packetsQueue.size() + prioritizedPacketsQueue.size());
-		if(total_size >= NetworkConstants.PACKET_PROCESS_LIMIT) {
+		if (total_size >= NetworkConstants.PACKET_PROCESS_LIMIT) {
 			return;
 		}
-		
-		//Add the packet to the queue.
-		//If it's prioritized, add it to the prioritized queue instead.
-		if(msg.getOpcode() == PacketConstants.EQUIP_ITEM_OPCODE ||
-				msg.getOpcode() == PacketConstants.FIRST_ITEM_ACTION_OPCODE) {
+
+		// Add the packet to the queue.
+		// If it's prioritized, add it to the prioritized queue instead.
+		if (msg.getOpcode() == PacketConstants.EQUIP_ITEM_OPCODE
+				|| msg.getOpcode() == PacketConstants.FIRST_ITEM_ACTION_OPCODE) {
 			prioritizedPacketsQueue.add(msg);
 		} else {
 			packetsQueue.add(msg);
@@ -136,10 +136,11 @@ public class PlayerSession {
 
 	/**
 	 * Processes all of the queued messages from the {@link PacketDecoder} by
-	 * polling the internal queue, and then handling them via the handleInputMessage.
-	 * This method is called EACH GAME CYCLE.
+	 * polling the internal queue, and then handling them via the
+	 * handleInputMessage. This method is called EACH GAME CYCLE.
 	 * 
-	 * @param priorityOnly	Should only prioritized packets be read?
+	 * @param priorityOnly
+	 *            Should only prioritized packets be read?
 	 */
 	public void handleQueuedPackets(boolean priorityOnly) {
 
@@ -147,23 +148,24 @@ public class PlayerSession {
 
 		int processed = 0;
 
-		while((msg = prioritizedPacketsQueue.poll()) != null && ++processed < NetworkConstants.PACKET_PROCESS_LIMIT) {
+		while ((msg = prioritizedPacketsQueue.poll()) != null && ++processed < NetworkConstants.PACKET_PROCESS_LIMIT) {
 			processPacket(msg);
 		}
 
-
-		if(priorityOnly) {
+		if (priorityOnly) {
 			return;
 		}
 
-		while((msg = packetsQueue.poll()) != null && ++processed < NetworkConstants.PACKET_PROCESS_LIMIT) {
+		while ((msg = packetsQueue.poll()) != null && ++processed < NetworkConstants.PACKET_PROCESS_LIMIT) {
 			processPacket(msg);
 		}
 	}
 
 	/**
 	 * Handles an incoming message.
-	 * @param msg	The message to handle.
+	 * 
+	 * @param msg
+	 *            The message to handle.
 	 */
 	public void processPacket(Packet msg) {
 		PacketConstants.PACKETS[msg.getOpcode()].handleMessage(player, msg);
@@ -173,7 +175,8 @@ public class PlayerSession {
 	 * Queues the {@code msg} for this session to be encoded and sent to the
 	 * client.
 	 *
-	 * @param builder 	the packet to queue.
+	 * @param builder
+	 *            the packet to queue.
 	 */
 	public void write(PacketBuilder builder) {
 		try {
@@ -189,7 +192,8 @@ public class PlayerSession {
 	/**
 	 * Processes a packet immediately to be sent to the client.
 	 *
-	 * @param builder 	the packet to send.
+	 * @param builder
+	 *            the packet to send.
 	 */
 	public void writeAndFlush(PacketBuilder builder) {
 		try {

@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Random;
 
 import com.elvarg.Elvarg;
-import com.elvarg.net.NetworkConstants;
 import com.elvarg.net.ByteBufUtils;
+import com.elvarg.net.NetworkConstants;
 import com.elvarg.net.login.LoginDetailsMessage;
 import com.elvarg.net.login.LoginResponses;
 import com.elvarg.net.login.LoginUtils;
@@ -21,13 +21,14 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 /**
  * Decodes login.
+ * 
  * @author Swiffy
  */
 public final class LoginDecoder extends ByteToMessageDecoder {
 
 	/**
-	 * Generates random numbers via secure cryptography. Generates the session key for packet
-	 * encryption.
+	 * Generates random numbers via secure cryptography. Generates the session
+	 * key for packet encryption.
 	 */
 	private static final Random random = new SecureRandom();
 
@@ -40,19 +41,19 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 	 * The current login decoder state
 	 */
 	private LoginDecoderState state = LoginDecoderState.LOGIN_REQUEST;
-	
+
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf buffer, List<Object> out) throws Exception {
-		switch(state) {
-		
+		switch (state) {
+
 		case LOGIN_REQUEST:
 			decodeRequest(ctx, buffer);
 			break;
-			
+
 		case LOGIN_TYPE:
 			decodeType(ctx, buffer);
 			break;
-			
+
 		case LOGIN:
 			decodeLogin(ctx, buffer, out);
 			break;
@@ -60,55 +61,55 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 	}
 
 	private void decodeRequest(ChannelHandlerContext ctx, ByteBuf buffer) {
-		
-		if(!buffer.isReadable()) {
+
+		if (!buffer.isReadable()) {
 			ctx.channel().close();
 			return;
 		}
-		
+
 		int request = buffer.readUnsignedByte();
 		if (request != NetworkConstants.LOGIN_REQUEST_OPCODE) {
-			Elvarg.getLogger().info("Session rejected for bad login request id: "+request);
+			Elvarg.getLogger().info("Session rejected for bad login request id: " + request);
 			LoginUtils.sendResponseCode(ctx, LoginResponses.LOGIN_SERVER_OFFLINE);
 			return;
 		}
 
-		//Send information to the client
+		// Send information to the client
 		ByteBuf buf = Unpooled.buffer(19);
-		buf.writeByte(0); //0 = continue login
-		buf.writeLong(random.nextLong()); // This long will be used for encryption later on
+		buf.writeByte(0); // 0 = continue login
+		buf.writeLong(random.nextLong()); // This long will be used for
+											// encryption later on
 		ctx.writeAndFlush(buf);
-		
+
 		state = LoginDecoderState.LOGIN_TYPE;
 	}
 
 	private void decodeType(ChannelHandlerContext ctx, ByteBuf buffer) {
-		
-		if(!buffer.isReadable()) {
+
+		if (!buffer.isReadable()) {
 			ctx.channel().close();
 			return;
 		}
-		
+
 		int connectionType = buffer.readUnsignedByte();
 		if (connectionType != NetworkConstants.NEW_CONNECTION_OPCODE
 				&& connectionType != NetworkConstants.RECONNECTION_OPCODE) {
-			Elvarg.getLogger().info("Session rejected for bad connection type id: "+connectionType);
+			Elvarg.getLogger().info("Session rejected for bad connection type id: " + connectionType);
 			LoginUtils.sendResponseCode(ctx, LoginResponses.LOGIN_SERVER_OFFLINE);
 			return;
 		}
-		
+
 		state = LoginDecoderState.LOGIN;
 	}
 
 	private void decodeLogin(ChannelHandlerContext ctx, ByteBuf buffer, List<Object> out) {
-		
-		if(!buffer.isReadable()) {
+
+		if (!buffer.isReadable()) {
 			ctx.channel().close();
 			return;
 		}
-		
-		encryptedLoginBlockSize = buffer.readUnsignedByte();
 
+		encryptedLoginBlockSize = buffer.readUnsignedByte();
 
 		if (encryptedLoginBlockSize != buffer.readableBytes()) {
 			Elvarg.getLogger().info(String.format("[host= %s] encryptedLoginBlockSize != readable bytes",
@@ -117,10 +118,10 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 			return;
 		}
 
-		if(buffer.isReadable(encryptedLoginBlockSize)) {
+		if (buffer.isReadable(encryptedLoginBlockSize)) {
 
 			int magicId = buffer.readUnsignedByte();
-			if(magicId != 0xFF) {
+			if (magicId != 0xFF) {
 				Elvarg.getLogger().info(String.format("[host= %s] [magic= %d] was rejected for the wrong magic value.",
 						ctx.channel().remoteAddress(), magicId));
 				LoginUtils.sendResponseCode(ctx, LoginResponses.LOGIN_REJECT_SESSION);
@@ -129,7 +130,7 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 
 			int clientVersion = buffer.readShort();
 
-			int memory =  buffer.readByte();
+			int memory = buffer.readByte();
 			if (memory != 0 && memory != 1) {
 				Elvarg.getLogger().info(String.format("[host= %s] was rejected for having the memory setting.",
 						ctx.channel().remoteAddress()));
@@ -137,13 +138,13 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 				return;
 			}
 
-			/*int[] archiveCrcs = new int[9];
-			for (int i = 0; i < 9; i++) {
-				archiveCrcs[i] = buffer.readInt();
-			}*/
+			/*
+			 * int[] archiveCrcs = new int[9]; for (int i = 0; i < 9; i++) {
+			 * archiveCrcs[i] = buffer.readInt(); }
+			 */
 
 			/**
-			 * Our RSA components. 
+			 * Our RSA components.
 			 */
 			int length = buffer.readUnsignedByte();
 			byte[] rsaBytes = new byte[length];
@@ -153,7 +154,7 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 					.modPow(NetworkConstants.RSA_EXPONENT, NetworkConstants.RSA_MODULUS).toByteArray());
 
 			int securityId = rsaBuffer.readByte();
-			if(securityId != 10) {
+			if (securityId != 10) {
 				Elvarg.getLogger().info(String.format("[host= %s] was rejected for having the wrong securityId.",
 						ctx.channel().remoteAddress()));
 				LoginUtils.sendResponseCode(ctx, LoginResponses.LOGIN_REJECT_SESSION);
@@ -163,7 +164,7 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 			long clientSeed = rsaBuffer.readLong();
 			long seedReceived = rsaBuffer.readLong();
 
-			int[] seed = {(int) (clientSeed >> 32), (int) clientSeed, (int) (seedReceived >> 32), (int) seedReceived};
+			int[] seed = { (int) (clientSeed >> 32), (int) clientSeed, (int) (seedReceived >> 32), (int) seedReceived };
 			IsaacRandom decodingRandom = new IsaacRandom(seed);
 			for (int i = 0; i < seed.length; i++) {
 				seed[i] += 50;
@@ -179,13 +180,12 @@ public final class LoginDecoder extends ByteToMessageDecoder {
 				return;
 			}
 
-			out.add(new LoginDetailsMessage(ctx, username, password, ByteBufUtils.getHost(ctx.channel()), clientVersion, uid, new IsaacRandom(seed), decodingRandom));
+			out.add(new LoginDetailsMessage(ctx, username, password, ByteBufUtils.getHost(ctx.channel()), clientVersion,
+					uid, new IsaacRandom(seed), decodingRandom));
 		}
 	}
-	
+
 	private enum LoginDecoderState {
-		LOGIN_REQUEST,
-		LOGIN_TYPE,
-		LOGIN;
+		LOGIN_REQUEST, LOGIN_TYPE, LOGIN;
 	}
 }

@@ -6,28 +6,28 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import com.elvarg.GameConstants;
-import com.elvarg.world.content.SkillManager;
+import com.elvarg.world.content.skills.SkillManager;
 import com.elvarg.world.model.container.impl.Equipment;
 
 /**
- * This file manages every item definition, which includes
- * their name, description, value, skill requirements, etc.
+ * This file manages every item definition, which includes their name,
+ * description, value, skill requirements, etc.
  * 
  * @author relex lawl
  */
 
 public class ItemDefinition {
-		
+
 	/**
 	 * The max amount of items that will be loaded.
 	 */
 	private static final int MAX_AMOUNT_OF_ITEMS = 21500;
-	
+
 	/**
 	 * ItemDefinition array containing all items' definition values.
 	 */
 	private static ItemDefinition[] definitions = new ItemDefinition[MAX_AMOUNT_OF_ITEMS];
-	
+
 	/**
 	 * Loading all item definitions
 	 */
@@ -67,7 +67,7 @@ public class ItemDefinition {
 					definition.id = id;
 					break;
 				case "name":
-					if(value == null)
+					if (value == null)
 						continue;
 					definition.name = value;
 					break;
@@ -135,36 +135,37 @@ public class ItemDefinition {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}	
-	
+	}
+
 	public static ItemDefinition[] getDefinitions() {
 		return definitions;
 	}
-	
+
 	/**
 	 * Gets the item definition correspondent to the id.
 	 * 
-	 * @param id	The id of the item to fetch definition for.
-	 * @return		definitions[id].
+	 * @param id
+	 *            The id of the item to fetch definition for.
+	 * @return definitions[id].
 	 */
 	public static ItemDefinition forId(int id) {
 		return (id < 0 || id > definitions.length || definitions[id] == null) ? create(id) : definitions[id];
 	}
-	
+
 	/**
-	 * Gets the max amount of items that will be loaded
-	 * in Niobe.
-	 * @return	The maximum amount of item definitions loaded.
+	 * Gets the max amount of items that will be loaded in Niobe.
+	 * 
+	 * @return The maximum amount of item definitions loaded.
 	 */
 	public static int getMaxAmountOfItems() {
 		return MAX_AMOUNT_OF_ITEMS;
 	}
-	
+
 	public static ItemDefinition UNARMED_ITEM_DEFINITION;
-		
+
 	public static ItemDefinition create(int item) {
-		if(item == -1) {
-			if(UNARMED_ITEM_DEFINITION != null) {
+		if (item == -1) {
+			if (UNARMED_ITEM_DEFINITION != null) {
 				return UNARMED_ITEM_DEFINITION;
 			}
 			UNARMED_ITEM_DEFINITION = new ItemDefinition();
@@ -178,128 +179,114 @@ public class ItemDefinition {
 	private String name = "";
 	private String examine = "";
 	private int value;
-	private boolean 
-	stackable, 
-	tradeable, 
-	sellable, 
-	dropable,
-	noted;
+	private boolean stackable, tradeable, sellable, dropable, noted;
 	private int noteId;
 	private boolean doubleHanded;
-	private int 
-	blockAnim = 424, 
-	standAnim = 808, 
-	walkAnim = 819, 
-	runAnim = 824, 
-	standTurnAnim = 823, 
-	turn180Anim = 820, 
-	turn90CWAnim = 821, 
-	turn90CCWAnim = 821, 
-	interfaceId;
+	private int blockAnim = 424, standAnim = 808, walkAnim = 819, runAnim = 824, standTurnAnim = 823, turn180Anim = 820,
+			turn90CWAnim = 821, turn90CCWAnim = 821, interfaceId;
 	private double[] bonus = new double[18];
 	private int[] requirement = new int[SkillManager.AMOUNT_OF_SKILLS];
 	private EquipmentType equipmentType = EquipmentType.NONE;
-	
-	
+
 	public int getId() {
 		return id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public String getExamine() {
 		return examine;
 	}
-	
+
 	public int getValue() {
 		return value;
 	}
-	
+
 	public boolean isStackable() {
 		return stackable;
 	}
-	
+
 	public boolean isTradeable() {
 		return tradeable;
 	}
-	
+
 	public boolean isSellable() {
 		return sellable;
 	}
-	
+
 	public boolean isDropable() {
 		return dropable;
 	}
-	
+
 	public boolean isNoted() {
 		return noted;
 	}
-	
+
 	public int getNoteId() {
 		return noteId;
 	}
-	
+
 	public boolean isDoubleHanded() {
 		return doubleHanded;
 	}
-	
+
 	public int getBlockAnim() {
 		return blockAnim;
 	}
-	
+
 	public int getStandAnim() {
 		return standAnim;
 	}
-	
+
 	public int getWalkAnim() {
 		return walkAnim;
 	}
-	
+
 	public int getRunAnim() {
 		return runAnim;
 	}
-	
+
 	public int getStandTurnAnim() {
 		return standTurnAnim;
 	}
-	
+
 	public int getTurn180Anim() {
 		return turn180Anim;
 	}
-	
+
 	public int getTurn90CWAnim() {
 		return turn90CWAnim;
 	}
-	
+
 	public int getTurn90CCWAnim() {
 		return turn90CCWAnim;
 	}
-	
+
 	public int getInterfaceId() {
 		return interfaceId;
 	}
-	
+
 	public int[] getRequirement() {
 		return requirement;
 	}
-	
+
 	public double[] getBonus() {
 		return bonus;
 	}
-	
+
 	public int getEquipmentSlot() {
 		return equipmentType.slot;
 	}
-	
+
 	/**
 	 * Checks if item is a full torso replacer.
 	 */
 	public boolean isFullBody() {
 		return equipmentType.equals(EquipmentType.PLATEBODY);
 	}
-	
+
 	/**
 	 * Checks if item is a full head replacer.
 	 */
@@ -329,8 +316,7 @@ public class ItemDefinition {
 	}
 
 	private enum EquipmentType {
-		HOODED_CAPE(Equipment.CAPE_SLOT),
-		CAPE(Equipment.CAPE_SLOT),
+		HOODED_CAPE(Equipment.CAPE_SLOT), CAPE(Equipment.CAPE_SLOT),
 
 		SHIELD(Equipment.SHIELD_SLOT),
 
@@ -344,34 +330,45 @@ public class ItemDefinition {
 
 		ARROWS(Equipment.AMMUNITION_SLOT),
 
-		HAT(Equipment.HEAD_SLOT),// DOESNT CHANGE HAIR CLIPPING/JUST ADDS TO HEAD
-		MED_HELMET(Equipment.HEAD_SLOT),
-		MASK(Equipment.HEAD_SLOT),
-		FULL_MASK(Equipment.HEAD_SLOT),//TODO DOES NOTHING, PROBABALY WILL ALWAYS HAVE NO USE, currently unued
+		HAT(Equipment.HEAD_SLOT), // DOESNT CHANGE HAIR CLIPPING/JUST ADDS TO
+									// HEAD
+		MED_HELMET(Equipment.HEAD_SLOT), MASK(Equipment.HEAD_SLOT), FULL_MASK(Equipment.HEAD_SLOT), // TODO
+																									// DOES
+																									// NOTHING,
+																									// PROBABALY
+																									// WILL
+																									// ALWAYS
+																									// HAVE
+																									// NO
+																									// USE,
+																									// currently
+																									// unued
 		FULL_HELMET(Equipment.HEAD_SLOT),
 
-		BODY(Equipment.BODY_SLOT),//TORSO REMOVAL
+		BODY(Equipment.BODY_SLOT), // TORSO REMOVAL
 		PLATEBODY(Equipment.BODY_SLOT),
 
-		LEGS(Equipment.LEG_SLOT),//REMOVES BOTTOM HALF OF BODY TO FEET IF ITEM HAS NO LEG DATA
+		LEGS(Equipment.LEG_SLOT), // REMOVES BOTTOM HALF OF BODY TO FEET IF ITEM
+									// HAS NO LEG DATA
 
 		WEAPON(Equipment.WEAPON_SLOT),
 
-		NONE(-1);//DEFAULT/NOTHING IN SLOT
-		
+		NONE(-1);// DEFAULT/NOTHING IN SLOT
+
 		private EquipmentType(int slot) {
 			this.slot = slot;
 		}
 
 		private int slot;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "[ItemDefinition(" + id + ")] - Name: " + name + "; equipment slot: " + getEquipmentSlot() + "; value: "
-				+ value + "; stackable ? " + Boolean.toString(stackable) + "; noted ? " + Boolean.toString(noted) + "; 2h ? " + doubleHanded;
+				+ value + "; stackable ? " + Boolean.toString(stackable) + "; noted ? " + Boolean.toString(noted)
+				+ "; 2h ? " + doubleHanded;
 	}
-	
+
 	public static int getItemId(String itemName) {
 		for (int i = 0; i < MAX_AMOUNT_OF_ITEMS; i++) {
 			if (definitions[i] != null) {

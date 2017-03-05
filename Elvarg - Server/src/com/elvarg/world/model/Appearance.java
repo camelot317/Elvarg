@@ -3,32 +3,33 @@ package com.elvarg.world.model;
 import com.elvarg.world.entity.impl.player.Player;
 
 /**
- * This file manages a player's appearance and properties, such as head hints, gender, prayer head hints, etc.
+ * This file manages a player's appearance and properties, such as head hints,
+ * gender, prayer head hints, etc.
  * 
  * @author relex lawl
  */
 
 public class Appearance {
-		
+
 	/**
 	 * Can the player change appearance right now?
 	 */
 	private boolean canChangeAppearance = false;
-	
+
 	/**
 	 * The player's head icon hint.
 	 */
 	private int headHint = -1;
-	
+
 	/**
 	 * The player's bounty hunter skull.
 	 */
 	private int bountyHunterSkull = -1;
-	
-	
+
 	/**
 	 * Gets the player's current head hint index.
-	 * @return	The player's head hint.
+	 * 
+	 * @return The player's head hint.
 	 */
 	public int getHeadHint() {
 		return headHint;
@@ -36,8 +37,10 @@ public class Appearance {
 
 	/**
 	 * Sets the player's head icon hint.
-	 * @param headHint	The hint index to use.
-	 * @return			The Appearance instance.
+	 * 
+	 * @param headHint
+	 *            The hint index to use.
+	 * @return The Appearance instance.
 	 */
 	public Appearance setHeadHint(int headHint) {
 		this.headHint = headHint;
@@ -47,34 +50,40 @@ public class Appearance {
 
 	/**
 	 * Gets the player's current bounty hunter skull.
-	 * @return	The player's skull hint.
+	 * 
+	 * @return The player's skull hint.
 	 */
 	public int getBountyHunterSkull() {
 		return bountyHunterSkull;
 	}
-	
+
 	/**
 	 * Sets the player's bounty hunter skull.
-	 * @param skullHint	The skull hint index to use.
-	 * @return			The Appearance instance.
+	 * 
+	 * @param skullHint
+	 *            The skull hint index to use.
+	 * @return The Appearance instance.
 	 */
 	public Appearance setBountyHunterSkull(int skullHint) {
 		this.bountyHunterSkull = skullHint;
 		player.getUpdateFlag().flag(Flag.APPEARANCE);
 		return this;
 	}
-	
+
 	/**
 	 * Checks if a player can change appearance right now
+	 * 
 	 * @return the canChangeAppearance value
 	 */
 	public boolean canChangeAppearance() {
 		return canChangeAppearance;
 	}
-	
+
 	/**
 	 * Sets if a player can change appearance right now
-	 * @param l	The value to set
+	 * 
+	 * @param l
+	 *            The value to set
 	 */
 	public void setCanChangeAppearance(boolean l) {
 		this.canChangeAppearance = l;
@@ -83,50 +92,58 @@ public class Appearance {
 	/**
 	 * Gets the look array, which is an array with 13 elements describing the
 	 * look of a player.
+	 * 
 	 * @return The look array.
 	 */
 	public int[] getLook() {
 		return look;
 	}
-	
+
 	/**
 	 * Sets the look array.
-	 * @param look The look array.
-	 * @throws IllegalArgumentException if the array length is not 12.
+	 * 
+	 * @param look
+	 *            The look array.
+	 * @throws IllegalArgumentException
+	 *             if the array length is not 12.
 	 */
 	public void set(int[] look) {
-		if(look.length < 12) {
+		if (look.length < 12) {
 			throw new IllegalArgumentException("Array length must be 12.");
 		}
 		this.look = look;
 		player.getUpdateFlag().flag(Flag.APPEARANCE);
 	}
-	
+
 	/**
 	 * Sets a specific look.
-	 * @param index		Array index to set.
-	 * @param look		Value to change look[index] to.
+	 * 
+	 * @param index
+	 *            Array index to set.
+	 * @param look
+	 *            Value to change look[index] to.
 	 */
 	public void set(int index, int look) {
 		this.look[index] = look;
 		player.getUpdateFlag().flag(Flag.APPEARANCE);
 	}
-	
+
 	/**
 	 * The player's current character clothing.
 	 */
 	private int[] look = new int[13];
-	
+
 	/**
-	 * The Appearance constructor, also sets
-	 * the player's default clothing.
-	 * @param player	The associated player.
+	 * The Appearance constructor, also sets the player's default clothing.
+	 * 
+	 * @param player
+	 *            The associated player.
 	 */
 	public Appearance(Player player) {
 		this.player = player;
 		set();
 	}
-	
+
 	/**
 	 * Sets the player's default clothing.
 	 */
@@ -155,11 +172,11 @@ public class Appearance {
 		look[SKIN_COLOUR] = 0;
 		player.getUpdateFlag().flag(Flag.APPEARANCE);
 	}
-	
+
 	public boolean isMale() {
 		return look[GENDER] == 0;
 	}
-	
+
 	/**
 	 * The associated player.
 	 */
@@ -169,5 +186,5 @@ public class Appearance {
 	 * The index of said body part color in the look array.
 	 */
 	public static final int HAIR_COLOUR = 8, TORSO_COLOUR = 9, LEG_COLOUR = 10, FEET_COLOUR = 11, SKIN_COLOUR = 12,
-							HEAD = 1, CHEST = 2, ARMS = 3, HANDS = 4, LEGS = 5, FEET = 6, BEARD = 7, GENDER = 0;
+			HEAD = 1, CHEST = 2, ARMS = 3, HANDS = 4, LEGS = 5, FEET = 6, BEARD = 7, GENDER = 0;
 }

@@ -14,7 +14,7 @@ public class DragonDaggerCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1062, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(252, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -22,7 +22,8 @@ public class DragonDaggerCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0), new QueueableHit(character, target, this, true, target.isNpc() ? 1 : 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0),
+				new QueueableHit(character, target, this, true, target.isNpc() ? 1 : 0) };
 	}
 
 	@Override

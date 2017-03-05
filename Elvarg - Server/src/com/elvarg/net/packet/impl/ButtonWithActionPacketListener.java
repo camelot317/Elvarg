@@ -8,6 +8,7 @@ import com.elvarg.world.model.container.impl.Bank;
 
 /**
  * This packet listener reads a button click WITH an action.
+ * 
  * @author Gabriel Hannason
  */
 
@@ -17,12 +18,12 @@ public class ButtonWithActionPacketListener implements PacketListener {
 	public void handleMessage(Player player, Packet packet) {
 		int button = packet.readInt();
 		int action = packet.readByte();
-		
-		if(Bank.handleButton(player, button, action)) {
+
+		if (Bank.handleButton(player, button, action)) {
 			return;
 		}
-		if(ClanChatManager.handleButton(player, button, action)) {
-			
+		if (ClanChatManager.handleButton(player, button, action)) {
+
 		}
 	}
 }

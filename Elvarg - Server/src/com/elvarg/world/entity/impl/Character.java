@@ -1,6 +1,5 @@
 package com.elvarg.world.entity.impl;
 
-
 import com.elvarg.engine.task.Task;
 import com.elvarg.engine.task.TaskManager;
 import com.elvarg.util.Stopwatch;
@@ -21,6 +20,7 @@ import com.elvarg.world.model.movement.MovementQueue;
 
 /**
  * A player or NPC
+ * 
  * @author Gabriel Hannason
  */
 
@@ -35,7 +35,7 @@ public abstract class Character extends Entity {
 		setPosition(teleportTarget.copy());
 		setNeedsPlacement(true);
 		setResetMovementQueue(true);
-		if(isPlayer()) {
+		if (isPlayer()) {
 			getMovementQueue().handleRegionChange();
 		}
 		return this;
@@ -67,11 +67,11 @@ public abstract class Character extends Entity {
 	 * Fields
 	 */
 
-
 	private final Combat combat = new Combat(this);
 	private final MovementQueue movementQueue = new MovementQueue(this);
 	private String forcedChat;
-	private Direction direction, primaryDirection = Direction.NONE, secondaryDirection = Direction.NONE, lastDirection = Direction.NONE;
+	private Direction direction, primaryDirection = Direction.NONE, secondaryDirection = Direction.NONE,
+			lastDirection = Direction.NONE;
 	private Stopwatch lastCombat = new Stopwatch();
 	private UpdateFlag updateFlag = new UpdateFlag();
 	private Location location = Location.DEFAULT;
@@ -88,17 +88,26 @@ public abstract class Character extends Entity {
 
 	private HitDamage primaryHit;
 	private HitDamage secondaryHit;
-	public abstract void onRegister();
-	public abstract Character setHitpoints(int hitpoints);
-	public abstract void appendDeath();
-	public abstract void heal(int damage);
-	public abstract int getHitpoints();
-	public abstract int getBaseAttack(CombatType type);
-	public abstract int getBaseDefence(CombatType type);
-	public abstract int getBaseAttackSpeed();
-	public abstract int getAttackAnim();
-	public abstract int getBlockAnim();
 
+	public abstract void onRegister();
+
+	public abstract Character setHitpoints(int hitpoints);
+
+	public abstract void appendDeath();
+
+	public abstract void heal(int damage);
+
+	public abstract int getHitpoints();
+
+	public abstract int getBaseAttack(CombatType type);
+
+	public abstract int getBaseDefence(CombatType type);
+
+	public abstract int getBaseAttackSpeed();
+
+	public abstract int getAttackAnim();
+
+	public abstract int getBlockAnim();
 
 	/**
 	 * Is this entity registered.
@@ -106,8 +115,7 @@ public abstract class Character extends Entity {
 	private boolean registered;
 
 	/*
-	 * Getters and setters
-	 * Also contains methods.
+	 * Getters and setters Also contains methods.
 	 */
 
 	public Location getLocation() {
@@ -118,25 +126,22 @@ public abstract class Character extends Entity {
 		this.location = location;
 	}
 
-
 	public Character setGraphic(Graphic newGraphic) {
-		
+
 		/**
-		 * Graphic priorities.
-		 * This piece of code below will stop other graphics
-		 * from being performed if there's already one
-		 * with higher priority queued to be sent to the
-		 * client via player updating.
+		 * Graphic priorities. This piece of code below will stop other graphics
+		 * from being performed if there's already one with higher priority
+		 * queued to be sent to the client via player updating.
 		 */
-		if(this.graphic != null && newGraphic != null) {
-			if(this.graphic.getPriority().ordinal() > newGraphic.getPriority().ordinal()) {
+		if (this.graphic != null && newGraphic != null) {
+			if (this.graphic.getPriority().ordinal() > newGraphic.getPriority().ordinal()) {
 				return this;
 			}
 		}
-		
+
 		this.graphic = newGraphic;
 
-		if(newGraphic != null) {
+		if (newGraphic != null) {
 			getUpdateFlag().flag(Flag.GRAPHIC);
 		}
 
@@ -146,31 +151,29 @@ public abstract class Character extends Entity {
 	public Character setAnimation(Animation newAnimation) {
 
 		/**
-		 * Animation priorities.
-		 * This piece of code below will stop other animations
-		 * from being performed if there's already one
-		 * with higher priority queued to be sent to the
-		 * client via player updating.
+		 * Animation priorities. This piece of code below will stop other
+		 * animations from being performed if there's already one with higher
+		 * priority queued to be sent to the client via player updating.
 		 */
-		if(this.animation != null && newAnimation != null) {
-			if(this.animation.getPriority().ordinal() > newAnimation.getPriority().ordinal()) {
+		if (this.animation != null && newAnimation != null) {
+			if (this.animation.getPriority().ordinal() > newAnimation.getPriority().ordinal()) {
 				return this;
 			}
 		}
 
 		this.animation = newAnimation;
 
-		if(animation != null) {
+		if (animation != null) {
 			getUpdateFlag().flag(Flag.ANIMATION);
 		}
 
 		return this;
 	}
-	
+
 	public Graphic getGraphic() {
 		return graphic;
 	}
-	
+
 	public Animation getAnimation() {
 		return animation;
 	}
@@ -219,7 +222,6 @@ public abstract class Character extends Entity {
 	public Combat getCombat() {
 		return combat;
 	}
-
 
 	public Entity getInteractingEntity() {
 		return interactingEntity;
@@ -310,7 +312,6 @@ public abstract class Character extends Entity {
 		return this;
 	}
 
-
 	/**
 	 * Deals one damage to this entity.
 	 * 
@@ -322,7 +323,7 @@ public abstract class Character extends Entity {
 			dealSecondaryDamage(hit);
 			return;
 		}
-		if(getHitpoints() <= 0)
+		if (getHitpoints() <= 0)
 			return;
 		primaryHit = decrementHealth(hit);
 		getUpdateFlag().flag(Flag.SINGLE_HIT);
@@ -331,9 +332,9 @@ public abstract class Character extends Entity {
 	public HitDamage decrementHealth(HitDamage hit) {
 		if (getHitpoints() <= 0)
 			return hit;
-		if(hit.getDamage() > getHitpoints())
+		if (hit.getDamage() > getHitpoints())
 			hit.setDamage(getHitpoints());
-		if(hit.getDamage() < 0)
+		if (hit.getDamage() < 0)
 			hit.setDamage(0);
 		int outcome = getHitpoints() - hit.getDamage();
 		if (outcome < 0)
@@ -503,10 +504,10 @@ public abstract class Character extends Entity {
 	}
 
 	public Player getAsPlayer() {
-		return ((Player)this);
+		return ((Player) this);
 	}
 
 	public NPC getAsNpc() {
-		return ((NPC)this);
+		return ((NPC) this);
 	}
 }

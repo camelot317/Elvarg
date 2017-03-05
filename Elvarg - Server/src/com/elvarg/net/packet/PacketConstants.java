@@ -33,8 +33,9 @@ import com.elvarg.net.packet.impl.SwitchItemSlotPacketListener;
 import com.elvarg.net.packet.impl.TradeRequestPacketListener;
 
 /**
- * Defining all packets and other packet-related-constants 
- * that are in the 317 protocol.
+ * Defining all packets and other packet-related-constants that are in the 317
+ * protocol.
+ * 
  * @author Gabriel Hannason
  */
 public class PacketConstants {
@@ -79,35 +80,26 @@ public class PacketConstants {
 	public static final int MAGIC_ON_PLAYER_OPCODE = 249;
 	public static final int BANK_TAB_CREATION_OPCODE = 216;
 	public static final int TRADE_REQUEST_OPCODE = 139;
-	
-	public static final int 
-	OBJECT_FIRST_CLICK_OPCODE = 132, 
-	OBJECT_SECOND_CLICK_OPCODE = 252, 
-	OBJECT_THIRD_CLICK_OPCODE = 70, 
-	OBJECT_FOURTH_CLICK_OPCODE = 234, 
-	OBJECT_FIFTH_CLICK_OPCODE = 228;
-	
-	public static final int 
-	ATTACK_NPC_OPCODE = 72, 
-	FIRST_CLICK_OPCODE = 155, 
-	MAGE_NPC_OPCODE = 131, 
-	SECOND_CLICK_OPCODE = 17, 
-	THIRD_CLICK_OPCODE = 21, 
-	FOURTH_CLICK_OPCODE = 18;
-	
+
+	public static final int OBJECT_FIRST_CLICK_OPCODE = 132, OBJECT_SECOND_CLICK_OPCODE = 252,
+			OBJECT_THIRD_CLICK_OPCODE = 70, OBJECT_FOURTH_CLICK_OPCODE = 234, OBJECT_FIFTH_CLICK_OPCODE = 228;
+
+	public static final int ATTACK_NPC_OPCODE = 72, FIRST_CLICK_OPCODE = 155, MAGE_NPC_OPCODE = 131,
+			SECOND_CLICK_OPCODE = 17, THIRD_CLICK_OPCODE = 21, FOURTH_CLICK_OPCODE = 18;
+
 	public static final int FIRST_ITEM_ACTION_OPCODE = 122;
 	public static final int SECOND_ITEM_ACTION_OPCODE = 75;
 	public static final int THIRD_ITEM_ACTION_OPCODE = 16;
-	
+
 	static {
-		for(int i = 0; i < PACKETS.length; i++) {
+		for (int i = 0; i < PACKETS.length; i++) {
 			PACKETS[i] = new SilencedPacketListener();
 		}
 
 		PACKETS[BUTTON_CLICK_OPCODE] = new ButtonClickPacketListener();
 		PACKETS[BUTTON_WITH_ACTION_OPCODE] = new ButtonWithActionPacketListener();
 		PACKETS[CHAT_OPCODE_1] = new ChatPacketListener();
-		
+
 		PACKETS[DROP_ITEM_OPCODE] = new DropItemPacketListener();
 		PACKETS[FINALIZED_MAP_REGION_OPCODE] = new FinalizedMapRegionChangePacketListener();
 		PACKETS[CHANGE_MAP_REGION_OPCODE] = new RegionChangePacketListener();
@@ -131,40 +123,40 @@ public class PacketConstants {
 		PACKETS[FOLLOW_PLAYER_OPCODE] = new FollowPlayerPacketListener();
 		PACKETS[MAGIC_ON_PLAYER_OPCODE] = new MagicOnPlayerPacketListener();
 		PACKETS[BANK_TAB_CREATION_OPCODE] = new BankTabCreationPacketListener();
-		
+
 		PACKETS[FIRST_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
 		PACKETS[SECOND_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
 		PACKETS[THIRD_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
 		PACKETS[FOURTH_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
 		PACKETS[FIFTH_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
 		PACKETS[SIXTH_ITEM_CONTAINER_ACTION_OPCODE] = new ItemContainerActionPacketListener();
-	
+
 		PACKETS[OBJECT_FIRST_CLICK_OPCODE] = new ObjectActionPacketListener();
 		PACKETS[OBJECT_SECOND_CLICK_OPCODE] = new ObjectActionPacketListener();
 		PACKETS[OBJECT_THIRD_CLICK_OPCODE] = new ObjectActionPacketListener();
 		PACKETS[OBJECT_FOURTH_CLICK_OPCODE] = new ObjectActionPacketListener();
 		PACKETS[OBJECT_FIFTH_CLICK_OPCODE] = new ObjectActionPacketListener();
-		
+
 		PACKETS[ATTACK_NPC_OPCODE] = new NPCOptionPacketListener();
 		PACKETS[FIRST_CLICK_OPCODE] = new NPCOptionPacketListener();
 		PACKETS[MAGE_NPC_OPCODE] = new NPCOptionPacketListener();
 		PACKETS[SECOND_CLICK_OPCODE] = new NPCOptionPacketListener();
 		PACKETS[THIRD_CLICK_OPCODE] = new NPCOptionPacketListener();
 		PACKETS[FOURTH_CLICK_OPCODE] = new NPCOptionPacketListener();
-		
+
 		PACKETS[FIRST_ITEM_ACTION_OPCODE] = new ItemActionPacketListener();
 		PACKETS[SECOND_ITEM_ACTION_OPCODE] = new ItemActionPacketListener();
 		PACKETS[THIRD_ITEM_ACTION_OPCODE] = new ItemActionPacketListener();
-		
+
 		PACKETS[ADD_FRIEND_OPCODE] = new PlayerRelationPacketListener();
 		PACKETS[REMOVE_FRIEND_OPCODE] = new PlayerRelationPacketListener();
 		PACKETS[ADD_IGNORE_OPCODE] = new PlayerRelationPacketListener();
 		PACKETS[REMOVE_IGNORE_OPCODE] = new PlayerRelationPacketListener();
 		PACKETS[SEND_PM_OPCODE] = new PlayerRelationPacketListener();
-		
+
 		PACKETS[ENTER_AMOUNT_OPCODE] = new EnterInputPacketListener();
 		PACKETS[ENTER_SYNTAX_OPCODE] = new EnterInputPacketListener();
-		
+
 		PACKETS[TRADE_REQUEST_OPCODE] = new TradeRequestPacketListener();
 	}
 }

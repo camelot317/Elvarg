@@ -7,17 +7,16 @@ package com.elvarg.world.model;
  */
 public enum Priority {
 
-	
 	/**
 	 * A low priority.
 	 */
 	LOW,
-	
+
 	/**
 	 * A medium priority.
 	 */
 	MEDIUM,
-	
+
 	/**
 	 * A high priority. Should be prioritized over others.
 	 */

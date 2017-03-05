@@ -5,10 +5,9 @@ import java.nio.ByteBuffer;
 import com.elvarg.net.ByteBufUtils;
 import com.google.common.base.Preconditions;
 
-import io.netty.buffer.ByteBuf;
-
 /**
  * Represents a sector within some {@link Cache}.
+ * 
  * @author Ryley Kimmel <ryley.kimmel@live.com>
  */
 public final class CacheSector {
@@ -34,14 +33,19 @@ public final class CacheSector {
 	private final int cacheId;
 
 	/**
-	 * Constructs a new {@link CacheSector} with the expected index id, chunk, next
-	 * index id and cache id. This constructor is marked {@code private} and
-	 * should not be modified to be invoked directly, use
+	 * Constructs a new {@link CacheSector} with the expected index id, chunk,
+	 * next index id and cache id. This constructor is marked {@code private}
+	 * and should not be modified to be invoked directly, use
 	 * {@link CacheSector#decode(ByteBuffer, byte[], int, int)} instead.
-	 * @param indexId     The id of the index this sector is within.
-	 * @param chunk       This sectors chunk.
-	 * @param nextIndexId The next index within this sector.
-	 * @param cacheId     The id of the cache this sector is in.
+	 * 
+	 * @param indexId
+	 *            The id of the index this sector is within.
+	 * @param chunk
+	 *            This sectors chunk.
+	 * @param nextIndexId
+	 *            The next index within this sector.
+	 * @param cacheId
+	 *            The id of the cache this sector is in.
 	 */
 	private CacheSector(int indexId, int chunk, int nextIndexId, int cacheId) {
 		this.indexId = indexId;
@@ -52,10 +56,15 @@ public final class CacheSector {
 
 	/**
 	 * Decodes a {@link CacheSector} from the specified {@link ByteBuffer}.
-	 * @param buffer The {@link ByteBuffer} to get the sector from.
-	 * @param data   The expected data within the sector.
-	 * @param offset The expected offset of the sector.
-	 * @param length The expected length of the sector.
+	 * 
+	 * @param buffer
+	 *            The {@link ByteBuffer} to get the sector from.
+	 * @param data
+	 *            The expected data within the sector.
+	 * @param offset
+	 *            The expected offset of the sector.
+	 * @param length
+	 *            The expected length of the sector.
 	 * @return The decoded sector.
 	 */
 	public static CacheSector decode(ByteBuffer buffer, byte[] data, int offset, int length) {
@@ -69,9 +78,13 @@ public final class CacheSector {
 
 	/**
 	 * Tests whether or not this sector is valid.
-	 * @param cacheId The cache id to test.
-	 * @param indexId The index id to test.
-	 * @param chunk   The chunk id to test.
+	 * 
+	 * @param cacheId
+	 *            The cache id to test.
+	 * @param indexId
+	 *            The index id to test.
+	 * @param chunk
+	 *            The chunk id to test.
 	 */
 	public void check(int cacheId, int indexId, int chunk) {
 		Preconditions.checkArgument(this.cacheId == cacheId);

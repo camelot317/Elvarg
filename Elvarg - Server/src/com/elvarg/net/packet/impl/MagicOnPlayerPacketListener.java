@@ -12,7 +12,7 @@ public class MagicOnPlayerPacketListener implements PacketListener {
 	@Override
 	public void handleMessage(Player player, Packet packet) {
 		int playerIndex = packet.readShortA();
-		if(playerIndex < 0 || playerIndex > World.getPlayers().capacity())
+		if (playerIndex < 0 || playerIndex > World.getPlayers().capacity())
 			return;
 		int spellId = packet.readLEShort();
 		if (spellId < 0) {
@@ -26,19 +26,18 @@ public class MagicOnPlayerPacketListener implements PacketListener {
 			return;
 		}
 
-
-		if(attacked.getHitpoints() <= 0) {
+		if (attacked.getHitpoints() <= 0) {
 			player.getMovementQueue().reset();
 			return;
 		}
 
 		CombatSpell spell = CombatSpells.getCombatSpell(spellId);
 
-		if(spell == null) {
+		if (spell == null) {
 			player.getMovementQueue().reset();
 			return;
 		}
-		
+
 		player.setPositionToFace(attacked.getPosition());
 		player.getCombat().setCastSpell(spell);
 

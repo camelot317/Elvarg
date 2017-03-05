@@ -15,8 +15,6 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import com.elvarg.world.entity.impl.player.Player;
-
 /**
  * A collection that provides functionality for storing and managing characters.
  * This list does not support the storage of elements with a value of
@@ -38,8 +36,8 @@ public final class CharacterList<E extends Character> implements Iterable<E> {
 	private E[] characters;
 
 	/**
-	 * This collections characters in a shuffled ArrayList.
-	 * Used for battling PID.
+	 * This collections characters in a shuffled ArrayList. Used for battling
+	 * PID.
 	 */
 	private final List<E> shuffled_characters = new ArrayList<E>();
 
@@ -91,7 +89,7 @@ public final class CharacterList<E extends Character> implements Iterable<E> {
 			e.setIndex(slot);
 			e.onRegister();
 			characters[slot] = e;
-			size++;		
+			size++;
 			return true;
 		}
 		return false;
@@ -115,7 +113,7 @@ public final class CharacterList<E extends Character> implements Iterable<E> {
 			size--;
 			return true;
 		}
-		
+
 		return false;
 	}
 
@@ -156,21 +154,19 @@ public final class CharacterList<E extends Character> implements Iterable<E> {
 	 * 
 	 * 
 	 * 
-	 * UPDATED:
-	 * Now uses a shuffle_list to battle PID.
-	 * This means that all characters are always processed
-	 * in an random order instead of having higher priority
-	 * than other characters because of a higher PID.
+	 * UPDATED: Now uses a shuffle_list to battle PID. This means that all
+	 * characters are always processed in an random order instead of having
+	 * higher priority than other characters because of a higher PID.
 	 */
 	@Override
 	public void forEach(Consumer<? super E> action) {
-		
-		//Perform the action on the shuffled characters
-		for(E e : shuffled_characters) {
+
+		// Perform the action on the shuffled characters
+		for (E e : shuffled_characters) {
 			if (e == null)
 				continue;
 			action.accept(e);
-		}	
+		}
 	}
 
 	@Override
@@ -263,6 +259,7 @@ public final class CharacterList<E extends Character> implements Iterable<E> {
 
 	/**
 	 * Is the collection full?
+	 * 
 	 * @return true if collection is full, otherwise false
 	 */
 	public boolean isFull() {

@@ -18,7 +18,7 @@ public class DarkBowCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(426, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(1100, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.RANGED;
@@ -26,21 +26,22 @@ public class DarkBowCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 3), new QueueableHit(character, target, this, true, 2)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 3),
+				new QueueableHit(character, target, this, true, 2) };
 	}
 
 	@Override
 	public boolean canAttack(Character character, Character target) {
 		Player player = character.getAsPlayer();
 
-		//Check if current player's ranged weapon data is dark bow.
-		if(!(player.getCombat().getRangedWeaponData() != null 
+		// Check if current player's ranged weapon data is dark bow.
+		if (!(player.getCombat().getRangedWeaponData() != null
 				&& player.getCombat().getRangedWeaponData() == RangedWeaponData.DARK_BOW)) {
 			return false;
 		}
 
-		//Check if player has enough ammunition to fire.
-		if(!RangedData.checkAmmo(player)) {
+		// Check if player has enough ammunition to fire.
+		if (!RangedData.checkAmmo(player)) {
 			return false;
 		}
 
@@ -50,12 +51,12 @@ public class DarkBowCombatMethod implements CombatMethod {
 	@Override
 	public void onQueueAdd(Character character, Character target) {
 		final Player player = character.getAsPlayer();
-		
+
 		CombatSpecial.drain(player, CombatSpecial.DARK_BOW.getDrainAmount());
-		
+
 		new Projectile(player, target, 1099, 70, 30, 43, 31, 0).sendProjectile();
 		RangedData.decrementAmmo(player, target.getPosition());
-		//And again.. Two arrows..
+		// And again.. Two arrows..
 		new Projectile(player, target, 1099, 95, 30, 43, 31, 0).sendProjectile();
 		RangedData.decrementAmmo(player, target.getPosition());
 	}

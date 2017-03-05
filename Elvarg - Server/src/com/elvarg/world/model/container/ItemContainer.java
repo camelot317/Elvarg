@@ -33,19 +33,23 @@ public abstract class ItemContainer {
 	public abstract StackType stackType();
 
 	/**
-	 * The refresh method to send the container's interface on addition or deletion of an item.
+	 * The refresh method to send the container's interface on addition or
+	 * deletion of an item.
 	 */
 	public abstract ItemContainer refreshItems();
 
 	/**
-	 * The full method which contains the content a player will receive upon container being full,
-	 * such as a message when inventory is full.
+	 * The full method which contains the content a player will receive upon
+	 * container being full, such as a message when inventory is full.
 	 */
 	public abstract ItemContainer full();
 
 	/**
-	 * ItemContainer constructor to create a new instance and to define the player.
-	 * @param player	Player who owns the item container.
+	 * ItemContainer constructor to create a new instance and to define the
+	 * player.
+	 * 
+	 * @param player
+	 *            Player who owns the item container.
 	 */
 	public ItemContainer(Player player) {
 		this.player = player;
@@ -55,8 +59,11 @@ public abstract class ItemContainer {
 	}
 
 	/**
-	 * ItemContainer constructor to create a new instance and to define the player.
-	 * @param player	Player who owns the item container.
+	 * ItemContainer constructor to create a new instance and to define the
+	 * player.
+	 * 
+	 * @param player
+	 *            Player who owns the item container.
 	 */
 	public ItemContainer(Player player, int capacity) {
 		this.player = player;
@@ -73,15 +80,15 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the owner's player instance.
-	 * @return	player.
+	 * 
+	 * @return player.
 	 */
 	public Player getPlayer() {
 		return player;
 	}
 
 	/**
-	 * Sets the player viewing the container, used
-	 * for containers such as Shops.
+	 * Sets the player viewing the container, used for containers such as Shops.
 	 */
 	public ItemContainer setPlayer(Player player) {
 		this.player = player;
@@ -95,7 +102,8 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the items in the container.
-	 * @return	items.
+	 * 
+	 * @return items.
 	 */
 	public Item[] getItems() {
 		return items;
@@ -103,7 +111,7 @@ public abstract class ItemContainer {
 
 	public Item[] getCopiedItems() {
 		Item[] it = new Item[items.length];
-		for(int i = 0; i < it.length; i++) {
+		for (int i = 0; i < it.length; i++) {
 			it[i] = items[i].copy();
 		}
 		return it;
@@ -111,6 +119,7 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the valid items in the container,
+	 * 
 	 * @return items in a list format.
 	 */
 	public ArrayList<Item> getValidItems() {
@@ -126,7 +135,7 @@ public abstract class ItemContainer {
 	public Item[] getValidItemsArray() {
 		List<Item> items = getValidItems();
 		Item[] array = new Item[items.size()];
-		for(int i = 0; i < items.size(); i++) {
+		for (int i = 0; i < items.size(); i++) {
 			array[i] = items.get(i);
 		}
 		return array;
@@ -134,12 +143,14 @@ public abstract class ItemContainer {
 
 	/**
 	 * Sets all the items in the container.
-	 * @param items		The item array to which set the container to hold.
+	 * 
+	 * @param items
+	 *            The item array to which set the container to hold.
 	 */
 	public ItemContainer setItems(Item[] items) {
 
-		if(!(this instanceof Shop)) { //Fixes an exploit
-			if(items.length != capacity()) {
+		if (!(this instanceof Shop)) { // Fixes an exploit
+			if (items.length != capacity()) {
 				return this;
 			}
 		}
@@ -150,8 +161,11 @@ public abstract class ItemContainer {
 
 	/**
 	 * Sets the item in said slot.
-	 * @param slot	Slot to set item for.
-	 * @param item	Item that will occupy the slot.
+	 * 
+	 * @param slot
+	 *            Slot to set item for.
+	 * @param item
+	 *            Item that will occupy the slot.
 	 */
 	public ItemContainer setItem(int slot, Item item) {
 		items[slot] = item;
@@ -161,8 +175,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Checks if the slot contains an item.
-	 * @param slot	The container slot to check.
-	 * @return		items[slot] != null.
+	 * 
+	 * @param slot
+	 *            The container slot to check.
+	 * @return items[slot] != null.
 	 */
 	public boolean isSlotOccupied(int slot) {
 		return items[slot] != null && items[slot].getId() > 0 && items[slot].getAmount() > 0;
@@ -170,12 +186,15 @@ public abstract class ItemContainer {
 
 	/**
 	 * Swaps two item slots.
-	 * @param fromSlot 	From slot.
-	 * @param toSlot 	To slot.
+	 * 
+	 * @param fromSlot
+	 *            From slot.
+	 * @param toSlot
+	 *            To slot.
 	 */
 	public ItemContainer swap(int fromSlot, int toSlot) {
 		Item temporaryItem = getItems()[fromSlot];
-		if(temporaryItem == null || temporaryItem.getId() <= 0)
+		if (temporaryItem == null || temporaryItem.getId() <= 0)
 			return this;
 		setItem(fromSlot, getItems()[toSlot]);
 		setItem(toSlot, temporaryItem);
@@ -184,7 +203,7 @@ public abstract class ItemContainer {
 
 	public ItemContainer shiftSwap(int fromSlot, int toSlot) {
 		Item temporaryItem = getItems()[fromSlot];
-		if(temporaryItem == null || temporaryItem.getId() <= 0)
+		if (temporaryItem == null || temporaryItem.getId() <= 0)
 			return this;
 
 		return this;
@@ -192,7 +211,8 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the amount of free slots the container has.
-	 * @return	Total amount of free slots in container.
+	 * 
+	 * @return Total amount of free slots in container.
 	 */
 	public int getFreeSlots() {
 		int space = 0;
@@ -206,7 +226,8 @@ public abstract class ItemContainer {
 
 	/**
 	 * Checks if the container is out of available slots.
-	 * @return	No free slot available.
+	 * 
+	 * @return No free slot available.
 	 */
 	public boolean isFull() {
 		return getEmptySlot() == -1;
@@ -214,8 +235,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Checks if container contains a certain item id.
-	 * @param id	The item id to check for in container.
-	 * @return		Container contains item with the specified id.
+	 * 
+	 * @param id
+	 *            The item id to check for in container.
+	 * @return Container contains item with the specified id.
 	 */
 	public boolean contains(int id) {
 		for (Item items : this.items) {
@@ -230,7 +253,7 @@ public abstract class ItemContainer {
 	 * Checks if this container has a set of certain items.
 	 *
 	 * @param item
-	 * the item to check in this container for.
+	 *            the item to check in this container for.
 	 * @return true if this container has the item.
 	 */
 	public boolean contains(Item[] item) {
@@ -252,7 +275,8 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the next empty slot for an item to equip.
-	 * @return	The next empty slot index.
+	 * 
+	 * @return The next empty slot index.
 	 */
 	public int getEmptySlot() {
 		for (int i = 0; i < capacity(); i++) {
@@ -265,8 +289,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the first slot found for an item with said id.
-	 * @param id	The id to loop through items to find.
-	 * @return		The slot index the item is located in.
+	 * 
+	 * @param id
+	 *            The id to loop through items to find.
+	 * @return The slot index the item is located in.
 	 */
 	public int getSlot(int id) {
 		for (int i = 0; i < capacity(); i++) {
@@ -279,8 +305,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the total amount of items in the container with the specified id.
-	 * @param id	The id of the item to search for.
-	 * @return 		The total amount of items in the container with said id.
+	 * 
+	 * @param id
+	 *            The id of the item to search for.
+	 * @return The total amount of items in the container with said id.
 	 */
 	public int getAmount(int id) {
 		int totalAmount = 0;
@@ -294,8 +322,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets the total amount of items in the container in the specified slot
-	 * @param id	The slot of the item to search for.
-	 * @return 		The total amount of items in the container with said slot.
+	 * 
+	 * @param id
+	 *            The slot of the item to search for.
+	 * @return The total amount of items in the container with said slot.
 	 */
 	public int getAmountForSlot(int slot) {
 		return items[slot].getAmount();
@@ -303,6 +333,7 @@ public abstract class ItemContainer {
 
 	/**
 	 * Resets items in the container.
+	 * 
 	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer resetItems() {
@@ -314,8 +345,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Gets an item by their slot index.
-	 * @param slot	Slot to check for item.
-	 * @return		Item in said slot.
+	 * 
+	 * @param slot
+	 *            Slot to check for item.
+	 * @return Item in said slot.
 	 */
 	public Item forSlot(int slot) {
 		return items[slot];
@@ -323,77 +356,89 @@ public abstract class ItemContainer {
 
 	/**
 	 * Switches an item from one item container to another.
-	 * @param to		The item container to put item on.
-	 * @param item		The item to put from one container to another.
-	 * @param slot		The slot of the item to switch from one container to another.
-	 * @param sort		This flag checks whether or not to sort items, such as for bank.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param to
+	 *            The item container to put item on.
+	 * @param item
+	 *            The item to put from one container to another.
+	 * @param slot
+	 *            The slot of the item to switch from one container to another.
+	 * @param sort
+	 *            This flag checks whether or not to sort items, such as for
+	 *            bank.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer switchItem(ItemContainer to, Item item, int slot, boolean sort, boolean refresh) {
-		
+
 		if (getItems()[slot].getId() != item.getId()) {
 			return this;
 		}
-		
+
 		if (to.getFreeSlots() <= 0 && !(to.contains(item.getId()) && item.getDefinition().isStackable())) {
 			to.full();
 			return this;
 		}
-		
+
 		delete(item, slot, refresh, to);
 
-		//Noted items should not be in bank. Un-note if it's noted..
-		if (to instanceof Bank && ItemDefinition.forId(item.getId()).isNoted() && !ItemDefinition.forId(item.getId() - 1).isNoted()) {
+		// Noted items should not be in bank. Un-note if it's noted..
+		if (to instanceof Bank && ItemDefinition.forId(item.getId()).isNoted()
+				&& !ItemDefinition.forId(item.getId() - 1).isNoted()) {
 			item.setId(item.getId() - 1);
 		}
 
 		to.add(item, refresh);
-		
+
 		if (sort && getAmount(item.getId()) <= 0)
 			sortItems();
-		
+
 		if (refresh) {
 			refreshItems();
 			to.refreshItems();
 		}
 
-		//Add item to bank search aswell!!
-		if(to instanceof Bank) {
-			if(getPlayer().isSearchingBank()) {
+		// Add item to bank search aswell!!
+		if (to instanceof Bank) {
+			if (getPlayer().isSearchingBank()) {
 				Bank.addToBankSearch(getPlayer(), item, false);
 			}
 		}
-		
+
 		return this;
 	}
-	
+
 	/**
 	 * Switches an item from one item container to another.
-	 * @param to		The item container to put item on.
-	 * @param item		The item to put from one container to another.
-	 * @param sort		This flag checks whether or not to sort items, such as for bank.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param to
+	 *            The item container to put item on.
+	 * @param item
+	 *            The item to put from one container to another.
+	 * @param sort
+	 *            This flag checks whether or not to sort items, such as for
+	 *            bank.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer switchItem(ItemContainer to, Item item, boolean sort, boolean refresh) {
 		if (to.getFreeSlots() <= 0 && !(to.contains(item.getId()) && item.getDefinition().isStackable())) {
 			to.full();
 			return this;
 		}
-		
+
 		int proper_amt = getAmount(item.getId());
-		
-		if(item.getAmount() > proper_amt) {
+
+		if (item.getAmount() > proper_amt) {
 			item.setAmount(proper_amt);
 		}
-		
-		if(item.getAmount() <= 0) {
+
+		if (item.getAmount() <= 0) {
 			return this;
 		}
-				
+
 		delete(item, refresh);
-		
+
 		to.add(item, refresh);
-		
+
 		if (sort && getAmount(item.getId()) <= 0)
 			sortItems();
 		if (refresh) {
@@ -403,17 +448,24 @@ public abstract class ItemContainer {
 		return this;
 	}
 
-
 	/**
 	 * Switches an item from one item container to another.
-	 * @param from		The item container to get item 
-	 * @param to		The item container to put item on.
-	 * @param item		The item to put from one container to another.
-	 * @param slot		The slot of the item to switch from one container to another.
-	 * @param sort		This flag checks whether or not to sort items, such as for bank.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param from
+	 *            The item container to get item
+	 * @param to
+	 *            The item container to put item on.
+	 * @param item
+	 *            The item to put from one container to another.
+	 * @param slot
+	 *            The slot of the item to switch from one container to another.
+	 * @param sort
+	 *            This flag checks whether or not to sort items, such as for
+	 *            bank.
+	 * @return The ItemContainer instance.
 	 */
-	public ItemContainer switchItem(ItemContainer from, ItemContainer to, Item item, int slot, boolean sort, boolean refresh) {
+	public ItemContainer switchItem(ItemContainer from, ItemContainer to, Item item, int slot, boolean sort,
+			boolean refresh) {
 		if (from.getItems()[slot].getId() != item.getId())
 			return this;
 		if (to.getFreeSlots() <= 0 && !(to.contains(item.getId()) && item.getDefinition().isStackable())) {
@@ -433,12 +485,19 @@ public abstract class ItemContainer {
 
 	/**
 	 * Switches an item from one item container to another.
-	 * @param from		The item container to get item 
-	 * @param to		The item container to put item on.
-	 * @param item		The item to put from one container to another.
-	 * @param slot		The slot of the item to switch from one container to another.
-	 * @param sort		This flag checks whether or not to sort items, such as for bank.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param from
+	 *            The item container to get item
+	 * @param to
+	 *            The item container to put item on.
+	 * @param item
+	 *            The item to put from one container to another.
+	 * @param slot
+	 *            The slot of the item to switch from one container to another.
+	 * @param sort
+	 *            This flag checks whether or not to sort items, such as for
+	 *            bank.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer switchItem(ItemContainer from, ItemContainer to, Item item, boolean sort, boolean refresh) {
 		if (to.getFreeSlots() <= 0 && !(to.contains(item.getId()) && item.getDefinition().isStackable())) {
@@ -464,12 +523,18 @@ public abstract class ItemContainer {
 	}
 
 	/**
-	 * Switches an item from one item container to another. THIS METHOD IS MAINLY USED FOR SELLING ITEMS TO SHOPS
-	 * @param from		The item container to get item 
-	 * @param to		The item container to put item on.
-	 * @param itemId	The item's id to put from one container to another.
-	 * @param amount	The amount of the item to put from one container to another.
-	 * @return			The ItemContainer instance.
+	 * Switches an item from one item container to another. THIS METHOD IS
+	 * MAINLY USED FOR SELLING ITEMS TO SHOPS
+	 * 
+	 * @param from
+	 *            The item container to get item
+	 * @param to
+	 *            The item container to put item on.
+	 * @param itemId
+	 *            The item's id to put from one container to another.
+	 * @param amount
+	 *            The amount of the item to put from one container to another.
+	 * @return The ItemContainer instance.
 	 */
 
 	public ItemContainer switchItem(ItemContainer from, ItemContainer to, int itemId, int amount) {
@@ -478,9 +543,10 @@ public abstract class ItemContainer {
 			return this;
 		}
 		Item item = new Item(getPlayer().getInventory().getItems()[from.getSlot(itemId)].getId());
-		if(item == null || item.getId() <= 0 || item.getAmount() <= 0)
+		if (item == null || item.getId() <= 0 || item.getAmount() <= 0)
 			return this;
-		if(item.getDefinition().isStackable() && amount > 1) { //Item is stackable 
+		if (item.getDefinition().isStackable() && amount > 1) { // Item is
+																// stackable
 			item.setAmount(from.getAmount(item.getId()));
 			from.delete(item.getId(), amount, false);
 			to.add(item.getId(), amount);
@@ -492,10 +558,10 @@ public abstract class ItemContainer {
 	}
 
 	public ItemContainer addItems(Item[] items, boolean refresh) {
-		if(items == null)
+		if (items == null)
 			return this;
-		for(Item item : items) {
-			if(item.getId() > 0 && item.getAmount() > 0) {
+		for (Item item : items) {
+			if (item.getId() > 0 && item.getAmount() > 0) {
 				this.add(item, refresh);
 			}
 		}
@@ -504,11 +570,12 @@ public abstract class ItemContainer {
 
 	/**
 	 * Sorts this item container's array of items to leave no empty spaces.
-	 * @return	The ItemContainer instance.
+	 * 
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer sortItems() {
-		for(int k = 0; k < capacity(); k++) {
-			if(getItems()[k] == null)
+		for (int k = 0; k < capacity(); k++) {
+			if (getItems()[k] == null)
 				continue;
 			for (int i = 0; i < (capacity() - 1); i++) {
 				if (getItems()[i] == null || getItems()[i].getId() <= 0 || getItems()[i].getAmount() <= 0) {
@@ -521,8 +588,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Adds an item to the item container.
-	 * @param item	The item to add.
-	 * @return		The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to add.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer add(Item item) {
 		return add(item, true);
@@ -530,9 +599,12 @@ public abstract class ItemContainer {
 
 	/**
 	 * Adds an item to the item container.
-	 * @param id		The id of the item.
-	 * @param amount	The amount of the item.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param id
+	 *            The id of the item.
+	 * @param amount
+	 *            The amount of the item.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer add(int id, int amount) {
 		return add(new Item(id, amount));
@@ -540,19 +612,24 @@ public abstract class ItemContainer {
 
 	/**
 	 * Adds an item to the item container.
-	 * @param item		The item to add.
-	 * @param refresh	If <code>true</code> the item container interface will be refreshed.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to add.
+	 * @param refresh
+	 *            If <code>true</code> the item container interface will be
+	 *            refreshed.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer add(Item item, boolean refresh) {
-		if(item == null || item.getId() <= 0 || item.getAmount() <= 0)
+		if (item == null || item.getId() <= 0 || item.getAmount() <= 0)
 			return this;
 		if (ItemDefinition.forId(item.getId()).isStackable() || stackType() == StackType.STACKS) {
 			int slot = getSlot(item.getId());
 			if (slot == -1)
 				slot = getEmptySlot();
 			if (slot == -1) {
-				if(getPlayer().getRights() != PlayerRights.OWNER && getPlayer().getRights() != PlayerRights.DEVELOPER) {
+				if (getPlayer().getRights() != PlayerRights.OWNER
+						&& getPlayer().getRights() != PlayerRights.DEVELOPER) {
 					getPlayer().getPacketSender().sendMessage("You couldn't hold all those items.");
 					if (refresh)
 						refreshItems();
@@ -577,7 +654,8 @@ public abstract class ItemContainer {
 			while (amount > 0) {
 				int slot = getEmptySlot();
 				if (slot == -1) {
-					if(getPlayer().getRights() != PlayerRights.OWNER && getPlayer().getRights() != PlayerRights.DEVELOPER) {
+					if (getPlayer().getRights() != PlayerRights.OWNER
+							&& getPlayer().getRights() != PlayerRights.DEVELOPER) {
 						getPlayer().getPacketSender().sendMessage("You couldn't hold all those items.");
 						if (refresh)
 							refreshItems();
@@ -599,8 +677,10 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param item	The item to delete.
-	 * @return		The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to delete.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(Item item) {
 		return delete(item.getId(), item.getAmount());
@@ -608,9 +688,13 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param item	The item to delete.
-	 * @param slot	The slot of the item (used to delete the item from said slot, not the first one found).
-	 * @return		The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to delete.
+	 * @param slot
+	 *            The slot of the item (used to delete the item from said slot,
+	 *            not the first one found).
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(Item item, int slot) {
 		return delete(item, slot, true);
@@ -618,14 +702,16 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param id		The id of the item to delete.
-	 * @param amount	The amount of the item to delete.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param id
+	 *            The id of the item to delete.
+	 * @param amount
+	 *            The amount of the item to delete.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(int id, int amount) {
 		return delete(id, amount, true);
 	}
-
 
 	public ItemContainer delete(Item item, boolean refresh) {
 		return delete(item.getId(), item.getAmount(), refresh);
@@ -633,10 +719,15 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param id		The id of the item to delete.
-	 * @param amount	The amount of the item to delete.
-	 * @param refresh	If <code>true</code> the item container interface will refresh.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param id
+	 *            The id of the item to delete.
+	 * @param amount
+	 *            The amount of the item to delete.
+	 * @param refresh
+	 *            If <code>true</code> the item container interface will
+	 *            refresh.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(int id, int amount, boolean refresh) {
 		return delete(new Item(id, amount), getSlot(id), refresh);
@@ -644,10 +735,15 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param item		The item to delete.
-	 * @param slot		The slot of the item to delete.
-	 * @param refresh	If <code>true</code> the item container interface will refresh.
-	 * @return			The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to delete.
+	 * @param slot
+	 *            The slot of the item to delete.
+	 * @param refresh
+	 *            If <code>true</code> the item container interface will
+	 *            refresh.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(Item item, int slot, boolean refresh) {
 		return delete(item, slot, refresh, null);
@@ -655,11 +751,18 @@ public abstract class ItemContainer {
 
 	/**
 	 * Deletes an item from the item container.
-	 * @param item			The item to delete.
-	 * @param slot			The slot of the item to delete.
-	 * @param refresh		If <code>true</code> the item container interface will refresh.
-	 * @param toContainer	To check if other container has enough space to continue deleting said amount from this container.
-	 * @return				The ItemContainer instance.
+	 * 
+	 * @param item
+	 *            The item to delete.
+	 * @param slot
+	 *            The slot of the item to delete.
+	 * @param refresh
+	 *            If <code>true</code> the item container interface will
+	 *            refresh.
+	 * @param toContainer
+	 *            To check if other container has enough space to continue
+	 *            deleting said amount from this container.
+	 * @return The ItemContainer instance.
 	 */
 	public ItemContainer delete(Item item, int slot, boolean refresh, ItemContainer toContainer) {
 		if (item == null || slot < 0)
@@ -667,8 +770,11 @@ public abstract class ItemContainer {
 		if (item.getAmount() > getAmount(item.getId()))
 			item.setAmount(getAmount(item.getId()));
 		if (item.getDefinition().isStackable() || stackType() == StackType.STACKS) {
-			/*	if (toContainer != null && !item.getDefinition().isStackable() && item.getAmount() > toContainer.getFreeSlots() && !(this instanceof Bank))
-				item.setAmount(toContainer.getFreeSlots());*/
+			/*
+			 * if (toContainer != null && !item.getDefinition().isStackable() &&
+			 * item.getAmount() > toContainer.getFreeSlots() && !(this
+			 * instanceof Bank)) item.setAmount(toContainer.getFreeSlots());
+			 */
 			items[slot].setAmount(items[slot].getAmount() - item.getAmount());
 			if (items[slot].getAmount() < 1)
 				items[slot].setId(-1);
@@ -694,7 +800,7 @@ public abstract class ItemContainer {
 	 * Gets an item id by its index.
 	 *
 	 * @param index
-	 * the index.
+	 *            the index.
 	 * @return the item id on this index.
 	 */
 	public Item getById(int id) {
@@ -717,7 +823,6 @@ public abstract class ItemContainer {
 		return Arrays.stream(items).filter(Objects::nonNull).allMatch(item -> contains(item.getId()));
 	}
 
-
 	public boolean containsAny(int... ids) {
 		return Arrays.stream(ids).anyMatch(id -> contains(id));
 	}
@@ -735,23 +840,24 @@ public abstract class ItemContainer {
 	}
 
 	public Item[] toSafeArray() {
-		return Iterables.toArray(Arrays.stream(items).filter(Objects::nonNull).collect(Collectors.toList()), Item.class);
+		return Iterables.toArray(Arrays.stream(items).filter(Objects::nonNull).collect(Collectors.toList()),
+				Item.class);
 	}
 
 	public void moveItems(ItemContainer to, boolean refreshOrig, boolean refreshTo) {
 
 		for (Item it : getValidItems()) {
-			if(to.getFreeSlots() <= 0 && !(to.contains(it.getId()) && it.getDefinition().isStackable())) {
+			if (to.getFreeSlots() <= 0 && !(to.contains(it.getId()) && it.getDefinition().isStackable())) {
 				break;
 			}
 			to.add(it, false);
 			delete(it.getId(), it.getAmount(), false);
 		}
 
-		if(refreshOrig) {
+		if (refreshOrig) {
 			refreshItems();
 		}
-		if(refreshTo) {
+		if (refreshTo) {
 			to.refreshItems();
 		}
 	}
@@ -760,7 +866,7 @@ public abstract class ItemContainer {
 	 * Adds a set of items into the inventory.
 	 *
 	 * @param item
-	 * the set of items to add.
+	 *            the set of items to add.
 	 */
 	public void addItemSet(Item[] item) {
 		for (Item addItem : item) {
@@ -775,7 +881,7 @@ public abstract class ItemContainer {
 	 * Deletes a set of items from the inventory.
 	 *
 	 * @param item
-	 * the set of items to delete.
+	 *            the set of items to delete.
 	 */
 	public void deleteItemSet(Item[] item) {
 		for (Item deleteItem : item) {
@@ -786,24 +892,23 @@ public abstract class ItemContainer {
 			delete(deleteItem);
 		}
 	}
-	
+
 	/**
-	 * Gets the total wealth of this container's items
-	 * as a string.
+	 * Gets the total wealth of this container's items as a string.
+	 * 
 	 * @return
 	 */
 	public String getTotalValue() {
 		int k = 0;
 
-		for(Item item: getValidItems()) {
+		for (Item item : getValidItems()) {
 			k += item.getDefinition().getValue() * item.getAmount();
 		}
 
-		if(k >= Integer.MAX_VALUE) {
+		if (k >= Integer.MAX_VALUE) {
 			return "Too High!";
 		}
 
-		return ""+k+"";
+		return "" + k + "";
 	}
 }
-

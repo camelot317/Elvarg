@@ -12,13 +12,15 @@ public class Entity {
 
 	/**
 	 * The Entity constructor.
-	 * @param position	The position the entity is currently in.
+	 * 
+	 * @param position
+	 *            The position the entity is currently in.
 	 */
 	public Entity(Position position) {
 		setPosition(position);
 		lastKnownRegion = position;
 	}
-	
+
 	/**
 	 * The entity's unique index.
 	 */
@@ -34,14 +36,15 @@ public class Entity {
 	 */
 	private Position position = GameConstants.DEFAULT_POSITION.copy();
 
-	/**	
+	/**
 	 * The entity's first position in current map region.
 	 */
 	private Position lastKnownRegion;
 
 	/**
 	 * Gets the entity's unique index.
-	 * @return	The entity's index.
+	 * 
+	 * @return The entity's index.
 	 */
 	public int getIndex() {
 		return index;
@@ -49,8 +52,10 @@ public class Entity {
 
 	/**
 	 * Sets the entity's index.
-	 * @param index		The value the entity's index will contain.
-	 * @return			The Entity instance.
+	 * 
+	 * @param index
+	 *            The value the entity's index will contain.
+	 * @return The Entity instance.
 	 */
 	public Entity setIndex(int index) {
 		this.index = index;
@@ -58,9 +63,9 @@ public class Entity {
 	}
 
 	/**
-	 * Gets this entity's first position upon entering their
-	 * current map region.
-	 * @return	The lastKnownRegion instance.
+	 * Gets this entity's first position upon entering their current map region.
+	 * 
+	 * @return The lastKnownRegion instance.
 	 */
 	public Position getLastKnownRegion() {
 		return lastKnownRegion;
@@ -68,8 +73,11 @@ public class Entity {
 
 	/**
 	 * Sets the entity's current region's position.
-	 * @param lastKnownRegion	The position in which the player first entered the current region.
-	 * @return					The Entity instance.
+	 * 
+	 * @param lastKnownRegion
+	 *            The position in which the player first entered the current
+	 *            region.
+	 * @return The Entity instance.
 	 */
 	public Entity setLastKnownRegion(Position lastKnownRegion) {
 		this.lastKnownRegion = lastKnownRegion;
@@ -78,7 +86,9 @@ public class Entity {
 
 	/**
 	 * Sets the entity position
-	 * @param position the world position
+	 * 
+	 * @param position
+	 *            the world position
 	 */
 	public Entity setPosition(Position position) {
 		this.position = position;
@@ -87,6 +97,7 @@ public class Entity {
 
 	/**
 	 * Gets the entity position.
+	 * 
 	 * @return the entity's world position
 	 */
 	public Position getPosition() {
@@ -95,7 +106,9 @@ public class Entity {
 
 	/**
 	 * Performs an animation.
-	 * @param animation	The animation to perform.
+	 * 
+	 * @param animation
+	 *            The animation to perform.
 	 */
 	public void performAnimation(Animation animation) {
 
@@ -103,7 +116,9 @@ public class Entity {
 
 	/**
 	 * Performs a graphic.
-	 * @param graphic	The graphic to perform.
+	 * 
+	 * @param graphic
+	 *            The graphic to perform.
 	 */
 	public void performGraphic(Graphic graphic) {
 
@@ -111,7 +126,8 @@ public class Entity {
 
 	/**
 	 * gets the entity's tile size.
-	 * @return	The size the entity occupies in the world.
+	 * 
+	 * @return The size the entity occupies in the world.
 	 */
 	public int getSize() {
 		return size;
@@ -119,7 +135,8 @@ public class Entity {
 
 	/**
 	 * Sets the entity's tile size
-	 * @return	The Entity instance.
+	 * 
+	 * @return The Entity instance.
 	 */
 	public Entity setSize(int size) {
 		this.size = size;

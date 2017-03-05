@@ -37,16 +37,15 @@ public class NpcDefinition {
 
 			while ((line = reader.readLine()) != null) {
 
-
 				if (line.contains("inish")) {
 					definitions[definition.id] = definition;
 
-					//Loaded the definitions for this npc.
-					//Let's spawn the npc if needed.
-					if(definition != null) {
-						if(spawnPos != null) {
+					// Loaded the definitions for this npc.
+					// Let's spawn the npc if needed.
+					if (definition != null) {
+						if (spawnPos != null) {
 							NPC npc = new NPC(definition.getId(), spawnPos);
-							if(definition.getHitpoints() > 0) {
+							if (definition.getHitpoints() > 0) {
 								npc.setHitpoints(definition.getHitpoints());
 							}
 							World.getNpcAddQueue().add(npc);
@@ -57,26 +56,25 @@ public class NpcDefinition {
 					continue;
 				}
 
-
 				String[] args = line.split(": ");
 				if (args.length <= 1)
 					continue;
-				String token = args[0], value = args[1];				
+				String token = args[0], value = args[1];
 				switch (token.toLowerCase()) {
 				case "npc":
 					int id = Integer.valueOf(value);
-					
-					//If definitions already exist -
-					//We're just spawning a new npc.
-					//ONLY create new definition if there isn't one already.
-					if(forId(id) == null) {
+
+					// If definitions already exist -
+					// We're just spawning a new npc.
+					// ONLY create new definition if there isn't one already.
+					if (forId(id) == null) {
 						definition = new NpcDefinition();
 						definition.id = id;
 					}
-					
+
 					break;
 				case "name":
-					if(value == null)
+					if (value == null)
 						continue;
 					definition.name = value;
 					break;
@@ -89,7 +87,7 @@ public class NpcDefinition {
 					int y = Integer.parseInt(coordinates[1]);
 					int z = coordinates.length == 3 ? Integer.parseInt(coordinates[2]) : 0;
 					spawnPos = new Position(x, y, z);
-					break;					
+					break;
 				case "size":
 					definition.size = Integer.parseInt(value);
 					break;
@@ -166,7 +164,7 @@ public class NpcDefinition {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}	
+	}
 
 	/** An array containing all of the npc definitions. */
 	private static NpcDefinition[] definitions;
@@ -225,7 +223,7 @@ public class NpcDefinition {
 
 	/** This npc's combat level */
 	private int combatLevel;
-	
+
 	/** This npc's attack bonus. */
 	private int attackLevel;
 	private int strengthLevel;
@@ -243,13 +241,13 @@ public class NpcDefinition {
 
 	/** This npc's slayer level required to attack. */
 	private int slayerLevel;
-	
+
 	/** This npc's aggression distance */
 	private int aggressionDistance;
-	
+
 	/** This npc's maximum follow distance in combat **/
-	private int combatFollowDistance = 7; //Default is 7
-	
+	private int combatFollowDistance = 7; // Default is 7
+
 	public int getId() {
 		return id;
 	}

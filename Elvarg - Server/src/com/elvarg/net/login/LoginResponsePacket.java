@@ -22,11 +22,14 @@ public final class LoginResponsePacket {
 	/**
 	 * Creates a new {@link LoginResponsePacket}.
 	 * 
-	 * @param response The response that was indicated.
+	 * @param response
+	 *            The response that was indicated.
 	 * 
-	 * @param rights The rights of the player logging in.
+	 * @param rights
+	 *            The rights of the player logging in.
 	 * 
-	 * @param flagged The flag that indicates a player was flagged.
+	 * @param flagged
+	 *            The flag that indicates a player was flagged.
 	 */
 	public LoginResponsePacket(int response, PlayerRights rights) {
 		this.response = response;
@@ -46,4 +49,3 @@ public final class LoginResponsePacket {
 		return rights;
 	}
 }
-

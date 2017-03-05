@@ -24,7 +24,7 @@ public class ShopDefinition {
 			public void load(JsonObject reader, Gson builder) {
 				int id = reader.get("id").getAsInt();
 				boolean buysItems = reader.get("buys-items").getAsBoolean();
-				String name =  reader.get("name").getAsString();
+				String name = reader.get("name").getAsString();
 				Item[] items = builder.fromJson(reader.get("items").getAsJsonArray(), Item[].class);
 				Item currency = new Item(reader.get("currency").getAsInt());
 				shops.put(id, new Shop(null, new ShopDefinition(id, name, currency, items, buysItems)));
@@ -36,7 +36,7 @@ public class ShopDefinition {
 			}
 		};
 	}
-	
+
 	public ShopDefinition(int id, String name, Item currency, Item[] stock, boolean buysItems) {
 		this.id = id;
 		this.name = name;
@@ -44,7 +44,7 @@ public class ShopDefinition {
 		this.originalStock = stock;
 		this.buysItems = buysItems;
 	}
-	
+
 	private final int id;
 
 	private final String name;
@@ -52,11 +52,11 @@ public class ShopDefinition {
 	private final Item currency;
 
 	private final Item[] originalStock;
-	
+
 	private final boolean buysItems;
-	
+
 	/** ------------------------------------------- **/
-	
+
 	public Item[] getOriginalStock() {
 		return this.originalStock;
 	}
@@ -72,7 +72,7 @@ public class ShopDefinition {
 	public Item getCurrency() {
 		return currency;
 	}
-	
+
 	public boolean buysItems() {
 		return buysItems;
 	}

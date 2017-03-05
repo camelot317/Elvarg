@@ -6,14 +6,24 @@ public class CombatConstants {
 	// Damage cached for currently 60 seconds will not be accounted for.
 	public static final long DAMAGE_CACHE_TIMEOUT = 60000;
 
-	/** The amount of damage that will be drained by combat protection prayer. */
-	public static final double PRAYER_DAMAGE_REDUCTION_AGAINST_PLAYERS = .5; //50% damage reduction
-	public static final double PRAYER_DAMAGE_REDUCTION_AGAINST_NPCS = .8; //80% damage reduction
-	
-	/** The rate at which accuracy will be reduced by combat protection prayer. */
-	public static final double PRAYER_ACCURACY_REDUCTION_AGAINST_PLAYERS = .20; //-20% accuracy
-	public static final double PRAYER_ACCURACY_REDUCTION_AGAINST_NPCS = .40; //-80% accuracy
-	
+	/**
+	 * The amount of damage that will be drained by combat protection prayer.
+	 */
+	public static final double PRAYER_DAMAGE_REDUCTION_AGAINST_PLAYERS = .5; // 50%
+																				// damage
+																				// reduction
+	public static final double PRAYER_DAMAGE_REDUCTION_AGAINST_NPCS = .8; // 80%
+																			// damage
+																			// reduction
+
+	/**
+	 * The rate at which accuracy will be reduced by combat protection prayer.
+	 */
+	public static final double PRAYER_ACCURACY_REDUCTION_AGAINST_PLAYERS = .20; // -20%
+																				// accuracy
+	public static final double PRAYER_ACCURACY_REDUCTION_AGAINST_NPCS = .40; // -80%
+																				// accuracy
+
 	/** The amount of hitpoints the redemption prayer will heal. */
 	// Currently at .25 meaning hitpoints will be healed by 25% of the remaining
 	// prayer points when using redemption.
@@ -30,7 +40,7 @@ public class CombatConstants {
 	// effect.
 	public static final int RETRIBUTION_RADIUS = 5;
 
-	//Recoil item id
+	// Recoil item id
 	public static final int RING_OF_RECOIL_ID = 2550;
-	
+
 }

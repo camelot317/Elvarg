@@ -7,8 +7,8 @@ import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.dialogue.DialogueManager;
 
 /**
- * This packet listener handles player's mouse click on the
- * "Click here to continue" option, etc.
+ * This packet listener handles player's mouse click on the "Click here to
+ * continue" option, etc.
  * 
  * @author relex lawl
  */

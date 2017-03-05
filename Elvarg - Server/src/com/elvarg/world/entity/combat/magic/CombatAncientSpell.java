@@ -1,4 +1,5 @@
 package com.elvarg.world.entity.combat.magic;
+
 import java.util.Iterator;
 import java.util.Optional;
 
@@ -25,10 +26,9 @@ public abstract class CombatAncientSpell extends CombatSpell {
 	public MagicSpellbook getSpellbook() {
 		return MagicSpellbook.ANCIENT;
 	}
-	
+
 	@Override
-	public void finishCast(Character cast, Character castOn, boolean accurate,
-			int damage) {
+	public void finishCast(Character cast, Character castOn, boolean accurate, int damage) {
 
 		// The spell wasn't accurate, so do nothing.
 		if (!accurate || damage <= 0) {
@@ -40,7 +40,7 @@ public abstract class CombatAncientSpell extends CombatSpell {
 
 		// The spell doesn't support multiple targets or we aren't in a
 		// multicombat zone, so do nothing.
-		if (spellRadius() == 0/* || !Locations.Location.inMulti(castOn)*/) {
+		if (spellRadius() == 0/* || !Locations.Location.inMulti(castOn) */) {
 			return;
 		}
 
@@ -63,39 +63,38 @@ public abstract class CombatAncientSpell extends CombatSpell {
 				continue;
 			}
 
-			if(next.isNpc()) {
-				NPC n = (NPC)next;
-				if(!n.getDefinition().isAttackable()) {
+			if (next.isNpc()) {
+				NPC n = (NPC) next;
+				if (!n.getDefinition().isAttackable()) {
 					continue;
 				}
 			} else {
-				Player p = (Player)next;
-				if(p.getLocation() != Location.WILDERNESS || !Location.inMulti(p)) {
-            		continue;
-            	}
+				Player p = (Player) next;
+				if (p.getLocation() != Location.WILDERNESS || !Location.inMulti(p)) {
+					continue;
+				}
 			}
 
+			if (next.getPosition().isWithinDistance(castOn.getPosition(), spellRadius()) && !next.equals(cast)
+					&& !next.equals(castOn) && next.getHitpoints() > 0 && next.getHitpoints() > 0) {
 
-			if (next.getPosition().isWithinDistance(castOn.getPosition(), spellRadius()) && !next.equals(cast) && !next.equals(castOn) && next.getHitpoints() > 0 && next.getHitpoints() > 0) {
+				QueueableHit qH = new QueueableHit(cast, next, CombatFactory.MAGIC_COMBAT, true, 0)
+						.setHandleAfterHitEffects(false);
 
-				QueueableHit qH = new QueueableHit(cast, next, CombatFactory.MAGIC_COMBAT, true, 0).setHandleAfterHitEffects(false);
-				
-				
-				if(qH.isAccurate()) {
-					
-					//Successful hit, send graphics and do spell effects.
+				if (qH.isAccurate()) {
+
+					// Successful hit, send graphics and do spell effects.
 					endGraphic().ifPresent(next::performGraphic);
 					spellEffect(cast, next, qH.getTotalDamage());
-					
+
 				} else {
-					
-					//Unsuccessful hit. Send splash graphics for the spell because it wasn't accurate
+
+					// Unsuccessful hit. Send splash graphics for the spell
+					// because it wasn't accurate
 					next.performGraphic(MagicCombatMethod.SPLASH_GRAPHIC);
 				}
-				
-				
+
 				CombatFactory.queueHit(qH);
-				
 
 			}
 		}

@@ -19,14 +19,14 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
  */
 public final class GameEngine implements Runnable {
 
-	private final ScheduledExecutorService logicService = GameEngine.createLogicService();   
+	private final ScheduledExecutorService logicService = GameEngine.createLogicService();
 	private boolean PACKETS_PROCESS;
-	
+
 	@Override
 	public void run() {
 		try {
-			
-			switch(next()) {
+
+			switch (next()) {
 			case PACKET_PROCESSING:
 				World.getPlayers().forEach($it -> $it.getSession().handleQueuedPackets(true));
 				break;
@@ -35,7 +35,7 @@ public final class GameEngine implements Runnable {
 				World.sequence();
 				break;
 			}
-			
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 			World.savePlayers();
@@ -44,25 +44,24 @@ public final class GameEngine implements Runnable {
 	}
 
 	private EngineState next() {
-		
-		if(PACKETS_PROCESS) {
+
+		if (PACKETS_PROCESS) {
 			PACKETS_PROCESS = false;
 			return EngineState.PACKET_PROCESSING;
 		}
-		
+
 		PACKETS_PROCESS = true;
 		return EngineState.GAME_PROCESSING;
 	}
 
 	private enum EngineState {
-		PACKET_PROCESSING,
-		GAME_PROCESSING;
+		PACKET_PROCESSING, GAME_PROCESSING;
 	}
 
 	public void submit(Runnable t) {
 		try {
 			logicService.execute(t);
-		} catch(Throwable e) {
+		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 	}

@@ -5,6 +5,7 @@ import java.util.Optional;
 import com.elvarg.world.entity.impl.Character;
 import com.elvarg.world.entity.impl.player.Player;
 import com.elvarg.world.model.Item;
+
 /**
  * A {@link Spell} implementation primarily used for spells that have effects
  * when they hit the player.
@@ -12,7 +13,7 @@ import com.elvarg.world.model.Item;
  * @author lare96
  */
 public abstract class CombatEffectSpell extends CombatSpell {
-	
+
 	@Override
 	public int maximumHit() {
 
@@ -29,8 +30,7 @@ public abstract class CombatEffectSpell extends CombatSpell {
 	}
 
 	@Override
-	public void finishCast(Character cast, Character castOn, boolean accurate,
-			int damage) {
+	public void finishCast(Character cast, Character castOn, boolean accurate, int damage) {
 		if (accurate) {
 			spellEffect(cast, castOn);
 		}

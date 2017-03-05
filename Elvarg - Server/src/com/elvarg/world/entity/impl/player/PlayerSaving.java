@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
-public  class PlayerSaving {
+public class PlayerSaving {
 
 	public static void save(Player player) {
 		// Create the path and file objects.
@@ -52,20 +52,23 @@ public  class PlayerSaving {
 			object.addProperty("spec-percentage", new Integer(player.getSpecialPercentage()));
 			object.addProperty("recoil-damage", new Integer(player.getRecoilDamage()));
 			object.addProperty("poison-damage", new Integer(player.getPoisonDamage()));
-			
-			object.addProperty("poison-immunity", new Integer(player.getCombat().getPoisonImmunityTimer().secondsRemaining()));
+
+			object.addProperty("poison-immunity",
+					new Integer(player.getCombat().getPoisonImmunityTimer().secondsRemaining()));
 			object.addProperty("overload-timer", new Integer(player.getOverloadTimer().secondsRemaining()));
-			object.addProperty("fire-immunity", new Integer(player.getCombat().getFireImmunityTimer().secondsRemaining()));
-			object.addProperty("teleblock-timer", new Integer(player.getCombat().getTeleBlockTimer().secondsRemaining()));
-			object.addProperty("prayerblock-timer", new Integer(player.getCombat().getPrayerBlockTimer().secondsRemaining()));
-			
+			object.addProperty("fire-immunity",
+					new Integer(player.getCombat().getFireImmunityTimer().secondsRemaining()));
+			object.addProperty("teleblock-timer",
+					new Integer(player.getCombat().getTeleBlockTimer().secondsRemaining()));
+			object.addProperty("prayerblock-timer",
+					new Integer(player.getCombat().getPrayerBlockTimer().secondsRemaining()));
+
 			object.addProperty("skull-timer", new Integer(player.getSkullTimer()));
 
 			object.addProperty("target-kills", new Integer(player.getBountyHunter().getTargetKills()));
 			object.addProperty("normal-kills", new Integer(player.getBountyHunter().getNormalKills()));
 			object.addProperty("deaths", new Integer(player.getBountyHunter().getDeaths()));
 			object.addProperty("pkp", new Integer(player.getPkp()));
-
 
 			object.add("inventory", builder.toJsonTree(player.getInventory().getItems()));
 			object.add("equipment", builder.toJsonTree(player.getEquipment().getItems()));
@@ -74,28 +77,26 @@ public  class PlayerSaving {
 			object.add("friends", builder.toJsonTree(player.getRelations().getFriendList().toArray()));
 			object.add("ignores", builder.toJsonTree(player.getRelations().getIgnoreList().toArray()));
 
-			for(int i = 0; i < player.getBanks().length; i++) {
-				if(i == Bank.BANK_SEARCH_TAB_INDEX) {
+			for (int i = 0; i < player.getBanks().length; i++) {
+				if (i == Bank.BANK_SEARCH_TAB_INDEX) {
 					continue;
 				}
-				if(player.getBank(i) != null) {
-					object.add("bank-"+i, builder.toJsonTree(player.getBank(i).getValidItems()));
+				if (player.getBank(i) != null) {
+					object.add("bank-" + i, builder.toJsonTree(player.getBank(i).getValidItems()));
 				}
 			}
 
 			writer.write(builder.toJson(object));
 			writer.close();
 
-
 		} catch (Exception e) {
 			// An error happened while saving.
-			Elvarg.getLogger().log(Level.WARNING,
-					"An error has occured while saving a character file!", e);
+			Elvarg.getLogger().log(Level.WARNING, "An error has occured while saving a character file!", e);
 		}
 	}
 
 	public static boolean playerExists(String p) {
 		p = Misc.formatPlayerName(p.toLowerCase());
-		return new File("./data/saves/characters/"+p+".json").exists();
+		return new File("./data/saves/characters/" + p + ".json").exists();
 	}
 }

@@ -14,7 +14,7 @@ public class DragonLongswordCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1058, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(248, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -22,7 +22,7 @@ public class DragonLongswordCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override

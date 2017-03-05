@@ -15,7 +15,7 @@ public class AbyssalWhipCombatMethod implements CombatMethod {
 
 	private static final Animation ANIMATION = new Animation(1658, Priority.HIGH);
 	private static final Graphic GRAPHIC = new Graphic(341, GraphicHeight.HIGH, Priority.HIGH);
-	
+
 	@Override
 	public CombatType getCombatType() {
 		return CombatType.MELEE;
@@ -23,7 +23,7 @@ public class AbyssalWhipCombatMethod implements CombatMethod {
 
 	@Override
 	public QueueableHit[] fetchDamage(Character character, Character target) {
-		return new QueueableHit[]{new QueueableHit(character, target, this, true, 0)};
+		return new QueueableHit[] { new QueueableHit(character, target, this, true, 0) };
 	}
 
 	@Override
@@ -53,27 +53,27 @@ public class AbyssalWhipCombatMethod implements CombatMethod {
 
 	@Override
 	public void finished(Character character) {
-		
+
 	}
 
 	@Override
 	public void handleAfterHitEffects(QueueableHit hit) {
 		Character target = hit.getTarget();
-		
-		if(target.getHitpoints() <= 0) {
+
+		if (target.getHitpoints() <= 0) {
 			return;
 		}
-		
+
 		target.performGraphic(GRAPHIC);
-		if(target.isPlayer()) {
-			Player p = (Player)target;
+		if (target.isPlayer()) {
+			Player p = (Player) target;
 			int totalRunEnergy = p.getRunEnergy() - 25;
 			if (totalRunEnergy < 0) {
 				totalRunEnergy = 0;
 			}
 			p.setRunEnergy(totalRunEnergy);
 			p.getPacketSender().sendRunEnergy(totalRunEnergy);
-			if(totalRunEnergy == 0) {
+			if (totalRunEnergy == 0) {
 				p.setRunning(false);
 				p.getPacketSender().sendRunStatus();
 			}

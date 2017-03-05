@@ -10,6 +10,7 @@ import jaggrab.net.jaggrab.JagGrabResponse;
 
 /**
  * A worker which services JAGGRAB requests.
+ * 
  * @author Graham
  */
 public final class JagGrabRequestWorker extends RequestWorker<JagGrabRequest> {
@@ -21,10 +22,10 @@ public final class JagGrabRequestWorker extends RequestWorker<JagGrabRequest> {
 
 	@Override
 	protected void service(Channel channel, JagGrabRequest request) throws IOException {
-			
+
 		String path = request.getFilePath();
 		ByteBuf buf = ResourceRequester.request(path);
-		
+
 		if (buf == null) {
 			channel.close();
 		} else {
