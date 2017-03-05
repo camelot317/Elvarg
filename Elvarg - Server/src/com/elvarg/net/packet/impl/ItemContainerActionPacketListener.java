@@ -23,6 +23,7 @@ import com.elvarg.world.model.syntax.impl.PriceCheckX;
 import com.elvarg.world.model.syntax.impl.SellX;
 import com.elvarg.world.model.syntax.impl.TradeX;
 import com.elvarg.world.model.syntax.impl.WithdrawBankX;
+import com.elvarg.world.model.teleportation.operational.OperationsHandler;
 
 public class ItemContainerActionPacketListener implements PacketListener {
 
@@ -80,7 +81,6 @@ public class ItemContainerActionPacketListener implements PacketListener {
 		case PriceChecker.CONTAINER_ID:
 			player.getPriceChecker().withdraw(id, 1, slot);
 			break;
-
 		case Bank.INVENTORY_INTERFACE_ID:
 			Bank.deposit(player, id, slot, 1);
 			break;
@@ -174,6 +174,9 @@ public class ItemContainerActionPacketListener implements PacketListener {
 				player.getTrading().handleItem(id, 5, slot, player.getTrading().getContainer(), 
 						player.getInventory());
 			}
+			break;
+		case 1688: 
+				OperationsHandler.executeOperation(player, id);
 			break;
 		case PriceChecker.CONTAINER_ID:
 			player.getPriceChecker().withdraw(id, 5, slot);
